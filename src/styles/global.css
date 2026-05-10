@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Brand fonts: Satoshi via Fontshare, New Spirit via Adobe Fonts (your kit) */
-@import url('https://api.fontshare.com/v2/css?f[]=satoshi@301,401,501,701&display=swap');
-@import url('https://use.typekit.net/nbd2daq.css');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Caveat:wght@400;600;700&display=swap');
+/*
+  Fonts are loaded via <link> tags in src/layouts/Base.astro:
+  - New Spirit (Adobe Fonts kit nbd2daq)
+  - Satoshi Variable (Fontshare)
+  - JetBrains Mono (Google Fonts)
+*/
 
 @layer base {
   html {
@@ -14,9 +16,6 @@
   body {
     @apply bg-cream text-ink font-sans antialiased;
     font-feature-settings: 'ss01', 'ss02';
-    background-image:
-      radial-gradient(ellipse at top right, rgba(225, 61, 15, 0.05) 0%, transparent 60%),
-      radial-gradient(ellipse at bottom left, rgba(155, 64, 196, 0.06) 0%, transparent 50%);
   }
 
   ::selection {
@@ -53,7 +52,7 @@
     @apply font-display text-2xl text-ink mt-10 mb-3;
   }
   .prose-mc blockquote {
-    @apply border-l-4 border-orange pl-6 italic text-ink my-8 font-display text-xl;
+    @apply border-l-2 border-orange pl-6 italic text-ink my-8 font-display text-xl;
   }
 
   .nav-link {
@@ -74,102 +73,8 @@
     @apply font-mono text-xs uppercase tracking-[0.15em] text-ink-muted mt-3;
   }
 
-  /* The signature orange period that ties to your brand */
+  /* The one signature touch — orange period */
   .brand-period {
     @apply text-orange;
   }
-
-  /* Grid paper texture background — like your post templates */
-  .grid-paper {
-    background-color: #fdfbf6;
-    background-image:
-      linear-gradient(rgba(99, 173, 230, 0.18) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(99, 173, 230, 0.18) 1px, transparent 1px);
-    background-size: 22px 22px;
-  }
-
-  /* Lavender wash with a subtle paper feel */
-  .lavender-paper {
-    background-color: #ECE0F5;
-    position: relative;
-  }
-  .lavender-paper::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(155, 64, 196, 0.07) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(155, 64, 196, 0.07) 1px, transparent 1px);
-    background-size: 22px 22px;
-    pointer-events: none;
-  }
-
-  /* "Hand-drawn" crayon-style underline using Caveat font */
-  .scribble-text {
-    font-family: 'Caveat', cursive;
-    @apply text-purple;
-  }
-}
-
-/* Crayon scribble decorations — pure CSS, no SVG files needed */
-.scribble {
-  position: absolute;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* A wavy crayon line, drawn with SVG inline */
-.scribble-wave {
-  display: inline-block;
-  width: 120px;
-  height: 40px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'><path d='M5,20 Q15,5 25,20 T45,20 T65,20 T85,20 T105,20 T120,20' stroke='%239B40C4' stroke-width='3' fill='none' stroke-linecap='round' opacity='0.6'/></svg>");
-  background-repeat: no-repeat;
-}
-
-/* A burst/star scribble */
-.scribble-burst {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><g stroke='%23C896E0' stroke-width='3' fill='none' stroke-linecap='round' opacity='0.7'><line x1='40' y1='10' x2='40' y2='30'/><line x1='40' y1='50' x2='40' y2='70'/><line x1='10' y1='40' x2='30' y2='40'/><line x1='50' y1='40' x2='70' y2='40'/><line x1='18' y1='18' x2='30' y2='30'/><line x1='50' y1='50' x2='62' y2='62'/><line x1='62' y1='18' x2='50' y2='30'/><line x1='30' y1='50' x2='18' y2='62'/></g></svg>");
-  background-repeat: no-repeat;
-}
-
-/* A loose squiggle, like the LinkedIn banner */
-.scribble-loop {
-  display: inline-block;
-  width: 200px;
-  height: 80px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 80'><path d='M10,40 C30,10 50,70 70,40 S110,10 130,40 S170,70 190,40' stroke='%23C896E0' stroke-width='4' fill='none' stroke-linecap='round' opacity='0.7'/></svg>");
-  background-repeat: no-repeat;
-}
-
-/* An orange crayon underline, looser than the wave */
-.scribble-underline-orange {
-  display: inline-block;
-  width: 100%;
-  height: 14px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' preserveAspectRatio='none'><path d='M2,8 Q50,2 100,7 T198,8' stroke='%23E13D0F' stroke-width='3' fill='none' stroke-linecap='round' opacity='0.85'/></svg>");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-/* Crown — the little Basquiat-style crown from your "Write your value" post */
-.scribble-crown {
-  display: inline-block;
-  width: 60px;
-  height: 40px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40'><path d='M5,35 L5,15 L18,28 L30,8 L42,28 L55,15 L55,35 Z' stroke='%23E13D0F' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
-  background-repeat: no-repeat;
-}
-
-/* Highlight — soft orange highlighter behind text */
-.highlighted {
-  background: linear-gradient(180deg, transparent 60%, rgba(225, 61, 15, 0.25) 60%);
-  padding: 0 4px;
-}
-.highlighted-purple {
-  background: linear-gradient(180deg, transparent 60%, rgba(200, 150, 224, 0.6) 60%);
-  padding: 0 4px;
 }
