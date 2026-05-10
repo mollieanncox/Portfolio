@@ -1,0 +1,198 @@
+---
+import Base from '../layouts/Base.astro';
+
+const caseStudies = [
+  {
+    slug: 'linear-migration',
+    eyebrow: 'Branch · 2026',
+    title: 'Migrating an engineering org from Jira to Linear',
+    summary:
+      'A six-week pilot, 2.7× throughput, and a $42K cost reduction — built on real engineer data, not vendor demos.',
+    metric: '2.7×',
+    metricLabel: 'Throughput per engineer',
+  },
+  {
+    slug: 'pdlc-redesign',
+    eyebrow: 'Branch · 2025',
+    title: 'Redesigning the product development lifecycle',
+    summary:
+      'A four-phase operating model (Discover · Plan · Build · Measure) with named DACI ownership that pulled design upstream into discovery.',
+    metric: '4 phases',
+    metricLabel: 'Cross-functional alignment',
+  },
+  {
+    slug: 'auxin-design-system',
+    eyebrow: 'Branch · 2024–2026',
+    title: 'Auxin: a design system for a multi-product platform',
+    summary:
+      'Building a scalable component library, governance model, and Figma-to-code alignment across a complex enterprise SaaS surface.',
+    metric: 'System',
+    metricLabel: 'Multi-product platform',
+  },
+  {
+    slug: 'fleetio-team-scaling',
+    eyebrow: 'Fleetio · 2023',
+    title: 'Scaling a design org from 6 to 15',
+    summary:
+      'Hiring rubrics, leveling frameworks, and onboarding — supporting 150% headcount growth without quality degradation.',
+    metric: '6 → 15',
+    metricLabel: 'Designers',
+  },
+  {
+    slug: 'ivy-positioning',
+    eyebrow: 'Branch · 2025',
+    title: 'Ivy: positioning AI as category creation',
+    summary:
+      'A competitive teardown of Adjust, AppsFlyer, and Singular that exposed fragmented AI naming — and a positioning play that named the category.',
+    metric: 'Category',
+    metricLabel: 'Brand positioning',
+  },
+];
+---
+
+<Base title="Mollie Cox · Product Design Leader, Founder, Speaker">
+  <!-- Hero — grid paper background, crayon scribbles around the headline -->
+  <section class="grid-paper relative overflow-hidden border-b border-ink/5">
+    <!-- Decorative scribbles, absolutely positioned -->
+    <div class="scribble scribble-loop top-12 right-8 hidden md:block"></div>
+    <div class="scribble scribble-burst top-32 right-32 hidden lg:block"></div>
+    <div class="scribble scribble-crown bottom-24 left-12 hidden md:block"></div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-10 pt-16 md:pt-24 pb-24 md:pb-32 relative z-10">
+      <p class="eyebrow mb-8">
+        Product Design Leader · Founder · Host of <span class="scribble-text text-2xl">Bounce</span> Podcast · Speaker
+      </p>
+
+      <h1
+        class="font-display text-display-xl text-ink leading-[0.95] tracking-tight max-w-[18ch]"
+      >
+        Great design is a
+        <span class="relative inline-block">
+          <span class="highlighted">moral</span>
+        </span>
+        imperative<span class="brand-period">.</span>
+      </h1>
+
+      <div class="mt-12 max-w-reading">
+        <p class="text-xl md:text-2xl text-ink-soft leading-relaxed">
+          Twenty years building, scaling, and leading design organizations across enterprise
+          SaaS, fintech, and consumer products. I architect operating models that move design
+          upstream into product strategy, build design systems that scale across complex
+          platforms, and translate design decisions into <span class="highlighted-purple">executive-ready business cases</span> grounded in real data.
+        </p>
+      </div>
+
+      <div class="mt-16 flex flex-wrap gap-x-12 gap-y-8">
+        <div>
+          <p class="stat">20<span class="text-orange">.</span></p>
+          <p class="stat-label">Years leading design</p>
+        </div>
+        <div>
+          <p class="stat">2.7<span class="text-orange">×</span></p>
+          <p class="stat-label">Throughput gain (Linear)</p>
+        </div>
+        <div>
+          <p class="stat">6 → 15</p>
+          <p class="stat-label">Designers scaled (Fleetio)</p>
+        </div>
+        <div>
+          <p class="stat">17K<span class="text-orange">+</span></p>
+          <p class="stat-label">LinkedIn followers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="max-w-7xl mx-auto px-6 md:px-10 py-24 relative">
+    <div class="flex items-baseline justify-between mb-16">
+      <div>
+        <p class="eyebrow mb-3">Selected work</p>
+        <h2 class="font-display text-display-md text-ink">
+          What I've been working on<span class="brand-period">.</span>
+        </h2>
+      </div>
+      <p class="text-sm text-ink-muted">2023 – present</p>
+    </div>
+
+    <div class="space-y-2">
+      {
+        caseStudies.map((cs, i) => (
+          <a
+            href={`/work/${cs.slug}`}
+            class="group block py-10 md:py-12 border-t border-ink/10 hover:border-orange transition-colors duration-300"
+          >
+            <div class="grid md:grid-cols-12 gap-6 items-start">
+              <div class="md:col-span-1">
+                <p class="font-mono text-xs text-ink-muted">
+                  {String(i + 1).padStart(2, '0')}
+                </p>
+              </div>
+              <div class="md:col-span-7">
+                <p class="eyebrow mb-3">{cs.eyebrow}</p>
+                <h3 class="font-display text-display-md text-ink group-hover:text-orange transition-colors">
+                  {cs.title}<span class="text-orange">.</span>
+                </h3>
+                <p class="mt-4 text-lg text-ink-soft max-w-reading">{cs.summary}</p>
+              </div>
+              <div class="md:col-span-3 md:text-right">
+                <p class="font-display text-3xl md:text-4xl text-ink">{cs.metric}</p>
+                <p class="stat-label md:text-right">{cs.metricLabel}</p>
+              </div>
+              <div class="md:col-span-1 md:text-right pt-2">
+                <span
+                  class="inline-block text-ink-muted group-hover:text-orange group-hover:translate-x-1 transition-all"
+                >
+                  →
+                </span>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- About preview — lavender paper background with grid + scribbles -->
+  <section class="lavender-paper py-32 border-y border-ink/5 relative overflow-hidden">
+    <div class="scribble scribble-loop top-16 right-16 hidden md:block"></div>
+    <div class="scribble scribble-burst bottom-20 left-20 hidden lg:block"></div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
+      <div class="grid md:grid-cols-12 gap-8">
+        <div class="md:col-span-3">
+          <p class="eyebrow text-purple-deep">About</p>
+        </div>
+        <div class="md:col-span-9 max-w-reading">
+          <p class="font-display text-display-md text-purple-deep leading-tight mb-8">
+            I lead by building the operating system, not just the
+            <span class="relative inline-block">
+              <span class="highlighted">output</span>
+            </span><span class="brand-period">.</span>
+          </p>
+          <p class="text-lg text-ink-soft leading-relaxed mb-6">
+            Currently Sr. Director of Product Experience at Branch, where I lead product
+            design, UX research, content, technical documentation, and design systems for
+            an enterprise mobile measurement and engagement platform. I also co-founded
+            Veer, a venture-backed AI healthcare workforce platform selected for the
+            NMotion Spring 2025 accelerator.
+          </p>
+          <p class="text-lg text-ink-soft leading-relaxed mb-10">
+            Before Branch I scaled the design organization at Fleetio from 6 to 15
+            designers, led platform modernization at DMSi, and held design and creative
+            leadership roles at Hudl, GRIN, ORCA.TRADE, Thought District, and HobbyTown.
+            I host the <em>Bounce</em> podcast and have taught UX/UI and design systems as
+            adjunct faculty at the University of Nebraska–Lincoln since 2013.
+          </p>
+          <a
+            href="/about"
+            class="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-[0.15em] text-purple-deep hover:text-orange transition-colors"
+          >
+            More about me
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
