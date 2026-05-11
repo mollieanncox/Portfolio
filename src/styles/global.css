@@ -79,9 +79,10 @@
   }
 
   /*
-    Architectural drawing grid for the hero header.
-    Vertical lines at two weights (anchor + ruled), plus horizontal ruled lines.
-    Subtle enough not to fight the content.
+    Architectural drafting paper for the hero header.
+    Vertical lines only, at multiple weights. Plus two horizontal rules:
+    one near the top (the "header rule") and one further down.
+    Matches the reference image.
   */
   .hero-grid {
     background-color: #F4EFE5;
@@ -89,25 +90,36 @@
       /* Heavier vertical anchor lines every 96px */
       linear-gradient(to right, rgba(2, 16, 29, 0.08) 1px, transparent 1px),
       /* Lighter vertical ruled lines every 24px */
-      linear-gradient(to right, rgba(2, 16, 29, 0.04) 1px, transparent 1px),
-      /* Horizontal ruled lines every 24px */
-      linear-gradient(to bottom, rgba(2, 16, 29, 0.04) 1px, transparent 1px);
+      linear-gradient(to right, rgba(2, 16, 29, 0.04) 1px, transparent 1px);
     background-size:
       96px 100%,
-      24px 100%,
-      100% 24px;
+      24px 100%;
     background-repeat: repeat;
   }
 
-  /* Optional top rule, like a notebook header line */
+  /* Top horizontal rule, like a notebook header */
   .hero-grid::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 80px;
     left: 0;
     right: 0;
-    height: 2px;
+    height: 1px;
+    background: rgba(2, 16, 29, 0.18);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Second horizontal rule, lower on the page */
+  .hero-grid::after {
+    content: '';
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+    height: 1px;
     background: rgba(2, 16, 29, 0.12);
     z-index: 1;
+    pointer-events: none;
   }
 }
