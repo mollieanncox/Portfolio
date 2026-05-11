@@ -1,0 +1,237 @@
+---
+import CaseStudy from '../../layouts/CaseStudy.astro';
+---
+
+<CaseStudy
+  title="Migrating an engineering org from Jira to Linear"
+  eyebrow="Branch · Spring 2026"
+  summary="A six-week pilot with real Branch engineers. Not a vendor demo. The data made the case. 2.7× throughput per engineer, 87 to 93% cycle completion against Linear's 87% benchmark, and 6 of 7 engineers strongly recommending migration."
+  role="Sr. Director of Product Experience"
+  duration="12 weeks (setup and pilot)"
+  team="Eng, PM, Product Ops"
+  outcome="$42K cost reduction. 300+ seats."
+>
+  <h2>The problem wasn't Jira. It was the cost of fixing Jira.</h2>
+
+  <p>
+    Branch was running on Jira at a real cost. 398 licenses, 62 spaces, with 30 of them
+    abandoned or inactive. Issue types, workflows, and fields were non-standardized
+    across every team. Epics couldn't span team boundaries, so cross-team initiative
+    visibility didn't exist. The tool was failing despite full adoption.
+  </p>
+
+  <p>
+    The proposed remediation, call it Jira 2.0, required an outside contractor and months
+    of internal cleanup. Before signing off, I wanted to test a different question:
+    <strong>
+      should we invest the Jira 2.0 remediation effort into fixing Jira, or into a
+      platform that doesn't need fixing?
+    </strong>
+  </p>
+
+  <h2>A real test, not a vendor demo</h2>
+
+  <p>
+    I designed a six-week live pilot. Not a sandbox, not a sales engineering walkthrough.
+    Real Branch engineers, real work, the same engineers benchmarked in both systems.
+  </p>
+
+  <ul class="list-none pl-0 my-8 space-y-3">
+    <li class="flex gap-4">
+      <span class="font-mono text-orange">→</span>
+      <span><strong>Teams:</strong> Engagement (Eng + PM), Product Documentation, Pinx Panthers, Auxin</span>
+    </li>
+    <li class="flex gap-4">
+      <span class="font-mono text-orange">→</span>
+      <span><strong>Method:</strong> Before survey (Jira baseline), mid-cycle check-in, post-pilot final survey</span>
+    </li>
+    <li class="flex gap-4">
+      <span class="font-mono text-orange">→</span>
+      <span><strong>Benchmark:</strong> Before and after issue data from the same 7 engineers in both Jira and Linear</span>
+    </li>
+    <li class="flex gap-4">
+      <span class="font-mono text-orange">→</span>
+      <span><strong>Integrations:</strong> Slack agent, GitHub, Claude Code MCP, Windsurf, DX</span>
+    </li>
+  </ul>
+
+  <p>
+    I set five target metrics before the pilot started and held the team accountable to
+    them. Issue creation frequency, engineer satisfaction, cycle completion rate,
+    percentage of work tracked, and issue resolution time. I also met with Linear's SE
+    team to address concerns from internal dissenters before the cutover decision.
+  </p>
+
+  <!-- Big stat callout -->
+  <div class="not-prose my-16 py-16 px-8 md:px-12 bg-navy-deep text-cream relative overflow-hidden">
+    <div class="absolute top-6 left-8 font-mono text-xs uppercase tracking-[0.18em] text-cream/60">
+      The Result
+    </div>
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="font-display text-[clamp(5rem,15vw,12rem)] leading-none text-orange">
+          2.7×
+        </p>
+      </div>
+      <div>
+        <p class="font-display text-2xl md:text-3xl text-cream leading-tight mb-4">
+          More issues completed per engineer per week in Linear vs. Jira.
+        </p>
+        <p class="font-mono text-sm text-cream/70">
+          Same 7 engineers. Same work. Source: Jira "Status Category Changed" field and
+          Linear export. Linear's cross-customer benchmark is 2×. Branch hit 2.7×.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Five metrics. Four hits. One partial. Zero misses.</h2>
+
+  <p>The pilot delivered against every target I set:</p>
+
+  <div class="not-prose my-12 space-y-4">
+    {[
+      {
+        metric: 'Issue creation frequency',
+        target: 'Target: 2× increase',
+        result: '2.7× throughput (Jira 2.42/eng/wk to Linear 6.47/eng/wk)',
+        status: 'HIT',
+      },
+      {
+        metric: 'Engineer satisfaction',
+        target: 'Target: 4.0+ in Linear',
+        result: '5.0/5 overall. Every dimension above 4.0.',
+        status: 'HIT',
+      },
+      {
+        metric: 'Cycle completion rate',
+        target: 'Target: stable or improved',
+        result: '100%, 87%, 93% across first three cycles. Planning 4 cycles ahead.',
+        status: 'HIT',
+      },
+      {
+        metric: '% of work tracked',
+        target: 'Target: 80%+',
+        result: '4 of 5 respondents at 75 to 100%. 86% of issues tied to a project.',
+        status: 'HIT',
+      },
+      {
+        metric: 'Issue resolution time',
+        target: 'Target: 3.3× faster',
+        result: 'Median work time in Linear: 1.9 days. Jira baseline unavailable in export.',
+        status: 'PARTIAL',
+      },
+    ].map((row) => (
+      <div class="grid md:grid-cols-12 gap-4 py-5 border-b border-ink/10 items-start">
+        <div class="md:col-span-3">
+          <p class="font-display text-lg text-ink">{row.metric}</p>
+          <p class="font-mono text-xs text-ink-muted mt-1">{row.target}</p>
+        </div>
+        <div class="md:col-span-7 text-ink-soft">{row.result}</div>
+        <div class="md:col-span-2 md:text-right">
+          <span
+            class={`font-mono text-xs uppercase tracking-[0.15em] px-3 py-1 ${
+              row.status === 'HIT' ? 'bg-orange text-cream' : 'bg-cream-deep text-ink'
+            }`}
+          >
+            {row.status}
+          </span>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <h2>Every engineer improved. Even the one who preferred Jira.</h2>
+
+  <p>
+    Throughput gains weren't concentrated in early adopters or power users. Each of the
+    seven pilot engineers measured higher issue completion in Linear than in Jira,
+    ranging from 1.2× to 7.0× per individual. The engineer who rated Linear lowest in
+    mid-pilot still completed more work in it.
+  </p>
+
+  <p>
+    Survey deltas told the same story. Across every dimension I measured (ease of
+    creation, ability to triage, trust in the data, roadmap visibility, manager
+    visibility, overall satisfaction) Linear improved on Jira. Overall satisfaction
+    swung from 2.83 to 5.00, the largest delta in the survey.
+  </p>
+
+  <blockquote>
+    "Please let us keep using Linear. I desperately do not want to go back to Jira."
+    <br />
+    <span class="not-italic font-mono text-sm text-ink-muted">
+      Engagement team engineer, post-pilot survey
+    </span>
+  </blockquote>
+
+  <h2>The capability decision behind the cost decision</h2>
+
+  <p>
+    The financial case wasn't a savings story. It was a capability story. Three scenarios
+    on the table:
+  </p>
+
+  <div class="not-prose my-10 grid md:grid-cols-3 gap-6">
+    <div class="p-6 border border-ink/15 bg-cream-warm">
+      <p class="eyebrow mb-3">Stay · Fix Jira</p>
+      <p class="font-display text-3xl text-ink mb-2">$173K+</p>
+      <p class="text-sm text-ink-soft">
+        Jira + Confluence + Asana. Plus Jira 2.0 remediation cost (TBD, contractor required).
+      </p>
+    </div>
+    <div class="p-6 border border-ink/15 bg-cream-warm">
+      <p class="eyebrow mb-3">Switch · Replace Jira</p>
+      <p class="font-display text-3xl text-ink mb-2">$177K</p>
+      <p class="text-sm text-ink-soft">
+        Linear + Notion + Asana unchanged. No remediation cost.
+      </p>
+    </div>
+    <div class="p-6 border-2 border-orange bg-orange/5">
+      <p class="eyebrow mb-3 text-orange-deep">Recommended</p>
+      <p class="font-display text-3xl text-ink mb-2">$131K</p>
+      <p class="text-sm text-ink-soft">
+        Linear + Notion. Asana removed pending parallel evaluation. <strong>$42K reduction.</strong>
+      </p>
+    </div>
+  </div>
+
+  <p>
+    The 2.7× throughput was measured before any of the integrations activated. Gong
+    (10,000 customer calls per year converting to issues automatically), Zendesk Triage,
+    Linear Asks (replacing Branch Assist for IT provisioning), and Linear Releases for
+    CI/CD. The pilot result was the floor, not the ceiling.
+  </p>
+
+  <h2>What I did, what changed</h2>
+
+  <p>
+    I owned the end-to-end pilot. Design, execution, and recommendation. JQL-scoped sprint
+    exports from Jira, CSV mapping logic for the import, importer evaluation across
+    Linear's native Jira assistant and CLI paths, pilot team selection, benchmark
+    methodology, before and after survey design, dissenter review meetings, and the
+    final executive recommendation.
+  </p>
+
+  <p>
+    The migration moved forward as a full org cut-over with white-glove onboarding from
+    Linear's customer success team. Sequenced first through Engineering and Product, then
+    IT and Security, then CX and Sales. Asana evaluated in parallel for the remaining
+    30-day decision window.
+  </p>
+
+  <h2>Why this case study</h2>
+
+  <p>
+    Most "design leader leads tooling decision" stories are project-management fables.
+    This one shows what design leadership actually looks like at the executive level.
+    Framing the right question (capability vs. cost). Designing a defensible test
+    methodology. Holding the test accountable to pre-set metrics. Presenting the result
+    as a business case rather than a feature wishlist. Managing the dissent that
+    inevitably surfaces when the data is too good.
+  </p>
+
+  <p>
+    Design leadership isn't just about what ships. It's about what gets decided.
+  </p>
+</CaseStudy>
