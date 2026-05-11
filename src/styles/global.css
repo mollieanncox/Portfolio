@@ -80,9 +80,8 @@
 
   /*
     Architectural drafting paper for the hero header.
-    Vertical lines only, at multiple weights. Plus two horizontal rules:
-    one near the top (the "header rule") and one further down.
-    Matches the reference image.
+    Vertical lines at multiple weights, plus three pairs of double horizontal
+    rules (top band, middle band, bottom band) matching the reference image.
   */
   .hero-grid {
     background-color: #F4EFE5;
@@ -97,29 +96,44 @@
     background-repeat: repeat;
   }
 
-  /* Top horizontal rule, like a notebook header */
+  /* Top double-line band */
   .hero-grid::before {
     content: '';
     position: absolute;
-    top: 80px;
+    top: 32px;
     left: 0;
     right: 0;
-    height: 1px;
-    background: rgba(2, 16, 29, 0.18);
+    height: 12px;
+    border-top: 1px solid rgba(2, 16, 29, 0.18);
+    border-bottom: 1px solid rgba(2, 16, 29, 0.18);
     z-index: 1;
     pointer-events: none;
   }
 
-  /* Second horizontal rule, lower on the page */
+  /* Bottom double-line band */
   .hero-grid::after {
     content: '';
     position: absolute;
-    bottom: 120px;
+    bottom: 32px;
     left: 0;
     right: 0;
-    height: 1px;
-    background: rgba(2, 16, 29, 0.12);
+    height: 12px;
+    border-top: 1px solid rgba(2, 16, 29, 0.18);
+    border-bottom: 1px solid rgba(2, 16, 29, 0.18);
     z-index: 1;
     pointer-events: none;
+  }
+
+  /* Middle double-line band (rendered via inner div in the hero) */
+  .hero-grid-middle-band {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 12px;
+    border-top: 1px solid rgba(2, 16, 29, 0.15);
+    border-bottom: 1px solid rgba(2, 16, 29, 0.15);
+    pointer-events: none;
+    z-index: 1;
   }
 }
