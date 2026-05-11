@@ -77,4 +77,32 @@
   .brand-period {
     @apply text-orange;
   }
+
+  /*
+    Architectural drawing grid for the hero header.
+    Inspired by Mollie's post template aesthetic and the gridded paper backgrounds
+    that run through her brand. Subtle enough not to fight the content.
+  */
+  .hero-grid {
+    background-color: #F4EFE5;
+    background-image:
+      /* Heavier vertical lines every 8 columns (the "anchor" lines) */
+      linear-gradient(to right, rgba(2, 16, 29, 0.07) 1px, transparent 1px),
+      /* Lighter vertical lines every column */
+      linear-gradient(to right, rgba(2, 16, 29, 0.04) 1px, transparent 1px),
+      /* Subtle horizontal line near the top */
+      linear-gradient(to bottom, transparent calc(100% - 1px), rgba(2, 16, 29, 0.06) 1px);
+    background-size:
+      /* Heavier lines: every 96px */
+      96px 100%,
+      /* Lighter lines: every 24px */
+      24px 100%,
+      /* Horizontal: full */
+      100% 100%;
+    background-position:
+      0 0,
+      0 0,
+      0 0;
+    background-repeat: repeat-x, repeat-x, no-repeat;
+  }
 }
