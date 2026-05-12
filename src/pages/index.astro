@@ -7,34 +7,34 @@ const caseStudies = [
     eyebrow: 'Founder · 2026',
     title: 'Course Code: an AI-native consumer product, solo',
     summary:
-      'Built a live, revenue-generating consumer app from zero to paying subscribers in ten weeks. Solo, with an AI co-founder. 4.6K active users, 4,659 courses, real product, real conversion.',
+      'Built a live, revenue-generating consumer app from zero to paying subscribers in ten weeks. Solo, with an AI co-founder.',
     metric: '4.6K',
-    metricLabel: 'Active users in 28 days',
+    metricLabel: 'Active users (28 days)',
   },
   {
     slug: 'linear-migration',
     eyebrow: 'Branch · 2026',
     title: 'Migrating an engineering org from Jira to Linear',
     summary:
-      'A six-week pilot, 2.7× throughput, and a measurable enterprise-scale rollout decision. Built on real engineer data, not vendor demos.',
+      'A six-week pilot, 2.7× throughput, and a measurable enterprise-scale rollout decision. Built on real engineer data.',
     metric: '2.7×',
     metricLabel: 'Throughput per engineer',
   },
   {
     slug: 'pdlc-redesign',
-    eyebrow: 'Branch · 2025–2026',
+    eyebrow: 'Branch · 2025 to 2026',
     title: 'Redesigning the product development lifecycle',
     summary:
-      'A four-phase operating model (Discover, Plan, Build, Measure) with named DACI ownership that pulled design upstream into discovery and closed the loop on measurement.',
+      'A four-phase operating model with named DACI ownership that pulled design upstream into discovery and closed the loop on measurement.',
     metric: '4 phases',
     metricLabel: 'Cross-functional alignment',
   },
   {
     slug: 'auxin-design-system',
-    eyebrow: 'Branch · 2024–2026',
+    eyebrow: 'Branch · 2024 to 2026',
     title: 'Auxin: a design system for a multi-product platform',
     summary:
-      'Building a scalable component library, governance model, and Figma-to-code alignment across a complex enterprise SaaS surface.',
+      'A scalable component library, governance model, and Figma-to-code alignment across a complex enterprise SaaS surface.',
     metric: 'System',
     metricLabel: 'Multi-product platform',
   },
@@ -52,7 +52,7 @@ const caseStudies = [
     eyebrow: 'Branch · 2025',
     title: 'Ivy: positioning AI as category creation',
     summary:
-      'A competitive teardown of Adjust, AppsFlyer, and Singular that exposed fragmented AI naming. A positioning play that named the category.',
+      'A competitive teardown that exposed fragmented AI naming. A positioning play that named the category.',
     metric: 'Category',
     metricLabel: 'Brand positioning',
   },
@@ -60,34 +60,36 @@ const caseStudies = [
 
 const beliefs = [
   {
-    title: "Start with the user",
-    body: "Every functionality begins from a real user need. Does this solve a real problem? Does this make their work easier? Is it better than the alternative they have today?",
+    title: 'Start with the user',
+    body: "Every functionality begins from a real user need. Does this solve a real problem? Does this make their work easier?",
   },
   {
-    title: "Systems match the real world",
-    body: "Products speak the user's language, not the system's. Words, patterns, and concepts come from how people already think. Real-world conventions over internal jargon.",
+    title: 'Systems match the real world',
+    body: "Products speak the user's language, not the system's. Words, patterns, concepts come from how people already think.",
   },
   {
-    title: "Personal preference is a hypothesis",
-    body: "Design decisions live or die on evidence. Personal taste is a starting hypothesis, never a conclusion. Research and conventions inform; testing decides.",
+    title: 'Personal preference is a hypothesis',
+    body: 'Design decisions live or die on evidence. Personal taste is a starting hypothesis, never a conclusion.',
   },
   {
-    title: "Test early, test often",
-    body: "The feedback loop is the work. Get users in front of decisions before they harden. Use what you learn to iterate. Then test again.",
+    title: 'Test early, test often',
+    body: 'The feedback loop is the work. Get users in front of decisions before they harden. Iterate. Test again.',
   },
   {
-    title: "Work should be clean",
-    body: "Design shouldn't contain anything irrelevant. Less to read, fewer paths to consider, more focus on what matters. Both informationally and aesthetically.",
+    title: 'Work should be clean',
+    body: "Design shouldn't contain anything irrelevant. Less to read, fewer paths to consider, more focus on what matters.",
   },
   {
-    title: "Live in the now, build for the future",
-    body: "Solve for the situation in front of you, but build with scalability in mind. Functionality should be relevant today and extendable tomorrow.",
+    title: 'Live in the now, build for the future',
+    body: 'Solve for the situation in front of you, but build with scalability in mind. Relevant today, extendable tomorrow.',
   },
 ];
 ---
 
 <Base title="Mollie Cox · Product Design Leader, AI-Native Founder, Speaker">
-  <!-- Hero with architectural grid background -->
+  <!-- ===================== -->
+  <!-- HERO with grid backdrop -->
+  <!-- ===================== -->
   <section class="hero-grid relative overflow-hidden">
     <div class="hero-grid-middle-band"></div>
     <div class="max-w-7xl mx-auto px-6 md:px-10 pt-12 md:pt-20 pb-24 md:pb-32 relative z-10">
@@ -104,9 +106,7 @@ const beliefs = [
 
       <p class="eyebrow mb-8">Product Design Leader · AI-Native Founder · Speaker</p>
 
-      <h1
-        class="font-display text-display-xl text-ink leading-[0.95] tracking-tight max-w-[18ch]"
-      >
+      <h1 class="font-display text-display-xl text-ink leading-[0.95] tracking-tight max-w-[18ch]">
         Great design is a moral imperative<span class="brand-period">.</span>
       </h1>
 
@@ -145,13 +145,15 @@ const beliefs = [
     </div>
   </section>
 
+  <!-- ===================== -->
   <!-- Currently building -->
-  <section class="bg-navy-deep text-cream border-y border-ink/10">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
+  <!-- ===================== -->
+  <section class="bg-ink text-cream border-y border-ink/10 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20 relative z-10">
       <div class="grid md:grid-cols-12 gap-8 items-end">
         <div class="md:col-span-3">
           <p class="font-mono text-xs uppercase tracking-[0.18em] text-cream/60 mb-3">Currently building</p>
-          <p class="font-display text-3xl text-orange">Course Code<span class="text-cream">.</span></p>
+          <p class="font-display text-3xl text-orange">Course Code</p>
         </div>
         <div class="md:col-span-6 max-w-reading">
           <p class="font-display text-2xl text-cream leading-tight mb-4">
@@ -166,6 +168,7 @@ const beliefs = [
           <a
             href="/work/course-code"
             class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
+            style="border-radius: 999px;"
           >
             Read case study →
           </a>
@@ -174,6 +177,7 @@ const beliefs = [
             target="_blank"
             rel="noopener"
             class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-cream/30 text-cream font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
+            style="border-radius: 999px;"
           >
             See it live →
           </a>
@@ -182,7 +186,9 @@ const beliefs = [
     </div>
   </section>
 
+  <!-- ===================== -->
   <!-- Recognition row -->
+  <!-- ===================== -->
   <section class="border-b border-ink/10 bg-cream-warm/40">
     <div class="max-w-7xl mx-auto px-6 md:px-10 py-12">
       <p class="eyebrow mb-8 text-center md:text-left">Selected recognition</p>
@@ -201,7 +207,7 @@ const beliefs = [
         </div>
         <div class="text-center md:text-left">
           <p class="font-display text-xl text-ink leading-tight">UNL</p>
-          <p class="font-mono text-xs text-ink-muted mt-1 uppercase tracking-wider">Adjunct · 2013–present</p>
+          <p class="font-mono text-xs text-ink-muted mt-1 uppercase tracking-wider">Adjunct · 2013-present</p>
         </div>
         <div class="text-center md:text-left">
           <p class="font-display text-xl text-ink leading-tight">Maven</p>
@@ -211,8 +217,10 @@ const beliefs = [
     </div>
   </section>
 
-  <!-- Work -->
-  <section id="work" class="max-w-7xl mx-auto px-6 md:px-10 py-16">
+  <!-- ===================== -->
+  <!-- Work grid -->
+  <!-- ===================== -->
+  <section id="work" class="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
     <div class="flex items-baseline justify-between mb-16">
       <p class="eyebrow">Selected work</p>
       <p class="text-sm text-ink-muted">2023 to present</p>
@@ -233,8 +241,8 @@ const beliefs = [
               </div>
               <div class="md:col-span-7">
                 <p class="eyebrow mb-3">{cs.eyebrow}</p>
-                <h2 class="font-display text-display-md text-ink group-hover:text-orange transition-colors">
-                  {cs.title}<span class="text-orange">.</span>
+                <h2 class="font-display text-display-md text-ink group-hover:text-orange transition-colors leading-tight">
+                  {cs.title}
                 </h2>
                 <p class="mt-4 text-lg text-ink-soft max-w-reading">{cs.summary}</p>
               </div>
@@ -256,13 +264,15 @@ const beliefs = [
     </div>
   </section>
 
-  <!-- AI operating model block -->
-  <section class="bg-ink text-cream py-24 md:py-32 my-16">
+  <!-- ===================== -->
+  <!-- AI Operating Model block -->
+  <!-- ===================== -->
+  <section class="bg-ink text-cream py-24 md:py-32">
     <div class="max-w-7xl mx-auto px-6 md:px-10">
       <div class="grid md:grid-cols-12 gap-8">
         <div class="md:col-span-3">
           <p class="font-mono text-xs uppercase tracking-[0.18em] text-cream/60 mb-2">How I work</p>
-          <p class="font-display text-3xl text-orange">AI Operating Model<span class="text-cream">.</span></p>
+          <p class="font-display text-3xl text-orange">AI Operating Model</p>
         </div>
         <div class="md:col-span-9">
           <h2 class="font-display text-display-md text-cream leading-tight mb-8 max-w-[24ch]">
@@ -274,29 +284,30 @@ const beliefs = [
             It's an operating model: AI as co-founder, not calculator. Authority
             structure, not tool list. The infrastructure that made Course Code possible.
           </p>
-          <div class="flex flex-wrap gap-4">
-            <a
-              href="/ai"
-              class="inline-flex items-center gap-2 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
-            >
-              Read the operating model →
-            </a>
-          </div>
+          <a
+            href="/ai"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
+            style="border-radius: 999px;"
+          >
+            Read the operating model →
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Bounce Podcast block -->
-  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-ink/10">
+  <!-- ===================== -->
+  <!-- Bounce block -->
+  <!-- ===================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32 border-b border-ink/10">
     <div class="grid md:grid-cols-12 gap-8">
       <div class="md:col-span-3">
         <p class="eyebrow mb-3">Podcast</p>
-        <p class="font-display text-3xl text-orange">Bounce<span class="text-ink">.</span></p>
+        <p class="font-display text-3xl text-orange">Bounce</p>
       </div>
       <div class="md:col-span-9">
         <h2 class="font-display text-display-md text-ink leading-tight mb-8 max-w-[24ch]">
-          Conversations on design, leadership, and what actually works<span class="brand-period">.</span>
+          Conversations on design, leadership, and what actually works.
         </h2>
         <p class="text-lg text-ink-soft leading-relaxed mb-10 max-w-reading">
           Bounce is my podcast on design leadership. Real conversations with practitioners
@@ -309,6 +320,7 @@ const beliefs = [
             target="_blank"
             rel="noopener"
             class="inline-flex items-center gap-2 px-6 py-3 bg-ink text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange transition-colors"
+            style="border-radius: 999px;"
           >
             Listen on Spotify →
           </a>
@@ -317,6 +329,7 @@ const beliefs = [
             target="_blank"
             rel="noopener"
             class="inline-flex items-center gap-2 px-6 py-3 border border-ink/30 text-ink font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
+            style="border-radius: 999px;"
           >
             Watch on YouTube →
           </a>
@@ -325,36 +338,147 @@ const beliefs = [
     </div>
   </section>
 
-  <!-- Things I Believe -->
-  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-ink/10">
+  <!-- ===================== -->
+  <!-- Things I Believe (now with linocut icons per principle) -->
+  <!-- ===================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
     <div class="grid md:grid-cols-12 gap-8 mb-16">
       <div class="md:col-span-4">
         <p class="eyebrow mb-3">Things I believe</p>
       </div>
       <div class="md:col-span-8">
         <h2 class="font-display text-display-md text-ink leading-tight max-w-[22ch]">
-          A short list of convictions about how good work gets made<span class="brand-period">.</span>
+          A short list of convictions about how good work gets made.
         </h2>
       </div>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-      {
-        beliefs.map((belief, i) => (
-          <div class="belief-card p-7 md:p-8">
-            <div class="flex items-baseline gap-3 mb-4">
-              <span class="font-mono text-xs text-orange">{String(i + 1).padStart(2, '0')}</span>
-              <h3 class="font-display text-xl text-ink">{belief.title}<span class="text-orange">.</span></h3>
-            </div>
-            <p class="text-ink-soft leading-relaxed">{belief.body}</p>
-          </div>
-        ))
-      }
+      <!-- 01 Start with the user -->
+      <div class="belief-card p-7 md:p-8">
+        <div class="linocut-icon">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="26" r="12" fill="#E13D0F" stroke="#02101D" stroke-width="3"/>
+            <path d="M18 68 C 18 56, 28 50, 40 50 C 52 50, 62 56, 62 68 Z" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+            <circle cx="40" cy="26" r="4" fill="#F4EFE5"/>
+          </svg>
+        </div>
+        <div class="flex items-baseline gap-3 mb-3">
+          <span class="font-mono text-xs text-orange">01</span>
+          <h3 class="font-display text-xl text-ink leading-tight">{beliefs[0].title}.</h3>
+        </div>
+        <p class="text-ink-soft leading-relaxed">{beliefs[0].body}</p>
+      </div>
+
+      <!-- 02 Systems match the real world -->
+      <div class="belief-card p-7 md:p-8">
+        <div class="linocut-icon">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="28" fill="#E13D0F" stroke="#02101D" stroke-width="3"/>
+            <line x1="12" y1="40" x2="68" y2="40" stroke="#02101D" stroke-width="2"/>
+            <line x1="40" y1="12" x2="40" y2="68" stroke="#02101D" stroke-width="2"/>
+            <path d="M14 28 Q 40 22, 66 28" fill="none" stroke="#02101D" stroke-width="2"/>
+            <path d="M14 52 Q 40 58, 66 52" fill="none" stroke="#02101D" stroke-width="2"/>
+            <ellipse cx="40" cy="40" rx="12" ry="28" fill="none" stroke="#02101D" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="flex items-baseline gap-3 mb-3">
+          <span class="font-mono text-xs text-orange">02</span>
+          <h3 class="font-display text-xl text-ink leading-tight">{beliefs[1].title}.</h3>
+        </div>
+        <p class="text-ink-soft leading-relaxed">{beliefs[1].body}</p>
+      </div>
+
+      <!-- 03 Personal preference is a hypothesis -->
+      <div class="belief-card p-7 md:p-8">
+        <div class="linocut-icon">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Flask -->
+            <path d="M32 10 L 32 32 L 18 62 C 16 66, 19 70, 24 70 L 56 70 C 61 70, 64 66, 62 62 L 48 32 L 48 10" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+            <line x1="28" y1="10" x2="52" y2="10" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
+            <!-- Liquid level -->
+            <path d="M24 50 L 56 50" stroke="#02101D" stroke-width="2"/>
+            <!-- Bubbles -->
+            <circle cx="34" cy="58" r="2" fill="#F4EFE5"/>
+            <circle cx="44" cy="62" r="1.5" fill="#F4EFE5"/>
+            <circle cx="38" cy="64" r="1" fill="#F4EFE5"/>
+          </svg>
+        </div>
+        <div class="flex items-baseline gap-3 mb-3">
+          <span class="font-mono text-xs text-orange">03</span>
+          <h3 class="font-display text-xl text-ink leading-tight">{beliefs[2].title}.</h3>
+        </div>
+        <p class="text-ink-soft leading-relaxed">{beliefs[2].body}</p>
+      </div>
+
+      <!-- 04 Test early, test often -->
+      <div class="belief-card p-7 md:p-8">
+        <div class="linocut-icon">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Circular arrow loop -->
+            <path d="M40 18 a22 22 0 1 1 -22 22" fill="none" stroke="#E13D0F" stroke-width="6" stroke-linecap="round"/>
+            <path d="M40 18 L 30 12 L 30 24 Z" fill="#E13D0F"/>
+            <circle cx="40" cy="40" r="6" fill="#02101D"/>
+          </svg>
+        </div>
+        <div class="flex items-baseline gap-3 mb-3">
+          <span class="font-mono text-xs text-orange">04</span>
+          <h3 class="font-display text-xl text-ink leading-tight">{beliefs[3].title}.</h3>
+        </div>
+        <p class="text-ink-soft leading-relaxed">{beliefs[3].body}</p>
+      </div>
+
+      <!-- 05 Work should be clean -->
+      <div class="belief-card p-7 md:p-8">
+        <div class="linocut-icon">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Broom -->
+            <rect x="35" y="10" width="6" height="38" fill="#02101D"/>
+            <path d="M22 46 L 58 46 L 64 70 L 16 70 Z" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+            <!-- Bristles -->
+            <line x1="24" y1="50" x2="22" y2="68" stroke="#02101D" stroke-width="1.5"/>
+            <line x1="30" y1="50" x2="28" y2="68" stroke="#02101D" stroke-width="1.5"/>
+            <line x1="36" y1="50" x2="35" y2="68" stroke="#02101D" stroke-width="1.5"/>
+            <line x1="44" y1="50" x2="45" y2="68" stroke="#02101D" stroke-width="1.5"/>
+            <line x1="50" y1="50" x2="52" y2="68" stroke="#02101D" stroke-width="1.5"/>
+            <line x1="56" y1="50" x2="58" y2="68" stroke="#02101D" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="flex items-baseline gap-3 mb-3">
+          <span class="font-mono text-xs text-orange">05</span>
+          <h3 class="font-display text-xl text-ink leading-tight">{beliefs[4].title}.</h3>
+        </div>
+        <p class="text-ink-soft leading-relaxed">{beliefs[4].body}</p>
+      </div>
+
+      <!-- 06 Live in the now, build for the future -->
+      <div class="belief-card p-7 md:p-8">
+        <div class="linocut-icon">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Bridge -->
+            <path d="M10 50 Q 40 26, 70 50" fill="none" stroke="#E13D0F" stroke-width="6" stroke-linecap="round"/>
+            <line x1="10" y1="50" x2="10" y2="70" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
+            <line x1="70" y1="50" x2="70" y2="70" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
+            <line x1="22" y1="44" x2="22" y2="70" stroke="#02101D" stroke-width="2"/>
+            <line x1="34" y1="36" x2="34" y2="70" stroke="#02101D" stroke-width="2"/>
+            <line x1="46" y1="36" x2="46" y2="70" stroke="#02101D" stroke-width="2"/>
+            <line x1="58" y1="44" x2="58" y2="70" stroke="#02101D" stroke-width="2"/>
+            <line x1="6" y1="70" x2="74" y2="70" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="flex items-baseline gap-3 mb-3">
+          <span class="font-mono text-xs text-orange">06</span>
+          <h3 class="font-display text-xl text-ink leading-tight">{beliefs[5].title}.</h3>
+        </div>
+        <p class="text-ink-soft leading-relaxed">{beliefs[5].body}</p>
+      </div>
     </div>
   </section>
 
+  <!-- ===================== -->
   <!-- About preview -->
-  <section class="max-w-7xl mx-auto px-6 md:px-10 py-32 border-t border-ink/10">
+  <!-- ===================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-ink/10">
     <div class="grid md:grid-cols-12 gap-8">
       <div class="md:col-span-3">
         <p class="eyebrow">About</p>

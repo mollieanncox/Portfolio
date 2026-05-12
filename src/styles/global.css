@@ -108,9 +108,13 @@
     @apply font-mono text-xs uppercase tracking-[0.2em] text-cream/60 mt-4;
   }
 
-  /* Inline stat number in tables: ink (navy) */
+  /* Inline stat number in tables: ink (navy) on light surfaces */
   .stat-num {
     @apply font-display text-3xl leading-none text-ink;
+  }
+  /* Inline stat number on dark surfaces: cream */
+  .stat-num-light {
+    @apply font-display text-3xl leading-none text-cream;
   }
 
   /* ============================================================

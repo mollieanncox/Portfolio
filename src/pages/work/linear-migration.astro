@@ -1,222 +1,355 @@
 ---
-import CaseStudy from '../../layouts/CaseStudy.astro';
+import Base from '../../layouts/Base.astro';
 ---
 
-<CaseStudy
-  title="Migrating an engineering org from Jira to Linear"
-  eyebrow="Branch · Spring 2026"
-  summary="A six-week pilot with real engineers, not a vendor demo. The data made the case. 2.7× throughput per engineer, 87 to 93% cycle completion against the industry benchmark, and the team voting overwhelmingly to migrate."
-  role="Sr. Director of Product Experience"
-  duration="12 weeks (setup and pilot)"
-  team="Eng, PM, Product Ops"
-  outcome="Enterprise-scale rollout decision"
+<Base
+  title="Linear Migration · Mollie Cox"
+  description="Migrating an engineering org from Jira to Linear. 2.7x throughput, 87 to 93% cycle completion, 5.0/5 satisfaction."
 >
-  <h2>The question wasn't Jira vs. Linear. It was what to invest in.</h2>
+  <!-- ============================== -->
+  <!-- HERO -->
+  <!-- ============================== -->
+  <section class="case-hero-dark">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 relative z-10">
+      <a
+        href="/#work"
+        class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] text-cream/60 hover:text-orange transition-colors mb-16"
+      >
+        ← All work
+      </a>
 
-  <p>
-    Our Jira instance had accumulated the kind of complexity every long-running enterprise
-    deployment does. Non-standardized issue types, workflows, and fields across teams.
-    Cross-team initiative visibility that didn't really exist because epics couldn't span
-    team boundaries. Significant abandoned space alongside active work. The system was
-    failing despite full adoption.
-  </p>
+      <p class="eyebrow-light mb-6">Branch · Spring 2026</p>
 
-  <p>
-    The proposed fix was a contractor-led cleanup project measured in months of work. Before
-    signing off, I wanted to test a different question:
-    <strong>
-      should we invest that remediation effort into fixing what we have, or into a platform
-      that doesn't need fixing?
-    </strong>
-  </p>
+      <h1 class="font-display text-display-lg text-cream leading-[0.95] tracking-tight max-w-[24ch]">
+        Migrating an engineering org from Jira to Linear<span class="brand-period">.</span>
+      </h1>
 
-  <h2>A real test, not a vendor demo</h2>
+      <p class="mt-10 text-xl text-cream/80 leading-relaxed max-w-[44ch]">
+        A six-week pilot with real engineers, not a vendor demo. The data made the
+        case. 2.7x throughput, 87 to 93% cycle completion, and the team voting
+        overwhelmingly to migrate.
+      </p>
 
-  <p>
-    I designed a six-week live pilot. Not a sandbox. Not a sales engineering walkthrough.
-    Real engineers doing real work, with the same engineers benchmarked in both systems.
-  </p>
-
-  <ul class="list-none pl-0 my-8 space-y-3">
-    <li class="flex gap-4">
-      <span class="font-mono text-orange">→</span>
-      <span><strong>Pilot teams:</strong> A cross-functional pod of engineers and PMs, plus a documentation team, plus a design-systems pod</span>
-    </li>
-    <li class="flex gap-4">
-      <span class="font-mono text-orange">→</span>
-      <span><strong>Method:</strong> Before survey (Jira baseline), mid-cycle check-in, post-pilot final survey</span>
-    </li>
-    <li class="flex gap-4">
-      <span class="font-mono text-orange">→</span>
-      <span><strong>Benchmark:</strong> Before and after issue data from the same engineers in both Jira and Linear</span>
-    </li>
-    <li class="flex gap-4">
-      <span class="font-mono text-orange">→</span>
-      <span><strong>Integrations:</strong> Slack, GitHub, MCP, AI coding tools</span>
-    </li>
-  </ul>
-
-  <p>
-    I set five target metrics before the pilot started. Issue creation frequency, engineer
-    satisfaction, cycle completion rate, percentage of work tracked, and issue resolution
-    time. I also met with the vendor's solution engineering team to address concerns from
-    internal dissenters before the cutover decision.
-  </p>
-
-  <!-- Big stat callout -->
-  <div class="not-prose my-16 py-16 px-8 md:px-12 bg-navy-deep text-cream relative overflow-hidden">
-    <div class="absolute top-6 left-8 font-mono text-xs uppercase tracking-[0.18em] text-cream/60">
-      The Result
-    </div>
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <p class="font-display text-[clamp(5rem,15vw,12rem)] leading-none text-orange">
-          2.7×
-        </p>
-      </div>
-      <div>
-        <p class="font-display text-2xl md:text-3xl text-cream leading-tight mb-4">
-          More issues completed per engineer per week in Linear vs. Jira.
-        </p>
-        <p class="font-mono text-sm text-cream/70">
-          Same engineers. Same work. Source: Jira "Status Category Changed" field and
-          Linear export. The vendor's cross-customer benchmark is 2×. We hit 2.7×.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <h2>Five metrics. Four hits. One partial. Zero misses.</h2>
-
-  <p>The pilot delivered against every target I set:</p>
-
-  <div class="not-prose my-12 space-y-4">
-    {[
-      {
-        metric: 'Issue creation frequency',
-        target: 'Target: 2× increase',
-        result: '2.7× throughput per engineer, per week',
-        status: 'HIT',
-      },
-      {
-        metric: 'Engineer satisfaction',
-        target: 'Target: 4.0+ in Linear',
-        result: '5.0/5 overall. Every dimension above 4.0.',
-        status: 'HIT',
-      },
-      {
-        metric: 'Cycle completion rate',
-        target: 'Target: stable or improved',
-        result: '100%, 87%, 93% across first three cycles. Planning 4 cycles ahead.',
-        status: 'HIT',
-      },
-      {
-        metric: '% of work tracked',
-        target: 'Target: 80%+',
-        result: 'Four of five respondents at 75 to 100%. Most issues tied to a project.',
-        status: 'HIT',
-      },
-      {
-        metric: 'Issue resolution time',
-        target: 'Target: faster',
-        result: 'Median work time under 2 days in Linear. Jira baseline unavailable in export.',
-        status: 'PARTIAL',
-      },
-    ].map((row) => (
-      <div class="grid md:grid-cols-12 gap-4 py-5 border-b border-ink/10 items-start">
-        <div class="md:col-span-3">
-          <p class="font-display text-lg text-ink">{row.metric}</p>
-          <p class="font-mono text-xs text-ink-muted mt-1">{row.target}</p>
+      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-cream/15 relative z-10">
+        <div>
+          <p class="eyebrow-light mb-2">Role</p>
+          <p class="text-cream">Sr. Director, Product Experience</p>
         </div>
-        <div class="md:col-span-7 text-ink-soft">{row.result}</div>
-        <div class="md:col-span-2 md:text-right">
-          <span
-            class={`font-mono text-xs uppercase tracking-[0.15em] px-3 py-1 ${
-              row.status === 'HIT' ? 'bg-orange text-cream' : 'bg-cream-deep text-ink'
-            }`}
-          >
-            {row.status}
-          </span>
+        <div>
+          <p class="eyebrow-light mb-2">Duration</p>
+          <p class="text-cream">12 weeks (setup + pilot)</p>
+        </div>
+        <div>
+          <p class="eyebrow-light mb-2">Team</p>
+          <p class="text-cream">Eng, PM, Product Ops</p>
+        </div>
+        <div>
+          <p class="eyebrow-light mb-2">Outcome</p>
+          <p class="text-cream">Enterprise rollout decision</p>
         </div>
       </div>
-    ))}
-  </div>
+    </div>
+  </section>
 
-  <h2>Every engineer improved. Even the one who preferred Jira.</h2>
+  <!-- =============================== -->
+  <!-- The headline result -->
+  <!-- =============================== -->
+  <section class="grid-backdrop border-b border-ink/10 overflow-hidden">
+    <div class="grid-backdrop-band-top"></div>
+    <div class="grid-backdrop-band-bottom"></div>
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28 relative z-10">
+      <p class="eyebrow mb-12">The result</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">
+        <div>
+          <p class="stat-hero">2.7×</p>
+          <p class="stat-hero-label">Throughput gain</p>
+        </div>
+        <div>
+          <p class="stat-hero">93%</p>
+          <p class="stat-hero-label">Cycle completion</p>
+        </div>
+        <div>
+          <p class="stat-hero">5.0</p>
+          <p class="stat-hero-label">Engineer satisfaction</p>
+        </div>
+        <div>
+          <p class="stat-hero">6wk</p>
+          <p class="stat-hero-label">Pilot duration</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <p>
-    Throughput gains weren't concentrated in early adopters or power users. Every pilot
-    engineer measured higher issue completion in Linear than in Jira, with individual
-    gains ranging widely. The engineer who rated Linear lowest in mid-pilot still
-    completed more work in it.
-  </p>
+  <!-- =============================== -->
+  <!-- THREE PILLARS: Question · Method · Recommendation -->
+  <!-- =============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <div class="pillar-grid">
 
-  <p>
-    Survey deltas told the same story. Across every dimension I measured (ease of creation,
-    ability to triage, trust in the data, roadmap visibility, manager visibility, overall
-    satisfaction) Linear improved on Jira. Overall satisfaction was the largest delta.
-  </p>
+      <!-- Question -->
+      <div class="pillar">
+        <div class="pillar-icon">
+          <!-- Forked path / decision -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="14" r="6" fill="#E13D0F"/>
+            <line x1="40" y1="20" x2="40" y2="36" stroke="#02101D" stroke-width="3"/>
+            <path d="M40 36 L 20 50 L 20 66" fill="none" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
+            <path d="M40 36 L 60 50 L 60 66" fill="none" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="20" cy="68" r="5" fill="#E13D0F"/>
+            <circle cx="60" cy="68" r="5" fill="#02101D"/>
+          </svg>
+        </div>
+        <div class="pillar-meta">
+          <p class="eyebrow mb-3">The question</p>
+          <h2 class="font-display text-3xl text-ink leading-tight">
+            Fix what we have, or replace it?
+          </h2>
+        </div>
+        <div class="pillar-body">
+          <p class="text-ink-soft leading-relaxed">
+            Our Jira instance had years of accumulated complexity. Non-standardized
+            issue types, no cross-team initiative visibility, significant abandoned
+            space alongside active work. The proposed fix was months of contractor-led
+            cleanup. Before signing off, I wanted to test a different question.
+          </p>
+        </div>
+        <div class="pillar-tagline"></div>
+      </div>
 
-  <blockquote>
-    "Please let us keep using Linear. I desperately do not want to go back to Jira."
-    <br />
-    <span class="not-italic font-mono text-sm text-ink-muted">
-      Pilot engineer, post-pilot survey
-    </span>
-  </blockquote>
+      <!-- Method -->
+      <div class="pillar">
+        <div class="pillar-icon">
+          <!-- Scales / measurement -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="14" x2="40" y2="60" stroke="#02101D" stroke-width="3"/>
+            <line x1="14" y1="22" x2="66" y2="22" stroke="#02101D" stroke-width="3"/>
+            <!-- Left pan -->
+            <path d="M14 22 L 8 40 L 26 40 Z" fill="#E13D0F" stroke="#02101D" stroke-width="2.5" stroke-linejoin="round"/>
+            <line x1="14" y1="22" x2="14" y2="32" stroke="#02101D" stroke-width="2"/>
+            <!-- Right pan -->
+            <path d="M66 22 L 60 40 L 78 40 Z" fill="#E13D0F" stroke="#02101D" stroke-width="2.5" stroke-linejoin="round"/>
+            <line x1="66" y1="22" x2="66" y2="32" stroke="#02101D" stroke-width="2"/>
+            <!-- Base -->
+            <rect x="30" y="60" width="20" height="6" fill="#02101D"/>
+            <circle cx="40" cy="14" r="3" fill="#E13D0F"/>
+          </svg>
+        </div>
+        <div class="pillar-meta">
+          <p class="eyebrow-voice mb-3">The method</p>
+          <h2 class="font-display text-3xl text-ink leading-tight">
+            Real engineers, real work, real data.
+          </h2>
+        </div>
+        <div class="pillar-body">
+          <p class="text-ink-soft leading-relaxed">
+            I designed a six-week live pilot. Not a sandbox. Real engineers doing
+            real work, benchmarked in both systems. Five target metrics set before
+            the pilot started. Issue throughput, satisfaction, cycle completion,
+            tracking percentage, resolution time.
+          </p>
+        </div>
+        <div class="pillar-tagline">
+          <p class="font-display text-2xl italic text-orange">"The data made the case."</p>
+        </div>
+      </div>
 
-  <h2>A capability decision, not a savings decision</h2>
+      <!-- Recommendation -->
+      <div class="pillar">
+        <div class="pillar-icon">
+          <!-- Upward arrow / forward motion -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 12 L 60 36 L 50 36 L 50 64 L 30 64 L 30 36 L 20 36 Z" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+            <line x1="34" y1="46" x2="46" y2="46" stroke="#F4EFE5" stroke-width="2" opacity="0.6"/>
+            <line x1="34" y1="54" x2="46" y2="54" stroke="#F4EFE5" stroke-width="2" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="pillar-meta">
+          <p class="eyebrow mb-3">The recommendation</p>
+          <h2 class="font-display text-3xl text-ink leading-tight">
+            A capability decision, not a cost cut.
+          </h2>
+        </div>
+        <div class="pillar-body">
+          <p class="text-ink-soft leading-relaxed">
+            The financial case wasn't a savings story. It was a capability story.
+            Capability decisions survive procurement cycles. Savings decisions get
+            re-litigated. The migration moved forward as a full org cut-over with
+            white-glove customer success onboarding.
+          </p>
+        </div>
+        <div class="pillar-tagline"></div>
+      </div>
 
-  <p>
-    The financial case wasn't a savings story. It was a capability story. I modeled three
-    scenarios for leadership: staying with the incumbent stack and funding the cleanup
-    project, switching tools with the existing scope intact, and switching while
-    consolidating a redundant adjacent tool.
-  </p>
+    </div>
+  </section>
 
-  <p>
-    The third scenario delivered both the lowest cost and the strongest capability profile.
-    But the framing that mattered to executives wasn't the line item. It was that we were
-    choosing between investing in a tool that needed fixing versus a platform that could
-    enable downstream automation we couldn't get from the incumbent. Capability decisions
-    survive procurement cycles. Savings decisions get re-litigated.
-  </p>
+  <!-- =============================== -->
+  <!-- Metrics breakdown -->
+  <!-- =============================== -->
+  <section class="bg-cream-warm/40 border-y border-ink/10 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-10">
+      <p class="eyebrow mb-3">Five metrics. Four hits. One partial. Zero misses.</p>
+      <h2 class="font-display text-display-md text-ink leading-tight max-w-[26ch] mb-16">
+        The pilot hit every target I set.
+      </h2>
 
-  <p>
-    Importantly, the 2.7× throughput was measured before integrations activated. Call
-    summarization to issues, support ticket triage, internal request handling, and release
-    automation were all post-migration capabilities. The pilot result was the floor, not
-    the ceiling.
-  </p>
+      <div class="space-y-4">
+        {[
+          {
+            metric: 'Issue creation frequency',
+            target: 'Target: 2× increase',
+            result: '2.7× throughput per engineer, per week',
+            status: 'HIT',
+          },
+          {
+            metric: 'Engineer satisfaction',
+            target: 'Target: 4.0+ in Linear',
+            result: '5.0/5 overall. Every dimension above 4.0.',
+            status: 'HIT',
+          },
+          {
+            metric: 'Cycle completion rate',
+            target: 'Target: stable or improved',
+            result: '100%, 87%, 93% across first three cycles. Planning 4 cycles ahead.',
+            status: 'HIT',
+          },
+          {
+            metric: '% of work tracked',
+            target: 'Target: 80%+',
+            result: '4 of 5 respondents at 75 to 100%. Most issues tied to a project.',
+            status: 'HIT',
+          },
+          {
+            metric: 'Issue resolution time',
+            target: 'Target: faster',
+            result: 'Median work time under 2 days. Jira baseline unavailable in export.',
+            status: 'PARTIAL',
+          },
+        ].map((row) => (
+          <div class="grid md:grid-cols-12 gap-4 py-6 px-6 bg-cream border border-ink/10 items-start" style="border-radius: 12px;">
+            <div class="md:col-span-3">
+              <p class="font-display text-lg text-ink">{row.metric}</p>
+              <p class="font-mono text-xs text-ink-muted mt-1">{row.target}</p>
+            </div>
+            <div class="md:col-span-7 text-ink-soft">{row.result}</div>
+            <div class="md:col-span-2 md:text-right">
+              <span
+                class={`font-mono text-xs uppercase tracking-[0.15em] px-3 py-1 ${
+                  row.status === 'HIT' ? 'bg-orange text-cream' : 'bg-cream-warm text-ink'
+                }`}
+                style="border-radius: 999px;"
+              >
+                {row.status}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-  <h2>What I did, what changed</h2>
+  <!-- =============================== -->
+  <!-- Quote callout -->
+  <!-- =============================== -->
+  <section class="bg-ink text-cream py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-10">
+      <p class="eyebrow-light mb-8">Voice of the engineer</p>
+      <blockquote class="font-display text-cream leading-[1.05] tracking-tight max-w-[24ch]" style="font-size: clamp(2rem, 5vw, 4rem);">
+        "Please let us keep using Linear. I desperately do not want to go back to Jira<span class="text-orange">."</span>
+      </blockquote>
+      <p class="mt-8 font-mono text-sm text-cream/60 uppercase tracking-wider">Pilot engineer · Post-pilot survey</p>
+    </div>
+  </section>
 
-  <p>
-    I owned the end-to-end pilot. Design, execution, and recommendation. JQL-scoped sprint
-    exports, CSV mapping logic for the import, importer evaluation across multiple paths,
-    pilot team selection, benchmark methodology, before-and-after survey design, dissenter
-    review meetings, and the final executive recommendation.
-  </p>
+  <!-- =============================== -->
+  <!-- Lessons three-up -->
+  <!-- =============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <p class="eyebrow mb-3">What I did</p>
+    <h2 class="font-display text-display-md text-ink leading-tight max-w-[26ch] mb-16">
+      Design leadership isn't just about what ships.
+    </h2>
 
-  <p>
-    The migration moved forward as a full org cut-over with white-glove onboarding from
-    the vendor's customer success team, sequenced through engineering and product first,
-    then through downstream functions, with an adjacent tool evaluated in parallel for the
-    consolidation decision.
-  </p>
+    <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+      <div class="lesson-card">
+        <div class="linocut-icon">
+          <!-- Magnifier on doc -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="14" width="36" height="50" fill="#E13D0F" stroke="#02101D" stroke-width="3"/>
+            <line x1="26" y1="24" x2="48" y2="24" stroke="#F4EFE5" stroke-width="2"/>
+            <line x1="26" y1="32" x2="48" y2="32" stroke="#F4EFE5" stroke-width="2"/>
+            <line x1="26" y1="40" x2="42" y2="40" stroke="#F4EFE5" stroke-width="2"/>
+            <circle cx="52" cy="52" r="10" fill="#02101D"/>
+            <circle cx="52" cy="52" r="6" fill="#F4EFE5"/>
+            <line x1="58" y1="58" x2="68" y2="68" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl text-ink mb-4 leading-tight">Framing the right question.</h3>
+        <p class="text-ink-soft leading-relaxed">
+          Most "tooling decision" stories are project-management fables. The leverage
+          is reframing it as capability versus cost, not Jira versus Linear.
+        </p>
+      </div>
 
-  <h2>Why this case study</h2>
+      <div class="lesson-card">
+        <div class="linocut-icon">
+          <!-- Trophy / accountability -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28 16 L 52 16 L 50 40 C 50 46, 46 50, 40 50 C 34 50, 30 46, 30 40 Z" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M28 20 L 18 20 L 18 28 C 18 34, 24 36, 30 36" fill="none" stroke="#02101D" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M52 20 L 62 20 L 62 28 C 62 34, 56 36, 50 36" fill="none" stroke="#02101D" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="34" y="50" width="12" height="8" fill="#02101D"/>
+            <rect x="28" y="58" width="24" height="6" fill="#02101D"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl text-ink mb-4 leading-tight">Holding the test accountable.</h3>
+        <p class="text-ink-soft leading-relaxed">
+          Five target metrics set before the pilot, not after. Methodology designed
+          to be defensible to dissenters. Result presented as a business case.
+        </p>
+      </div>
 
-  <p>
-    Most "design leader leads tooling decision" stories are project-management fables.
-    This one shows what design leadership actually looks like at the executive level.
-    Framing the right question (capability vs. cost). Designing a defensible test
-    methodology. Holding the test accountable to pre-set metrics. Presenting the result
-    as a business case rather than a feature wishlist. And managing the dissent that
-    inevitably surfaces when the data is too good.
-  </p>
+      <div class="lesson-card">
+        <div class="linocut-icon">
+          <!-- Speech bubble / persuasion -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 22 L 14 50 C 14 54, 18 58, 22 58 L 32 58 L 38 68 L 44 58 L 58 58 C 62 58, 66 54, 66 50 L 66 22 C 66 18, 62 14, 58 14 L 22 14 C 18 14, 14 18, 14 22 Z" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+            <line x1="22" y1="28" x2="58" y2="28" stroke="#F4EFE5" stroke-width="2"/>
+            <line x1="22" y1="36" x2="58" y2="36" stroke="#F4EFE5" stroke-width="2"/>
+            <line x1="22" y1="44" x2="46" y2="44" stroke="#F4EFE5" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl text-ink mb-4 leading-tight">Managing the dissent.</h3>
+        <p class="text-ink-soft leading-relaxed">
+          When the data is too good, the dissent gets sharper. Solution engineering
+          sessions to address concerns directly before the cutover decision.
+        </p>
+      </div>
+    </div>
+  </section>
 
-  <p>
-    Design leadership isn't just about what ships. It's about what gets decided.
-  </p>
-</CaseStudy>
+  <!-- =============================== -->
+  <!-- Meta-point -->
+  <!-- =============================== -->
+  <section class="grid-backdrop overflow-hidden border-b border-ink/10">
+    <div class="grid-backdrop-band-top"></div>
+    <div class="grid-backdrop-band-bottom"></div>
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-28 md:py-36 relative z-10">
+      <p class="eyebrow-voice mb-8">The meta-point</p>
+
+      <h2 class="font-display text-ink leading-[0.95] tracking-tight mb-12" style="font-size: clamp(2.5rem, 6vw, 5.5rem);">
+        Design leadership isn't just about what ships.<br/>
+        <span class="text-orange">It's about what gets decided.</span>
+      </h2>
+
+      <div class="max-w-3xl">
+        <p class="text-xl text-ink-soft leading-relaxed">
+          Framing the right question. Designing a defensible test methodology.
+          Holding it accountable to pre-set metrics. Presenting the result as a
+          business case rather than a feature wishlist. That's what design
+          leadership at the executive level actually looks like.
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>

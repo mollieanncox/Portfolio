@@ -1,168 +1,360 @@
 ---
-import CaseStudy from '../../layouts/CaseStudy.astro';
+import Base from '../../layouts/Base.astro';
 ---
 
-<CaseStudy
-  title="Redesigning a product development lifecycle"
-  eyebrow="Branch · 2025–2026"
-  summary="Architecting a four-phase operating model with named DACI ownership, paired problem and technical briefs, mandatory success metrics before Build, and post-launch decision loops. Adopted across product, design, engineering, and PMM."
-  role="Sr. Director of Product Experience"
-  duration="Multi-quarter rollout"
-  team="Product, Design, Engineering, PMM, Marketing"
-  outcome="Operating model adopted org-wide"
+<Base
+  title="PDLC Redesign · Mollie Cox"
+  description="Architecting a four-phase product development lifecycle adopted org-wide across product, design, engineering, and PMM."
 >
-  <h2>The problem we kept paying for</h2>
+  <!-- ============================== -->
+  <!-- HERO -->
+  <!-- ============================== -->
+  <section class="case-hero-dark">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 relative z-10">
+      <a
+        href="/#work"
+        class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] text-cream/60 hover:text-orange transition-colors mb-16"
+      >
+        ← All work
+      </a>
 
-  <p>
-    The company was shipping product, but Define was a black hole. Problems got framed by
-    PM alone, designers entered the work at ticket assignment instead of at problem framing,
-    engineers reacted to scoped solutions instead of shaping them, and analytics arrived
-    after launch instead of before. The cost of this wasn't just velocity. It was that
-    teams kept shipping features without success metrics, and those features quietly
-    accumulated into a heavier and heavier system.
-  </p>
+      <p class="eyebrow-light mb-6">Branch · 2025 to 2026</p>
 
-  <p>
-    The biggest tell was the gap between launch and measurement. Almost nothing that
-    shipped had a dashboard plan defined before Build started. So we couldn't tell which
-    features were working. So we couldn't make Invest, Iterate, or Deprecate decisions.
-    So nothing got deprecated. So the system got heavier every quarter.
-  </p>
+      <h1 class="font-display text-display-lg text-cream leading-[0.95] tracking-tight max-w-[22ch]">
+        Redesigning a product development lifecycle<span class="brand-period">.</span>
+      </h1>
 
-  <p>
-    I was asked to lead the redesign of how the company builds product. Not a process
-    document. A real operating model that product, design, engineering, and PMM would
-    actually adopt.
-  </p>
+      <p class="mt-10 text-xl text-cream/80 leading-relaxed max-w-[44ch]">
+        A four-phase operating model with named DACI ownership, paired briefs,
+        mandatory success metrics before Build, and post-launch decision loops.
+        Adopted across product, design, engineering, and PMM.
+      </p>
 
-  <h2>The four-phase model</h2>
-
-  <p>
-    The framework I built moves every initiative through four phases in sequence. The
-    structure is familiar; the discipline around it is what made the difference.
-  </p>
-
-  <div class="not-prose my-12 grid md:grid-cols-4 gap-4">
-    {[
-      {
-        n: '01',
-        name: 'Discover',
-        desc: 'Problem framing with the cross-functional triad in the room from the start. Customer research, technical context, design exploration. Exit: a signed problem brief.',
-      },
-      {
-        n: '02',
-        name: 'Plan',
-        desc: 'Paired problem brief and technical solution brief. Defined success metrics. Dashboard plan committed before Build. Post-launch review cadence scheduled.',
-      },
-      {
-        n: '03',
-        name: 'Build',
-        desc: 'SDLC runs inside this phase. Design active in hi-fi and QA, not handed off at ticket creation. Customer partners engaged on significant initiatives.',
-      },
-      {
-        n: '04',
-        name: 'Measure',
-        desc: 'Structured post-launch reviews against the metrics defined at Plan. Triad reconvenes. Invest, Iterate, or Deprecate decision documented. Loop back to Discover.',
-      },
-    ].map((phase) => (
-      <div class="p-6 border border-ink/15 bg-cream-warm/50">
-        <p class="font-mono text-xs text-orange uppercase tracking-wider mb-2">{phase.n}</p>
-        <p class="font-display text-2xl text-ink mb-3">{phase.name}<span class="text-orange">.</span></p>
-        <p class="text-sm text-ink-soft leading-snug">{phase.desc}</p>
+      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-cream/15 relative z-10">
+        <div>
+          <p class="eyebrow-light mb-2">Role</p>
+          <p class="text-cream">Sr. Director, Product Experience</p>
+        </div>
+        <div>
+          <p class="eyebrow-light mb-2">Duration</p>
+          <p class="text-cream">Multi-quarter rollout</p>
+        </div>
+        <div>
+          <p class="eyebrow-light mb-2">Team</p>
+          <p class="text-cream">Product, Design, Eng, PMM</p>
+        </div>
+        <div>
+          <p class="eyebrow-light mb-2">Outcome</p>
+          <p class="text-cream">Adopted org-wide</p>
+        </div>
       </div>
-    ))}
-  </div>
+    </div>
+  </section>
 
-  <p>
-    Design and customer proximity run through all four phases as standing threads, not as
-    one-time gates. Design is never "started" at ticket assignment. Customer contact is a
-    calendar commitment with defined minimums per phase. The PDLC governs initiative-level
-    work; SDLC runs inside Build. Iteration on existing features routes back through
-    Measure and Discover, not straight back to Build.
-  </p>
+  <!-- =============================== -->
+  <!-- The problem statement -->
+  <!-- =============================== -->
+  <section class="grid-backdrop border-b border-ink/10 overflow-hidden">
+    <div class="grid-backdrop-band-top"></div>
+    <div class="grid-backdrop-band-bottom"></div>
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32 relative z-10">
+      <p class="eyebrow mb-3">The problem we kept paying for</p>
+      <h2 class="font-display text-display-md text-ink leading-tight max-w-[28ch] mb-12">
+        Define was a black hole. Measurement was never the spine.
+      </h2>
 
-  <h2>The three non-negotiables</h2>
+      <div class="grid md:grid-cols-2 gap-12 max-w-5xl">
+        <p class="text-xl text-ink-soft leading-relaxed">
+          The company was shipping product, but problems got framed by PM alone.
+          Designers entered at ticket assignment instead of problem framing.
+          Engineers reacted to scoped solutions instead of shaping them.
+          Analytics arrived after launch instead of before.
+        </p>
+        <p class="text-xl text-ink-soft leading-relaxed">
+          The cost wasn't just velocity. Teams shipped features without success
+          metrics, those features accumulated into a heavier and heavier system,
+          and nothing got deprecated because nothing had been measured. The system
+          got heavier every quarter.
+        </p>
+      </div>
+    </div>
+  </section>
 
-  <p>
-    The framework introduced a lot. To make it real instead of aspirational, I named three
-    things as non-negotiable from day one.
-  </p>
+  <!-- =============================== -->
+  <!-- THE FOUR-PHASE MODEL (visual diagram) -->
+  <!-- =============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <p class="eyebrow mb-3">The framework</p>
+    <h2 class="font-display text-display-md text-ink leading-tight max-w-[22ch] mb-16">
+      The four-phase model.
+    </h2>
 
-  <p>
-    <strong>The triad engages from Discover, not from Plan.</strong> Technical feasibility
-    and design implications shape the problem brief itself. Loops back from Measure
-    re-engage the triad before returning to Build. This is the single change that did the
-    most to fix Define as a black hole.
-  </p>
+    <!-- Phase cards in a row, flowing left to right -->
+    <div class="grid md:grid-cols-4 gap-4 md:gap-6 mb-16">
+      {[
+        {
+          num: '01',
+          name: 'Discover',
+          color: '#E13D0F',
+          desc: 'Problem framing with the cross-functional triad in the room from the start. Exit: a signed problem brief.',
+        },
+        {
+          num: '02',
+          name: 'Plan',
+          color: '#9B40C4',
+          desc: 'Paired problem brief and technical solution brief. Defined success metrics. Dashboard plan committed before Build.',
+        },
+        {
+          num: '03',
+          name: 'Build',
+          color: '#062E5C',
+          desc: 'SDLC runs inside this phase. Design active in hi-fi and QA. Customer partners engaged on significant initiatives.',
+        },
+        {
+          num: '04',
+          name: 'Measure',
+          color: '#7A6A4F',
+          desc: 'Post-launch reviews against Plan metrics. Triad reconvenes. Invest, Iterate, or Deprecate decision documented.',
+        },
+      ].map((phase) => (
+        <div class="relative p-6 md:p-8 bg-cream border border-ink/10" style="border-radius: 16px;">
+          <div class="absolute left-0 top-0 bottom-0" style={`width: 6px; background: ${phase.color}; border-radius: 16px 0 0 16px;`}></div>
+          <div class="pl-3">
+            <p class="font-mono text-xs uppercase tracking-wider mb-3" style={`color: ${phase.color};`}>{phase.num}</p>
+            <p class="font-display text-3xl text-ink mb-4 leading-tight">{phase.name}</p>
+            <p class="text-sm text-ink-soft leading-relaxed">{phase.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
 
-  <p>
-    <strong>Measurement is the spine.</strong> Every initiative entering Plan has defined
-    success metrics, a dashboard plan, and a post-launch review scheduled. Dashboards
-    exist at launch. Analytics is engaged at Plan, not at launch.
-  </p>
+    <!-- Standing threads explanation -->
+    <div class="max-w-reading">
+      <p class="text-lg text-ink-soft leading-relaxed">
+        Design and customer proximity run through all four phases as standing
+        threads, not one-time gates. Design is never "started" at ticket assignment.
+        Customer contact is a calendar commitment with defined minimums per phase.
+        The PDLC governs initiative-level work; SDLC runs inside Build.
+      </p>
+    </div>
+  </section>
 
-  <p>
-    <strong>Invest, Iterate, or Deprecate decisions happen on a defined cadence,
-    documented, with feed-forward to Discover.</strong> Every significant initiative gets
-    a formal decision. Features without decisions don't accumulate silently into
-    maintenance burden.
-  </p>
+  <!-- =============================== -->
+  <!-- THREE NON-NEGOTIABLES (3-pillar) -->
+  <!-- =============================== -->
+  <section class="bg-cream-warm/40 border-y border-ink/10 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-10">
+      <p class="eyebrow mb-3">The non-negotiables</p>
+      <h2 class="font-display text-display-md text-ink leading-tight max-w-[26ch] mb-16">
+        Three things named non-negotiable from day one.
+      </h2>
 
-  <h2>DACI as the ownership model</h2>
+      <div class="pillar-grid">
 
-  <p>
-    For each phase, I defined who is the Driver, Approver, Contributor, and Informed. The
-    pattern adapts at the team level (each team revisits its charter with KPIs, personas,
-    target users, and team-specific DACI), but the overall structure is fixed. The
-    discipline of named ownership at each gate is what turned the framework from a process
-    document into a working operating model.
-  </p>
+        <!-- Triad -->
+        <div class="pillar">
+          <div class="pillar-icon">
+            <!-- Triangle / triad symbol -->
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <path d="M40 12 L 68 60 L 12 60 Z" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+              <circle cx="40" cy="12" r="5" fill="#02101D"/>
+              <circle cx="68" cy="60" r="5" fill="#02101D"/>
+              <circle cx="12" cy="60" r="5" fill="#02101D"/>
+              <!-- Connecting hatching -->
+              <line x1="40" y1="40" x2="40" y2="50" stroke="#F4EFE5" stroke-width="1.5"/>
+              <line x1="32" y1="44" x2="48" y2="44" stroke="#F4EFE5" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="pillar-meta">
+            <p class="eyebrow mb-3">Non-negotiable one</p>
+            <h3 class="font-display text-3xl text-ink leading-tight">
+              Triad from Discover, not Plan.
+            </h3>
+          </div>
+          <div class="pillar-body">
+            <p class="text-ink-soft leading-relaxed">
+              Technical feasibility and design implications shape the problem brief
+              itself. Loops back from Measure re-engage the triad before returning
+              to Build. The single change that did the most to fix Define as a
+              black hole.
+            </p>
+          </div>
+          <div class="pillar-tagline"></div>
+        </div>
 
-  <h2>The structural commitments</h2>
+        <!-- Measurement -->
+        <div class="pillar">
+          <div class="pillar-icon">
+            <!-- Ruler/measurement -->
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="32" width="60" height="16" fill="#E13D0F" stroke="#02101D" stroke-width="3"/>
+              <line x1="18" y1="32" x2="18" y2="40" stroke="#02101D" stroke-width="2.5"/>
+              <line x1="26" y1="32" x2="26" y2="38" stroke="#02101D" stroke-width="2"/>
+              <line x1="34" y1="32" x2="34" y2="40" stroke="#02101D" stroke-width="2.5"/>
+              <line x1="42" y1="32" x2="42" y2="38" stroke="#02101D" stroke-width="2"/>
+              <line x1="50" y1="32" x2="50" y2="40" stroke="#02101D" stroke-width="2.5"/>
+              <line x1="58" y1="32" x2="58" y2="38" stroke="#02101D" stroke-width="2"/>
+              <line x1="66" y1="32" x2="66" y2="40" stroke="#02101D" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <div class="pillar-meta">
+            <p class="eyebrow-voice mb-3">Non-negotiable two</p>
+            <h3 class="font-display text-3xl text-ink leading-tight">
+              Measurement is the spine.
+            </h3>
+          </div>
+          <div class="pillar-body">
+            <p class="text-ink-soft leading-relaxed">
+              Every initiative entering Plan has defined success metrics, a
+              dashboard plan, and a post-launch review scheduled. Dashboards exist
+              at launch. Analytics is engaged at Plan, not at launch.
+            </p>
+          </div>
+          <div class="pillar-tagline">
+            <p class="font-display text-2xl italic text-orange">"Close the loop."</p>
+          </div>
+        </div>
 
-  <p>
-    A framework is only as strong as the infrastructure supporting it. Alongside the PDLC
-    rollout, I named four parallel commitments leadership had to make for the operating
-    model to actually work.
-  </p>
+        <!-- Decisions -->
+        <div class="pillar">
+          <div class="pillar-icon">
+            <!-- Stamp / decision -->
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 14 L 50 14 L 56 36 L 24 36 Z" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+              <rect x="18" y="36" width="44" height="10" fill="#02101D"/>
+              <rect x="14" y="50" width="52" height="6" fill="#E13D0F" stroke="#02101D" stroke-width="2.5"/>
+              <rect x="10" y="58" width="60" height="6" fill="#02101D"/>
+            </svg>
+          </div>
+          <div class="pillar-meta">
+            <p class="eyebrow mb-3">Non-negotiable three</p>
+            <h3 class="font-display text-3xl text-ink leading-tight">
+              Decisions on a defined cadence.
+            </h3>
+          </div>
+          <div class="pillar-body">
+            <p class="text-ink-soft leading-relaxed">
+              Every significant initiative gets a formal Invest, Iterate, or
+              Deprecate decision. Features without decisions don't accumulate
+              silently into maintenance burden. The loop closes with a real call.
+            </p>
+          </div>
+          <div class="pillar-tagline"></div>
+        </div>
 
-  <p>
-    <strong>A single source of truth for specs.</strong> Designate one system as
-    authoritative. Migration-forward policy. New initiatives use it from day one.
-  </p>
+      </div>
+    </div>
+  </section>
 
-  <p>
-    <strong>A functioning deprecation process.</strong> Quarterly feature health reviews.
-    Defined approval path for Reinvest, Maintain, or Deprecate decisions. Customer notice,
-    migration path, and sunset date for every deprecation. Without this, AI-accelerated
-    build would only compound the maintenance burden.
-  </p>
+  <!-- =============================== -->
+  <!-- Structural commitments -->
+  <!-- =============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <p class="eyebrow mb-3">The infrastructure</p>
+    <h2 class="font-display text-display-md text-ink leading-tight max-w-[28ch] mb-16">
+      Four commitments leadership had to make.
+    </h2>
 
-  <p>
-    <strong>Research access infrastructure.</strong> Weekly customer touchpoint cadence as
-    a calendar commitment, not a best practice. Named research coordinator per team. A
-    searchable, accessible repository of insights for the whole product organization.
-  </p>
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+      <div class="lesson-card">
+        <div class="linocut-icon">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="20" width="52" height="44" fill="#E13D0F" stroke="#02101D" stroke-width="3"/>
+            <rect x="14" y="20" width="52" height="10" fill="#02101D"/>
+            <circle cx="40" cy="46" r="10" fill="#F4EFE5" stroke="#02101D" stroke-width="2.5"/>
+            <circle cx="40" cy="46" r="3" fill="#02101D"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl text-ink mb-4 leading-tight">A single source of truth for specs.</h3>
+        <p class="text-ink-soft leading-relaxed">
+          Designate one system as authoritative. Migration-forward policy. New
+          initiatives use it from day one.
+        </p>
+      </div>
 
-  <p>
-    <strong>A standing health review.</strong> A regular leadership forum on whether gates
-    are being respected, measurement is happening, teams are stuck, and friction is
-    surfacing. Not a status meeting. The mechanism that keeps the framework from
-    ossifying.
-  </p>
+      <div class="lesson-card">
+        <div class="linocut-icon">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="22" width="52" height="44" fill="#E13D0F" stroke="#02101D" stroke-width="3"/>
+            <line x1="14" y1="34" x2="66" y2="34" stroke="#02101D" stroke-width="2.5"/>
+            <line x1="22" y1="42" x2="50" y2="42" stroke="#F4EFE5" stroke-width="2"/>
+            <line x1="22" y1="48" x2="58" y2="48" stroke="#F4EFE5" stroke-width="2"/>
+            <line x1="22" y1="54" x2="42" y2="54" stroke="#F4EFE5" stroke-width="2"/>
+            <line x1="26" y1="14" x2="26" y2="26" stroke="#02101D" stroke-width="2.5"/>
+            <line x1="54" y1="14" x2="54" y2="26" stroke="#02101D" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl text-ink mb-4 leading-tight">A functioning deprecation process.</h3>
+        <p class="text-ink-soft leading-relaxed">
+          Quarterly feature health reviews. Defined approval path for Reinvest,
+          Maintain, or Deprecate decisions. Customer notice and migration paths
+          for sunset.
+        </p>
+      </div>
 
-  <h2>Why this case study</h2>
+      <div class="lesson-card">
+        <div class="linocut-icon">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="30" r="12" fill="#E13D0F" stroke="#02101D" stroke-width="3"/>
+            <path d="M22 64 C 22 52, 30 46, 40 46 C 50 46, 58 52, 58 64 Z" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+            <circle cx="40" cy="30" r="4" fill="#F4EFE5"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl text-ink mb-4 leading-tight">Research access infrastructure.</h3>
+        <p class="text-ink-soft leading-relaxed">
+          Weekly customer touchpoint cadence as a calendar commitment. Named
+          research coordinator per team. A searchable, accessible repository of
+          insights.
+        </p>
+      </div>
 
-  <p>
-    Operating model design is the work most design leaders never get to do, and the work
-    that most differentiates a Sr. Director from a VP. It's not about choosing a process
-    framework. It's about diagnosing the structural reason a company keeps shipping things
-    it can't measure, designing the cross-functional architecture that fixes it, and
-    getting product, engineering, and PMM to actually adopt it.
-  </p>
+      <div class="lesson-card">
+        <div class="linocut-icon">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="26" fill="#E13D0F" stroke="#02101D" stroke-width="3"/>
+            <line x1="40" y1="14" x2="40" y2="40" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
+            <line x1="40" y1="40" x2="56" y2="48" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="40" cy="40" r="3" fill="#F4EFE5"/>
+            <line x1="40" y1="6" x2="40" y2="10" stroke="#02101D" stroke-width="2.5"/>
+            <line x1="40" y1="70" x2="40" y2="74" stroke="#02101D" stroke-width="2.5"/>
+            <line x1="6" y1="40" x2="10" y2="40" stroke="#02101D" stroke-width="2.5"/>
+            <line x1="70" y1="40" x2="74" y2="40" stroke="#02101D" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl text-ink mb-4 leading-tight">A standing health review.</h3>
+        <p class="text-ink-soft leading-relaxed">
+          A regular leadership forum on whether gates are being respected,
+          measurement is happening, teams are stuck. Not a status meeting. The
+          mechanism that keeps the framework from ossifying.
+        </p>
+      </div>
+    </div>
+  </section>
 
-  <p>
-    Design upstream into discovery. Measurement as the spine. The loop closed by a real
-    decision. That's the leverage.
-  </p>
-</CaseStudy>
+  <!-- =============================== -->
+  <!-- Meta-point -->
+  <!-- =============================== -->
+  <section class="grid-backdrop overflow-hidden border-b border-ink/10">
+    <div class="grid-backdrop-band-top"></div>
+    <div class="grid-backdrop-band-bottom"></div>
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-28 md:py-36 relative z-10">
+      <p class="eyebrow-voice mb-8">The meta-point</p>
+
+      <h2 class="font-display text-ink leading-[0.95] tracking-tight mb-12" style="font-size: clamp(2.5rem, 6vw, 5.5rem);">
+        Operating model design is the work most design leaders never get to do.<br/>
+        <span class="text-orange">And the work that most differentiates a Sr. Director from a VP.</span>
+      </h2>
+
+      <div class="max-w-3xl">
+        <p class="text-xl text-ink-soft leading-relaxed">
+          It's not about choosing a process framework. It's about diagnosing the
+          structural reason a company keeps shipping things it can't measure,
+          designing the cross-functional architecture that fixes it, and getting
+          product, engineering, and PMM to actually adopt it. Design upstream into
+          discovery. Measurement as the spine. The loop closed by a real decision.
+          That's the leverage.
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>

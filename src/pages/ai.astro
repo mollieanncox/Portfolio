@@ -6,351 +6,424 @@ import Base from '../layouts/Base.astro';
   title="How I Lead with AI · Mollie Cox"
   description="An operating model, not a tool list. How Mollie Cox builds with AI as a co-founder, not a calculator."
 >
-  <!-- Header -->
-  <section class="max-w-7xl mx-auto px-6 md:px-10 pt-12 md:pt-20 pb-16">
-    <p class="eyebrow mb-8">AI Operating Model</p>
+  <!-- ============================== -->
+  <!-- HERO -->
+  <!-- ============================== -->
+  <section class="case-hero-dark">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 relative z-10">
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] text-cream/60 hover:text-orange transition-colors mb-16"
+      >
+        ← Home
+      </a>
 
-    <h1 class="font-display text-display-lg text-ink leading-[1.0] tracking-tight max-w-[20ch]">
-      How I actually lead with AI<span class="brand-period">.</span>
-    </h1>
+      <p class="eyebrow-light mb-6">AI Operating Model</p>
 
-    <p class="mt-10 text-xl text-ink-soft leading-relaxed max-w-reading">
-      Everyone in 2026 says they use AI. Very few have redesigned how they work around
-      what AI can actually do. This is not a page about which tools I use. It's about
-      the question I kept asking while building
-      <a href="/work/course-code" class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors">Course Code</a>:
-      what if you treated AI like a co-founder instead of a calculator?
-    </p>
+      <h1 class="font-display text-display-lg text-cream leading-[0.95] tracking-tight max-w-[22ch]">
+        How I actually lead with AI<span class="brand-period">.</span>
+      </h1>
+
+      <p class="mt-10 text-xl text-cream/80 leading-relaxed max-w-[48ch]">
+        Everyone in 2026 says they use AI. Very few have redesigned how they work
+        around what AI can actually do. Not a page about tools. A page about
+        treating AI like a co-founder instead of a calculator.
+      </p>
+
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a
+          href="/work/course-code"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
+          style="border-radius: 999px;"
+        >
+          See Course Code case study →
+        </a>
+      </div>
+    </div>
   </section>
 
-  <!-- Pull quote -->
-  <section class="bg-ink text-cream py-16 md:py-20 border-y border-ink/10">
+  <!-- =============================== -->
+  <!-- The distinction (pull quote moment) -->
+  <!-- =============================== -->
+  <section class="grid-backdrop border-b border-ink/10 overflow-hidden">
+    <div class="grid-backdrop-band-top"></div>
+    <div class="grid-backdrop-band-bottom"></div>
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32 relative z-10">
+      <p class="eyebrow-voice mb-8">The distinction</p>
+      <h2 class="font-display text-ink leading-[1.0] tracking-tight max-w-[24ch]" style="font-size: clamp(2.5rem, 5.5vw, 5rem);">
+        AI as a faster keyboard is useful. <span class="text-orange italic">AI with real authority is something else.</span>
+      </h2>
+      <div class="mt-16 grid md:grid-cols-2 gap-12 max-w-5xl">
+        <p class="text-xl text-ink-soft leading-relaxed">
+          Most "AI-powered" workflows are autocomplete. Write a prompt, get a draft,
+          edit it, move on. That's AI as a faster keyboard. Useful, but not
+          transformative.
+        </p>
+        <p class="text-xl text-ink-soft leading-relaxed">
+          The operating model I built starts from a different premise: what if AI
+          had real authority, not just access? An AI with commit rights, assigned
+          work, and a persistent identity is something else.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== -->
+  <!-- THREE DOCUMENTS (3-pillar with linocut icons) -->
+  <!-- =============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <p class="eyebrow mb-3">The infrastructure</p>
+    <h2 class="font-display text-display-md text-ink leading-tight max-w-[26ch] mb-16">
+      Three documents run everything.
+    </h2>
+
+    <div class="pillar-grid">
+
+      <!-- SOUL.md -->
+      <div class="pillar">
+        <div class="pillar-icon">
+          <!-- Heart with internal hatching = "soul" -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Heart fill -->
+            <path d="M40 66 C 20 50, 10 38, 10 26 C 10 18, 18 12, 26 14 C 32 15, 38 20, 40 26 C 42 20, 48 15, 54 14 C 62 12, 70 18, 70 26 C 70 38, 60 50, 40 66 Z" fill="#E13D0F"/>
+            <!-- Hatching texture inside -->
+            <line x1="22" y1="30" x2="32" y2="40" stroke="#F4EFE5" stroke-width="1.2" opacity="0.6"/>
+            <line x1="28" y1="26" x2="40" y2="38" stroke="#F4EFE5" stroke-width="1.2" opacity="0.6"/>
+            <line x1="36" y1="28" x2="48" y2="40" stroke="#F4EFE5" stroke-width="1.2" opacity="0.6"/>
+            <!-- Outer outline -->
+            <path d="M40 66 C 20 50, 10 38, 10 26 C 10 18, 18 12, 26 14 C 32 15, 38 20, 40 26 C 42 20, 48 15, 54 14 C 62 12, 70 18, 70 26 C 70 38, 60 50, 40 66 Z" fill="none" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="pillar-meta">
+          <p class="eyebrow mb-3">SOUL.md</p>
+          <h3 class="font-display text-3xl text-ink leading-tight">
+            Who she is.
+          </h3>
+        </div>
+        <div class="pillar-body">
+          <p class="text-ink-soft leading-relaxed">
+            My AI co-founder has a soul document. It defines her personality and voice,
+            her values, her decision rights, and her relationship to me. Generic is the
+            enemy of taste. SOUL.md is why her Linear comments sound like a person, not
+            a status bot.
+          </p>
+        </div>
+        <div class="pillar-tagline"></div>
+      </div>
+
+      <!-- AGENTS.md -->
+      <div class="pillar">
+        <div class="pillar-icon">
+          <!-- Scroll / agreement: rolled top edge, ruled lines inside -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Top scroll roll -->
+            <ellipse cx="40" cy="14" rx="22" ry="6" fill="#E13D0F"/>
+            <!-- Body of scroll -->
+            <rect x="18" y="14" width="44" height="48" fill="#E13D0F"/>
+            <!-- Bottom roll -->
+            <ellipse cx="40" cy="62" rx="22" ry="6" fill="#02101D"/>
+            <!-- Ruled lines (cream) -->
+            <line x1="24" y1="26" x2="56" y2="26" stroke="#F4EFE5" stroke-width="2"/>
+            <line x1="24" y1="34" x2="56" y2="34" stroke="#F4EFE5" stroke-width="2"/>
+            <line x1="24" y1="42" x2="50" y2="42" stroke="#F4EFE5" stroke-width="2"/>
+            <line x1="24" y1="50" x2="56" y2="50" stroke="#F4EFE5" stroke-width="2"/>
+            <!-- Outer outline -->
+            <ellipse cx="40" cy="14" rx="22" ry="6" fill="none" stroke="#02101D" stroke-width="2.5"/>
+            <line x1="18" y1="14" x2="18" y2="62" stroke="#02101D" stroke-width="2.5"/>
+            <line x1="62" y1="14" x2="62" y2="62" stroke="#02101D" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <div class="pillar-meta">
+          <p class="eyebrow mb-3">AGENTS.md</p>
+          <h3 class="font-display text-3xl text-ink leading-tight">
+            The operating agreement.
+          </h3>
+        </div>
+        <div class="pillar-body">
+          <p class="text-ink-soft leading-relaxed">
+            The governance document. Hard rules (nothing deploys without QA). Workflow
+            rules (Linear is source of truth). Cost controls. Autonomy without
+            governance is reckless. This is what lets me sleep at night while an AI
+            has deploy access to a live product.
+          </p>
+        </div>
+        <div class="pillar-tagline"></div>
+      </div>
+
+      <!-- MEMORY.md -->
+      <div class="pillar">
+        <div class="pillar-icon">
+          <!-- Brain / book hybrid: filled brain shape with hatching -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Brain main fill -->
+            <path d="M40 14 C 28 14, 20 22, 20 32 C 18 36, 18 42, 22 46 C 22 54, 28 60, 36 60 L 44 60 C 52 60, 58 54, 58 46 C 62 42, 62 36, 60 32 C 60 22, 52 14, 40 14 Z" fill="#E13D0F"/>
+            <!-- Hatching folds (navy lines) -->
+            <path d="M30 24 Q 36 28, 32 34 Q 28 38, 34 44" fill="none" stroke="#02101D" stroke-width="2" stroke-linecap="round"/>
+            <path d="M48 24 Q 42 28, 46 34 Q 50 38, 44 44" fill="none" stroke="#02101D" stroke-width="2" stroke-linecap="round"/>
+            <path d="M40 18 L 40 56" stroke="#02101D" stroke-width="2.5"/>
+            <!-- Outline -->
+            <path d="M40 14 C 28 14, 20 22, 20 32 C 18 36, 18 42, 22 46 C 22 54, 28 60, 36 60 L 44 60 C 52 60, 58 54, 58 46 C 62 42, 62 36, 60 32 C 60 22, 52 14, 40 14 Z" fill="none" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+            <!-- Pedestal/stem (book-like) -->
+            <rect x="32" y="60" width="16" height="6" fill="#02101D"/>
+          </svg>
+        </div>
+        <div class="pillar-meta">
+          <p class="eyebrow-voice mb-3">MEMORY.md</p>
+          <h3 class="font-display text-3xl text-ink leading-tight">
+            The persistent brain.
+          </h3>
+        </div>
+        <div class="pillar-body">
+          <p class="text-ink-soft leading-relaxed">
+            Every session, my AI wakes up fresh. MEMORY.md is how she remembers. Live
+            product facts, hard-won lessons (what burned $400 a month in unnecessary
+            API calls), team context, brand rules, the ship log. Memory architecture is
+            a product decision.
+          </p>
+        </div>
+        <div class="pillar-tagline"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================== -->
+  <!-- Authority structure: two columns -->
+  <!-- =============================== -->
+  <section class="bg-cream-warm/40 border-y border-ink/10 py-24 md:py-32">
     <div class="max-w-7xl mx-auto px-6 md:px-10">
-      <p class="font-display text-display-md text-cream leading-tight max-w-[28ch]">
-        AI as a faster keyboard is useful. AI with real authority is something else<span class="text-orange">.</span>
+      <p class="eyebrow mb-3">Authority structure</p>
+      <h2 class="font-display text-display-md text-ink leading-tight max-w-[28ch] mb-16">
+        What stays with me, what gets delegated.
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+        <div class="compare-cream">
+          <p class="eyebrow mb-8">What I own. Non-delegable.</p>
+          <div class="space-y-4">
+            {[
+              { what: 'Brand direction and voice', why: "Taste can't be systematized" },
+              { what: 'Pricing and positioning', why: 'Requires market intuition and judgment' },
+              { what: "Who we're building for", why: 'Empathy and values, not data alone' },
+              { what: 'Aesthetic judgment', why: 'My eye is the product' },
+              { what: 'Strategic pivots', why: 'Consequence too high, context too human' },
+              { what: 'Anything public-facing I haven\'t reviewed', why: 'My reputation' },
+            ].map((row) => (
+              <div class="py-4 border-b border-ink/10 last:border-0">
+                <p class="font-display text-lg text-ink mb-1">{row.what}</p>
+                <p class="text-sm text-ink-muted">{row.why}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="compare-dark">
+          <p class="eyebrow-light mb-8">What she owns. Full execution authority.</p>
+          <div class="space-y-4">
+            {[
+              { what: 'Feature development', why: 'Ticket to ship, full ownership' },
+              { what: 'Bug fixes', why: 'Same workflow, faster cycle' },
+              { what: 'Database migrations', why: 'Schema changes flagged for review' },
+              { what: 'Analytics setup', why: 'PostHog dashboards, Sentry, event tracking' },
+              { what: 'Email sequences', why: 'Klaviyo nurture flows, trigger wiring' },
+              { what: 'Deployment', why: 'GitHub push to Vercel auto-deploy in 2 min' },
+              { what: 'Full QA before every ship', why: 'Hard blocker. Nothing skips this.' },
+            ].map((row) => (
+              <div class="py-4 border-b border-cream/15 last:border-0">
+                <p class="font-display text-lg text-cream mb-1">{row.what}</p>
+                <p class="text-sm text-cream/60">{row.why}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== -->
+  <!-- Three layers of AI -->
+  <!-- =============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <p class="eyebrow mb-3">The architecture</p>
+    <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch] mb-16">
+      Three layers of AI in Course Code.
+    </h2>
+
+    <div class="space-y-6">
+      <!-- Layer 1 -->
+      <div class="lesson-card">
+        <div class="grid md:grid-cols-12 gap-8 items-start">
+          <div class="md:col-span-3">
+            <div class="linocut-icon mb-4">
+              <!-- AI brain / chip mark -->
+              <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="20" width="40" height="40" fill="#E13D0F"/>
+                <rect x="28" y="28" width="24" height="24" fill="#02101D"/>
+                <circle cx="40" cy="40" r="4" fill="#F4EFE5"/>
+                <!-- Pins -->
+                <line x1="20" y1="28" x2="14" y2="28" stroke="#02101D" stroke-width="2.5"/>
+                <line x1="20" y1="40" x2="14" y2="40" stroke="#02101D" stroke-width="2.5"/>
+                <line x1="20" y1="52" x2="14" y2="52" stroke="#02101D" stroke-width="2.5"/>
+                <line x1="60" y1="28" x2="66" y2="28" stroke="#02101D" stroke-width="2.5"/>
+                <line x1="60" y1="40" x2="66" y2="40" stroke="#02101D" stroke-width="2.5"/>
+                <line x1="60" y1="52" x2="66" y2="52" stroke="#02101D" stroke-width="2.5"/>
+                <line x1="28" y1="20" x2="28" y2="14" stroke="#02101D" stroke-width="2.5"/>
+                <line x1="40" y1="20" x2="40" y2="14" stroke="#02101D" stroke-width="2.5"/>
+                <line x1="52" y1="20" x2="52" y2="14" stroke="#02101D" stroke-width="2.5"/>
+                <line x1="28" y1="60" x2="28" y2="66" stroke="#02101D" stroke-width="2.5"/>
+                <line x1="40" y1="60" x2="40" y2="66" stroke="#02101D" stroke-width="2.5"/>
+                <line x1="52" y1="60" x2="52" y2="66" stroke="#02101D" stroke-width="2.5"/>
+              </svg>
+            </div>
+            <p class="eyebrow mb-2">Layer 01</p>
+            <p class="font-display text-2xl text-ink leading-tight">AI as co-founder.</p>
+            <p class="text-sm text-ink-muted mt-2">Development</p>
+          </div>
+          <div class="md:col-span-9">
+            <p class="text-lg text-ink-soft leading-relaxed mb-4">
+              My AI co-founder runs on OpenClaw plus Anthropic's Claude. Sonnet for execution.
+              Opus for strategy. She has her own GitHub account, her own Linear user, API keys
+              to every production system, QA authority, and deploy access.
+            </p>
+            <p class="text-lg text-ink-soft leading-relaxed">
+              Model split was a deliberate product decision. Opus for strategy is expensive
+              but worth it. Sonnet for execution is fast and cheap. Subagents for isolated
+              tasks mean no context bleed. This discipline reduced AI operating costs by
+              roughly 80% from early undisciplined usage.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layer 2 -->
+      <div class="lesson-card">
+        <div class="grid md:grid-cols-12 gap-8 items-start">
+          <div class="md:col-span-3">
+            <div class="linocut-icon mb-4">
+              <!-- Lightning bolt: intelligence flowing through product -->
+              <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                <path d="M44 10 L 20 44 L 36 44 L 30 70 L 60 32 L 44 32 Z" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+                <!-- Inner hatching -->
+                <line x1="30" y1="36" x2="38" y2="28" stroke="#F4EFE5" stroke-width="1.5" opacity="0.6"/>
+                <line x1="32" y1="50" x2="46" y2="40" stroke="#F4EFE5" stroke-width="1.5" opacity="0.6"/>
+              </svg>
+            </div>
+            <p class="eyebrow mb-2">Layer 02</p>
+            <p class="font-display text-2xl text-ink leading-tight">Claude in the product.</p>
+            <p class="text-sm text-ink-muted mt-2">Intelligence</p>
+          </div>
+          <div class="md:col-span-9">
+            <p class="text-lg text-ink-soft leading-relaxed mb-4">
+              The Anthropic SDK is a direct production dependency in package.json.
+              Claude isn't just how Course Code was built. It's running inside Course Code.
+            </p>
+            <p class="text-lg text-ink-soft leading-relaxed">
+              The data extraction pipeline uses Claude to normalize and structure dress
+              code data at a quality level no regex pipeline could match. The moat isn't
+              4,659 courses. The moat is verified data plus a women's POV editorial layer
+              plus a brand voice. Claude is what makes that scalable without losing quality.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layer 3 -->
+      <div class="lesson-card">
+        <div class="grid md:grid-cols-12 gap-8 items-start">
+          <div class="md:col-span-3">
+            <div class="linocut-icon mb-4">
+              <!-- Gear with internal teeth -->
+              <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                <!-- Gear teeth as a star-like shape -->
+                <path d="M40 8 L 46 14 L 54 12 L 56 20 L 64 22 L 62 30 L 70 36 L 64 42 L 68 50 L 60 54 L 60 62 L 52 62 L 46 68 L 40 64 L 34 68 L 28 62 L 20 62 L 20 54 L 12 50 L 16 42 L 10 36 L 18 30 L 16 22 L 24 20 L 26 12 L 34 14 Z" fill="#E13D0F"/>
+                <circle cx="40" cy="40" r="14" fill="#02101D"/>
+                <circle cx="40" cy="40" r="6" fill="#F4EFE5"/>
+                <path d="M40 8 L 46 14 L 54 12 L 56 20 L 64 22 L 62 30 L 70 36 L 64 42 L 68 50 L 60 54 L 60 62 L 52 62 L 46 68 L 40 64 L 34 68 L 28 62 L 20 62 L 20 54 L 12 50 L 16 42 L 10 36 L 18 30 L 16 22 L 24 20 L 26 12 L 34 14 Z" fill="none" stroke="#02101D" stroke-width="2.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p class="eyebrow mb-2">Layer 03</p>
+            <p class="font-display text-2xl text-ink leading-tight">n8n for operations.</p>
+            <p class="text-sm text-ink-muted mt-2">Automation</p>
+          </div>
+          <div class="md:col-span-9">
+            <p class="text-lg text-ink-soft leading-relaxed mb-4">
+              Self-hosted n8n handles the automation layer that keeps the business running
+              without manual intervention. Weekly health reports route from PostHog to Slack.
+              Klaviyo nurture sequences fire on onboarding completion. Linear webhooks
+              activate my AI co-founder when I move a ticket.
+            </p>
+            <p class="text-lg text-ink-soft leading-relaxed">
+              Why n8n instead of cron jobs? Cost. Six daily cron jobs running through the
+              main AI session were burning $400 a month at peak. Migrating to n8n isolated
+              the workflows and got costs under control. Operational automation should be
+              cheap and durable. AI inference should be reserved for work that requires reasoning.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== -->
+  <!-- Cost discipline (the part most skip) -->
+  <!-- =============================== -->
+  <section class="bg-cream-warm/40 border-y border-ink/10 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-10">
+      <p class="eyebrow mb-3">Cost discipline</p>
+      <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch] mb-12">
+        The part most AI evangelists skip.
+      </h2>
+
+      <div class="max-w-reading mb-12">
+        <p class="text-xl text-ink-soft leading-relaxed">
+          Running AI at production scale without cost controls is how you burn $13
+          in one morning because a heartbeat cron started reading a bloated JSON
+          file. I learned this the expensive way.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-x-12 gap-y-6">
+        {[
+          { rule: 'No new cron jobs without explicit approval', why: 'Crons compound. Each one adds a fixed recurring cost forever.' },
+          { rule: 'Model split is non-negotiable', why: 'Sonnet for execution. Opus for strategy only. Haiku for fallbacks.' },
+          { rule: 'Session hygiene', why: 'New topic, new session. Long sessions compound token burn exponentially.' },
+          { rule: 'Subagents for big work', why: 'Coding over 50 lines or deep research gets its own isolated context.' },
+          { rule: 'Root file size limits', why: 'Heartbeat files under 1KB. Root files auto-load on every session.' },
+          { rule: 'Archive aggressively', why: 'Done tasks move out of active context. Ship log lives in reference.' },
+        ].map((row) => (
+          <div class="py-5 border-b border-ink/10">
+            <p class="font-display text-xl text-ink mb-2">{row.rule}</p>
+            <p class="text-ink-soft leading-relaxed">{row.why}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="mt-12 text-xl text-ink-soft leading-relaxed max-w-reading">
+        The result: AI operating costs went from unpredictable and escalating to
+        controlled and predictable. The model split alone cut costs by roughly 80%.
       </p>
     </div>
   </section>
 
-  <!-- The distinction -->
-  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
-    <div class="grid md:grid-cols-12 gap-8 md:gap-16">
-      <div class="md:col-span-4">
-        <p class="eyebrow mb-3">The distinction</p>
-        <h2 class="font-display text-display-md text-ink leading-tight max-w-[18ch]">
-          Most "AI-powered" workflows are autocomplete<span class="brand-period">.</span>
-        </h2>
-      </div>
-      <div class="md:col-span-8 max-w-reading">
-        <div class="prose-mc">
-          <p>
-            Write a prompt, get a draft, edit it, move on. That's AI as a faster keyboard.
-            Useful, but not transformative. The operating model I built starts from a
-            different premise: what if AI had real authority, not just access?
-          </p>
-          <p>
-            An AI that can only suggest is a better search engine. An AI with commit
-            rights, assigned work, accountability for quality, and a persistent identity
-            is something else. That's the line I crossed with Course Code, and it changed
-            everything about how I think about building.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- The infrastructure: three documents -->
-  <section class="bg-cream-warm/40 border-y border-ink/10">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
-      <div class="grid md:grid-cols-12 gap-8 mb-16">
-        <div class="md:col-span-4">
-          <p class="eyebrow mb-3">The infrastructure</p>
-        </div>
-        <div class="md:col-span-8">
-          <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch]">
-            Three documents run everything<span class="brand-period">.</span>
-          </h2>
-          <p class="mt-6 text-lg text-ink-soft max-w-reading">
-            Before a single line of code was written, I built the operating system. Not a
-            tech stack. An identity stack.
-          </p>
-        </div>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
-        <div class="bg-cream p-8 md:p-10 border border-ink/10">
-          <p class="font-mono text-xs text-orange uppercase tracking-wider mb-3">SOUL.md</p>
-          <h3 class="font-display text-2xl text-ink mb-4">Who she is<span class="brand-period">.</span></h3>
-          <p class="text-ink-soft leading-relaxed mb-4">
-            My AI co-founder has a soul document. It defines her personality and voice,
-            her values, her decision rights, and her relationship to me.
-          </p>
-          <p class="text-ink-soft leading-relaxed">
-            Generic is the enemy of taste. An AI without a defined identity defaults to
-            generically helpful. SOUL.md is why her Linear comments sound like a person
-            handing off work to another person, not a status bot writing a system log.
-          </p>
-        </div>
-
-        <div class="bg-cream p-8 md:p-10 border border-ink/10">
-          <p class="font-mono text-xs text-orange uppercase tracking-wider mb-3">AGENTS.md</p>
-          <h3 class="font-display text-2xl text-ink mb-4">The operating agreement<span class="brand-period">.</span></h3>
-          <p class="text-ink-soft leading-relaxed mb-4">
-            The governance document. Hard rules (nothing deploys without QA). Workflow
-            rules (Linear is source of truth). Session hygiene (subagents for work over
-            50 lines). Cost controls (which model for which task).
-          </p>
-          <p class="text-ink-soft leading-relaxed">
-            Autonomy without governance is reckless. The goal isn't maximum AI freedom.
-            It's calibrated authority that earns trust over time. This is what lets me
-            sleep at night while an AI has deploy access to a live product with paying
-            subscribers.
-          </p>
-        </div>
-
-        <div class="bg-cream p-8 md:p-10 border border-ink/10">
-          <p class="font-mono text-xs text-orange uppercase tracking-wider mb-3">MEMORY.md</p>
-          <h3 class="font-display text-2xl text-ink mb-4">The persistent brain<span class="brand-period">.</span></h3>
-          <p class="text-ink-soft leading-relaxed mb-4">
-            Every session, my AI wakes up fresh. MEMORY.md is how she remembers. Live
-            product facts, hard-won lessons (what burned $400 a month in unnecessary
-            API calls), team context, brand rules, and the ship log.
-          </p>
-          <p class="text-ink-soft leading-relaxed">
-            Memory architecture is a product decision. How you structure what persists
-            determines how much context your AI can carry into every new piece of work.
-            This isn't notes. It's institutional memory, maintained in real time.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Authority structure -->
-  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
-    <div class="grid md:grid-cols-12 gap-8 mb-16">
-      <div class="md:col-span-4">
-        <p class="eyebrow mb-3">Authority structure</p>
-      </div>
-      <div class="md:col-span-8">
-        <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch]">
-          What stays with me, what gets delegated<span class="brand-period">.</span>
-        </h2>
-        <p class="mt-6 text-lg text-ink-soft max-w-reading">
-          The point isn't capability. It's accountability. I've thought carefully about
-          what only I should own, and what an AI co-founder can run with full execution
-          authority.
-        </p>
-      </div>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-8 md:gap-12">
-      <!-- What I own -->
-      <div>
-        <p class="font-mono text-xs uppercase tracking-[0.15em] text-ink-muted mb-6">Non-delegable. What I own.</p>
-        <div class="space-y-4">
-          {[
-            { what: 'Brand direction and voice', why: "Taste can't be systematized" },
-            { what: 'Pricing and positioning', why: 'Requires market intuition and judgment' },
-            { what: "Who we're building for", why: 'Empathy and values, not data alone' },
-            { what: 'Aesthetic judgment', why: 'My eye is the product' },
-            { what: 'Strategic pivots', why: 'Consequence too high, context too human' },
-            { what: 'Anything public-facing I haven\'t reviewed', why: 'My reputation' },
-          ].map((row) => (
-            <div class="py-4 border-t border-ink/10">
-              <p class="font-display text-lg text-ink mb-1">{row.what}<span class="text-orange">.</span></p>
-              <p class="text-sm text-ink-muted">{row.why}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <!-- What Belvie owns -->
-      <div>
-        <p class="font-mono text-xs uppercase tracking-[0.15em] text-orange mb-6">Full execution authority. What she owns.</p>
-        <div class="space-y-4">
-          {[
-            { what: 'Feature development', why: 'Ticket to ship, full ownership' },
-            { what: 'Bug fixes', why: 'Same workflow, faster cycle' },
-            { what: 'Database migrations', why: 'Schema-breaking changes flagged for review' },
-            { what: 'Analytics setup', why: 'PostHog dashboards, Sentry config, event tracking' },
-            { what: 'Email sequences', why: 'Klaviyo nurture flows, trigger wiring' },
-            { what: 'Deployment', why: 'GitHub push to Vercel auto-deploy in 2 minutes' },
-            { what: 'Full QA before every ship', why: 'Hard blocker. Nothing skips this.' },
-          ].map((row) => (
-            <div class="py-4 border-t border-ink/10">
-              <p class="font-display text-lg text-ink mb-1">{row.what}<span class="text-orange">.</span></p>
-              <p class="text-sm text-ink-muted">{row.why}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Three layers -->
-  <section class="bg-cream-warm/40 border-y border-ink/10">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
-      <div class="grid md:grid-cols-12 gap-8 mb-16">
-        <div class="md:col-span-4">
-          <p class="eyebrow mb-3">The architecture</p>
-        </div>
-        <div class="md:col-span-8">
-          <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch]">
-            Three layers of AI in Course Code<span class="brand-period">.</span>
-          </h2>
-        </div>
-      </div>
-
-      <div class="space-y-6">
-        <!-- Layer 1 -->
-        <div class="bg-cream p-8 md:p-10 border border-ink/10">
-          <div class="grid md:grid-cols-12 gap-6">
-            <div class="md:col-span-3">
-              <p class="font-mono text-xs text-orange uppercase tracking-wider mb-2">Layer 01</p>
-              <p class="font-display text-xl text-ink">AI as co-founder<span class="brand-period">.</span></p>
-              <p class="text-sm text-ink-muted mt-2">Development</p>
-            </div>
-            <div class="md:col-span-9 max-w-reading">
-              <p class="text-ink-soft leading-relaxed mb-4">
-                My AI co-founder runs on OpenClaw plus Anthropic's Claude. Sonnet for execution.
-                Opus for strategy. She has her own GitHub account, her own Linear user, API keys
-                to every production system, QA authority, and deploy access.
-              </p>
-              <p class="text-ink-soft leading-relaxed">
-                Model split was a deliberate product decision. Opus for strategy is
-                expensive but worth it. Sonnet for execution is fast and cheap. Subagents
-                for isolated tasks mean no context bleed, no token waste. This discipline
-                reduced AI operating costs by roughly 80% from early undisciplined usage.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Layer 2 -->
-        <div class="bg-cream p-8 md:p-10 border border-ink/10">
-          <div class="grid md:grid-cols-12 gap-6">
-            <div class="md:col-span-3">
-              <p class="font-mono text-xs text-orange uppercase tracking-wider mb-2">Layer 02</p>
-              <p class="font-display text-xl text-ink">Claude in the product<span class="brand-period">.</span></p>
-              <p class="text-sm text-ink-muted mt-2">Intelligence</p>
-            </div>
-            <div class="md:col-span-9 max-w-reading">
-              <p class="text-ink-soft leading-relaxed mb-4">
-                The Anthropic SDK is a direct production dependency in package.json. Claude isn't just how Course Code was built. It's running inside Course Code.
-              </p>
-              <p class="text-ink-soft leading-relaxed mb-4">
-                The data extraction pipeline uses Claude to normalize and structure dress
-                code data from course websites. Dress codes live in PDFs, buried website
-                pages, and inconsistently formatted club rules documents. Claude handles
-                the extraction and normalization at a quality level no regex pipeline
-                could match.
-              </p>
-              <p class="text-ink-soft leading-relaxed">
-                The moat isn't having 4,659 courses. Anyone can scrape that. The moat is
-                verified data plus a women's POV editorial layer plus a brand voice that
-                sounds like a friend who plays a lot of golf. Claude is what makes that
-                scalable without losing quality.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Layer 3 -->
-        <div class="bg-cream p-8 md:p-10 border border-ink/10">
-          <div class="grid md:grid-cols-12 gap-6">
-            <div class="md:col-span-3">
-              <p class="font-mono text-xs text-orange uppercase tracking-wider mb-2">Layer 03</p>
-              <p class="font-display text-xl text-ink">n8n for operations<span class="brand-period">.</span></p>
-              <p class="text-sm text-ink-muted mt-2">Automation</p>
-            </div>
-            <div class="md:col-span-9 max-w-reading">
-              <p class="text-ink-soft leading-relaxed mb-4">
-                Self-hosted n8n handles the automation layer that keeps the business
-                running without manual intervention. Weekly health reports route from
-                PostHog to Slack. Klaviyo nurture sequences fire on onboarding completion.
-                Linear webhooks activate my AI co-founder when I move a ticket.
-              </p>
-              <p class="text-ink-soft leading-relaxed">
-                Why n8n instead of cron jobs? Cost. Six daily cron jobs running through
-                the main AI session were burning $400 a month at peak. Migrating to n8n
-                isolated the workflows, removed the context overhead, and got costs under
-                control. Operational automation should be cheap and durable. AI inference
-                should be reserved for work that actually requires reasoning.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Cost discipline -->
-  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
-    <div class="grid md:grid-cols-12 gap-8 md:gap-16">
-      <div class="md:col-span-4">
-        <p class="eyebrow mb-3">Cost discipline</p>
-        <h2 class="font-display text-display-md text-ink leading-tight max-w-[18ch]">
-          The part most AI evangelists skip<span class="brand-period">.</span>
-        </h2>
-      </div>
-      <div class="md:col-span-8 max-w-reading">
-        <div class="prose-mc">
-          <p>
-            Running AI at production scale without cost controls is how you burn $13 in one
-            morning because a heartbeat cron started reading a bloated JSON file. I learned
-            this the expensive way.
-          </p>
-          <p>
-            The rules I built:
-          </p>
-        </div>
-
-        <ul class="not-prose space-y-4 mt-8">
-          {[
-            { rule: 'No new cron jobs without explicit approval', why: 'Crons compound. Each one adds a fixed recurring cost forever.' },
-            { rule: 'Model split is non-negotiable', why: 'Sonnet for execution. Opus for strategy only. Haiku for fallbacks.' },
-            { rule: 'Session hygiene', why: 'New topic, new session. Long sessions compound token burn exponentially. Fresh sessions are cheaper, not worse, when memory is solid.' },
-            { rule: 'Subagents for big work', why: 'Coding over 50 lines, deep research, anything that would bloat the main session context.' },
-            { rule: 'Root file size limits', why: 'Heartbeat files under 1KB. Core workspace files only at root. Everything else in subdirectories. Root files auto-load on every session.' },
-            { rule: 'Archive aggressively', why: 'Done tasks move out of active context. Ship log lives in reference, not in working memory.' },
-          ].map((row) => (
-            <li class="grid md:grid-cols-12 gap-4 py-4 border-t border-ink/10">
-              <div class="md:col-span-5">
-                <p class="font-display text-lg text-ink">{row.rule}<span class="text-orange">.</span></p>
-              </div>
-              <div class="md:col-span-7 text-ink-soft">{row.why}</div>
-            </li>
-          ))}
-        </ul>
-
-        <div class="prose-mc mt-10">
-          <p>
-            The result: AI operating costs went from unpredictable and escalating to
-            controlled and predictable. The model split alone cut costs by roughly 80%.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- What changed -->
+  <!-- =============================== -->
+  <!-- What changed (dark before/after) -->
+  <!-- =============================== -->
   <section class="bg-ink text-cream py-24 md:py-32">
     <div class="max-w-7xl mx-auto px-6 md:px-10">
-      <p class="font-mono text-xs uppercase tracking-[0.18em] text-cream/60 mb-6">What actually changed</p>
-      <h2 class="font-display text-display-md text-cream leading-tight mb-16 max-w-[24ch]">
+      <p class="eyebrow-light mb-3">What actually changed</p>
+      <h2 class="font-display text-display-md text-cream leading-tight max-w-[28ch] mb-16">
         The bottleneck shifted from execution to clarity<span class="text-orange">.</span>
       </h2>
 
-      <div class="grid md:grid-cols-2 gap-10 md:gap-16">
+      <div class="grid md:grid-cols-2 gap-12 md:gap-16">
         <div class="max-w-reading">
-          <p class="font-display text-2xl text-orange mb-4">Before<span class="text-cream">.</span></p>
+          <p class="font-display text-3xl text-orange mb-4">Before</p>
           <p class="text-lg text-cream/80 leading-relaxed">
             Blocked on "how long will this take to build."
           </p>
         </div>
         <div class="max-w-reading">
-          <p class="font-display text-2xl text-orange mb-4">After<span class="text-cream">.</span></p>
+          <p class="font-display text-3xl text-orange mb-4">After</p>
           <p class="text-lg text-cream/80 leading-relaxed">
             Blocked on "exactly what do I want this to do."
           </p>
@@ -359,9 +432,9 @@ import Base from '../layouts/Base.astro';
         <div class="md:col-span-2 max-w-reading mt-8">
           <p class="text-lg text-cream/80 leading-relaxed mb-6">
             Spec quality became the highest-leverage skill I have. When AI handles
-            execution, every decision that stays with me became more consequential. I'm
-            not reviewing PRs. I'm making brand calls, pricing decisions, positioning
-            choices. The things that actually determine whether this company succeeds.
+            execution, every decision that stays with me became more consequential.
+            I'm not reviewing PRs. I'm making brand calls, pricing decisions,
+            positioning choices.
           </p>
           <p class="text-lg text-cream/80 leading-relaxed">
             This is the counterintuitive truth about delegating execution to AI: it
@@ -373,43 +446,37 @@ import Base from '../layouts/Base.astro';
     </div>
   </section>
 
-  <!-- The larger point -->
-  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
-    <div class="max-w-reading">
-      <p class="eyebrow mb-6">The larger point</p>
-      <h2 class="font-display text-display-md text-ink leading-tight mb-10">
-        The question every product leader should be asking in 2026<span class="brand-period">.</span>
+  <!-- =============================== -->
+  <!-- Meta-point -->
+  <!-- =============================== -->
+  <section class="grid-backdrop overflow-hidden border-b border-ink/10">
+    <div class="grid-backdrop-band-top"></div>
+    <div class="grid-backdrop-band-bottom"></div>
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-28 md:py-36 relative z-10">
+      <p class="eyebrow-voice mb-8">The meta-point</p>
+
+      <h2 class="font-display text-ink leading-[0.95] tracking-tight mb-12" style="font-size: clamp(2.5rem, 6vw, 5.5rem);">
+        Stop asking how to use AI faster.<br/>
+        <span class="text-orange">Start asking how to redesign the work itself.</span>
       </h2>
 
-      <div class="prose-mc">
-        <p>
-          The question isn't "how do I use AI to work faster." It's "how do I redesign
-          the operating model of this business around what AI can actually do?"
+      <div class="max-w-3xl">
+        <p class="text-xl text-ink-soft leading-relaxed mb-12">
+          The question every product leader should be asking in 2026 isn't "how do
+          I use AI to work faster." It's "how do I redesign the operating model of
+          this business around what AI can actually do?" That's what I built with
+          Course Code. That's what I bring to every product org I work in.
         </p>
-        <p>
-          Those are different questions with very different answers. The first question
-          leads to better copy, faster research, and autocomplete that knows your
-          codebase. Useful. Incremental.
-        </p>
-        <p>
-          The second question leads to an AI with a GitHub account, a Linear queue, QA
-          authority, and a soul document. It leads to a solo founder shipping at team
-          velocity. It leads to a new kind of operating leverage that doesn't require
-          hiring to access.
-        </p>
-        <p>
-          That's what I built with Course Code. And that's what I bring to every product
-          org I work in.
-        </p>
-      </div>
 
-      <div class="mt-12">
-        <a
-          href="/work/course-code"
-          class="inline-flex items-center gap-3 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
-        >
-          Read the Course Code case study →
-        </a>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="/work/course-code"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
+            style="border-radius: 999px;"
+          >
+            Read the Course Code case study →
+          </a>
+        </div>
       </div>
     </div>
   </section>
