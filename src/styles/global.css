@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-  Fonts loaded via <link> in src/layouts/Base.astro.
-*/
+/* Fonts loaded via <link> in src/layouts/Base.astro */
 
 @layer base {
   html { scroll-behavior: smooth; }
@@ -20,22 +18,26 @@
 @layer components {
 
   /* ============================================================
-     TYPOGRAPHY
+     COLOR ROLES
+     Orange (#E13D0F) = brand signature. H1 period. Hero stat numbers.
+     Purple (#9B40C4) = voice color. Italicized taglines. Editorial emphasis.
+     Used sparingly. Two roles, two colors, no overlap.
      ============================================================ */
 
-  /* Eyebrows now have color. Orange on every surface. */
+  /* Eyebrow base: orange. */
   .eyebrow {
     @apply font-mono text-xs uppercase tracking-[0.18em] text-orange;
   }
-
-  /* Eyebrow on dark surfaces is the same brighter color */
   .eyebrow-light {
     @apply font-mono text-xs uppercase tracking-[0.18em] text-orange;
   }
+  /* Voice eyebrow: purple. Used for editorial or personal-tone sections. */
+  .eyebrow-voice {
+    @apply font-mono text-xs uppercase tracking-[0.18em];
+    color: #9B40C4;
+  }
 
-  /* Brand period - the orange dot at end of an H1.
-     Critical: needs breathing room from the letter before it,
-     and slightly smaller so it floats. */
+  /* Brand period: H1 only. Floats off the word, slightly smaller. */
   .brand-period {
     @apply text-orange inline-block;
     margin-left: 0.04em;
@@ -44,17 +46,13 @@
     transform: translateY(-0.02em);
   }
 
-  /* Same treatment but for stat numbers (smaller adjustments) */
-  .stat-period {
-    @apply text-orange inline-block;
-    margin-left: 0.06em;
-    font-size: 0.8em;
-    vertical-align: baseline;
-    transform: translateY(-0.04em);
+  /* Purple voice text */
+  .text-voice {
+    color: #9B40C4;
   }
 
   /* ============================================================
-     PROSE (case study fallback)
+     PROSE
      ============================================================ */
 
   .prose-mc {
@@ -87,9 +85,9 @@
 
   /* ============================================================
      STATS
+     Hero numbers in BRAND ORANGE. No periods on numbers.
      ============================================================ */
 
-  /* Small inline stat */
   .stat {
     @apply font-display text-display-lg text-ink leading-none;
   }
@@ -97,14 +95,9 @@
     @apply font-mono text-xs uppercase tracking-[0.15em] text-ink-muted mt-3;
   }
 
-  /* Hero stat with supersized period */
+  /* Hero stat: brand orange, supersized, no period */
   .stat-hero {
-    @apply font-display leading-[0.85] text-ink;
-    font-size: clamp(4rem, 9vw, 8.5rem);
-    letter-spacing: -0.03em;
-  }
-  .stat-hero-light {
-    @apply font-display leading-[0.85] text-cream;
+    @apply font-display leading-[0.85] text-orange;
     font-size: clamp(4rem, 9vw, 8.5rem);
     letter-spacing: -0.03em;
   }
@@ -115,13 +108,18 @@
     @apply font-mono text-xs uppercase tracking-[0.2em] text-cream/60 mt-4;
   }
 
+  /* Inline stat number in tables: brand orange */
+  .stat-num {
+    @apply font-display text-3xl leading-none text-orange;
+  }
+
   /* ============================================================
      BELIEF CARDS
      ============================================================ */
 
   .belief-card {
     @apply bg-cream border-2 rounded-sm transition-all duration-300;
-    border-color: rgba(245, 128, 106, 0.6);
+    border-color: rgba(225, 61, 15, 0.5);
   }
   .belief-card:hover {
     border-color: rgba(225, 61, 15, 0.9);
@@ -129,40 +127,22 @@
   }
 
   /* ============================================================
-     ICONS (hand-cut character)
+     LINOCUT ICONS
+     Stand alone (no box). Larger size. Hand-cut feel:
+       - Mixed stroke and fill
+       - Slightly chunky proportions
+       - Hatching/texture lines where appropriate
+       - Imperfect alignment
      ============================================================ */
 
-  /* Icon box on cream surface */
-  .icon-box {
-    @apply inline-flex items-center justify-center w-14 h-14 mb-6;
-    background: #F62300;
-    border-radius: 4px;
-    transform: rotate(-2deg);
+  .linocut-icon {
+    @apply inline-block;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
   }
-  .icon-box svg {
-    @apply w-8 h-8;
-    stroke: #FFFFFF;
-    stroke-width: 2.5;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  /* Icon box on dark surface, inverted */
-  .icon-box-light {
-    @apply inline-flex items-center justify-center w-14 h-14 mb-6;
-    background: rgba(246, 35, 0, 0.18);
-    border: 1.5px solid #F62300;
-    border-radius: 4px;
-    transform: rotate(-2deg);
-  }
-  .icon-box-light svg {
-    @apply w-8 h-8;
-    stroke: #F62300;
-    stroke-width: 2.5;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+  .linocut-icon svg {
+    @apply w-full h-full;
   }
 
   /* ============================================================
@@ -184,8 +164,6 @@
   .shot-caption {
     @apply font-mono text-xs uppercase tracking-[0.15em] text-ink-muted mt-5 text-center;
   }
-
-  /* Screenshot constrained width helper */
   .shot-contained {
     max-width: 920px;
     margin: 0 auto;
@@ -205,7 +183,7 @@
   }
 
   /* ============================================================
-     TECH STACK TOOL CARDS (real color coding)
+     TECH STACK TOOL CARDS
      ============================================================ */
 
   .tool-card {
@@ -218,27 +196,19 @@
     @apply -translate-y-1;
     box-shadow: 0 12px 24px -8px rgba(2, 16, 29, 0.15);
   }
-
-  /* The left edge bar (color coded) */
   .tool-card-edge {
     @apply absolute left-0 top-0 bottom-0;
     width: 6px;
   }
-
-  /* Category color: edge AND subtle background tint */
-  .tool-card-frontend { background: rgba(246, 35, 0, 0.04); }
-  .tool-card-frontend .tool-card-edge { background: #F62300; }
-
+  .tool-card-frontend { background: rgba(225, 61, 15, 0.04); }
+  .tool-card-frontend .tool-card-edge { background: #E13D0F; }
   .tool-card-backend { background: rgba(155, 64, 196, 0.05); }
   .tool-card-backend .tool-card-edge { background: #9B40C4; }
-
   .tool-card-ai { background: rgba(6, 46, 92, 0.05); }
   .tool-card-ai .tool-card-edge { background: #062E5C; }
-
   .tool-card-ops { background: rgba(122, 106, 79, 0.06); }
   .tool-card-ops .tool-card-edge { background: #7A6A4F; }
 
-  /* Legend chip - matches the tool card colors */
   .legend-chip {
     @apply inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-ink-muted;
   }
@@ -247,7 +217,7 @@
   }
 
   /* ============================================================
-     SECTION DIVIDERS
+     DIVIDERS
      ============================================================ */
 
   .divider-orange {
@@ -258,13 +228,12 @@
     content: '';
     @apply absolute left-0 top-0 h-full;
     width: 80px;
-    background: #F62300;
+    background: #E13D0F;
     transform: skewX(-12deg);
   }
 
   /* ============================================================
-     ARCHITECTURAL GRID BACKDROP (from homepage)
-     Reusable on any section as backdrop
+     GRID BACKDROP (from homepage)
      ============================================================ */
 
   .grid-backdrop {
@@ -289,7 +258,7 @@
   .grid-backdrop-band-top { top: 32px; }
   .grid-backdrop-band-bottom { bottom: 32px; }
 
-  /* Hero grid (kept name for legacy hero on homepage) */
+  /* Hero grid (for homepage) */
   .hero-grid {
     background-color: #F4EFE5;
     background-image:
@@ -332,8 +301,6 @@
   .case-hero-dark {
     @apply bg-ink text-cream relative overflow-hidden;
   }
-
-  /* Subtle texture on dark hero */
   .case-hero-dark::before {
     content: '';
     position: absolute;
@@ -355,14 +322,37 @@
     border-radius: 16px;
   }
 
-  /* For 3-pillar layout: ensures bottom alignment */
+  /* ============================================================
+     3-PILLAR LAYOUT (Problem/Insight/Bet)
+     Fix: explicit row tracks so headlines align across columns.
+     Icon row | Eyebrow + Headline row | Body row | Tagline row
+     All four use the same row track on the grid, so alignment is
+     enforced regardless of content length per pillar.
+     ============================================================ */
+
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  @media (min-width: 768px) {
+    .pillar-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+  }
   .pillar {
-    @apply h-full flex flex-col;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    row-gap: 1rem;
   }
-  .pillar-content {
-    @apply flex-1;
-  }
-  .pillar-footer {
-    @apply mt-auto pt-6;
+  .pillar-icon { align-self: start; }
+  .pillar-meta { align-self: start; }
+  .pillar-body { align-self: start; }
+  .pillar-tagline {
+    align-self: end;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(2, 16, 29, 0.1);
+    min-height: 60px;
   }
 }
