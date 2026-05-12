@@ -95,9 +95,9 @@
     @apply font-mono text-xs uppercase tracking-[0.15em] text-ink-muted mt-3;
   }
 
-  /* Hero stat: brand orange, supersized, no period */
+  /* Hero stat: ink (navy), supersized, no period. Orange reserved for signature. */
   .stat-hero {
-    @apply font-display leading-[0.85] text-orange;
+    @apply font-display leading-[0.85] text-ink;
     font-size: clamp(4rem, 9vw, 8.5rem);
     letter-spacing: -0.03em;
   }
@@ -108,9 +108,9 @@
     @apply font-mono text-xs uppercase tracking-[0.2em] text-cream/60 mt-4;
   }
 
-  /* Inline stat number in tables: brand orange */
+  /* Inline stat number in tables: ink (navy) */
   .stat-num {
-    @apply font-display text-3xl leading-none text-orange;
+    @apply font-display text-3xl leading-none text-ink;
   }
 
   /* ============================================================
@@ -135,10 +135,12 @@
        - Imperfect alignment
      ============================================================ */
 
+  /* Default linocut icon: 52px. Tuned so it reads as a deliberate mark
+     rather than an overscaled hero illustration. */
   .linocut-icon {
     @apply inline-block;
-    width: 80px;
-    height: 80px;
+    width: 52px;
+    height: 52px;
     margin-bottom: 1.5rem;
   }
   .linocut-icon svg {
