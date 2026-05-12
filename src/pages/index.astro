@@ -3,6 +3,15 @@ import Base from '../layouts/Base.astro';
 
 const caseStudies = [
   {
+    slug: 'course-code',
+    eyebrow: 'Founder · 2026',
+    title: 'Course Code: an AI-native consumer product, solo',
+    summary:
+      'Built a live, revenue-generating consumer app from zero to paying subscribers in ten weeks. Solo, with an AI co-founder. 4.6K active users, 4,659 courses, real product, real conversion.',
+    metric: '4.6K',
+    metricLabel: 'Active users in 28 days',
+  },
+  {
     slug: 'linear-migration',
     eyebrow: 'Branch · 2026',
     title: 'Migrating an engineering org from Jira to Linear',
@@ -77,7 +86,7 @@ const beliefs = [
 ];
 ---
 
-<Base title="Mollie Cox · Product Design Leader, Founder, Speaker">
+<Base title="Mollie Cox · Product Design Leader, AI-Native Founder, Speaker">
   <!-- Hero with architectural grid background -->
   <section class="hero-grid relative overflow-hidden">
     <div class="hero-grid-middle-band"></div>
@@ -89,11 +98,11 @@ const beliefs = [
           <span class="relative inline-flex rounded-full h-2 w-2 bg-orange"></span>
         </span>
         <span class="font-mono text-xs uppercase tracking-[0.15em] text-ink-soft">
-          Open to VP & Head of Design conversations
+          Open to VP & Head of Design + AI-native operator roles
         </span>
       </div>
 
-      <p class="eyebrow mb-8">Product Design Leader · Founder · Speaker</p>
+      <p class="eyebrow mb-8">Product Design Leader · AI-Native Founder · Speaker</p>
 
       <h1
         class="font-display text-display-xl text-ink leading-[0.95] tracking-tight max-w-[18ch]"
@@ -102,15 +111,16 @@ const beliefs = [
       </h1>
 
       <p class="mt-8 font-display text-2xl md:text-3xl text-ink-soft max-w-[40ch] leading-snug">
-        Design and Product Experience leader building executive-grade design organizations across enterprise SaaS, fintech, and consumer products.
+        Design and Product Experience leader building executive-grade design organizations. AI-native founder shipping live consumer products with an AI co-founder.
       </p>
 
       <div class="mt-12 max-w-reading">
         <p class="text-xl md:text-2xl text-ink-soft leading-relaxed">
           Twenty years building, scaling, and leading design organizations. I architect
-          operating models that move design upstream into product strategy. I build design
-          systems that scale across complex platforms. I translate design decisions into
-          executive-ready business cases grounded in real data.
+          operating models that move design upstream into product strategy. I build
+          design systems that scale across complex platforms. And I've redesigned how I
+          work around what AI can actually do, shipping a live consumer product solo in
+          ten weeks.
         </p>
       </div>
 
@@ -124,8 +134,8 @@ const beliefs = [
           <p class="stat-label">Throughput gain (Linear)</p>
         </div>
         <div>
-          <p class="stat">6 → 15</p>
-          <p class="stat-label">Designers scaled (Fleetio)</p>
+          <p class="stat">4.6K</p>
+          <p class="stat-label">Users (Course Code, 28 days)</p>
         </div>
         <div>
           <p class="stat">17K+</p>
@@ -135,11 +145,52 @@ const beliefs = [
     </div>
   </section>
 
+  <!-- Currently building -->
+  <section class="bg-navy-deep text-cream border-y border-ink/10">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
+      <div class="grid md:grid-cols-12 gap-8 items-end">
+        <div class="md:col-span-3">
+          <p class="font-mono text-xs uppercase tracking-[0.18em] text-cream/60 mb-3">Currently building</p>
+          <p class="font-display text-3xl text-orange">Course Code<span class="text-cream">.</span></p>
+        </div>
+        <div class="md:col-span-6 max-w-reading">
+          <p class="font-display text-2xl text-cream leading-tight mb-4">
+            A live, revenue-generating consumer app built solo with an AI co-founder<span class="text-orange">.</span>
+          </p>
+          <p class="text-cream/80 leading-relaxed">
+            4,659 golf courses. 4.6K active users in 28 days. Live Pro tier at $39 a year.
+            Phase 1 shipped on time. Ten weeks from concept to revenue.
+          </p>
+        </div>
+        <div class="md:col-span-3 flex flex-col gap-3">
+          <a
+            href="/work/course-code"
+            class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
+          >
+            Read case study →
+          </a>
+          <a
+            href="https://coursecode.golf"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-cream/30 text-cream font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
+          >
+            See it live →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Recognition row -->
-  <section class="border-t border-ink/10 bg-cream-warm/40">
+  <section class="border-b border-ink/10 bg-cream-warm/40">
     <div class="max-w-7xl mx-auto px-6 md:px-10 py-12">
       <p class="eyebrow mb-8 text-center md:text-left">Selected recognition</p>
       <div class="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12 items-center">
+        <div class="text-center md:text-left">
+          <p class="font-display text-xl text-ink leading-tight">Course Code</p>
+          <p class="font-mono text-xs text-ink-muted mt-1 uppercase tracking-wider">Founder · Live 2026</p>
+        </div>
         <div class="text-center md:text-left">
           <p class="font-display text-xl text-ink leading-tight">Bounce Podcast</p>
           <p class="font-mono text-xs text-ink-muted mt-1 uppercase tracking-wider">Host</p>
@@ -155,10 +206,6 @@ const beliefs = [
         <div class="text-center md:text-left">
           <p class="font-display text-xl text-ink leading-tight">Maven</p>
           <p class="font-mono text-xs text-ink-muted mt-1 uppercase tracking-wider">Course Instructor</p>
-        </div>
-        <div class="text-center md:text-left">
-          <p class="font-display text-xl text-ink leading-tight">Veer</p>
-          <p class="font-mono text-xs text-ink-muted mt-1 uppercase tracking-wider">Co-founder & CEO</p>
         </div>
       </div>
     </div>
@@ -209,39 +256,30 @@ const beliefs = [
     </div>
   </section>
 
-  <!-- Bounce Podcast block -->
+  <!-- AI operating model block -->
   <section class="bg-ink text-cream py-24 md:py-32 my-16">
     <div class="max-w-7xl mx-auto px-6 md:px-10">
       <div class="grid md:grid-cols-12 gap-8">
         <div class="md:col-span-3">
-          <p class="font-mono text-xs uppercase tracking-[0.18em] text-cream/60 mb-2">Podcast</p>
-          <p class="font-display text-3xl text-orange">Bounce<span class="text-cream">.</span></p>
+          <p class="font-mono text-xs uppercase tracking-[0.18em] text-cream/60 mb-2">How I work</p>
+          <p class="font-display text-3xl text-orange">AI Operating Model<span class="text-cream">.</span></p>
         </div>
         <div class="md:col-span-9">
-          <h2 class="font-display text-display-md text-cream leading-tight mb-8 max-w-[20ch]">
-            Conversations on design, leadership, and what actually works<span class="text-orange">.</span>
+          <h2 class="font-display text-display-md text-cream leading-tight mb-8 max-w-[24ch]">
+            How I actually lead with AI<span class="text-orange">.</span>
           </h2>
           <p class="text-lg text-cream/80 leading-relaxed mb-10 max-w-reading">
-            Bounce is my podcast on design leadership. Real conversations with practitioners
-            about the work, the careers, the choices, and the realities of building
-            creative organizations that ship.
+            Everyone in 2026 says they use AI. Very few have redesigned how they work
+            around what AI can actually do. This is not a page about which tools I use.
+            It's an operating model: AI as co-founder, not calculator. Authority
+            structure, not tool list. The infrastructure that made Course Code possible.
           </p>
           <div class="flex flex-wrap gap-4">
             <a
-              href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP"
-              target="_blank"
-              rel="noopener"
+              href="/ai"
               class="inline-flex items-center gap-2 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
             >
-              Listen on Spotify →
-            </a>
-            <a
-              href="https://www.youtube.com/@BouncePodcast"
-              target="_blank"
-              rel="noopener"
-              class="inline-flex items-center gap-2 px-6 py-3 border border-cream/30 text-cream font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
-            >
-              Watch on YouTube →
+              Read the operating model →
             </a>
           </div>
         </div>
@@ -249,8 +287,46 @@ const beliefs = [
     </div>
   </section>
 
+  <!-- Bounce Podcast block -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-ink/10">
+    <div class="grid md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <p class="eyebrow mb-3">Podcast</p>
+        <p class="font-display text-3xl text-orange">Bounce<span class="text-ink">.</span></p>
+      </div>
+      <div class="md:col-span-9">
+        <h2 class="font-display text-display-md text-ink leading-tight mb-8 max-w-[24ch]">
+          Conversations on design, leadership, and what actually works<span class="brand-period">.</span>
+        </h2>
+        <p class="text-lg text-ink-soft leading-relaxed mb-10 max-w-reading">
+          Bounce is my podcast on design leadership. Real conversations with practitioners
+          about the work, the careers, the choices, and the realities of building
+          creative organizations that ship.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-ink text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange transition-colors"
+          >
+            Listen on Spotify →
+          </a>
+          <a
+            href="https://www.youtube.com/@BouncePodcast"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 px-6 py-3 border border-ink/30 text-ink font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
+          >
+            Watch on YouTube →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Things I Believe -->
-  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-ink/10">
     <div class="grid md:grid-cols-12 gap-8 mb-16">
       <div class="md:col-span-4">
         <p class="eyebrow mb-3">Things I believe</p>
@@ -290,16 +366,17 @@ const beliefs = [
         <p class="text-lg text-ink-soft leading-relaxed mb-6">
           Currently Sr. Director of Product Experience at Branch, where I lead product
           design, UX research, content, technical documentation, and design systems for
-          an enterprise mobile measurement and engagement platform. I also co-founded
-          Veer, a venture-backed AI healthcare workforce platform selected for the
-          NMotion Spring 2025 accelerator.
+          an enterprise mobile measurement and engagement platform. I'm also the founder of
+          <a href="https://coursecode.golf" target="_blank" rel="noopener" class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors">Course Code</a>,
+          a live AI-native consumer product I built solo with an AI co-founder.
         </p>
         <p class="text-lg text-ink-soft leading-relaxed mb-10">
           Before Branch I scaled the design organization at Fleetio from 6 to 15
           designers, led platform modernization at DMSi, and held design and creative
           leadership roles at Hudl, GRIN, ORCA.TRADE, Thought District, and HobbyTown.
-          I host the <em>Bounce</em> podcast, teach <a href="/teaching" class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors">Design Career Catalyst on Maven</a>, and have taught UX/UI and design systems as
-          adjunct faculty at the University of Nebraska, Lincoln since 2013.
+          I host the <em>Bounce</em> podcast, teach <a href="/teaching" class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors">Design Career Catalyst on Maven</a>,
+          and have taught UX/UI and design systems as adjunct faculty at the University
+          of Nebraska, Lincoln since 2013.
         </p>
         <a
           href="/about"

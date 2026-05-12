@@ -8,7 +8,7 @@ interface Props {
 
 const {
   title,
-  description = 'Mollie Cox. Design and Product Experience leader. Twenty years building, scaling, and leading design organizations across enterprise SaaS, fintech, and consumer products.',
+  description = 'Mollie Cox. Design and Product Experience leader and AI-native founder. Twenty years building, scaling, and leading design organizations across enterprise SaaS, fintech, and consumer products.',
 } = Astro.props;
 ---
 
@@ -48,8 +48,9 @@ const {
         <a href="/" class="font-display text-xl text-ink hover:text-orange transition-colors">
           Mollie Cox<span class="text-orange">.</span>
         </a>
-        <div class="flex items-center gap-6 md:gap-8 text-sm">
+        <div class="flex items-center gap-5 md:gap-7 text-sm">
           <a href="/#work" class="nav-link">Work</a>
+          <a href="/ai" class="nav-link">AI</a>
           <a href="/teaching" class="nav-link">Teaching</a>
           <a href="/about" class="nav-link">About</a>
           <a href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP" target="_blank" rel="noopener" class="nav-link">Bounce</a>
@@ -69,7 +70,7 @@ const {
             Mollie Cox<span class="text-orange">.</span>
           </p>
           <p class="text-sm text-ink-muted">
-            Design and Product Experience leader.
+            Design and Product Experience leader. AI-native founder.
             <br />Lincoln, Nebraska.
           </p>
         </div>
@@ -90,20 +91,20 @@ const {
             LinkedIn
           </a>
           <a
+            href="https://coursecode.golf"
+            target="_blank"
+            rel="noopener"
+            class="block text-ink-soft hover:text-orange transition-colors mt-1"
+          >
+            Course Code (live product)
+          </a>
+          <a
             href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP"
             target="_blank"
             rel="noopener"
             class="block text-ink-soft hover:text-orange transition-colors mt-1"
           >
             Bounce on Spotify
-          </a>
-          <a
-            href="https://www.youtube.com/@BouncePodcast"
-            target="_blank"
-            rel="noopener"
-            class="block text-ink-soft hover:text-orange transition-colors mt-1"
-          >
-            Bounce on YouTube
           </a>
         </div>
         <div class="md:text-right">
