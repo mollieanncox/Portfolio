@@ -1,5 +1,18 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const leadershipTestimonials = [
+  {
+    quote: "Mollie has a rare combination of charisma, exceptional intelligence, and leadership in one human being, and the field of design is lucky to have someone in it with such a skillset. Her leadership inspires confidence and fosters a sense of purpose.",
+    name: "Zeljka Hassler",
+    role: "Sr. Product Design Manager",
+  },
+  {
+    quote: "One of the standout qualities of Mollie is her commitment to mentorship. She invests time in developing her team's skills, encouraging them to push boundaries and explore new ideas. Her feedback is always constructive and insightful.",
+    name: "Dani Weidner",
+    role: "Senior Product Designer",
+  },
+];
 ---
 
 <Base title="About · Mollie Cox">
@@ -51,8 +64,12 @@ import Base from '../layouts/Base.astro';
           </div>
           <div>
             <p class="eyebrow mb-2">Teaching</p>
-            <p class="text-ink">Adjunct Professor</p>
-            <p class="text-sm text-ink-muted">University of Nebraska, Lincoln. 2013 to present.</p>
+            <p class="text-ink">
+              <a href="/teaching" class="hover:text-orange transition-colors">
+                Maven course + UNL adjunct →
+              </a>
+            </p>
+            <p class="text-sm text-ink-muted">Adjunct at UNL since 2013</p>
           </div>
         </div>
       </div>
@@ -127,11 +144,12 @@ import Base from '../layouts/Base.astro';
             I host <strong>Bounce</strong>, a podcast on design and leadership, available
             on <a href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP" target="_blank" rel="noopener" class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors">Spotify</a>
             and <a href="https://www.youtube.com/@BouncePodcast" target="_blank" rel="noopener" class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors">YouTube</a>.
-            I've taught UX/UI, design systems, and atomic design as adjunct faculty at the
-            University of Nebraska, Lincoln since 2013. I have a community of 17,000+
-            followers on LinkedIn where I write about design as a business function, the
-            realities of leading design teams, and what it actually takes to ship great
-            work.
+            I run <strong>Design Career Catalyst</strong>, a paid cohort course on
+            <a href="https://maven.com/mollie-cox/design-career-catalyst" target="_blank" rel="noopener" class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors">Maven</a>
+            built for senior designers ready to lead. I've taught UX/UI, design systems,
+            and atomic design as adjunct faculty at the University of Nebraska, Lincoln since
+            2013. And I have a community of 17,000+ followers on LinkedIn where I write
+            about design as a business function and what it takes to ship great work.
           </p>
 
           <h2>Outside of work</h2>
@@ -141,28 +159,69 @@ import Base from '../layouts/Base.astro';
             Performance), CalArts (MFA, Acting), and Kaplan University (MBA, Summa Cum
             Laude).
           </p>
-
-          <hr class="my-12 border-ink/10" />
-
-          <p>
-            <a
-              href="mailto:molliecox@gmail.com"
-              class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors"
-            >
-              molliecox@gmail.com
-            </a>
-            ·
-            <a
-              href="https://linkedin.com/in/molliecox"
-              target="_blank"
-              rel="noopener"
-              class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors"
-            >
-              LinkedIn
-            </a>
-          </p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Leadership testimonials block -->
+  <section class="bg-cream-warm/40 border-y border-ink/10">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+      <div class="grid md:grid-cols-12 gap-8 mb-16">
+        <div class="md:col-span-4">
+          <p class="eyebrow mb-3">Voices</p>
+        </div>
+        <div class="md:col-span-8">
+          <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch]">
+            From people I've led<span class="brand-period">.</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+        {
+          leadershipTestimonials.map((t) => (
+            <figure class="bg-cream p-8 md:p-10 border border-ink/10">
+              <blockquote class="text-lg text-ink-soft leading-relaxed mb-6">
+                "{t.quote}"
+              </blockquote>
+              <figcaption>
+                <p class="font-display text-lg text-ink">{t.name}</p>
+                <p class="font-mono text-xs text-ink-muted mt-1 uppercase tracking-wider">{t.role}</p>
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+
+      <p class="mt-10 text-sm text-ink-muted">
+        <a href="/teaching" class="hover:text-orange border-b border-ink-muted/30 hover:border-orange transition-colors">
+          Read more testimonials from designers I've led, taught, and mentored →
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24">
+    <div class="prose-mc max-w-reading">
+      <p>
+        <a
+          href="mailto:molliecox@gmail.com"
+          class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors"
+        >
+          molliecox@gmail.com
+        </a>
+        ·
+        <a
+          href="https://linkedin.com/in/molliecox"
+          target="_blank"
+          rel="noopener"
+          class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors"
+        >
+          LinkedIn
+        </a>
+      </p>
     </div>
   </section>
 </Base>

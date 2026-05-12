@@ -1,0 +1,242 @@
+---
+import Base from '../layouts/Base.astro';
+
+const directReportTestimonials = [
+  {
+    quote: "Mollie has a rare combination of charisma, exceptional intelligence, and leadership in one human being, and the field of design is lucky to have someone in it with such a skillset. She is a highly regarded design leader known for her energy, clarity, and authenticity. Her leadership inspires confidence and fosters a sense of purpose.",
+    name: "Zeljka Hassler",
+    role: "Sr. Product Design Manager",
+  },
+  {
+    quote: "Mollie's extensive experience across organizations and products makes her an exceptional design leader. Her authenticity, passion, and fearless approach to growth will leave you feeling empowered. For clarity and confidence in navigating your design career, Mollie's guidance is unmatched.",
+    name: "Mandi Saeteun",
+    role: "Product Design Manager",
+  },
+  {
+    quote: "One of the standout qualities of Mollie is her commitment to mentorship. She invests time in developing her team's skills, encouraging them to push boundaries and explore new ideas. Her feedback is always constructive and insightful, allowing team members to grow both personally and professionally.",
+    name: "Dani Weidner",
+    role: "Senior Product Designer",
+  },
+  {
+    quote: "Mollie's mentorship was transformative for my career. She consistently set clear goals, provided actionable feedback, and created opportunities for me to stretch and develop new skills. Her high standards elevated not just the quality of our work but also our capabilities as designers.",
+    name: "Jeff Nissen",
+    role: "Senior Product Designer",
+  },
+];
+
+const menteeTestimonials = [
+  {
+    quote: "Mollie is awesome. You can tell she has a lot of experience and knows her stuff. She's super sharp, very friendly and extremely helpful. As a very experienced designer, it was great to chat with a fellow experienced designer like Mollie about market conditions and where the design field is going.",
+    name: "ADPList mentee",
+    role: "Senior designer",
+  },
+  {
+    quote: "Mollie has offered me very valuable and insightful advice. She answered all my questions and gave me a unique perspective as a hiring manager for my jobhunting process. It was so worth it waiting for our session.",
+    name: "Anna Skopenko",
+    role: "Founding Designer, Fay",
+  },
+  {
+    quote: "I had a great mentoring session with Mollie. She is a hands-on leader in product design with a deep passion for education and mentorship. Her insights were not only valuable, but specifically tailored to help me improve my CV and portfolio.",
+    name: "Vlada",
+    role: "Visitor Lecturer, Regent's University",
+  },
+];
+---
+
+<Base title="Teaching & Mentoring · Mollie Cox">
+  <!-- Header -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 pt-12 md:pt-20 pb-16">
+    <p class="eyebrow mb-8">Teaching & Mentoring</p>
+
+    <h1 class="font-display text-display-lg text-ink leading-[1.0] tracking-tight max-w-[22ch]">
+      Growing the designers who'll lead the field next<span class="brand-period">.</span>
+    </h1>
+
+    <p class="mt-10 text-xl text-ink-soft leading-relaxed max-w-reading">
+      Teaching is part of the work, not a side project. I've been an adjunct professor at the
+      University of Nebraska since 2013, I run a paid cohort course on design career strategy,
+      and I mentor designers around the world through ADPList. The thread across all of it
+      is the same: technical skill alone isn't what makes a designer a leader.
+    </p>
+  </section>
+
+  <!-- Stats row -->
+  <section class="border-y border-ink/10 bg-cream-warm/40">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-12">
+      <p class="eyebrow mb-8">Mentoring impact</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        <div>
+          <p class="stat">3,900</p>
+          <p class="stat-label">Minutes mentored</p>
+        </div>
+        <div>
+          <p class="stat">116</p>
+          <p class="stat-label">1:1 bookings</p>
+        </div>
+        <div>
+          <p class="stat">11</p>
+          <p class="stat-label">Countries reached</p>
+        </div>
+        <div>
+          <p class="stat">12+</p>
+          <p class="stat-label">Years teaching at UNL</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maven course -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <div class="grid md:grid-cols-12 gap-8 md:gap-16">
+      <div class="md:col-span-4">
+        <p class="eyebrow mb-3">Cohort course</p>
+        <p class="font-display text-3xl text-orange mb-2">Maven<span class="text-ink">.</span></p>
+        <p class="font-mono text-xs text-ink-muted uppercase tracking-wider mb-8">3-week cohort · $899</p>
+
+        <a
+          href="https://maven.com/mollie-cox/design-career-catalyst"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-ink text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange transition-colors"
+        >
+          Join the waitlist →
+        </a>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display text-display-md text-ink leading-tight mb-6 max-w-[22ch]">
+          The Design Career Catalyst: Amplify Your Impact<span class="brand-period">.</span>
+        </h2>
+
+        <p class="text-lg text-ink-soft leading-relaxed mb-6">
+          A 3-week cohort course built for senior designers and design leads who've mastered
+          the craft but want to amplify their organizational impact. The curriculum covers
+          strategic relationships, stakeholder influence, personal evaluation frameworks, and
+          turning design decisions into business outcomes.
+        </p>
+
+        <p class="text-lg text-ink-soft leading-relaxed mb-10">
+          The soft skills and career frameworks I teach aren't in books, on YouTube, or in
+          most design education. They're what I learned the hard way leading design teams
+          for two decades, distilled for designers ready to lead.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-10">
+          {[
+            'Master relationship building & strategic communication',
+            'Build your professional assessment framework',
+            'Transform design skills into organizational impact',
+            'Create your career acceleration roadmap',
+            'Navigate complex organizational dynamics',
+            'Develop leadership through influence',
+          ].map((item) => (
+            <div class="flex gap-3 items-start">
+              <span class="font-mono text-orange mt-1">→</span>
+              <p class="text-ink-soft">{item}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Direct report testimonials -->
+  <section class="bg-cream-warm/40 border-y border-ink/10">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+      <div class="grid md:grid-cols-12 gap-8 mb-16">
+        <div class="md:col-span-4">
+          <p class="eyebrow mb-3">Voices</p>
+        </div>
+        <div class="md:col-span-8">
+          <h2 class="font-display text-display-md text-ink leading-tight max-w-[22ch]">
+            What former directs and design leaders say<span class="brand-period">.</span>
+          </h2>
+          <p class="mt-6 text-lg text-ink-soft max-w-reading">
+            People who reported to me, partnered with me on design teams, or know my leadership
+            from the inside.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+        {
+          directReportTestimonials.map((t) => (
+            <figure class="bg-cream p-8 md:p-10 border border-ink/10">
+              <blockquote class="text-lg text-ink-soft leading-relaxed mb-6">
+                "{t.quote}"
+              </blockquote>
+              <figcaption>
+                <p class="font-display text-lg text-ink">{t.name}</p>
+                <p class="font-mono text-xs text-ink-muted mt-1 uppercase tracking-wider">{t.role}</p>
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ADPList mentee testimonials -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <div class="grid md:grid-cols-12 gap-8 mb-16">
+      <div class="md:col-span-4">
+        <p class="eyebrow mb-3">ADPList mentoring</p>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display text-display-md text-ink leading-tight max-w-[22ch]">
+          From designers around the world<span class="brand-period">.</span>
+        </h2>
+        <p class="mt-6 text-lg text-ink-soft max-w-reading">
+          I've mentored 116 designers across 11 countries through ADPList. A selection of
+          what they've said:
+        </p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+      {
+        menteeTestimonials.map((t) => (
+          <figure class="border-l-2 border-orange pl-6">
+            <blockquote class="text-base text-ink-soft leading-relaxed mb-6 italic">
+              "{t.quote}"
+            </blockquote>
+            <figcaption>
+              <p class="font-display text-base text-ink">{t.name}</p>
+              <p class="font-mono text-xs text-ink-muted mt-1 uppercase tracking-wider">{t.role}</p>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- UNL Teaching -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 pb-24 md:pb-32">
+    <div class="grid md:grid-cols-12 gap-8">
+      <div class="md:col-span-4">
+        <p class="eyebrow mb-3">University teaching</p>
+        <p class="font-display text-3xl text-ink mb-2">UNL<span class="text-orange">.</span></p>
+        <p class="font-mono text-xs text-ink-muted uppercase tracking-wider">Adjunct · 2013 to present</p>
+      </div>
+      <div class="md:col-span-8 max-w-reading">
+        <h2 class="font-display text-display-md text-ink leading-tight mb-6">
+          Twelve years teaching the next generation<span class="brand-period">.</span>
+        </h2>
+        <p class="text-lg text-ink-soft leading-relaxed mb-6">
+          I've been an adjunct professor at the University of Nebraska, Lincoln since 2013,
+          teaching undergraduate students design fundamentals, design systems, and what it
+          actually takes to build a career in product design.
+        </p>
+        <p class="text-lg text-ink-soft leading-relaxed mb-6">
+          Courses I've taught include UX/UI Design (ADPR 358), Atomic Design (ADPR 398),
+          Design Systems (ADPR 398), Art Direction (ADPR 433), Layout & Design (ADPR 333),
+          Portfolio Development (ADPR 483), and Photo & Video (JOUR 160).
+        </p>
+        <p class="text-lg text-ink-soft leading-relaxed">
+          Teaching keeps me connected to how designers learn, what they're up against in
+          the field, and how to translate hard-won professional lessons into something
+          actionable.
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>

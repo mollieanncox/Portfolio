@@ -7,7 +7,7 @@ const caseStudies = [
     eyebrow: 'Branch · 2026',
     title: 'Migrating an engineering org from Jira to Linear',
     summary:
-      'A six-week pilot, 2.7× throughput, and a $42K cost reduction. Built on real engineer data, not vendor demos.',
+      'A six-week pilot, 2.7× throughput, and a measurable enterprise-scale rollout decision. Built on real engineer data, not vendor demos.',
     metric: '2.7×',
     metricLabel: 'Throughput per engineer',
   },
@@ -48,62 +48,90 @@ const caseStudies = [
     metricLabel: 'Brand positioning',
   },
 ];
+
+const beliefs = [
+  {
+    title: "Start with the user",
+    body: "Every functionality begins from a real user need. Does this solve a real problem? Does this make their work easier? Is it better than the alternative they have today?",
+  },
+  {
+    title: "Systems match the real world",
+    body: "Products speak the user's language, not the system's. Words, patterns, and concepts come from how people already think. Real-world conventions over internal jargon.",
+  },
+  {
+    title: "Personal preference is a hypothesis",
+    body: "Design decisions live or die on evidence. Personal taste is a starting hypothesis, never a conclusion. Research and conventions inform; testing decides.",
+  },
+  {
+    title: "Test early, test often",
+    body: "The feedback loop is the work. Get users in front of decisions before they harden. Use what you learn to iterate. Then test again.",
+  },
+  {
+    title: "Work should be clean",
+    body: "Design shouldn't contain anything irrelevant. Less to read, fewer paths to consider, more focus on what matters. Both informationally and aesthetically.",
+  },
+  {
+    title: "Live in the now, build for the future",
+    body: "Solve for the situation in front of you, but build with scalability in mind. Functionality should be relevant today and extendable tomorrow.",
+  },
+];
 ---
 
 <Base title="Mollie Cox · Product Design Leader, Founder, Speaker">
   <!-- Hero with architectural grid background -->
   <section class="hero-grid relative overflow-hidden">
+    <div class="hero-grid-middle-band"></div>
     <div class="max-w-7xl mx-auto px-6 md:px-10 pt-12 md:pt-20 pb-24 md:pb-32 relative z-10">
-    <!-- Availability indicator -->
-    <div class="inline-flex items-center gap-3 mb-8 px-4 py-2 border border-ink/15 rounded-full bg-cream/70 backdrop-blur-sm">
-      <span class="relative flex h-2 w-2">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-2 w-2 bg-orange"></span>
-      </span>
-      <span class="font-mono text-xs uppercase tracking-[0.15em] text-ink-soft">
-        Open to VP & Head of Design conversations
-      </span>
-    </div>
+      <!-- Availability indicator -->
+      <div class="inline-flex items-center gap-3 mb-8 px-4 py-2 border border-ink/15 rounded-full bg-cream/70 backdrop-blur-sm">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-orange"></span>
+        </span>
+        <span class="font-mono text-xs uppercase tracking-[0.15em] text-ink-soft">
+          Open to VP & Head of Design conversations
+        </span>
+      </div>
 
-    <p class="eyebrow mb-8">Product Design Leader · Founder · Speaker</p>
+      <p class="eyebrow mb-8">Product Design Leader · Founder · Speaker</p>
 
-    <h1
-      class="font-display text-display-xl text-ink leading-[0.95] tracking-tight max-w-[18ch]"
-    >
-      Great design is a moral imperative<span class="brand-period">.</span>
-    </h1>
+      <h1
+        class="font-display text-display-xl text-ink leading-[0.95] tracking-tight max-w-[18ch]"
+      >
+        Great design is a moral imperative<span class="brand-period">.</span>
+      </h1>
 
-    <p class="mt-8 font-display text-2xl md:text-3xl text-ink-soft max-w-[40ch] leading-snug">
-      Design and Product Experience leader building executive-grade design organizations across enterprise SaaS, fintech, and consumer products.
-    </p>
-
-    <div class="mt-12 max-w-reading">
-      <p class="text-xl md:text-2xl text-ink-soft leading-relaxed">
-        Twenty years building, scaling, and leading design organizations. I architect
-        operating models that move design upstream into product strategy. I build design
-        systems that scale across complex platforms. I translate design decisions into
-        executive-ready business cases grounded in real data.
+      <p class="mt-8 font-display text-2xl md:text-3xl text-ink-soft max-w-[40ch] leading-snug">
+        Design and Product Experience leader building executive-grade design organizations across enterprise SaaS, fintech, and consumer products.
       </p>
-    </div>
 
-    <div class="mt-16 flex flex-wrap gap-x-12 gap-y-8">
-      <div>
-        <p class="stat">20</p>
-        <p class="stat-label">Years leading design</p>
+      <div class="mt-12 max-w-reading">
+        <p class="text-xl md:text-2xl text-ink-soft leading-relaxed">
+          Twenty years building, scaling, and leading design organizations. I architect
+          operating models that move design upstream into product strategy. I build design
+          systems that scale across complex platforms. I translate design decisions into
+          executive-ready business cases grounded in real data.
+        </p>
       </div>
-      <div>
-        <p class="stat">2.7×</p>
-        <p class="stat-label">Throughput gain (Linear)</p>
+
+      <div class="mt-16 flex flex-wrap gap-x-12 gap-y-8">
+        <div>
+          <p class="stat">20</p>
+          <p class="stat-label">Years leading design</p>
+        </div>
+        <div>
+          <p class="stat">2.7×</p>
+          <p class="stat-label">Throughput gain (Linear)</p>
+        </div>
+        <div>
+          <p class="stat">6 → 15</p>
+          <p class="stat-label">Designers scaled (Fleetio)</p>
+        </div>
+        <div>
+          <p class="stat">17K+</p>
+          <p class="stat-label">LinkedIn community</p>
+        </div>
       </div>
-      <div>
-        <p class="stat">6 → 15</p>
-        <p class="stat-label">Designers scaled (Fleetio)</p>
-      </div>
-      <div>
-        <p class="stat">17K+</p>
-        <p class="stat-label">LinkedIn community</p>
-      </div>
-    </div>
     </div>
   </section>
 
@@ -125,8 +153,8 @@ const caseStudies = [
           <p class="font-mono text-xs text-ink-muted mt-1 uppercase tracking-wider">Adjunct · 2013–present</p>
         </div>
         <div class="text-center md:text-left">
-          <p class="font-display text-xl text-ink leading-tight">LinkedIn</p>
-          <p class="font-mono text-xs text-ink-muted mt-1 uppercase tracking-wider">17K+ community</p>
+          <p class="font-display text-xl text-ink leading-tight">Maven</p>
+          <p class="font-mono text-xs text-ink-muted mt-1 uppercase tracking-wider">Course Instructor</p>
         </div>
         <div class="text-center md:text-left">
           <p class="font-display text-xl text-ink leading-tight">Veer</p>
@@ -221,6 +249,34 @@ const caseStudies = [
     </div>
   </section>
 
+  <!-- Things I Believe -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <div class="grid md:grid-cols-12 gap-8 mb-16">
+      <div class="md:col-span-4">
+        <p class="eyebrow mb-3">Things I believe</p>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display text-display-md text-ink leading-tight max-w-[22ch]">
+          A short list of convictions about how good work gets made<span class="brand-period">.</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+      {
+        beliefs.map((belief, i) => (
+          <div class="belief-card p-7 md:p-8">
+            <div class="flex items-baseline gap-3 mb-4">
+              <span class="font-mono text-xs text-orange">{String(i + 1).padStart(2, '0')}</span>
+              <h3 class="font-display text-xl text-ink">{belief.title}<span class="text-orange">.</span></h3>
+            </div>
+            <p class="text-ink-soft leading-relaxed">{belief.body}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
   <!-- About preview -->
   <section class="max-w-7xl mx-auto px-6 md:px-10 py-32 border-t border-ink/10">
     <div class="grid md:grid-cols-12 gap-8">
@@ -242,8 +298,8 @@ const caseStudies = [
           Before Branch I scaled the design organization at Fleetio from 6 to 15
           designers, led platform modernization at DMSi, and held design and creative
           leadership roles at Hudl, GRIN, ORCA.TRADE, Thought District, and HobbyTown.
-          I host the <em>Bounce</em> podcast and have taught UX/UI and design systems as
-          adjunct faculty at the University of Nebraska–Lincoln since 2013.
+          I host the <em>Bounce</em> podcast, teach <a href="/teaching" class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors">Design Career Catalyst on Maven</a>, and have taught UX/UI and design systems as
+          adjunct faculty at the University of Nebraska, Lincoln since 2013.
         </p>
         <a
           href="/about"

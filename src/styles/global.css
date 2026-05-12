@@ -79,6 +79,19 @@
   }
 
   /*
+    Belief card. Coral-bordered cards for the Things I Believe section,
+    matching the design language from Mollie's existing brand work.
+  */
+  .belief-card {
+    @apply bg-cream border-2 rounded-sm transition-all duration-300;
+    border-color: rgba(245, 128, 106, 0.6); /* orange-soft */
+  }
+  .belief-card:hover {
+    border-color: rgba(225, 61, 15, 0.9); /* orange */
+    @apply -translate-y-0.5;
+  }
+
+  /*
     Architectural drafting paper for the hero header.
     Vertical lines at multiple weights, plus three pairs of double horizontal
     rules (top band, middle band, bottom band) matching the reference image.

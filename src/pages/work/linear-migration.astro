@@ -5,41 +5,42 @@ import CaseStudy from '../../layouts/CaseStudy.astro';
 <CaseStudy
   title="Migrating an engineering org from Jira to Linear"
   eyebrow="Branch · Spring 2026"
-  summary="A six-week pilot with real Branch engineers. Not a vendor demo. The data made the case. 2.7× throughput per engineer, 87 to 93% cycle completion against Linear's 87% benchmark, and 6 of 7 engineers strongly recommending migration."
+  summary="A six-week pilot with real engineers, not a vendor demo. The data made the case. 2.7× throughput per engineer, 87 to 93% cycle completion against the industry benchmark, and the team voting overwhelmingly to migrate."
   role="Sr. Director of Product Experience"
   duration="12 weeks (setup and pilot)"
   team="Eng, PM, Product Ops"
-  outcome="$42K cost reduction. 300+ seats."
+  outcome="Enterprise-scale rollout decision"
 >
-  <h2>The problem wasn't Jira. It was the cost of fixing Jira.</h2>
+  <h2>The question wasn't Jira vs. Linear. It was what to invest in.</h2>
 
   <p>
-    Branch was running on Jira at a real cost. 398 licenses, 62 spaces, with 30 of them
-    abandoned or inactive. Issue types, workflows, and fields were non-standardized
-    across every team. Epics couldn't span team boundaries, so cross-team initiative
-    visibility didn't exist. The tool was failing despite full adoption.
+    Our Jira instance had accumulated the kind of complexity every long-running enterprise
+    deployment does. Non-standardized issue types, workflows, and fields across teams.
+    Cross-team initiative visibility that didn't really exist because epics couldn't span
+    team boundaries. Significant abandoned space alongside active work. The system was
+    failing despite full adoption.
   </p>
 
   <p>
-    The proposed remediation, call it Jira 2.0, required an outside contractor and months
-    of internal cleanup. Before signing off, I wanted to test a different question:
+    The proposed fix was a contractor-led cleanup project measured in months of work. Before
+    signing off, I wanted to test a different question:
     <strong>
-      should we invest the Jira 2.0 remediation effort into fixing Jira, or into a
-      platform that doesn't need fixing?
+      should we invest that remediation effort into fixing what we have, or into a platform
+      that doesn't need fixing?
     </strong>
   </p>
 
   <h2>A real test, not a vendor demo</h2>
 
   <p>
-    I designed a six-week live pilot. Not a sandbox, not a sales engineering walkthrough.
-    Real Branch engineers, real work, the same engineers benchmarked in both systems.
+    I designed a six-week live pilot. Not a sandbox. Not a sales engineering walkthrough.
+    Real engineers doing real work, with the same engineers benchmarked in both systems.
   </p>
 
   <ul class="list-none pl-0 my-8 space-y-3">
     <li class="flex gap-4">
       <span class="font-mono text-orange">→</span>
-      <span><strong>Teams:</strong> Engagement (Eng + PM), Product Documentation, Pinx Panthers, Auxin</span>
+      <span><strong>Pilot teams:</strong> A cross-functional pod of engineers and PMs, plus a documentation team, plus a design-systems pod</span>
     </li>
     <li class="flex gap-4">
       <span class="font-mono text-orange">→</span>
@@ -47,19 +48,19 @@ import CaseStudy from '../../layouts/CaseStudy.astro';
     </li>
     <li class="flex gap-4">
       <span class="font-mono text-orange">→</span>
-      <span><strong>Benchmark:</strong> Before and after issue data from the same 7 engineers in both Jira and Linear</span>
+      <span><strong>Benchmark:</strong> Before and after issue data from the same engineers in both Jira and Linear</span>
     </li>
     <li class="flex gap-4">
       <span class="font-mono text-orange">→</span>
-      <span><strong>Integrations:</strong> Slack agent, GitHub, Claude Code MCP, Windsurf, DX</span>
+      <span><strong>Integrations:</strong> Slack, GitHub, MCP, AI coding tools</span>
     </li>
   </ul>
 
   <p>
-    I set five target metrics before the pilot started and held the team accountable to
-    them. Issue creation frequency, engineer satisfaction, cycle completion rate,
-    percentage of work tracked, and issue resolution time. I also met with Linear's SE
-    team to address concerns from internal dissenters before the cutover decision.
+    I set five target metrics before the pilot started. Issue creation frequency, engineer
+    satisfaction, cycle completion rate, percentage of work tracked, and issue resolution
+    time. I also met with the vendor's solution engineering team to address concerns from
+    internal dissenters before the cutover decision.
   </p>
 
   <!-- Big stat callout -->
@@ -78,8 +79,8 @@ import CaseStudy from '../../layouts/CaseStudy.astro';
           More issues completed per engineer per week in Linear vs. Jira.
         </p>
         <p class="font-mono text-sm text-cream/70">
-          Same 7 engineers. Same work. Source: Jira "Status Category Changed" field and
-          Linear export. Linear's cross-customer benchmark is 2×. Branch hit 2.7×.
+          Same engineers. Same work. Source: Jira "Status Category Changed" field and
+          Linear export. The vendor's cross-customer benchmark is 2×. We hit 2.7×.
         </p>
       </div>
     </div>
@@ -94,7 +95,7 @@ import CaseStudy from '../../layouts/CaseStudy.astro';
       {
         metric: 'Issue creation frequency',
         target: 'Target: 2× increase',
-        result: '2.7× throughput (Jira 2.42/eng/wk to Linear 6.47/eng/wk)',
+        result: '2.7× throughput per engineer, per week',
         status: 'HIT',
       },
       {
@@ -112,13 +113,13 @@ import CaseStudy from '../../layouts/CaseStudy.astro';
       {
         metric: '% of work tracked',
         target: 'Target: 80%+',
-        result: '4 of 5 respondents at 75 to 100%. 86% of issues tied to a project.',
+        result: 'Four of five respondents at 75 to 100%. Most issues tied to a project.',
         status: 'HIT',
       },
       {
         metric: 'Issue resolution time',
-        target: 'Target: 3.3× faster',
-        result: 'Median work time in Linear: 1.9 days. Jira baseline unavailable in export.',
+        target: 'Target: faster',
+        result: 'Median work time under 2 days in Linear. Jira baseline unavailable in export.',
         status: 'PARTIAL',
       },
     ].map((row) => (
@@ -144,80 +145,64 @@ import CaseStudy from '../../layouts/CaseStudy.astro';
   <h2>Every engineer improved. Even the one who preferred Jira.</h2>
 
   <p>
-    Throughput gains weren't concentrated in early adopters or power users. Each of the
-    seven pilot engineers measured higher issue completion in Linear than in Jira,
-    ranging from 1.2× to 7.0× per individual. The engineer who rated Linear lowest in
-    mid-pilot still completed more work in it.
+    Throughput gains weren't concentrated in early adopters or power users. Every pilot
+    engineer measured higher issue completion in Linear than in Jira, with individual
+    gains ranging widely. The engineer who rated Linear lowest in mid-pilot still
+    completed more work in it.
   </p>
 
   <p>
-    Survey deltas told the same story. Across every dimension I measured (ease of
-    creation, ability to triage, trust in the data, roadmap visibility, manager
-    visibility, overall satisfaction) Linear improved on Jira. Overall satisfaction
-    swung from 2.83 to 5.00, the largest delta in the survey.
+    Survey deltas told the same story. Across every dimension I measured (ease of creation,
+    ability to triage, trust in the data, roadmap visibility, manager visibility, overall
+    satisfaction) Linear improved on Jira. Overall satisfaction was the largest delta.
   </p>
 
   <blockquote>
     "Please let us keep using Linear. I desperately do not want to go back to Jira."
     <br />
     <span class="not-italic font-mono text-sm text-ink-muted">
-      Engagement team engineer, post-pilot survey
+      Pilot engineer, post-pilot survey
     </span>
   </blockquote>
 
-  <h2>The capability decision behind the cost decision</h2>
+  <h2>A capability decision, not a savings decision</h2>
 
   <p>
-    The financial case wasn't a savings story. It was a capability story. Three scenarios
-    on the table:
+    The financial case wasn't a savings story. It was a capability story. I modeled three
+    scenarios for leadership: staying with the incumbent stack and funding the cleanup
+    project, switching tools with the existing scope intact, and switching while
+    consolidating a redundant adjacent tool.
   </p>
 
-  <div class="not-prose my-10 grid md:grid-cols-3 gap-6">
-    <div class="p-6 border border-ink/15 bg-cream-warm">
-      <p class="eyebrow mb-3">Stay · Fix Jira</p>
-      <p class="font-display text-3xl text-ink mb-2">$173K+</p>
-      <p class="text-sm text-ink-soft">
-        Jira + Confluence + Asana. Plus Jira 2.0 remediation cost (TBD, contractor required).
-      </p>
-    </div>
-    <div class="p-6 border border-ink/15 bg-cream-warm">
-      <p class="eyebrow mb-3">Switch · Replace Jira</p>
-      <p class="font-display text-3xl text-ink mb-2">$177K</p>
-      <p class="text-sm text-ink-soft">
-        Linear + Notion + Asana unchanged. No remediation cost.
-      </p>
-    </div>
-    <div class="p-6 border-2 border-orange bg-orange/5">
-      <p class="eyebrow mb-3 text-orange-deep">Recommended</p>
-      <p class="font-display text-3xl text-ink mb-2">$131K</p>
-      <p class="text-sm text-ink-soft">
-        Linear + Notion. Asana removed pending parallel evaluation. <strong>$42K reduction.</strong>
-      </p>
-    </div>
-  </div>
+  <p>
+    The third scenario delivered both the lowest cost and the strongest capability profile.
+    But the framing that mattered to executives wasn't the line item. It was that we were
+    choosing between investing in a tool that needed fixing versus a platform that could
+    enable downstream automation we couldn't get from the incumbent. Capability decisions
+    survive procurement cycles. Savings decisions get re-litigated.
+  </p>
 
   <p>
-    The 2.7× throughput was measured before any of the integrations activated. Gong
-    (10,000 customer calls per year converting to issues automatically), Zendesk Triage,
-    Linear Asks (replacing Branch Assist for IT provisioning), and Linear Releases for
-    CI/CD. The pilot result was the floor, not the ceiling.
+    Importantly, the 2.7× throughput was measured before integrations activated. Call
+    summarization to issues, support ticket triage, internal request handling, and release
+    automation were all post-migration capabilities. The pilot result was the floor, not
+    the ceiling.
   </p>
 
   <h2>What I did, what changed</h2>
 
   <p>
     I owned the end-to-end pilot. Design, execution, and recommendation. JQL-scoped sprint
-    exports from Jira, CSV mapping logic for the import, importer evaluation across
-    Linear's native Jira assistant and CLI paths, pilot team selection, benchmark
-    methodology, before and after survey design, dissenter review meetings, and the
-    final executive recommendation.
+    exports, CSV mapping logic for the import, importer evaluation across multiple paths,
+    pilot team selection, benchmark methodology, before-and-after survey design, dissenter
+    review meetings, and the final executive recommendation.
   </p>
 
   <p>
     The migration moved forward as a full org cut-over with white-glove onboarding from
-    Linear's customer success team. Sequenced first through Engineering and Product, then
-    IT and Security, then CX and Sales. Asana evaluated in parallel for the remaining
-    30-day decision window.
+    the vendor's customer success team, sequenced through engineering and product first,
+    then through downstream functions, with an adjacent tool evaluated in parallel for the
+    consolidation decision.
   </p>
 
   <h2>Why this case study</h2>
@@ -227,7 +212,7 @@ import CaseStudy from '../../layouts/CaseStudy.astro';
     This one shows what design leadership actually looks like at the executive level.
     Framing the right question (capability vs. cost). Designing a defensible test
     methodology. Holding the test accountable to pre-set metrics. Presenting the result
-    as a business case rather than a feature wishlist. Managing the dissent that
+    as a business case rather than a feature wishlist. And managing the dissent that
     inevitably surfaces when the data is too good.
   </p>
 

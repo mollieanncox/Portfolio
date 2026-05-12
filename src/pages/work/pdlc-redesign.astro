@@ -3,23 +3,23 @@ import CaseStudy from '../../layouts/CaseStudy.astro';
 ---
 
 <CaseStudy
-  title="Redesigning the product development lifecycle"
+  title="Redesigning a product development lifecycle"
   eyebrow="Branch · 2025–2026"
-  summary="A four-phase operating model with named DACI ownership, paired problem and technical solution briefs, mandatory success metrics before Build, and a 90-day Invest, Iterate, or Deprecate decision loop. Adopted across Product, Design, Engineering, and PMM."
+  summary="Architecting a four-phase operating model with named DACI ownership, paired problem and technical briefs, mandatory success metrics before Build, and post-launch decision loops. Adopted across product, design, engineering, and PMM."
   role="Sr. Director of Product Experience"
-  duration="Q3 2025 to Q2 2026"
+  duration="Multi-quarter rollout"
   team="Product, Design, Engineering, PMM, Marketing"
   outcome="Operating model adopted org-wide"
 >
   <h2>The problem we kept paying for</h2>
 
   <p>
-    Branch was shipping product, but Define was a black hole. Problems got framed by PM
-    alone, designers entered at ticket assignment instead of at problem framing,
-    engineers reacted to scoped solutions instead of shaping them, and analytics showed
-    up after launch instead of before. The cost of this wasn't just velocity. It was
-    that we'd ship features without success metrics, then quietly accumulate them into
-    maintenance burden engineering called crushing.
+    The company was shipping product, but Define was a black hole. Problems got framed by
+    PM alone, designers entered the work at ticket assignment instead of at problem framing,
+    engineers reacted to scoped solutions instead of shaping them, and analytics arrived
+    after launch instead of before. The cost of this wasn't just velocity. It was that
+    teams kept shipping features without success metrics, and those features quietly
+    accumulated into a heavier and heavier system.
   </p>
 
   <p>
@@ -30,16 +30,16 @@ import CaseStudy from '../../layouts/CaseStudy.astro';
   </p>
 
   <p>
-    I was asked to lead the redesign of how Branch builds product. Not a process
-    document. A real operating model that Product, Design, Engineering, and PMM would
+    I was asked to lead the redesign of how the company builds product. Not a process
+    document. A real operating model that product, design, engineering, and PMM would
     actually adopt.
   </p>
 
   <h2>The four-phase model</h2>
 
   <p>
-    The framework I built has four phases that every initiative moves through in
-    sequence:
+    The framework I built moves every initiative through four phases in sequence. The
+    structure is familiar; the discipline around it is what made the difference.
   </p>
 
   <div class="not-prose my-12 grid md:grid-cols-4 gap-4">
@@ -47,22 +47,22 @@ import CaseStudy from '../../layouts/CaseStudy.astro';
       {
         n: '01',
         name: 'Discover',
-        desc: 'Problem framing with the full triad (PM, PD, EM) in the room from the start. Customer research, technical context, design exploration. Exit: a problem brief everyone signed.',
+        desc: 'Problem framing with the cross-functional triad in the room from the start. Customer research, technical context, design exploration. Exit: a signed problem brief.',
       },
       {
         n: '02',
         name: 'Plan',
-        desc: 'Paired problem brief and technical solution brief. Defined success metrics. Dashboard plan. 30/60/90-day review scheduled. Analytics engaged. Exit: a measurable plan.',
+        desc: 'Paired problem brief and technical solution brief. Defined success metrics. Dashboard plan committed before Build. Post-launch review cadence scheduled.',
       },
       {
         n: '03',
         name: 'Build',
-        desc: 'SDLC runs inside this phase. PD active in hi-fi and QA, not handed off at ticket creation. Customer design partner engaged on significant initiatives.',
+        desc: 'SDLC runs inside this phase. Design active in hi-fi and QA, not handed off at ticket creation. Customer partners engaged on significant initiatives.',
       },
       {
         n: '04',
         name: 'Measure',
-        desc: '30, 60, and 90-day reviews against the metrics defined at Plan. Triad reconvenes. Invest, Iterate, or Deprecate decision. Loop back to Discover.',
+        desc: 'Structured post-launch reviews against the metrics defined at Plan. Triad reconvenes. Invest, Iterate, or Deprecate decision documented. Loop back to Discover.',
       },
     ].map((phase) => (
       <div class="p-6 border border-ink/15 bg-cream-warm/50">
@@ -74,198 +74,95 @@ import CaseStudy from '../../layouts/CaseStudy.astro';
   </div>
 
   <p>
-    Design and Customer Proximity run through all four phases as standing threads, not
-    as one-time gates. Design is never "started" at ticket assignment. Customer contact
-    is a calendar commitment with defined minimums per phase (three in Discover, one in
-    Plan, design partner in Build for significant initiatives, two in Measure).
-  </p>
-
-  <p>
-    PDLC governs initiative-level work. SDLC runs inside Build. Iteration on existing
-    features routes back through Measure, Discover, Plan, Build, not straight back to
-    Build.
+    Design and customer proximity run through all four phases as standing threads, not as
+    one-time gates. Design is never "started" at ticket assignment. Customer contact is a
+    calendar commitment with defined minimums per phase. The PDLC governs initiative-level
+    work; SDLC runs inside Build. Iteration on existing features routes back through
+    Measure and Discover, not straight back to Build.
   </p>
 
   <h2>The three non-negotiables</h2>
 
   <p>
-    The framework introduced a lot. To make it real instead of aspirational, I named
-    three things as non-negotiable starting Q2 2026.
+    The framework introduced a lot. To make it real instead of aspirational, I named three
+    things as non-negotiable from day one.
   </p>
 
   <p>
-    <strong>The triad engages from Discover, not from Plan.</strong> Technical
-    feasibility and design implications shape the problem brief itself. Loops back from
-    Measure re-engage the triad before returning to Build. This is the single change
-    that did the most to fix Define as a black hole.
+    <strong>The triad engages from Discover, not from Plan.</strong> Technical feasibility
+    and design implications shape the problem brief itself. Loops back from Measure
+    re-engage the triad before returning to Build. This is the single change that did the
+    most to fix Define as a black hole.
   </p>
 
   <p>
     <strong>Measurement is the spine.</strong> Every initiative entering Plan has defined
-    success metrics, a dashboard plan, and a 30/60/90 review scheduled. Dashboards exist
-    at launch. Analytics is engaged at Plan, not at launch.
+    success metrics, a dashboard plan, and a post-launch review scheduled. Dashboards
+    exist at launch. Analytics is engaged at Plan, not at launch.
   </p>
 
   <p>
-    <strong>Invest, Iterate, or Deprecate decisions happen at 90 days, documented, with
-    feed-forward to Discover.</strong> Every significant initiative gets a formal
-    decision. Features without decisions don't accumulate silently into maintenance
-    burden.
+    <strong>Invest, Iterate, or Deprecate decisions happen on a defined cadence,
+    documented, with feed-forward to Discover.</strong> Every significant initiative gets
+    a formal decision. Features without decisions don't accumulate silently into
+    maintenance burden.
   </p>
 
   <h2>DACI as the ownership model</h2>
 
   <p>
-    For each phase, I defined who is the Driver, Approver, Contributor, and Informed.
-    The model is adapted at the pod level (each pod revisits its charter with KPIs,
-    personas, target users, and pod-specific DACI), but the overall pattern is fixed.
+    For each phase, I defined who is the Driver, Approver, Contributor, and Informed. The
+    pattern adapts at the team level (each team revisits its charter with KPIs, personas,
+    target users, and team-specific DACI), but the overall structure is fixed. The
+    discipline of named ownership at each gate is what turned the framework from a process
+    document into a working operating model.
   </p>
 
-  <div class="not-prose my-10 overflow-x-auto">
-    <table class="w-full border-collapse">
-      <thead>
-        <tr class="border-b border-ink/20">
-          <th class="text-left py-3 px-4 font-mono text-xs uppercase tracking-wider text-ink-muted">Phase</th>
-          <th class="text-left py-3 px-4 font-mono text-xs uppercase tracking-wider text-ink-muted">Gate owner</th>
-          <th class="text-left py-3 px-4 font-mono text-xs uppercase tracking-wider text-ink-muted">Co-drivers</th>
-        </tr>
-      </thead>
-      <tbody class="font-display">
-        <tr class="border-b border-ink/10">
-          <td class="py-4 px-4 text-ink">Discover</td>
-          <td class="py-4 px-4 text-ink-soft">PM</td>
-          <td class="py-4 px-4 text-ink-soft">PD, EM, Research</td>
-        </tr>
-        <tr class="border-b border-ink/10">
-          <td class="py-4 px-4 text-ink">Plan</td>
-          <td class="py-4 px-4 text-ink-soft">PM + EM</td>
-          <td class="py-4 px-4 text-ink-soft">PD, Analytics, PMM</td>
-        </tr>
-        <tr class="border-b border-ink/10">
-          <td class="py-4 px-4 text-ink">Build</td>
-          <td class="py-4 px-4 text-ink-soft">EM then PM</td>
-          <td class="py-4 px-4 text-ink-soft">PD, QA, Customer design partner</td>
-        </tr>
-        <tr>
-          <td class="py-4 px-4 text-ink">Measure</td>
-          <td class="py-4 px-4 text-ink-soft">VP Product</td>
-          <td class="py-4 px-4 text-ink-soft">PM, PD, EM, Analytics</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2>The structural gaps I named alongside the framework</h2>
+  <h2>The structural commitments</h2>
 
   <p>
-    A framework is only as strong as the infrastructure supporting it. As part of the
-    PDLC rollout, I named four parallel commitments leadership had to make for the
-    operating model to actually work.
+    A framework is only as strong as the infrastructure supporting it. Alongside the PDLC
+    rollout, I named four parallel commitments leadership had to make for the operating
+    model to actually work.
   </p>
 
   <p>
-    <strong>Single source of truth for specs.</strong> Designate one system as
-    authoritative. Migration-forward policy. New initiatives use it Day 1.
+    <strong>A single source of truth for specs.</strong> Designate one system as
+    authoritative. Migration-forward policy. New initiatives use it from day one.
   </p>
 
   <p>
-    <strong>Functioning deprecation process.</strong> Quarterly Feature Health Review.
-    PM proposes, VP Product approves Reinvest, Maintain, or Deprecate. Deprecation
-    requires 90-day customer notice, migration path, sunset date. Without this,
-    AI-accelerated build would only compound the maintenance burden.
+    <strong>A functioning deprecation process.</strong> Quarterly feature health reviews.
+    Defined approval path for Reinvest, Maintain, or Deprecate decisions. Customer notice,
+    migration path, and sunset date for every deprecation. Without this, AI-accelerated
+    build would only compound the maintenance burden.
   </p>
 
   <p>
-    <strong>Research access infrastructure.</strong> Weekly customer touchpoint cadence
-    (calendar commitment). Named research coordinator per team. Great Question as
-    designated repository. Searchable, accessible to all of proddev.
+    <strong>Research access infrastructure.</strong> Weekly customer touchpoint cadence as
+    a calendar commitment, not a best practice. Named research coordinator per team. A
+    searchable, accessible repository of insights for the whole product organization.
   </p>
 
   <p>
-    <strong>Monthly PDLC Health Review.</strong> A standing leadership review of whether
-    gates are respected, measurement is happening, pods are stuck, friction is surfacing.
-    Not a status meeting. The mechanism that keeps the framework from ossifying.
-  </p>
-
-  <h2>The rollout sequence</h2>
-
-  <p>
-    I designed the rollout to land in four steps, with the Monthly PDLC Health Review
-    running throughout.
-  </p>
-
-  <div class="not-prose my-10 space-y-6">
-    {[
-      {
-        when: 'May',
-        what: 'Pod charter revisions. Each pod revisits its charter with KPIs, personas, target users, and adapted DACI. Pod leads (EM + PM) drive. AI tooling rolls out to proddev in parallel.',
-      },
-      {
-        when: 'June',
-        what: 'Triad engagement from Discover begins for all new initiatives. Sanctioned and unsanctioned AI blurring patterns communicated and enforced. Monthly PDLC Health Review begins.',
-      },
-      {
-        when: 'Q3',
-        what: 'Every initiative entering Plan has defined success metrics, dashboard plan, 30/60/90 review scheduled. Analytics owner engaged at Plan. First cohort reaches Measure with full framework applied.',
-      },
-      {
-        when: 'Q4',
-        what: 'Feature Health Review running quarterly. First cohort of Invest, Iterate, or Deprecate decisions documented. Loop to Discover operational.',
-      },
-    ].map((step) => (
-      <div class="grid md:grid-cols-12 gap-6 pb-6 border-b border-ink/10">
-        <div class="md:col-span-2">
-          <p class="font-mono text-xs text-orange uppercase tracking-[0.15em]">{step.when}</p>
-        </div>
-        <div class="md:col-span-10 text-ink-soft">{step.what}</div>
-      </div>
-    ))}
-  </div>
-
-  <p>
-    The maturity target is Level 2 across all phases by end of 2026, per QBR commitment.
-    Level 3 work begins in 2027 with foundations holding.
-  </p>
-
-  <h2>Three decisions for VP alignment</h2>
-
-  <p>
-    When I brought the framework to VP Product and VP Engineering for sign-off, I
-    isolated three decisions that only they could make. Everything else could be adjusted
-    by the Director, EM, and Product leads group.
-  </p>
-
-  <p>
-    <strong>1. Model adoption.</strong> Do we adopt the four-phase model with Design and
-    Customer Proximity as continuous threads, governing initiative-level work, with SDLC
-    running inside Build?
-  </p>
-
-  <p>
-    <strong>2. Q2 non-negotiables.</strong> Do we commit to the four Q2 fundamentals?
-    Measurement spine at Plan. Triad engagement from Discover. 90-day Invest, Iterate,
-    or Deprecate decisions. AI tool use at the phase level with sanctioned vs.
-    unsanctioned patterns.
-  </p>
-
-  <p>
-    <strong>3. AI mandate alignment.</strong> The PDLC operationalizes the QBR's pillar
-    two (AI adoption as measured expectation). What is the leadership-defined mandate
-    and metric? The PDLC document doesn't define it. It needs to align with it.
+    <strong>A standing health review.</strong> A regular leadership forum on whether gates
+    are being respected, measurement is happening, teams are stuck, and friction is
+    surfacing. Not a status meeting. The mechanism that keeps the framework from
+    ossifying.
   </p>
 
   <h2>Why this case study</h2>
 
   <p>
-    Operating model design is the work most design leaders never get to do, and the
-    work that most differentiates a Sr. Director from a VP. It's not about choosing a
-    process framework. It's about diagnosing the structural reason a company keeps
-    shipping things it can't measure, designing the cross-functional architecture that
-    fixes it, and getting Product, Engineering, and PMM to actually adopt it.
+    Operating model design is the work most design leaders never get to do, and the work
+    that most differentiates a Sr. Director from a VP. It's not about choosing a process
+    framework. It's about diagnosing the structural reason a company keeps shipping things
+    it can't measure, designing the cross-functional architecture that fixes it, and
+    getting product, engineering, and PMM to actually adopt it.
   </p>
 
   <p>
-    Design upstream into discovery. Measurement as the spine. The loop closed at 90
-    days. That's the leverage.
+    Design upstream into discovery. Measurement as the spine. The loop closed by a real
+    decision. That's the leverage.
   </p>
 </CaseStudy>
