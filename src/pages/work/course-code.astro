@@ -1,267 +1,507 @@
 ---
-import CaseStudy from '../../layouts/CaseStudy.astro';
+import Base from '../../layouts/Base.astro';
 ---
 
-<CaseStudy
-  title="Course Code: an AI-native consumer product, solo"
-  eyebrow="Founder · 2026"
-  summary="Built a live, revenue-generating consumer app from zero to paying subscribers in ten weeks, solo, with an AI co-founder. 4.6K active users, 4,659 courses, $39 annual Pro tier, real product, real conversion."
-  role="Founder, Product, Design, Operator"
-  duration="Ten weeks from concept to Phase 1 complete"
-  team="One human, one AI co-founder"
-  outcome="Live consumer product. 4.6K users. Paying subscribers."
+<Base
+  title="Course Code · Mollie Cox"
+  description="An AI-native consumer product, built solo with an AI co-founder. 4.6K active users in 28 days. Live at coursecode.golf."
 >
-  <h2>The problem nobody was solving</h2>
+  <!-- ============================== -->
+  <!-- HERO: navy bg with linocut fox -->
+  <!-- ============================== -->
+  <section class="case-hero-dark">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 relative">
+      <a
+        href="/#work"
+        class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] text-cream/60 hover:text-orange transition-colors mb-16"
+      >
+        ← All work
+      </a>
 
-  <p>
-    Women in golf face a specific, universal, quietly embarrassing problem. Showing up
-    at a new course without knowing the dress code. The rules are real. They're course
-    specific, enforced, and often the difference between being welcomed and turned away
-    at the bag drop.
-  </p>
+      <div class="grid md:grid-cols-12 gap-8 items-center relative z-10">
+        <div class="md:col-span-7">
+          <p class="eyebrow-light mb-6">Founder · 2026</p>
 
-  <p>
-    But the rules are buried in PDFs, missing from websites, never aggregated anywhere,
-    and almost never written from a woman's perspective. The existing options were
-    generic golf directories built by men, for men. Course databases that list yardage
-    and green fees. Nothing that answers the actual question women ask before every new
-    round: <em>what do I wear?</em>
-  </p>
+          <h1 class="font-display text-display-lg text-cream leading-[0.95] tracking-tight">
+            An AI-native consumer product<span class="brand-period">.</span>
+          </h1>
 
-  <h2>The insight</h2>
+          <p class="mt-10 text-xl text-cream/80 leading-relaxed max-w-[40ch]">
+            Built solo with an AI co-founder. Zero to live, revenue-generating, ten weeks.
+            4,659 courses indexed. 4.6K active users in 28 days. Real product, real conversion.
+          </p>
 
-  <p>
-    This wasn't a dress code directory problem. It was a style intelligence problem.
-    The opportunity wasn't "here are the rules." It was <em>here's how to show up as
-    yourself, within the rules, on every course you'll ever play.</em>
-  </p>
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a
+              href="https://coursecode.golf"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
+            >
+              See it live →
+            </a>
+            <a
+              href="/ai"
+              class="inline-flex items-center gap-2 px-6 py-3 border border-cream/30 text-cream font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
+            >
+              Read the AI operating model →
+            </a>
+          </div>
+        </div>
 
-  <p>
-    Utility earns the right for identity. The lookup is the hook. The Style Planner is
-    the product. The brand position is a woman's POV on golf in 2026.
-  </p>
-
-  <blockquote>
-    Tagline: <em>Know before you go.</em>
-  </blockquote>
-
-  <!-- Big stat callout -->
-  <div class="not-prose my-16 py-16 px-8 md:px-12 bg-navy-deep text-cream relative overflow-hidden">
-    <div class="absolute top-6 left-8 font-mono text-xs uppercase tracking-[0.18em] text-cream/60">
-      Live as of May 2026
-    </div>
-    <div class="grid md:grid-cols-4 gap-8 md:gap-12 items-end">
-      <div>
-        <p class="font-display text-5xl md:text-6xl text-orange leading-none">4.6K</p>
-        <p class="font-mono text-sm text-cream/70 mt-3">Active users</p>
+        <!-- The fox illustration in orange -->
+        <div class="md:col-span-5 hidden md:block">
+          <svg viewBox="0 0 277 301" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-sm ml-auto">
+            <path d="M157.433 0.0194147C160.064 0.28246 161.676 2.94593 163.024 5.90516C174.636 31.2571 178.058 58.7139 177.992 87.0253C214.307 112.772 199.242 143.253 239.011 154.663L268.419 163.081C274.142 164.725 277.234 169.887 276.148 175.74C272.267 196.554 258.681 212.173 239.504 220.887C220.326 229.6 189.406 232.1 183.452 250.02C181.84 254.887 181.018 259.819 180.788 264.817L180.67 267.096C180.578 273.283 181.289 279.521 182.33 285.721C179.573 283.247 175.416 281.701 170.458 280.891C170.317 279.63 170.194 278.361 170.097 277.082C169.866 274.155 169.769 271.163 169.867 268.105L169.995 265.711C170.379 258.307 171.814 250.388 174.867 241.602C168.255 238.873 147.532 257.714 150.689 246.042C150.854 245.45 151.61 244.957 152.63 244.036C174.636 224.011 204.8 224.503 229.603 213.883C209.866 214.869 192.005 217.072 173.814 211.581C171.479 210.858 171.446 207.998 172.301 207.142C177.794 201.651 202.761 214.903 240.228 202.572C247.07 200.303 252.925 196.719 257.136 191.458C252.202 188.729 249.274 185.473 246.248 180.969L233.32 186.657C205.36 198.988 150.623 172.616 96.9395 203.525C79.1437 213.784 66.4796 229.141 59.21 248.541C71.2821 243.806 79.9003 236.539 93.2881 234.829L80.0322 253.802C79.177 255.051 76.8417 256.728 78.3877 258.011C80.9219 260.147 109.275 245.187 120.064 247.685C113.222 257.517 107.4 268.961 102.663 281.028C100.208 287.265 98.0441 293.674 96.1797 300.12C94.2075 297.729 89.4431 292.472 79.5605 282.119C70.127 272.236 57.3445 262.334 46.5098 254.907C41.0905 251.193 36.1506 248.092 32.3516 245.918C30.453 244.831 28.8327 243.973 27.5771 243.385C26.95 243.091 26.4061 242.861 25.96 242.703C25.5303 242.551 25.1376 242.447 24.8359 242.447C22.9579 242.447 21.5809 243.475 20.1895 244.663C18.7753 245.87 17.299 247.285 15.1299 248.37H15.1289C14.7446 248.562 13.3407 249.316 11.1123 250.156C10.9008 250.236 9.71064 250.723 7.72363 251.541C8.84172 248.237 9.90812 244.805 10.9395 241.224C11.9443 237.736 12.9182 234.108 13.8818 230.324C7.69769 231.048 5.65784 235.125 0 233.086C8.58539 216.217 15.4935 199.546 18.0264 180.508C19.2435 171.268 24.2434 160.844 23.0264 151.638C21.0198 136.545 16.9406 122.702 16.6445 107.083C16.1182 81.0735 19.21 55.7217 25.7559 30.6659C26.4466 28.0354 28.355 25.9306 29.8682 25.3388C32.3681 24.3523 35.6573 25.2074 38.1572 26.9501C59.1109 41.8784 76.8741 59.108 92.7949 79.3632C98.9462 78.8371 106.611 77.8838 111.282 74.6942C115.46 61.3439 144.538 -1.26276 157.433 0.0194147Z" fill="#E13D0F"/>
+          </svg>
+        </div>
       </div>
-      <div>
-        <p class="font-display text-5xl md:text-6xl text-orange leading-none">4,659</p>
-        <p class="font-mono text-sm text-cream/70 mt-3">Courses indexed</p>
-      </div>
-      <div>
-        <p class="font-display text-5xl md:text-6xl text-orange leading-none">10wk</p>
-        <p class="font-mono text-sm text-cream/70 mt-3">Concept to Phase 1 complete</p>
-      </div>
-      <div>
-        <p class="font-display text-5xl md:text-6xl text-orange leading-none">$39</p>
-        <p class="font-mono text-sm text-cream/70 mt-3">Pro tier, annual</p>
+
+      <!-- Meta row -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-cream/15">
+        <div>
+          <p class="eyebrow-light mb-2">Role</p>
+          <p class="text-cream">Founder · Product · Design</p>
+        </div>
+        <div>
+          <p class="eyebrow-light mb-2">Duration</p>
+          <p class="text-cream">10 weeks</p>
+        </div>
+        <div>
+          <p class="eyebrow-light mb-2">Team</p>
+          <p class="text-cream">One human, one AI</p>
+        </div>
+        <div>
+          <p class="eyebrow-light mb-2">Status</p>
+          <p class="text-cream">Live · Phase 1 shipped</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <h2>The bet</h2>
-
-  <p>
-    The conventional path: hire a developer, build for six months, launch something.
-    Course Code went a different direction entirely. The thesis: a solo founder with
-    the right AI infrastructure can operate at the output level of a small, highly
-    aligned team. Not by using AI as a tool, but by restructuring the entire operating
-    model around AI.
-  </p>
-
-  <p>
-    The distinction matters. Using AI means faster prompts, better copy, autocomplete.
-    An AI co-founder means autonomous execution authority, real accountability, defined
-    decision rights, and a persistent identity that shows up to work every day.
-  </p>
-
-  <p>
-    I wrote about how this works in detail. <a href="/ai" class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors">Read the AI operating model →</a>
-  </p>
-
-  <h2>The product</h2>
-
-  <h3>Free tier</h3>
-  <p>
-    Dress code lookup for 4,659 courses across all 50 states. Course vibe ratings
-    (casual, smart casual, traditional, strict). Policy specifics (collars, sleeveless,
-    denim, leggings, hat rules). Look Books, the community-powered style boards that
-    are public by default and shareable. Course search by state or name. Verified dress
-    codes with badge indicators. Community corrections to keep the data fresh.
-  </p>
-
-  <h3>Pro tier ($6.99 a month, or $39 a year with 53% savings)</h3>
-  <p>
-    <strong>Style Planner.</strong> A 4-step wizard that takes the course, the date,
-    the occasion, and your style preferences and builds a complete outfit using real
-    weather data and shoppable products.
-  </p>
-  <p>
-    <strong>Look Books.</strong> A personal golf style archive. Save looks, organize
-    boards by course or season, share by link, discover what the community is wearing
-    everywhere.
-  </p>
-  <p>
-    <strong>Style Search.</strong> Skip the wizard. Search and browse golf products
-    directly, filter by what you care about, save favorites to any Look Book.
-  </p>
-  <p>
-    <strong>Real-weather styling.</strong> Outfit recommendations built around the
-    actual forecast for your tee time, not generic seasonal advice.
-  </p>
-  <p>
-    Seven-day free trial. No card charged until day eight.
-  </p>
-
-  <h3>The Woman-Forward Score</h3>
-  <p>
-    On every course page, women rate four things specific to the women's experience:
-    welcome factor, facilities, course condition, pace of play. With optional detail
-    questions: were the forward tees in good shape? Did the pro shop have women's gear?
-    Were playing partners welcoming? Is the bathroom accessible on the back nine?
-  </p>
-  <p>
-    Competitors won't easily replicate this because they weren't asking these questions
-    in the first place.
-  </p>
-
-  <h2>The viral loop</h2>
-
-  <p>
-    Public Look Books are shareable by link to anyone. No login required to browse.
-    "Steal the Look" prompts non-users to sign up. Signup leads to a free trial of
-    Style Planner. The style loop feeds itself. Walls kill sharing. Let people share
-    first, monetize the upstream behavior.
-  </p>
-
-  <h2>The tech stack</h2>
-
-  <div class="not-prose my-10 overflow-x-auto">
-    <table class="w-full">
-      <thead>
-        <tr class="border-b border-ink/20">
-          <th class="text-left py-3 pr-6 font-mono text-xs uppercase tracking-wider text-ink-muted">Layer</th>
-          <th class="text-left py-3 font-mono text-xs uppercase tracking-wider text-ink-muted">Technology</th>
-        </tr>
-      </thead>
-      <tbody class="font-display">
-        <tr class="border-b border-ink/10"><td class="py-3 pr-6 text-ink">Frontend</td><td class="py-3 text-ink-soft">Next.js 16, React 19, TypeScript</td></tr>
-        <tr class="border-b border-ink/10"><td class="py-3 pr-6 text-ink">Styling</td><td class="py-3 text-ink-soft">Tailwind CSS 4</td></tr>
-        <tr class="border-b border-ink/10"><td class="py-3 pr-6 text-ink">Backend / DB</td><td class="py-3 text-ink-soft">Supabase (Postgres + Auth + Row-level Security)</td></tr>
-        <tr class="border-b border-ink/10"><td class="py-3 pr-6 text-ink">Payments</td><td class="py-3 text-ink-soft">Stripe (Pro plan, 7-day trial, webhooks)</td></tr>
-        <tr class="border-b border-ink/10"><td class="py-3 pr-6 text-ink">Analytics</td><td class="py-3 text-ink-soft">PostHog (behavioral) + Sentry (errors)</td></tr>
-        <tr class="border-b border-ink/10"><td class="py-3 pr-6 text-ink">Email</td><td class="py-3 text-ink-soft">Klaviyo (4-email nurture sequence)</td></tr>
-        <tr class="border-b border-ink/10"><td class="py-3 pr-6 text-ink">Automation</td><td class="py-3 text-ink-soft">n8n (self-hosted, Docker)</td></tr>
-        <tr class="border-b border-ink/10"><td class="py-3 pr-6 text-ink">AI dev</td><td class="py-3 text-ink-soft">OpenClaw + Anthropic Claude</td></tr>
-        <tr class="border-b border-ink/10"><td class="py-3 pr-6 text-ink">AI product</td><td class="py-3 text-ink-soft">@anthropic-ai/sdk (direct dependency)</td></tr>
-        <tr class="border-b border-ink/10"><td class="py-3 pr-6 text-ink">Deployment</td><td class="py-3 text-ink-soft">Vercel (GitHub auto-deploy, under 2 min)</td></tr>
-        <tr class="border-b border-ink/10"><td class="py-3 pr-6 text-ink">Project mgmt</td><td class="py-3 text-ink-soft">Linear (source of truth for all work)</td></tr>
-        <tr><td class="py-3 pr-6 text-ink">Affiliate</td><td class="py-3 text-ink-soft">CJ, Rakuten, Skimlinks (three active networks)</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2>The numbers</h2>
-
-  <div class="not-prose my-10 grid md:grid-cols-2 gap-6">
-    <div class="p-6 border border-ink/15 bg-cream-warm/40">
-      <p class="eyebrow mb-3">Reach</p>
-      <ul class="space-y-2 text-ink-soft">
-        <li>4.6K active users (28 days)</li>
-        <li>4.9K active users (30 days)</li>
-        <li>4.5K organic search sessions</li>
-        <li>11 countries</li>
-        <li>9.1K page views</li>
-        <li>30s average engagement time</li>
-      </ul>
+  <!-- =============================== -->
+  <!-- Big stats panel - supersized -->
+  <!-- =============================== -->
+  <section class="bg-cream-warm/40 border-b border-ink/10">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
+      <p class="eyebrow mb-12">Live, as of May 2026</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">
+        <div>
+          <p class="stat-hero text-ink">4.6K<span class="stat-hero-period">.</span></p>
+          <p class="stat-hero-label">Active users (28 days)</p>
+        </div>
+        <div>
+          <p class="stat-hero text-ink">4,659<span class="stat-hero-period">.</span></p>
+          <p class="stat-hero-label">Courses indexed</p>
+        </div>
+        <div>
+          <p class="stat-hero text-ink">10wk<span class="stat-hero-period">.</span></p>
+          <p class="stat-hero-label">Concept to revenue</p>
+        </div>
+        <div>
+          <p class="stat-hero text-ink">$39<span class="stat-hero-period">.</span></p>
+          <p class="stat-hero-label">Annual Pro tier</p>
+        </div>
+      </div>
     </div>
-    <div class="p-6 border border-ink/15 bg-cream-warm/40">
-      <p class="eyebrow mb-3">Conversion</p>
-      <ul class="space-y-2 text-ink-soft">
-        <li>200 registered users</li>
-        <li>158 signups in last 28 days (79% of total)</li>
-        <li>5 Pro subscribers</li>
-        <li>2.5% free-to-paid conversion</li>
-        <li>Three affiliate networks active</li>
-        <li>Stripe live, subscriptions processing</li>
-      </ul>
+  </section>
+
+  <!-- =============================== -->
+  <!-- THREE PILLARS: Problem · Insight · Bet -->
+  <!-- =============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+      <!-- Problem -->
+      <div>
+        <div class="icon-box">
+          <!-- Compass icon -->
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="16,8 10,14 8,16 14,10"/></svg>
+        </div>
+        <p class="eyebrow mb-3">The problem</p>
+        <h2 class="font-display text-3xl text-ink leading-tight mb-5">
+          Nobody was solving this.
+        </h2>
+        <p class="text-ink-soft leading-relaxed">
+          Women face a quiet, universal golf problem. Showing up at a new course
+          without knowing the dress code. The rules are real, enforced, and the
+          difference between welcome and turned away at the bag drop. But they're
+          buried in PDFs, missing from websites, and never written from a woman's
+          perspective.
+        </p>
+      </div>
+
+      <!-- Insight -->
+      <div>
+        <div class="icon-box">
+          <!-- Lightbulb -->
+          <svg viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.8.7 1 1.5 1 2.3v1h6v-1c0-.8.2-1.6 1-2.3A7 7 0 0 0 12 2z"/></svg>
+        </div>
+        <p class="eyebrow mb-3">The insight</p>
+        <h2 class="font-display text-3xl text-ink leading-tight mb-5">
+          Style intelligence, not a directory.
+        </h2>
+        <p class="text-ink-soft leading-relaxed">
+          The opportunity wasn't "here are the rules." It was: here's how to show
+          up as yourself, within the rules, on every course you'll play. Utility
+          earns the right for identity. The lookup is the hook; the Style Planner
+          is the product.
+        </p>
+        <p class="font-display text-2xl text-orange mt-6">Know before you go.</p>
+      </div>
+
+      <!-- Bet -->
+      <div>
+        <div class="icon-box">
+          <!-- Chess knight stand-in: dice -->
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.2" fill="#E13D0F" stroke="none"/><circle cx="15.5" cy="15.5" r="1.2" fill="#E13D0F" stroke="none"/><circle cx="15.5" cy="8.5" r="1.2" fill="#E13D0F" stroke="none"/><circle cx="8.5" cy="15.5" r="1.2" fill="#E13D0F" stroke="none"/></svg>
+        </div>
+        <p class="eyebrow mb-3">The bet</p>
+        <h2 class="font-display text-3xl text-ink leading-tight mb-5">
+          Solo, with an AI co-founder.
+        </h2>
+        <p class="text-ink-soft leading-relaxed">
+          Conventional path: hire a developer, build for six months, launch.
+          Course Code went different. The thesis: a solo founder with the right
+          AI infrastructure can operate at the output level of a small team. Not
+          AI as a tool. AI as a co-founder with authority.
+        </p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <p>
-    These numbers reflect a product that went from zero to live in ten weeks. Phase 1
-    shipped six days ahead of the planned May 9 deadline. The growth curve is the early
-    shape of organic distribution working, not the result of paid acquisition or growth
-    hacking.
-  </p>
+  <!-- =============================== -->
+  <!-- Product screenshot strip -->
+  <!-- =============================== -->
+  <section class="bg-cream-warm/40 border-y border-ink/10 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-10">
+      <div class="flex items-baseline justify-between mb-12">
+        <div>
+          <p class="eyebrow mb-3">The product</p>
+          <h2 class="font-display text-display-md text-ink leading-tight max-w-[18ch]">
+            Built and shipped.
+          </h2>
+        </div>
+        <a
+          href="https://coursecode.golf"
+          target="_blank"
+          rel="noopener"
+          class="font-mono text-xs uppercase tracking-[0.15em] text-ink hover:text-orange transition-colors"
+        >
+          coursecode.golf →
+        </a>
+      </div>
 
-  <h2>What I learned</h2>
+      <!-- Featured: marketing hero (linocut) -->
+      <div class="mb-10">
+        <div class="shot-frame">
+          <img src="/coursecode/01-hero.png" alt="Course Code marketing homepage with linocut fox illustration and 'Know before you go' tagline" />
+        </div>
+        <p class="shot-caption">Marketing home · Know before you go</p>
+      </div>
 
-  <h3>About the AI co-founder model</h3>
-  <p>
-    <strong>The bottleneck shifts, not disappears.</strong> You stop being blocked on
-    "how long will this take to build" and start being blocked on "exactly what do I
-    want this to do." Spec quality becomes the most important skill you have.
-  </p>
-  <p>
-    <strong>Give AI real authority, not just suggestions.</strong> An AI that can only
-    advise is a better search engine. An AI with commit rights, assigned tickets, and
-    QA responsibility is a collaborator. The difference is accountability architecture.
-  </p>
-  <p>
-    <strong>Human judgment concentrates, not diminishes.</strong> When AI handles
-    execution, every decision that stays with you becomes more consequential. Brand,
-    tone, pricing, who you're building for. These can't be delegated. You get to be
-    only a decision-maker.
-  </p>
+      <!-- Two-up grid -->
+      <div class="grid md:grid-cols-2 gap-8 md:gap-10 mb-10">
+        <div>
+          <div class="shot-frame">
+            <img src="/coursecode/02-course-detail.png" alt="Course Code detail page for Sedona Golf Resort showing dress code, vibe, and what-to-wear blocks" />
+          </div>
+          <p class="shot-caption">Course detail · The Vibe + The Code + What to Wear</p>
+        </div>
+        <div>
+          <div class="shot-frame">
+            <img src="/coursecode/03-community.png" alt="Course Code community page showing women's golf style boards" />
+          </div>
+          <p class="shot-caption">Community · What women are wearing</p>
+        </div>
+      </div>
 
-  <h3>About building the product</h3>
-  <p>
-    <strong>Utility earns the right for identity.</strong> The dress code lookup is the
-    hook. Style Planner is the product. But you can't lead with Style Planner. You have
-    to earn trust with the thing that solves the immediate, concrete problem first.
-  </p>
-  <p>
-    <strong>Content quality beats content volume.</strong> 4,659 courses sounds
-    impressive until a user hits one with wrong information. Verified Silver and Gold
-    courses build more trust than algorithmically generated ones. The tiered content
-    system (Bronze, Silver, Gold) is built around that truth.
-  </p>
-  <p>
-    <strong>Public-first is the growth engine.</strong> Look Books shareable without
-    login is how organic distribution happens. Walls kill sharing. Let people share
-    first, monetize the upstream behavior.
-  </p>
+      <!-- Pricing full -->
+      <div>
+        <div class="shot-frame">
+          <img src="/coursecode/04-pricing.png" alt="Course Code pricing page showing Free and Pro tiers with $39 annual" />
+        </div>
+        <p class="shot-caption">Pricing · Know the rules. Own the look.</p>
+      </div>
+    </div>
+  </section>
 
-  <h2>The meta-point</h2>
+  <!-- =============================== -->
+  <!-- Free vs Pro comparison -->
+  <!-- =============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <p class="eyebrow mb-3">Free + Pro</p>
+    <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch] mb-12">
+      Utility for everyone, intelligence for Pro.
+    </h2>
 
-  <p>
-    Course Code is a product case study. It's also a proof of concept for a new way to
-    found a company. The question every product leader should be asking in 2026 isn't
-    "how do I use AI to work faster." It's "how do I redesign the operating model of
-    this business around what AI can actually do?"
-  </p>
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+      <!-- Free -->
+      <div class="compare-cream">
+        <p class="eyebrow mb-3">Free</p>
+        <p class="font-display text-4xl text-ink mb-2">$0</p>
+        <p class="text-sm text-ink-muted mb-8">Always free</p>
 
-  <p>
-    I built a live product, got to paying customers, and shipped a complete Phase 1
-    roadmap as a solo founder, on timeline, by treating that question seriously.
-    That's the case study.
-  </p>
+        <ul class="space-y-4">
+          <li class="flex gap-3 items-start">
+            <span class="font-mono text-orange mt-1 shrink-0">◆</span>
+            <span class="text-ink-soft">Dress code lookup, 4,659 courses, all 50 states</span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <span class="font-mono text-orange mt-1 shrink-0">◆</span>
+            <span class="text-ink-soft">Course vibe ratings: casual, smart casual, traditional, strict</span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <span class="font-mono text-orange mt-1 shrink-0">◆</span>
+            <span class="text-ink-soft">Policy details: collars, sleeveless, denim, leggings, hats</span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <span class="font-mono text-orange mt-1 shrink-0">◆</span>
+            <span class="text-ink-soft">Public Look Books, shareable by link, viral loop</span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <span class="font-mono text-orange mt-1 shrink-0">◆</span>
+            <span class="text-ink-soft">Verified courses with badge indicators</span>
+          </li>
+        </ul>
+      </div>
 
-  <p>
-    <a href="https://coursecode.golf" target="_blank" rel="noopener" class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors">
-      See it live at coursecode.golf →
-    </a>
-  </p>
-</CaseStudy>
+      <!-- Pro -->
+      <div class="compare-dark">
+        <p class="eyebrow-light mb-3">Pro</p>
+        <p class="font-display text-4xl text-cream mb-2">$39<span class="text-orange">/yr</span></p>
+        <p class="text-sm text-cream/60 mb-8">$6.99/mo · 7-day free trial</p>
+
+        <ul class="space-y-4">
+          <li class="flex gap-3 items-start">
+            <span class="font-mono text-orange mt-1 shrink-0">◆</span>
+            <span class="text-cream/85">Everything in Free</span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <span class="font-mono text-orange mt-1 shrink-0">◆</span>
+            <span class="text-cream/85"><strong class="text-cream">Style Planner.</strong> 4-step wizard. Course + date + occasion + style → outfit with real-weather data.</span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <span class="font-mono text-orange mt-1 shrink-0">◆</span>
+            <span class="text-cream/85"><strong class="text-cream">Look Books.</strong> Personal golf style archive. Save, organize, share, discover.</span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <span class="font-mono text-orange mt-1 shrink-0">◆</span>
+            <span class="text-cream/85"><strong class="text-cream">Style Search.</strong> Search shoppable products. Filter, save to Look Books.</span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <span class="font-mono text-orange mt-1 shrink-0">◆</span>
+            <span class="text-cream/85"><strong class="text-cream">Real-weather styling.</strong> Forecast for your tee time, not generic seasonal advice.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== -->
+  <!-- Tech stack visual grid -->
+  <!-- =============================== -->
+  <section class="bg-cream-warm/40 border-y border-ink/10 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-10">
+      <p class="eyebrow mb-3">The stack</p>
+      <h2 class="font-display text-display-md text-ink leading-tight max-w-[22ch] mb-12">
+        Modern, fast, and AI-native at every layer.
+      </h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {[
+          { name: 'Next.js 16', cat: 'frontend', desc: 'React 19, TypeScript' },
+          { name: 'Tailwind CSS 4', cat: 'frontend', desc: 'Design tokens, utilities' },
+          { name: 'Vercel', cat: 'frontend', desc: 'Auto-deploy under 2 min' },
+          { name: 'Supabase', cat: 'backend', desc: 'Postgres + Auth + RLS' },
+          { name: 'Stripe', cat: 'backend', desc: 'Pro plan, trial, webhooks' },
+          { name: 'PostHog', cat: 'backend', desc: 'Behavioral analytics' },
+          { name: 'Sentry', cat: 'backend', desc: 'Error monitoring' },
+          { name: 'Klaviyo', cat: 'backend', desc: '4-email nurture sequence' },
+          { name: 'OpenClaw + Claude', cat: 'ai', desc: 'AI co-founder runtime' },
+          { name: '@anthropic-ai/sdk', cat: 'ai', desc: 'Production dependency' },
+          { name: 'Linear', cat: 'ops', desc: 'Source of truth for work' },
+          { name: 'n8n', cat: 'ops', desc: 'Self-hosted automation' },
+        ].map((tool) => (
+          <div class="tool-card">
+            <div class={`tool-card-edge tool-card-edge-${tool.cat}`}></div>
+            <p class="font-display text-lg text-ink leading-tight mb-1 pl-3">{tool.name}</p>
+            <p class="text-xs text-ink-muted pl-3">{tool.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Legend -->
+      <div class="mt-10 flex flex-wrap gap-6 text-xs font-mono uppercase tracking-wider text-ink-muted">
+        <span class="flex items-center gap-2"><span class="w-3 h-3" style="background:#E13D0F"></span>Frontend</span>
+        <span class="flex items-center gap-2"><span class="w-3 h-3" style="background:#9B40C4"></span>Backend / Data</span>
+        <span class="flex items-center gap-2"><span class="w-3 h-3" style="background:#062E5C"></span>AI</span>
+        <span class="flex items-center gap-2"><span class="w-3 h-3" style="background:#7A6A4F"></span>Ops</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== -->
+  <!-- The numbers: Reach + Conversion -->
+  <!-- =============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <p class="eyebrow mb-3">The numbers</p>
+    <h2 class="font-display text-display-md text-ink leading-tight max-w-[22ch] mb-12">
+      Real users. Real revenue. Real conversion.
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+      <!-- Reach -->
+      <div class="compare-cream">
+        <p class="eyebrow mb-8">Reach</p>
+        <div class="space-y-6">
+          <div class="flex items-baseline justify-between border-b border-ink/10 pb-4">
+            <p class="font-display text-3xl text-ink">4.6K<span class="text-orange">.</span></p>
+            <p class="font-mono text-xs uppercase tracking-wider text-ink-muted">Active users (28 days)</p>
+          </div>
+          <div class="flex items-baseline justify-between border-b border-ink/10 pb-4">
+            <p class="font-display text-3xl text-ink">4.9K<span class="text-orange">.</span></p>
+            <p class="font-mono text-xs uppercase tracking-wider text-ink-muted">Active users (30 days)</p>
+          </div>
+          <div class="flex items-baseline justify-between border-b border-ink/10 pb-4">
+            <p class="font-display text-3xl text-ink">4.5K<span class="text-orange">.</span></p>
+            <p class="font-mono text-xs uppercase tracking-wider text-ink-muted">Organic search sessions</p>
+          </div>
+          <div class="flex items-baseline justify-between border-b border-ink/10 pb-4">
+            <p class="font-display text-3xl text-ink">9.1K<span class="text-orange">.</span></p>
+            <p class="font-mono text-xs uppercase tracking-wider text-ink-muted">Page views</p>
+          </div>
+          <div class="flex items-baseline justify-between">
+            <p class="font-display text-3xl text-ink">11<span class="text-orange">.</span></p>
+            <p class="font-mono text-xs uppercase tracking-wider text-ink-muted">Countries</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conversion -->
+      <div class="compare-dark">
+        <p class="eyebrow-light mb-8">Conversion</p>
+        <div class="space-y-6">
+          <div class="flex items-baseline justify-between border-b border-cream/15 pb-4">
+            <p class="font-display text-3xl text-cream">200<span class="text-orange">.</span></p>
+            <p class="font-mono text-xs uppercase tracking-wider text-cream/60">Registered users</p>
+          </div>
+          <div class="flex items-baseline justify-between border-b border-cream/15 pb-4">
+            <p class="font-display text-3xl text-cream">158<span class="text-orange">.</span></p>
+            <p class="font-mono text-xs uppercase tracking-wider text-cream/60">Signups in 28 days (79%)</p>
+          </div>
+          <div class="flex items-baseline justify-between border-b border-cream/15 pb-4">
+            <p class="font-display text-3xl text-cream">5<span class="text-orange">.</span></p>
+            <p class="font-mono text-xs uppercase tracking-wider text-cream/60">Pro subscribers</p>
+          </div>
+          <div class="flex items-baseline justify-between border-b border-cream/15 pb-4">
+            <p class="font-display text-3xl text-cream">2.5<span class="text-orange">%</span></p>
+            <p class="font-mono text-xs uppercase tracking-wider text-cream/60">Free → paid conversion</p>
+          </div>
+          <div class="flex items-baseline justify-between">
+            <p class="font-display text-3xl text-cream">3<span class="text-orange">.</span></p>
+            <p class="font-mono text-xs uppercase tracking-wider text-cream/60">Affiliate networks active</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-10 text-ink-muted text-sm font-mono">
+      Source: Google Analytics 4 + PostHog + Stripe, live data May 2026.
+    </p>
+  </section>
+
+  <!-- =============================== -->
+  <!-- Lessons - 3 cards with icons -->
+  <!-- =============================== -->
+  <section class="bg-cream-warm/40 border-y border-ink/10 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-10">
+      <p class="eyebrow mb-3">What I learned</p>
+      <h2 class="font-display text-display-md text-ink leading-tight max-w-[22ch] mb-12">
+        The bottleneck shifts, but it doesn't disappear.
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+        <div class="lesson-card">
+          <div class="icon-box">
+            <!-- Spec clarity icon -->
+            <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-ink mb-3 leading-tight">Spec quality is the new bottleneck.</h3>
+          <p class="text-ink-soft leading-relaxed">
+            You stop being blocked on "how long will this take to build" and start being
+            blocked on "exactly what do I want this to do." Clarity becomes the highest-leverage
+            skill you have.
+          </p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="icon-box">
+            <!-- Authority icon: key -->
+            <svg viewBox="0 0 24 24"><circle cx="7" cy="14" r="4"/><path d="M11 14h10"/><path d="M17 14v3"/><path d="M21 14v3"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-ink mb-3 leading-tight">Authority beats access.</h3>
+          <p class="text-ink-soft leading-relaxed">
+            An AI that can only advise is a better search engine. An AI with commit rights,
+            assigned tickets, and QA responsibility is a collaborator. The difference is
+            accountability architecture.
+          </p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="icon-box">
+            <!-- Judgment icon: magnifier -->
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><line x1="20" y1="20" x2="16" y2="16"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-ink mb-3 leading-tight">Judgment concentrates.</h3>
+          <p class="text-ink-soft leading-relaxed">
+            When AI handles execution, every decision that stays with you becomes more
+            consequential. Brand, tone, pricing, who you're building for. These can't be
+            delegated. You get to be only a decision-maker.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== -->
+  <!-- The meta-point + CTA -->
+  <!-- =============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <div class="max-w-[28ch]">
+      <p class="eyebrow mb-6">The meta-point</p>
+      <h2 class="font-display text-display-md text-ink leading-[1.05] mb-10">
+        Stop asking how to use AI faster. Start asking how to redesign the work itself.
+      </h2>
+    </div>
+    <div class="max-w-reading">
+      <p class="text-lg text-ink-soft leading-relaxed mb-6">
+        Course Code is a product case study. It's also a proof of concept for a new way
+        to found a company. The question every product leader should be asking in 2026
+        isn't "how do I use AI to work faster." It's "how do I redesign the operating
+        model of this business around what AI can actually do?"
+      </p>
+      <p class="text-lg text-ink-soft leading-relaxed mb-10">
+        I built a live product, got to paying customers, and shipped a complete Phase 1
+        roadmap as a solo founder, on timeline, by treating that question seriously.
+        That's the case study.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a
+          href="/ai"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
+        >
+          Read the AI operating model →
+        </a>
+        <a
+          href="https://coursecode.golf"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-ink/30 text-ink font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
+        >
+          See Course Code live →
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>
