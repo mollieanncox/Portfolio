@@ -10,7 +10,7 @@ import Base from '../../layouts/Base.astro';
   <!-- HERO: navy bg with linocut fox -->
   <!-- ============================== -->
   <section class="case-hero-dark">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 relative">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 relative z-10">
       <a
         href="/#work"
         class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] text-cream/60 hover:text-orange transition-colors mb-16"
@@ -18,7 +18,7 @@ import Base from '../../layouts/Base.astro';
         ← All work
       </a>
 
-      <div class="grid md:grid-cols-12 gap-8 items-center relative z-10">
+      <div class="grid md:grid-cols-12 gap-8 md:gap-16 items-center">
         <div class="md:col-span-7">
           <p class="eyebrow-light mb-6">Founder · 2026</p>
 
@@ -37,28 +37,30 @@ import Base from '../../layouts/Base.astro';
               target="_blank"
               rel="noopener"
               class="inline-flex items-center gap-2 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
+              style="border-radius: 999px;"
             >
               See it live →
             </a>
             <a
               href="/ai"
               class="inline-flex items-center gap-2 px-6 py-3 border border-cream/30 text-cream font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
+              style="border-radius: 999px;"
             >
               Read the AI operating model →
             </a>
           </div>
         </div>
 
-        <!-- The fox illustration in orange -->
-        <div class="md:col-span-5 hidden md:block">
-          <svg viewBox="0 0 277 301" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-sm ml-auto">
-            <path d="M157.433 0.0194147C160.064 0.28246 161.676 2.94593 163.024 5.90516C174.636 31.2571 178.058 58.7139 177.992 87.0253C214.307 112.772 199.242 143.253 239.011 154.663L268.419 163.081C274.142 164.725 277.234 169.887 276.148 175.74C272.267 196.554 258.681 212.173 239.504 220.887C220.326 229.6 189.406 232.1 183.452 250.02C181.84 254.887 181.018 259.819 180.788 264.817L180.67 267.096C180.578 273.283 181.289 279.521 182.33 285.721C179.573 283.247 175.416 281.701 170.458 280.891C170.317 279.63 170.194 278.361 170.097 277.082C169.866 274.155 169.769 271.163 169.867 268.105L169.995 265.711C170.379 258.307 171.814 250.388 174.867 241.602C168.255 238.873 147.532 257.714 150.689 246.042C150.854 245.45 151.61 244.957 152.63 244.036C174.636 224.011 204.8 224.503 229.603 213.883C209.866 214.869 192.005 217.072 173.814 211.581C171.479 210.858 171.446 207.998 172.301 207.142C177.794 201.651 202.761 214.903 240.228 202.572C247.07 200.303 252.925 196.719 257.136 191.458C252.202 188.729 249.274 185.473 246.248 180.969L233.32 186.657C205.36 198.988 150.623 172.616 96.9395 203.525C79.1437 213.784 66.4796 229.141 59.21 248.541C71.2821 243.806 79.9003 236.539 93.2881 234.829L80.0322 253.802C79.177 255.051 76.8417 256.728 78.3877 258.011C80.9219 260.147 109.275 245.187 120.064 247.685C113.222 257.517 107.4 268.961 102.663 281.028C100.208 287.265 98.0441 293.674 96.1797 300.12C94.2075 297.729 89.4431 292.472 79.5605 282.119C70.127 272.236 57.3445 262.334 46.5098 254.907C41.0905 251.193 36.1506 248.092 32.3516 245.918C30.453 244.831 28.8327 243.973 27.5771 243.385C26.95 243.091 26.4061 242.861 25.96 242.703C25.5303 242.551 25.1376 242.447 24.8359 242.447C22.9579 242.447 21.5809 243.475 20.1895 244.663C18.7753 245.87 17.299 247.285 15.1299 248.37H15.1289C14.7446 248.562 13.3407 249.316 11.1123 250.156C10.9008 250.236 9.71064 250.723 7.72363 251.541C8.84172 248.237 9.90812 244.805 10.9395 241.224C11.9443 237.736 12.9182 234.108 13.8818 230.324C7.69769 231.048 5.65784 235.125 0 233.086C8.58539 216.217 15.4935 199.546 18.0264 180.508C19.2435 171.268 24.2434 160.844 23.0264 151.638C21.0198 136.545 16.9406 122.702 16.6445 107.083C16.1182 81.0735 19.21 55.7217 25.7559 30.6659C26.4466 28.0354 28.355 25.9306 29.8682 25.3388C32.3681 24.3523 35.6573 25.2074 38.1572 26.9501C59.1109 41.8784 76.8741 59.108 92.7949 79.3632C98.9462 78.8371 106.611 77.8838 111.282 74.6942C115.46 61.3439 144.538 -1.26276 157.433 0.0194147Z" fill="#E13D0F"/>
+        <!-- The fox illustration. Inline SVG, exact paths, original color. -->
+        <div class="md:col-span-5 flex justify-center md:justify-end">
+          <svg viewBox="0 0 277 301" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-xs md:max-w-sm">
+            <path d="M157.433 0.0194147C160.064 0.28246 161.676 2.94593 163.024 5.90516C174.636 31.2571 178.058 58.7139 177.992 87.0253C214.307 112.772 199.242 143.253 239.011 154.663L268.419 163.081C274.142 164.725 277.234 169.887 276.148 175.74C272.267 196.554 258.681 212.173 239.504 220.887C220.326 229.6 189.406 232.1 183.452 250.02C181.84 254.887 181.018 259.819 180.788 264.817L180.67 267.096C180.578 273.283 181.289 279.521 182.33 285.721C179.573 283.247 175.416 281.701 170.458 280.891C170.317 279.63 170.194 278.361 170.097 277.082C169.866 274.155 169.769 271.163 169.867 268.105L169.995 265.711C170.379 258.307 171.814 250.388 174.867 241.602C168.255 238.873 147.532 257.714 150.689 246.042C150.854 245.45 151.61 244.957 152.63 244.036C174.636 224.011 204.8 224.503 229.603 213.883C209.866 214.869 192.005 217.072 173.814 211.581C171.479 210.858 171.446 207.998 172.301 207.142C177.794 201.651 202.761 214.903 240.228 202.572C247.07 200.303 252.925 196.719 257.136 191.458C252.202 188.729 249.274 185.473 246.248 180.969L233.32 186.657C205.36 198.988 150.623 172.616 96.9395 203.525C79.1437 213.784 66.4796 229.141 59.21 248.541C71.2821 243.806 79.9003 236.539 93.2881 234.829L80.0322 253.802C79.177 255.051 76.8417 256.728 78.3877 258.011C80.9219 260.147 109.275 245.187 120.064 247.685C113.222 257.517 107.4 268.961 102.663 281.028C100.208 287.265 98.0441 293.674 96.1797 300.12C94.2075 297.729 89.4431 292.472 79.5605 282.119C70.127 272.236 57.3445 262.334 46.5098 254.907C41.0905 251.193 36.1506 248.092 32.3516 245.918C30.453 244.831 28.8327 243.973 27.5771 243.385C26.95 243.091 26.4061 242.861 25.96 242.703C25.5303 242.551 25.1376 242.447 24.8359 242.447C22.9579 242.447 21.5809 243.475 20.1895 244.663C18.7753 245.87 17.299 247.285 15.1299 248.37H15.1289C14.7446 248.562 13.3407 249.316 11.1123 250.156C10.9008 250.236 9.71064 250.723 7.72363 251.541C8.84172 248.237 9.90812 244.805 10.9395 241.224C11.9443 237.736 12.9182 234.108 13.8818 230.324C7.69769 231.048 5.65784 235.125 0 233.086C8.58539 216.217 15.4935 199.546 18.0264 180.508C19.2435 171.268 24.2434 160.844 23.0264 151.638C21.0198 136.545 16.9406 122.702 16.6445 107.083C16.1182 81.0735 19.21 55.7217 25.7559 30.6659C26.4466 28.0354 28.355 25.9306 29.8682 25.3388C32.3681 24.3523 35.6573 25.2074 38.1572 26.9501C59.1109 41.8784 76.8741 59.108 92.7949 79.3632C98.9462 78.8371 106.611 77.8838 111.282 74.6942C115.46 61.3439 144.538 -1.26276 157.433 0.0194147ZM53.6182 206.945C44.8354 210.891 39.3743 218.289 35.5586 226.575C44.1111 223.418 50.7563 216.744 53.6182 206.945ZM49.9004 194.186C52.0052 182.219 34.9018 205.727 35.3945 210.496C41.8088 206.452 45.8873 200.697 49.9004 194.186ZM41.4473 175.641C37.2697 182.053 33.9798 187.972 32.1377 195.699C39.1113 190.767 42.6315 183.895 41.4473 175.641ZM100.756 183.5C89.8679 180.508 83.9469 188.104 76.3154 192.773C73.4207 192.905 75.4928 194.515 78.1572 193.989C86.2492 190.833 94.1113 187.544 100.756 183.5ZM102.86 172.058C93.3542 167.29 84.6705 171.498 77.5654 177.614C87.1702 177.154 94.4726 173.998 102.86 172.058ZM143.223 141.477C133.848 141.642 129.604 147.692 122.631 150.257C120.295 151.112 117.828 153.085 119.045 155.288C119.252 155.654 140.888 165.283 144.275 162.85L144.242 162.817C139.966 154.038 140.032 148.35 143.223 141.477ZM156.841 144.634C157.499 152.229 156.775 156.965 154.341 162.653C161.347 162.357 166.248 160.91 172.005 157.622C166.577 151.309 162.729 148.152 156.841 144.634ZM39.21 44.1141C29.3746 70.1894 38.2559 119.643 49.1768 143.943C62.6964 139.142 33.7827 93.6996 51.4141 75.1542L52.4336 95.7714C56.1073 93.5746 55.4637 88.9593 59.4062 89.0634C59.472 95.4096 56.1833 98.7313 58.749 104.025C61.249 101.921 60.6905 97.777 65.5918 97.0536C63.8155 104.978 62.4666 111.949 63.6836 120.728C71.2162 112.738 78.5846 106.294 88.8145 100.605C74.5712 78.6074 58.3216 60.2592 39.21 44.1141ZM195.787 126.351C193.452 133.125 197.334 140.031 203.584 142.168C202.367 135.986 200.557 130.889 195.787 126.351ZM140.295 104.387C146.578 107.773 150.656 113.331 158.847 115.008C155.327 107.116 147.861 105.274 140.295 104.387ZM154.966 100.572C159.143 105.307 162.926 109.582 169.209 113.002C167.926 106.787 162.531 101.427 154.966 100.572ZM156.873 21.3602C148.748 38.8533 145.097 56.5109 143.519 75.5165C152.3 77.6865 159.175 80.8749 168.187 80.9413C166.411 60.2707 164.731 40.52 156.873 21.3602Z" fill="#F62300"/>
           </svg>
         </div>
       </div>
 
       <!-- Meta row -->
-      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-cream/15">
+      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-cream/15 relative z-10">
         <div>
           <p class="eyebrow-light mb-2">Role</p>
           <p class="text-cream">Founder · Product · Design</p>
@@ -80,26 +82,28 @@ import Base from '../../layouts/Base.astro';
   </section>
 
   <!-- =============================== -->
-  <!-- Big stats panel - supersized -->
+  <!-- Big stats panel with GRID BACKDROP -->
   <!-- =============================== -->
-  <section class="bg-cream-warm/40 border-b border-ink/10">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
+  <section class="grid-backdrop border-b border-ink/10 overflow-hidden">
+    <div class="grid-backdrop-band-top"></div>
+    <div class="grid-backdrop-band-bottom"></div>
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28 relative z-10">
       <p class="eyebrow mb-12">Live, as of May 2026</p>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">
         <div>
-          <p class="stat-hero text-ink">4.6K<span class="stat-hero-period">.</span></p>
+          <p class="stat-hero">4.6K<span class="stat-period">.</span></p>
           <p class="stat-hero-label">Active users (28 days)</p>
         </div>
         <div>
-          <p class="stat-hero text-ink">4,659<span class="stat-hero-period">.</span></p>
+          <p class="stat-hero">4,659<span class="stat-period">.</span></p>
           <p class="stat-hero-label">Courses indexed</p>
         </div>
         <div>
-          <p class="stat-hero text-ink">10wk<span class="stat-hero-period">.</span></p>
+          <p class="stat-hero">10wk<span class="stat-period">.</span></p>
           <p class="stat-hero-label">Concept to revenue</p>
         </div>
         <div>
-          <p class="stat-hero text-ink">$39<span class="stat-hero-period">.</span></p>
+          <p class="stat-hero">$39<span class="stat-period">.</span></p>
           <p class="stat-hero-label">Annual Pro tier</p>
         </div>
       </div>
@@ -107,64 +111,89 @@ import Base from '../../layouts/Base.astro';
   </section>
 
   <!-- =============================== -->
-  <!-- THREE PILLARS: Problem · Insight · Bet -->
+  <!-- THREE PILLARS: Problem · Insight · Bet (bottom-aligned with footer) -->
   <!-- =============================== -->
   <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
     <div class="grid md:grid-cols-3 gap-8 md:gap-12">
       <!-- Problem -->
-      <div>
-        <div class="icon-box">
-          <!-- Compass icon -->
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="16,8 10,14 8,16 14,10"/></svg>
+      <div class="pillar">
+        <div class="pillar-content">
+          <div class="icon-box">
+            <!-- Compass: chunkier strokes, filled center dot -->
+            <svg viewBox="0 0 32 32">
+              <circle cx="16" cy="16" r="12" stroke-width="2.5"/>
+              <path d="M22 10 L14 18 L10 22 L18 14 Z" fill="white" stroke-width="2"/>
+              <circle cx="16" cy="16" r="1.5" fill="white" stroke="none"/>
+            </svg>
+          </div>
+          <p class="eyebrow mb-3">The problem</p>
+          <h2 class="font-display text-3xl text-ink leading-tight mb-5">
+            Nobody was solving this.
+          </h2>
+          <p class="text-ink-soft leading-relaxed">
+            Women face a quiet, universal golf problem. Showing up at a new course
+            without knowing the dress code. The rules are real, enforced, and the
+            difference between welcome and turned away at the bag drop. But they're
+            buried in PDFs, missing from websites, and never written from a woman's
+            perspective.
+          </p>
         </div>
-        <p class="eyebrow mb-3">The problem</p>
-        <h2 class="font-display text-3xl text-ink leading-tight mb-5">
-          Nobody was solving this.
-        </h2>
-        <p class="text-ink-soft leading-relaxed">
-          Women face a quiet, universal golf problem. Showing up at a new course
-          without knowing the dress code. The rules are real, enforced, and the
-          difference between welcome and turned away at the bag drop. But they're
-          buried in PDFs, missing from websites, and never written from a woman's
-          perspective.
-        </p>
       </div>
 
       <!-- Insight -->
-      <div>
-        <div class="icon-box">
-          <!-- Lightbulb -->
-          <svg viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.8.7 1 1.5 1 2.3v1h6v-1c0-.8.2-1.6 1-2.3A7 7 0 0 0 12 2z"/></svg>
+      <div class="pillar">
+        <div class="pillar-content">
+          <div class="icon-box">
+            <!-- Lightbulb: bulb shape filled, rays around -->
+            <svg viewBox="0 0 32 32">
+              <path d="M16 4 L16 2 M24 8 L26 6 M28 16 L30 16 M8 8 L6 6 M4 16 L2 16" stroke-width="2.5"/>
+              <path d="M10 16 a6 6 0 0 1 12 0 c0 3 -2 4 -2 6 v2 h-8 v-2 c0 -2 -2 -3 -2 -6 Z" stroke-width="2.5"/>
+              <line x1="13" y1="28" x2="19" y2="28" stroke-width="2.5"/>
+              <line x1="14" y1="30" x2="18" y2="30" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <p class="eyebrow mb-3">The insight</p>
+          <h2 class="font-display text-3xl text-ink leading-tight mb-5">
+            Style intelligence, not a directory.
+          </h2>
+          <p class="text-ink-soft leading-relaxed">
+            The opportunity wasn't "here are the rules." It was: here's how to show
+            up as yourself, within the rules, on every course you'll play. Utility
+            earns the right for identity. The lookup is the hook; the Style Planner
+            is the product.
+          </p>
         </div>
-        <p class="eyebrow mb-3">The insight</p>
-        <h2 class="font-display text-3xl text-ink leading-tight mb-5">
-          Style intelligence, not a directory.
-        </h2>
-        <p class="text-ink-soft leading-relaxed">
-          The opportunity wasn't "here are the rules." It was: here's how to show
-          up as yourself, within the rules, on every course you'll play. Utility
-          earns the right for identity. The lookup is the hook; the Style Planner
-          is the product.
-        </p>
-        <p class="font-display text-2xl text-orange mt-6">Know before you go.</p>
+        <!-- Footer pinned to bottom for alignment -->
+        <div class="pillar-footer">
+          <p class="font-display text-2xl text-orange italic">"Know before you go."</p>
+        </div>
       </div>
 
       <!-- Bet -->
-      <div>
-        <div class="icon-box">
-          <!-- Chess knight stand-in: dice -->
-          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.2" fill="#E13D0F" stroke="none"/><circle cx="15.5" cy="15.5" r="1.2" fill="#E13D0F" stroke="none"/><circle cx="15.5" cy="8.5" r="1.2" fill="#E13D0F" stroke="none"/><circle cx="8.5" cy="15.5" r="1.2" fill="#E13D0F" stroke="none"/></svg>
+      <div class="pillar">
+        <div class="pillar-content">
+          <div class="icon-box">
+            <!-- Dice with two pips -->
+            <svg viewBox="0 0 32 32">
+              <rect x="6" y="6" width="20" height="20" rx="3" stroke-width="2.5"/>
+              <circle cx="11" cy="11" r="1.8" fill="white" stroke="none"/>
+              <circle cx="21" cy="21" r="1.8" fill="white" stroke="none"/>
+              <circle cx="21" cy="11" r="1.8" fill="white" stroke="none"/>
+              <circle cx="11" cy="21" r="1.8" fill="white" stroke="none"/>
+              <circle cx="16" cy="16" r="1.8" fill="white" stroke="none"/>
+            </svg>
+          </div>
+          <p class="eyebrow mb-3">The bet</p>
+          <h2 class="font-display text-3xl text-ink leading-tight mb-5">
+            Solo, with an AI co-founder.
+          </h2>
+          <p class="text-ink-soft leading-relaxed">
+            Conventional path: hire a developer, build for six months, launch.
+            Course Code went different. A solo founder with the right AI infrastructure
+            can operate at the output level of a small team. Not AI as a tool. AI as a
+            co-founder with authority.
+          </p>
         </div>
-        <p class="eyebrow mb-3">The bet</p>
-        <h2 class="font-display text-3xl text-ink leading-tight mb-5">
-          Solo, with an AI co-founder.
-        </h2>
-        <p class="text-ink-soft leading-relaxed">
-          Conventional path: hire a developer, build for six months, launch.
-          Course Code went different. The thesis: a solo founder with the right
-          AI infrastructure can operate at the output level of a small team. Not
-          AI as a tool. AI as a co-founder with authority.
-        </p>
       </div>
     </div>
   </section>
@@ -174,7 +203,7 @@ import Base from '../../layouts/Base.astro';
   <!-- =============================== -->
   <section class="bg-cream-warm/40 border-y border-ink/10 py-24 md:py-32">
     <div class="max-w-7xl mx-auto px-6 md:px-10">
-      <div class="flex items-baseline justify-between mb-12">
+      <div class="flex items-baseline justify-between mb-16">
         <div>
           <p class="eyebrow mb-3">The product</p>
           <h2 class="font-display text-display-md text-ink leading-tight max-w-[18ch]">
@@ -191,34 +220,34 @@ import Base from '../../layouts/Base.astro';
         </a>
       </div>
 
-      <!-- Featured: marketing hero (linocut) -->
-      <div class="mb-10">
+      <!-- Featured: marketing hero (constrained) -->
+      <div class="mb-16 shot-contained">
         <div class="shot-frame">
-          <img src="/coursecode/01-hero.png" alt="Course Code marketing homepage with linocut fox illustration and 'Know before you go' tagline" />
+          <img src="/coursecode/01-hero.png" alt="Course Code marketing homepage with linocut fox and Know before you go tagline" loading="lazy" />
         </div>
         <p class="shot-caption">Marketing home · Know before you go</p>
       </div>
 
-      <!-- Two-up grid -->
-      <div class="grid md:grid-cols-2 gap-8 md:gap-10 mb-10">
+      <!-- Two-up grid (smaller) -->
+      <div class="grid md:grid-cols-2 gap-8 md:gap-10 mb-16 max-w-6xl mx-auto">
         <div>
           <div class="shot-frame">
-            <img src="/coursecode/02-course-detail.png" alt="Course Code detail page for Sedona Golf Resort showing dress code, vibe, and what-to-wear blocks" />
+            <img src="/coursecode/02-course-detail.png" alt="Course Code detail page for Sedona Golf Resort" loading="lazy" />
           </div>
           <p class="shot-caption">Course detail · The Vibe + The Code + What to Wear</p>
         </div>
         <div>
           <div class="shot-frame">
-            <img src="/coursecode/03-community.png" alt="Course Code community page showing women's golf style boards" />
+            <img src="/coursecode/03-community.png" alt="Course Code community page" loading="lazy" />
           </div>
           <p class="shot-caption">Community · What women are wearing</p>
         </div>
       </div>
 
-      <!-- Pricing full -->
-      <div>
+      <!-- Pricing full (constrained) -->
+      <div class="shot-contained">
         <div class="shot-frame">
-          <img src="/coursecode/04-pricing.png" alt="Course Code pricing page showing Free and Pro tiers with $39 annual" />
+          <img src="/coursecode/04-pricing.png" alt="Course Code pricing showing Free and Pro tiers" loading="lazy" />
         </div>
         <p class="shot-caption">Pricing · Know the rules. Own the look.</p>
       </div>
@@ -230,7 +259,7 @@ import Base from '../../layouts/Base.astro';
   <!-- =============================== -->
   <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
     <p class="eyebrow mb-3">Free + Pro</p>
-    <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch] mb-12">
+    <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch] mb-16">
       Utility for everyone, intelligence for Pro.
     </h2>
 
@@ -238,10 +267,10 @@ import Base from '../../layouts/Base.astro';
       <!-- Free -->
       <div class="compare-cream">
         <p class="eyebrow mb-3">Free</p>
-        <p class="font-display text-4xl text-ink mb-2">$0</p>
-        <p class="text-sm text-ink-muted mb-8">Always free</p>
+        <p class="font-display text-5xl text-ink mb-2 leading-none">$0</p>
+        <p class="text-sm text-ink-muted mb-10">Always free</p>
 
-        <ul class="space-y-4">
+        <ul class="space-y-5">
           <li class="flex gap-3 items-start">
             <span class="font-mono text-orange mt-1 shrink-0">◆</span>
             <span class="text-ink-soft">Dress code lookup, 4,659 courses, all 50 states</span>
@@ -268,17 +297,17 @@ import Base from '../../layouts/Base.astro';
       <!-- Pro -->
       <div class="compare-dark">
         <p class="eyebrow-light mb-3">Pro</p>
-        <p class="font-display text-4xl text-cream mb-2">$39<span class="text-orange">/yr</span></p>
-        <p class="text-sm text-cream/60 mb-8">$6.99/mo · 7-day free trial</p>
+        <p class="font-display text-5xl text-cream mb-2 leading-none">$39<span class="text-orange text-3xl">/yr</span></p>
+        <p class="text-sm text-cream/60 mb-10">$6.99/mo · 7-day free trial</p>
 
-        <ul class="space-y-4">
+        <ul class="space-y-5">
           <li class="flex gap-3 items-start">
             <span class="font-mono text-orange mt-1 shrink-0">◆</span>
             <span class="text-cream/85">Everything in Free</span>
           </li>
           <li class="flex gap-3 items-start">
             <span class="font-mono text-orange mt-1 shrink-0">◆</span>
-            <span class="text-cream/85"><strong class="text-cream">Style Planner.</strong> 4-step wizard. Course + date + occasion + style → outfit with real-weather data.</span>
+            <span class="text-cream/85"><strong class="text-cream">Style Planner.</strong> 4-step wizard. Course + date + occasion + style with real-weather data.</span>
           </li>
           <li class="flex gap-3 items-start">
             <span class="font-mono text-orange mt-1 shrink-0">◆</span>
@@ -298,12 +327,12 @@ import Base from '../../layouts/Base.astro';
   </section>
 
   <!-- =============================== -->
-  <!-- Tech stack visual grid -->
+  <!-- Tech stack visual grid with REAL color coding -->
   <!-- =============================== -->
   <section class="bg-cream-warm/40 border-y border-ink/10 py-24 md:py-32">
     <div class="max-w-7xl mx-auto px-6 md:px-10">
       <p class="eyebrow mb-3">The stack</p>
-      <h2 class="font-display text-display-md text-ink leading-tight max-w-[22ch] mb-12">
+      <h2 class="font-display text-display-md text-ink leading-tight max-w-[22ch] mb-16">
         Modern, fast, and AI-native at every layer.
       </h2>
 
@@ -322,20 +351,28 @@ import Base from '../../layouts/Base.astro';
           { name: 'Linear', cat: 'ops', desc: 'Source of truth for work' },
           { name: 'n8n', cat: 'ops', desc: 'Self-hosted automation' },
         ].map((tool) => (
-          <div class="tool-card">
-            <div class={`tool-card-edge tool-card-edge-${tool.cat}`}></div>
+          <div class={`tool-card tool-card-${tool.cat}`}>
+            <div class="tool-card-edge"></div>
             <p class="font-display text-lg text-ink leading-tight mb-1 pl-3">{tool.name}</p>
             <p class="text-xs text-ink-muted pl-3">{tool.desc}</p>
           </div>
         ))}
       </div>
 
-      <!-- Legend -->
-      <div class="mt-10 flex flex-wrap gap-6 text-xs font-mono uppercase tracking-wider text-ink-muted">
-        <span class="flex items-center gap-2"><span class="w-3 h-3" style="background:#E13D0F"></span>Frontend</span>
-        <span class="flex items-center gap-2"><span class="w-3 h-3" style="background:#9B40C4"></span>Backend / Data</span>
-        <span class="flex items-center gap-2"><span class="w-3 h-3" style="background:#062E5C"></span>AI</span>
-        <span class="flex items-center gap-2"><span class="w-3 h-3" style="background:#7A6A4F"></span>Ops</span>
+      <!-- Legend with matching colors -->
+      <div class="mt-10 flex flex-wrap gap-8">
+        <span class="legend-chip">
+          <span class="legend-chip-dot" style="background:#F62300"></span>Frontend
+        </span>
+        <span class="legend-chip">
+          <span class="legend-chip-dot" style="background:#9B40C4"></span>Backend / Data
+        </span>
+        <span class="legend-chip">
+          <span class="legend-chip-dot" style="background:#062E5C"></span>AI
+        </span>
+        <span class="legend-chip">
+          <span class="legend-chip-dot" style="background:#7A6A4F"></span>Ops
+        </span>
       </div>
     </div>
   </section>
@@ -345,7 +382,7 @@ import Base from '../../layouts/Base.astro';
   <!-- =============================== -->
   <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
     <p class="eyebrow mb-3">The numbers</p>
-    <h2 class="font-display text-display-md text-ink leading-tight max-w-[22ch] mb-12">
+    <h2 class="font-display text-display-md text-ink leading-tight max-w-[22ch] mb-16">
       Real users. Real revenue. Real conversion.
     </h2>
 
@@ -355,23 +392,23 @@ import Base from '../../layouts/Base.astro';
         <p class="eyebrow mb-8">Reach</p>
         <div class="space-y-6">
           <div class="flex items-baseline justify-between border-b border-ink/10 pb-4">
-            <p class="font-display text-3xl text-ink">4.6K<span class="text-orange">.</span></p>
+            <p class="font-display text-3xl text-ink">4.6K<span class="stat-period">.</span></p>
             <p class="font-mono text-xs uppercase tracking-wider text-ink-muted">Active users (28 days)</p>
           </div>
           <div class="flex items-baseline justify-between border-b border-ink/10 pb-4">
-            <p class="font-display text-3xl text-ink">4.9K<span class="text-orange">.</span></p>
+            <p class="font-display text-3xl text-ink">4.9K<span class="stat-period">.</span></p>
             <p class="font-mono text-xs uppercase tracking-wider text-ink-muted">Active users (30 days)</p>
           </div>
           <div class="flex items-baseline justify-between border-b border-ink/10 pb-4">
-            <p class="font-display text-3xl text-ink">4.5K<span class="text-orange">.</span></p>
+            <p class="font-display text-3xl text-ink">4.5K<span class="stat-period">.</span></p>
             <p class="font-mono text-xs uppercase tracking-wider text-ink-muted">Organic search sessions</p>
           </div>
           <div class="flex items-baseline justify-between border-b border-ink/10 pb-4">
-            <p class="font-display text-3xl text-ink">9.1K<span class="text-orange">.</span></p>
+            <p class="font-display text-3xl text-ink">9.1K<span class="stat-period">.</span></p>
             <p class="font-mono text-xs uppercase tracking-wider text-ink-muted">Page views</p>
           </div>
           <div class="flex items-baseline justify-between">
-            <p class="font-display text-3xl text-ink">11<span class="text-orange">.</span></p>
+            <p class="font-display text-3xl text-ink">11<span class="stat-period">.</span></p>
             <p class="font-mono text-xs uppercase tracking-wider text-ink-muted">Countries</p>
           </div>
         </div>
@@ -382,23 +419,23 @@ import Base from '../../layouts/Base.astro';
         <p class="eyebrow-light mb-8">Conversion</p>
         <div class="space-y-6">
           <div class="flex items-baseline justify-between border-b border-cream/15 pb-4">
-            <p class="font-display text-3xl text-cream">200<span class="text-orange">.</span></p>
+            <p class="font-display text-3xl text-cream">200<span class="stat-period">.</span></p>
             <p class="font-mono text-xs uppercase tracking-wider text-cream/60">Registered users</p>
           </div>
           <div class="flex items-baseline justify-between border-b border-cream/15 pb-4">
-            <p class="font-display text-3xl text-cream">158<span class="text-orange">.</span></p>
+            <p class="font-display text-3xl text-cream">158<span class="stat-period">.</span></p>
             <p class="font-mono text-xs uppercase tracking-wider text-cream/60">Signups in 28 days (79%)</p>
           </div>
           <div class="flex items-baseline justify-between border-b border-cream/15 pb-4">
-            <p class="font-display text-3xl text-cream">5<span class="text-orange">.</span></p>
+            <p class="font-display text-3xl text-cream">5<span class="stat-period">.</span></p>
             <p class="font-mono text-xs uppercase tracking-wider text-cream/60">Pro subscribers</p>
           </div>
           <div class="flex items-baseline justify-between border-b border-cream/15 pb-4">
             <p class="font-display text-3xl text-cream">2.5<span class="text-orange">%</span></p>
-            <p class="font-mono text-xs uppercase tracking-wider text-cream/60">Free → paid conversion</p>
+            <p class="font-mono text-xs uppercase tracking-wider text-cream/60">Free to paid conversion</p>
           </div>
           <div class="flex items-baseline justify-between">
-            <p class="font-display text-3xl text-cream">3<span class="text-orange">.</span></p>
+            <p class="font-display text-3xl text-cream">3<span class="stat-period">.</span></p>
             <p class="font-mono text-xs uppercase tracking-wider text-cream/60">Affiliate networks active</p>
           </div>
         </div>
@@ -411,22 +448,27 @@ import Base from '../../layouts/Base.astro';
   </section>
 
   <!-- =============================== -->
-  <!-- Lessons - 3 cards with icons -->
+  <!-- Lessons · 3 cards with bottom-aligned content -->
   <!-- =============================== -->
   <section class="bg-cream-warm/40 border-y border-ink/10 py-24 md:py-32">
     <div class="max-w-7xl mx-auto px-6 md:px-10">
       <p class="eyebrow mb-3">What I learned</p>
-      <h2 class="font-display text-display-md text-ink leading-tight max-w-[22ch] mb-12">
+      <h2 class="font-display text-display-md text-ink leading-tight max-w-[26ch] mb-16">
         The bottleneck shifts, but it doesn't disappear.
       </h2>
 
       <div class="grid md:grid-cols-3 gap-6 md:gap-8">
         <div class="lesson-card">
           <div class="icon-box">
-            <!-- Spec clarity icon -->
-            <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>
+            <!-- Spec doc icon, more deliberate -->
+            <svg viewBox="0 0 32 32">
+              <rect x="6" y="4" width="20" height="24" rx="2" stroke-width="2.5"/>
+              <line x1="10" y1="11" x2="22" y2="11" stroke-width="2.5"/>
+              <line x1="10" y1="16" x2="22" y2="16" stroke-width="2.5"/>
+              <line x1="10" y1="21" x2="18" y2="21" stroke-width="2.5"/>
+            </svg>
           </div>
-          <h3 class="font-display text-xl text-ink mb-3 leading-tight">Spec quality is the new bottleneck.</h3>
+          <h3 class="font-display text-xl text-ink mb-4 leading-tight">Spec quality is the new bottleneck.</h3>
           <p class="text-ink-soft leading-relaxed">
             You stop being blocked on "how long will this take to build" and start being
             blocked on "exactly what do I want this to do." Clarity becomes the highest-leverage
@@ -436,10 +478,13 @@ import Base from '../../layouts/Base.astro';
 
         <div class="lesson-card">
           <div class="icon-box">
-            <!-- Authority icon: key -->
-            <svg viewBox="0 0 24 24"><circle cx="7" cy="14" r="4"/><path d="M11 14h10"/><path d="M17 14v3"/><path d="M21 14v3"/></svg>
+            <!-- Key icon, chunkier -->
+            <svg viewBox="0 0 32 32">
+              <circle cx="11" cy="18" r="6" stroke-width="2.5"/>
+              <path d="M17 18 L26 18 L26 22 M22 18 L22 22" stroke-width="2.5"/>
+            </svg>
           </div>
-          <h3 class="font-display text-xl text-ink mb-3 leading-tight">Authority beats access.</h3>
+          <h3 class="font-display text-xl text-ink mb-4 leading-tight">Authority beats access.</h3>
           <p class="text-ink-soft leading-relaxed">
             An AI that can only advise is a better search engine. An AI with commit rights,
             assigned tickets, and QA responsibility is a collaborator. The difference is
@@ -449,10 +494,13 @@ import Base from '../../layouts/Base.astro';
 
         <div class="lesson-card">
           <div class="icon-box">
-            <!-- Judgment icon: magnifier -->
-            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><line x1="20" y1="20" x2="16" y2="16"/></svg>
+            <!-- Magnifier icon -->
+            <svg viewBox="0 0 32 32">
+              <circle cx="14" cy="14" r="8" stroke-width="2.5"/>
+              <line x1="26" y1="26" x2="20" y2="20" stroke-width="2.5"/>
+            </svg>
           </div>
-          <h3 class="font-display text-xl text-ink mb-3 leading-tight">Judgment concentrates.</h3>
+          <h3 class="font-display text-xl text-ink mb-4 leading-tight">Judgment concentrates.</h3>
           <p class="text-ink-soft leading-relaxed">
             When AI handles execution, every decision that stays with you becomes more
             consequential. Brand, tone, pricing, who you're building for. These can't be
@@ -464,43 +512,51 @@ import Base from '../../layouts/Base.astro';
   </section>
 
   <!-- =============================== -->
-  <!-- The meta-point + CTA -->
+  <!-- The meta-point + CTA with GRID BACKDROP -->
+  <!-- Headline now spans wide -->
   <!-- =============================== -->
-  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
-    <div class="max-w-[28ch]">
-      <p class="eyebrow mb-6">The meta-point</p>
-      <h2 class="font-display text-display-md text-ink leading-[1.05] mb-10">
-        Stop asking how to use AI faster. Start asking how to redesign the work itself.
-      </h2>
-    </div>
-    <div class="max-w-reading">
-      <p class="text-lg text-ink-soft leading-relaxed mb-6">
-        Course Code is a product case study. It's also a proof of concept for a new way
-        to found a company. The question every product leader should be asking in 2026
-        isn't "how do I use AI to work faster." It's "how do I redesign the operating
-        model of this business around what AI can actually do?"
-      </p>
-      <p class="text-lg text-ink-soft leading-relaxed mb-10">
-        I built a live product, got to paying customers, and shipped a complete Phase 1
-        roadmap as a solo founder, on timeline, by treating that question seriously.
-        That's the case study.
-      </p>
+  <section class="grid-backdrop overflow-hidden border-b border-ink/10">
+    <div class="grid-backdrop-band-top"></div>
+    <div class="grid-backdrop-band-bottom"></div>
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-28 md:py-36 relative z-10">
+      <p class="eyebrow mb-8">The meta-point</p>
 
-      <div class="flex flex-wrap gap-4">
-        <a
-          href="/ai"
-          class="inline-flex items-center gap-2 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
-        >
-          Read the AI operating model →
-        </a>
-        <a
-          href="https://coursecode.golf"
-          target="_blank"
-          rel="noopener"
-          class="inline-flex items-center gap-2 px-6 py-3 border border-ink/30 text-ink font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
-        >
-          See Course Code live →
-        </a>
+      <h2 class="font-display text-ink leading-[0.95] tracking-tight mb-12" style="font-size: clamp(2.5rem, 6vw, 5.5rem);">
+        Stop asking how to use AI faster.<br/>
+        <span class="text-orange">Start asking how to redesign the work itself.</span>
+      </h2>
+
+      <div class="max-w-3xl">
+        <p class="text-xl text-ink-soft leading-relaxed mb-6">
+          Course Code is a product case study. It's also a proof of concept for a new way
+          to found a company. The question every product leader should be asking in 2026
+          isn't "how do I use AI to work faster." It's "how do I redesign the operating
+          model of this business around what AI can actually do?"
+        </p>
+        <p class="text-xl text-ink-soft leading-relaxed mb-12">
+          I built a live product, got to paying customers, and shipped a complete Phase 1
+          roadmap as a solo founder, on timeline, by treating that question seriously.
+          That's the case study.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="/ai"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
+            style="border-radius: 999px;"
+          >
+            Read the AI operating model →
+          </a>
+          <a
+            href="https://coursecode.golf"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 px-6 py-3 border border-ink/30 text-ink font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
+            style="border-radius: 999px;"
+          >
+            See Course Code live →
+          </a>
+        </div>
       </div>
     </div>
   </section>

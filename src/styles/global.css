@@ -3,10 +3,7 @@
 @tailwind utilities;
 
 /*
-  Fonts loaded via <link> in src/layouts/Base.astro:
-  - New Spirit (Adobe Fonts kit nbd2daq)
-  - Satoshi Variable (Fontshare)
-  - JetBrains Mono (Google Fonts)
+  Fonts loaded via <link> in src/layouts/Base.astro.
 */
 
 @layer base {
@@ -21,15 +18,45 @@
 }
 
 @layer components {
-  /* Typography */
+
+  /* ============================================================
+     TYPOGRAPHY
+     ============================================================ */
+
+  /* Eyebrows now have color. Orange on every surface. */
   .eyebrow {
-    @apply font-mono text-xs uppercase tracking-[0.18em] text-ink-muted;
-  }
-  .eyebrow-light {
-    @apply font-mono text-xs uppercase tracking-[0.18em] text-cream/60;
+    @apply font-mono text-xs uppercase tracking-[0.18em] text-orange;
   }
 
-  /* Prose for case studies */
+  /* Eyebrow on dark surfaces is the same brighter color */
+  .eyebrow-light {
+    @apply font-mono text-xs uppercase tracking-[0.18em] text-orange;
+  }
+
+  /* Brand period - the orange dot at end of an H1.
+     Critical: needs breathing room from the letter before it,
+     and slightly smaller so it floats. */
+  .brand-period {
+    @apply text-orange inline-block;
+    margin-left: 0.04em;
+    font-size: 0.85em;
+    vertical-align: baseline;
+    transform: translateY(-0.02em);
+  }
+
+  /* Same treatment but for stat numbers (smaller adjustments) */
+  .stat-period {
+    @apply text-orange inline-block;
+    margin-left: 0.06em;
+    font-size: 0.8em;
+    vertical-align: baseline;
+    transform: translateY(-0.04em);
+  }
+
+  /* ============================================================
+     PROSE (case study fallback)
+     ============================================================ */
+
   .prose-mc {
     @apply text-lg leading-relaxed text-ink-soft max-w-reading;
   }
@@ -45,17 +72,24 @@
     @apply border-l-2 border-orange pl-6 italic text-ink my-8 font-display text-xl;
   }
 
-  /* Nav */
+  /* ============================================================
+     NAV
+     ============================================================ */
+
   .nav-link {
     @apply relative text-ink-soft hover:text-ink;
   }
   .nav-link::after {
     content: '';
-    @apply absolute left-0 -bottom-1 w-0 h-px bg-ink transition-all duration-300;
+    @apply absolute left-0 -bottom-1 w-0 h-px bg-orange transition-all duration-300;
   }
   .nav-link:hover::after { @apply w-full; }
 
-  /* Stats - small inline */
+  /* ============================================================
+     STATS
+     ============================================================ */
+
+  /* Small inline stat */
   .stat {
     @apply font-display text-display-lg text-ink leading-none;
   }
@@ -63,30 +97,28 @@
     @apply font-mono text-xs uppercase tracking-[0.15em] text-ink-muted mt-3;
   }
 
-  /* Stat - big hero treatment with supersized orange period */
+  /* Hero stat with supersized period */
   .stat-hero {
-    @apply font-display leading-[0.85];
+    @apply font-display leading-[0.85] text-ink;
     font-size: clamp(4rem, 9vw, 8.5rem);
     letter-spacing: -0.03em;
   }
-  .stat-hero-period {
-    @apply text-orange inline-block;
-    font-size: 1em;
-    margin-left: -0.05em;
+  .stat-hero-light {
+    @apply font-display leading-[0.85] text-cream;
+    font-size: clamp(4rem, 9vw, 8.5rem);
+    letter-spacing: -0.03em;
   }
   .stat-hero-label {
-    @apply font-mono text-xs uppercase tracking-[0.2em] text-ink-muted mt-3;
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-ink-muted mt-4;
   }
   .stat-hero-label-light {
-    @apply font-mono text-xs uppercase tracking-[0.2em] text-cream/60 mt-3;
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-cream/60 mt-4;
   }
 
-  /* The brand period - H1 only */
-  .brand-period {
-    @apply text-orange;
-  }
+  /* ============================================================
+     BELIEF CARDS
+     ============================================================ */
 
-  /* Belief card (kept from previous) */
   .belief-card {
     @apply bg-cream border-2 rounded-sm transition-all duration-300;
     border-color: rgba(245, 128, 106, 0.6);
@@ -96,75 +128,128 @@
     @apply -translate-y-0.5;
   }
 
-  /* === NEW visual system === */
+  /* ============================================================
+     ICONS (hand-cut character)
+     ============================================================ */
 
-  /* Icon container - used inside cards for SVG icons */
+  /* Icon box on cream surface */
   .icon-box {
-    @apply inline-flex items-center justify-center w-12 h-12 mb-5;
-    background: rgba(225, 61, 15, 0.08);
-    border-radius: 8px;
+    @apply inline-flex items-center justify-center w-14 h-14 mb-6;
+    background: #F62300;
+    border-radius: 4px;
+    transform: rotate(-2deg);
   }
   .icon-box svg {
-    @apply w-7 h-7;
-    stroke: #E13D0F;
-    stroke-width: 2;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .icon-box-light {
-    @apply inline-flex items-center justify-center w-12 h-12 mb-5;
-    background: rgba(225, 61, 15, 0.15);
-    border-radius: 8px;
-  }
-  .icon-box-light svg {
-    @apply w-7 h-7;
-    stroke: #E13D0F;
-    stroke-width: 2;
+    @apply w-8 h-8;
+    stroke: #FFFFFF;
+    stroke-width: 2.5;
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
   }
 
-  /* Screenshot frame - magazine style */
+  /* Icon box on dark surface, inverted */
+  .icon-box-light {
+    @apply inline-flex items-center justify-center w-14 h-14 mb-6;
+    background: rgba(246, 35, 0, 0.18);
+    border: 1.5px solid #F62300;
+    border-radius: 4px;
+    transform: rotate(-2deg);
+  }
+  .icon-box-light svg {
+    @apply w-8 h-8;
+    stroke: #F62300;
+    stroke-width: 2.5;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* ============================================================
+     SCREENSHOT FRAMES
+     ============================================================ */
+
   .shot-frame {
-    @apply relative overflow-hidden bg-cream border border-ink/15;
+    @apply relative overflow-hidden bg-cream;
+    border-radius: 18px;
+    border: 1px solid rgba(2, 16, 29, 0.08);
     box-shadow:
       0 1px 0 rgba(2, 16, 29, 0.04),
-      0 8px 24px -8px rgba(2, 16, 29, 0.12),
-      0 16px 48px -16px rgba(2, 16, 29, 0.08);
+      0 12px 32px -8px rgba(2, 16, 29, 0.18),
+      0 24px 56px -16px rgba(2, 16, 29, 0.12);
   }
   .shot-frame img {
     @apply block w-full h-auto;
   }
   .shot-caption {
-    @apply font-mono text-xs uppercase tracking-[0.15em] text-ink-muted mt-4;
+    @apply font-mono text-xs uppercase tracking-[0.15em] text-ink-muted mt-5 text-center;
   }
 
-  /* Two-column comparison (Free vs Pro tiers) */
+  /* Screenshot constrained width helper */
+  .shot-contained {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  /* ============================================================
+     TWO-COLUMN COMPARE
+     ============================================================ */
+
   .compare-cream {
-    @apply bg-cream-warm/60 p-8 md:p-10 border border-ink/10;
+    @apply bg-cream-warm/60 p-8 md:p-12 border border-ink/10;
+    border-radius: 18px;
   }
   .compare-dark {
-    @apply bg-ink text-cream p-8 md:p-10;
+    @apply bg-ink text-cream p-8 md:p-12;
+    border-radius: 18px;
   }
 
-  /* Tech stack tool card */
+  /* ============================================================
+     TECH STACK TOOL CARDS (real color coding)
+     ============================================================ */
+
   .tool-card {
-    @apply relative p-5 bg-cream border border-ink/10 transition-all duration-200;
+    @apply relative p-5 transition-all duration-200 overflow-hidden;
+    border-radius: 12px;
+    border: 1px solid rgba(2, 16, 29, 0.08);
+    background: #FFFFFF;
   }
   .tool-card:hover {
-    @apply -translate-y-0.5 border-orange/40;
+    @apply -translate-y-1;
+    box-shadow: 0 12px 24px -8px rgba(2, 16, 29, 0.15);
   }
-  .tool-card-edge {
-    @apply absolute left-0 top-0 bottom-0 w-1;
-  }
-  .tool-card-edge-frontend { background: #E13D0F; }
-  .tool-card-edge-backend { background: #9B40C4; }
-  .tool-card-edge-ai { background: #062E5C; }
-  .tool-card-edge-ops { background: #7A6A4F; }
 
-  /* Section divider - orange brushstroke */
+  /* The left edge bar (color coded) */
+  .tool-card-edge {
+    @apply absolute left-0 top-0 bottom-0;
+    width: 6px;
+  }
+
+  /* Category color: edge AND subtle background tint */
+  .tool-card-frontend { background: rgba(246, 35, 0, 0.04); }
+  .tool-card-frontend .tool-card-edge { background: #F62300; }
+
+  .tool-card-backend { background: rgba(155, 64, 196, 0.05); }
+  .tool-card-backend .tool-card-edge { background: #9B40C4; }
+
+  .tool-card-ai { background: rgba(6, 46, 92, 0.05); }
+  .tool-card-ai .tool-card-edge { background: #062E5C; }
+
+  .tool-card-ops { background: rgba(122, 106, 79, 0.06); }
+  .tool-card-ops .tool-card-edge { background: #7A6A4F; }
+
+  /* Legend chip - matches the tool card colors */
+  .legend-chip {
+    @apply inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-ink-muted;
+  }
+  .legend-chip-dot {
+    @apply w-3 h-3 inline-block rounded-sm;
+  }
+
+  /* ============================================================
+     SECTION DIVIDERS
+     ============================================================ */
+
   .divider-orange {
     @apply relative my-16;
     height: 4px;
@@ -172,12 +257,39 @@
   .divider-orange::before {
     content: '';
     @apply absolute left-0 top-0 h-full;
-    width: 60px;
-    background: #E13D0F;
+    width: 80px;
+    background: #F62300;
     transform: skewX(-12deg);
   }
 
-  /* Hero grid (kept from previous) */
+  /* ============================================================
+     ARCHITECTURAL GRID BACKDROP (from homepage)
+     Reusable on any section as backdrop
+     ============================================================ */
+
+  .grid-backdrop {
+    background-color: #F4EFE5;
+    background-image:
+      linear-gradient(to right, rgba(2, 16, 29, 0.06) 1px, transparent 1px),
+      linear-gradient(to right, rgba(2, 16, 29, 0.03) 1px, transparent 1px);
+    background-size: 96px 100%, 24px 100%;
+    background-repeat: repeat;
+    position: relative;
+  }
+  .grid-backdrop-band-top,
+  .grid-backdrop-band-bottom {
+    position: absolute;
+    left: 0; right: 0;
+    height: 12px;
+    border-top: 1px solid rgba(2, 16, 29, 0.15);
+    border-bottom: 1px solid rgba(2, 16, 29, 0.15);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .grid-backdrop-band-top { top: 32px; }
+  .grid-backdrop-band-bottom { bottom: 32px; }
+
+  /* Hero grid (kept name for legacy hero on homepage) */
   .hero-grid {
     background-color: #F4EFE5;
     background-image:
@@ -213,24 +325,44 @@
     z-index: 1;
   }
 
-  /* Case study hero - navy bg with fox */
+  /* ============================================================
+     CASE STUDY DARK HERO
+     ============================================================ */
+
   .case-hero-dark {
     @apply bg-ink text-cream relative overflow-hidden;
   }
-  .case-hero-fox {
-    @apply absolute right-0 top-1/2 -translate-y-1/2 opacity-90;
-    width: 380px;
-    max-width: 40vw;
-  }
-  .case-hero-fox svg {
-    @apply w-full h-auto;
-  }
-  .case-hero-fox svg path {
-    fill: #E13D0F;
+
+  /* Subtle texture on dark hero */
+  .case-hero-dark::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    opacity: 0.6;
   }
 
-  /* Three-up lesson cards */
+  /* ============================================================
+     LESSON CARDS
+     ============================================================ */
+
   .lesson-card {
-    @apply p-7 md:p-8 bg-cream-warm/40 border border-ink/10;
+    @apply p-8 md:p-10 bg-cream border border-ink/10 h-full flex flex-col;
+    border-radius: 16px;
+  }
+
+  /* For 3-pillar layout: ensures bottom alignment */
+  .pillar {
+    @apply h-full flex flex-col;
+  }
+  .pillar-content {
+    @apply flex-1;
+  }
+  .pillar-footer {
+    @apply mt-auto pt-6;
   }
 }
