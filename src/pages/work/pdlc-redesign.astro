@@ -251,6 +251,99 @@ import Base from '../../layouts/Base.astro';
       The four-phase model.
     </h2>
 
+    <!-- PDLC flow diagram: phases as horizontal track with standing threads above/below -->
+    <div class="mb-16 p-8 md:p-12 bg-cream border border-ink/10" style="border-radius: 16px;">
+      <svg viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" style="max-width: 100%;">
+        <!-- ================= STANDING THREADS (top + bottom of phases) ================= -->
+        <!-- Design thread (top) -->
+        <g>
+          <rect x="80" y="80" width="1040" height="32" rx="16" fill="#E13D0F" opacity="0.08" stroke="#E13D0F" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="100" y="101" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#E13D0F" letter-spacing="1.5">DESIGN · STANDING THREAD</text>
+          <text x="1100" y="101" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#E13D0F" letter-spacing="0.5" text-anchor="end">Never "started" at ticket assignment</text>
+        </g>
+
+        <!-- Customer proximity thread (bottom) -->
+        <g>
+          <rect x="80" y="308" width="1040" height="32" rx="16" fill="#9B40C4" opacity="0.08" stroke="#9B40C4" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="100" y="329" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#9B40C4" letter-spacing="1.5">CUSTOMER PROXIMITY · STANDING THREAD</text>
+          <text x="1100" y="329" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#9B40C4" letter-spacing="0.5" text-anchor="end">Calendar commitment, defined minimums</text>
+        </g>
+
+        <!-- ================= PHASE BLOCKS ================= -->
+        <!-- Phase 01 Discover -->
+        <g>
+          <rect x="80" y="140" width="240" height="140" rx="12" fill="#FFFFFF" stroke="#E13D0F" stroke-width="2"/>
+          <rect x="80" y="140" width="6" height="140" fill="#E13D0F" rx="3"/>
+          <text x="104" y="170" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#E13D0F" letter-spacing="1.5">01</text>
+          <text x="104" y="208" font-family="ui-serif, Georgia, serif" font-size="28" font-weight="500" fill="#02101D">Discover</text>
+          <text x="104" y="240" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#5C6770" letter-spacing="1">EXIT</text>
+          <text x="104" y="258" font-family="ui-serif, Georgia, serif" font-size="13" fill="#5C6770" font-style="italic">Signed problem brief</text>
+        </g>
+
+        <!-- Connector arrow Discover → Plan -->
+        <g stroke="#02101D" stroke-width="2" fill="none">
+          <line x1="320" y1="210" x2="345" y2="210"/>
+          <polyline points="338,204 345,210 338,216"/>
+        </g>
+
+        <!-- Phase 02 Plan -->
+        <g>
+          <rect x="345" y="140" width="240" height="140" rx="12" fill="#FFFFFF" stroke="#9B40C4" stroke-width="2"/>
+          <rect x="345" y="140" width="6" height="140" fill="#9B40C4" rx="3"/>
+          <text x="369" y="170" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#9B40C4" letter-spacing="1.5">02</text>
+          <text x="369" y="208" font-family="ui-serif, Georgia, serif" font-size="28" font-weight="500" fill="#02101D">Plan</text>
+          <text x="369" y="240" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#5C6770" letter-spacing="1">EXIT</text>
+          <text x="369" y="258" font-family="ui-serif, Georgia, serif" font-size="13" fill="#5C6770" font-style="italic">Paired briefs + metrics</text>
+        </g>
+
+        <!-- Connector arrow Plan → Build -->
+        <g stroke="#02101D" stroke-width="2" fill="none">
+          <line x1="585" y1="210" x2="610" y2="210"/>
+          <polyline points="603,204 610,210 603,216"/>
+        </g>
+
+        <!-- Phase 03 Build (slightly emphasized to show SDLC inside) -->
+        <g>
+          <rect x="610" y="140" width="240" height="140" rx="12" fill="#FFFFFF" stroke="#062E5C" stroke-width="2"/>
+          <rect x="610" y="140" width="6" height="140" fill="#062E5C" rx="3"/>
+          <text x="634" y="170" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#062E5C" letter-spacing="1.5">03</text>
+          <text x="634" y="208" font-family="ui-serif, Georgia, serif" font-size="28" font-weight="500" fill="#02101D">Build</text>
+          <!-- SDLC nested badge -->
+          <rect x="634" y="226" width="100" height="22" rx="11" fill="#062E5C" opacity="0.08" stroke="#062E5C" stroke-width="1"/>
+          <text x="684" y="241" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#062E5C" letter-spacing="1" text-anchor="middle">SDLC INSIDE</text>
+          <text x="634" y="270" font-family="ui-serif, Georgia, serif" font-size="13" fill="#5C6770" font-style="italic">Design QA + hi-fi</text>
+        </g>
+
+        <!-- Connector arrow Build → Measure -->
+        <g stroke="#02101D" stroke-width="2" fill="none">
+          <line x1="850" y1="210" x2="875" y2="210"/>
+          <polyline points="868,204 875,210 868,216"/>
+        </g>
+
+        <!-- Phase 04 Measure -->
+        <g>
+          <rect x="875" y="140" width="240" height="140" rx="12" fill="#FFFFFF" stroke="#7A6A4F" stroke-width="2"/>
+          <rect x="875" y="140" width="6" height="140" fill="#7A6A4F" rx="3"/>
+          <text x="899" y="170" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#7A6A4F" letter-spacing="1.5">04</text>
+          <text x="899" y="208" font-family="ui-serif, Georgia, serif" font-size="28" font-weight="500" fill="#02101D">Measure</text>
+          <text x="899" y="240" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#5C6770" letter-spacing="1">DECISION</text>
+          <text x="899" y="258" font-family="ui-serif, Georgia, serif" font-size="13" fill="#5C6770" font-style="italic">Invest · Iterate · Deprecate</text>
+        </g>
+
+        <!-- ================= LOOP-BACK ARROW (Measure → Discover, indicating learnings feed forward) ================= -->
+        <g stroke="#02101D" stroke-width="1.5" fill="none" stroke-dasharray="5 4" opacity="0.5">
+          <path d="M 995 280 Q 995 380, 600 380 Q 200 380, 200 280" />
+          <polyline points="206,274 200,280 194,274" stroke-dasharray="0" opacity="1"/>
+        </g>
+        <text x="600" y="402" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#5C6770" letter-spacing="1.5" text-anchor="middle" opacity="0.7">LEARNINGS LOOP BACK TO DISCOVER</text>
+      </svg>
+
+      <!-- Caption under diagram -->
+      <p class="mt-6 font-mono text-xs uppercase tracking-[0.15em] text-ink-muted text-center">
+        Initiative-level work · SDLC runs inside Build · Design and customer proximity span all phases
+      </p>
+    </div>
+
     <!-- Phase cards in a row, flowing left to right -->
     <div class="grid md:grid-cols-4 gap-4 md:gap-6 mb-16">
       {[
