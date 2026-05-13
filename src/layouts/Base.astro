@@ -52,7 +52,7 @@ const isAbout = path === '/about';
   <body>
     <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-cream/80 border-b border-ink/5">
       <nav class="max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
-        <a href="/" class="font-display text-xl text-ink hover:text-orange transition-colors relative z-50">
+        <a href="/" class="font-display text-xl text-ink hover:text-orange transition-colors">
           Mollie Cox<span class="brand-period">.</span>
         </a>
 
@@ -77,7 +77,7 @@ const isAbout = path === '/about';
         <!-- Mobile hamburger button -->
         <button
           id="mobile-menu-toggle"
-          class="md:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5"
+          class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5"
           aria-label="Toggle menu"
         >
           <span class="hamburger-line block w-6 h-0.5 bg-ink transition-all duration-300"></span>
@@ -85,69 +85,52 @@ const isAbout = path === '/about';
           <span class="hamburger-line block w-6 h-0.5 bg-ink transition-all duration-300"></span>
         </button>
       </nav>
+    </header>
 
-      <!-- Mobile menu overlay - explicit inline styles for bulletproof opacity layering -->
-      <div
-        id="mobile-menu"
-        class="md:hidden opacity-0 pointer-events-none transition-opacity duration-300 flex flex-col"
-        style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #F4EFE5; z-index: 60;"
-      >
-        <!-- Close button row, matches nav header height -->
-        <div class="flex items-center justify-between px-6 py-5">
-          <a href="/" class="font-display text-xl text-ink hover:text-orange transition-colors mobile-nav-link">
-            Mollie Cox<span class="brand-period">.</span>
-          </a>
-          <button
-            id="mobile-menu-close"
-            class="w-10 h-10 flex items-center justify-center"
-            aria-label="Close menu"
-          >
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-              <line x1="2" y1="2" x2="20" y2="20" stroke="#02101D" stroke-width="2" stroke-linecap="round"/>
-              <line x1="20" y1="2" x2="2" y2="20" stroke="#02101D" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </button>
+    <!-- Mobile menu overlay - OUTSIDE the header to avoid backdrop-blur stacking context trap -->
+    <div
+      id="mobile-menu"
+      class="md:hidden"
+      style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #F4EFE5; z-index: 100;"
+    >
+      <!-- Close button row, matches nav header dimensions -->
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.5rem;">
+        <a href="/" class="font-display text-xl text-ink mobile-nav-link" style="text-decoration: none;">
+          Mollie Cox<span class="brand-period">.</span>
+        </a>
+        <button
+          id="mobile-menu-close"
+          style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; background: transparent; border: none; cursor: pointer;"
+          aria-label="Close menu"
+        >
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <line x1="2" y1="2" x2="20" y2="20" stroke="#02101D" stroke-width="2" stroke-linecap="round"/>
+            <line x1="20" y1="2" x2="2" y2="20" stroke="#02101D" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Nav links centered in remaining vertical space -->
+      <div style="display: flex; flex-direction: column; justify-content: center; padding: 0 2rem 3rem; height: calc(100vh - 5rem);">
+        <div style="display: flex; flex-direction: column; gap: 2rem;">
+          <a href="/#work" class="mobile-nav-link font-display text-ink" style="font-size: 2.25rem; text-decoration: none;">Work<span class="brand-period">.</span></a>
+          <a href="/ai" class="mobile-nav-link font-display text-ink" style="font-size: 2.25rem; text-decoration: none;">AI<span class="brand-period">.</span></a>
+          <a href="/teaching" class="mobile-nav-link font-display text-ink" style="font-size: 2.25rem; text-decoration: none;">Teaching<span class="brand-period">.</span></a>
+          <a href="/about" class="mobile-nav-link font-display text-ink" style="font-size: 2.25rem; text-decoration: none;">About<span class="brand-period">.</span></a>
+          <a href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP" target="_blank" rel="noopener" class="mobile-nav-link font-display text-ink" style="font-size: 2.25rem; text-decoration: none;">Bounce<span class="brand-period">.</span></a>
         </div>
 
-        <!-- Nav links centered in remaining space -->
-        <div class="flex-1 flex flex-col justify-center px-8 pb-12">
-          <div class="flex flex-col gap-8">
-            <a
-              href="/#work"
-              class="mobile-nav-link font-display text-4xl text-ink hover:text-orange transition-colors"
-            >Work<span class="brand-period">.</span></a>
-            <a
-              href="/ai"
-              class="mobile-nav-link font-display text-4xl text-ink hover:text-orange transition-colors"
-            >AI<span class="brand-period">.</span></a>
-            <a
-              href="/teaching"
-              class="mobile-nav-link font-display text-4xl text-ink hover:text-orange transition-colors"
-            >Teaching<span class="brand-period">.</span></a>
-            <a
-              href="/about"
-              class="mobile-nav-link font-display text-4xl text-ink hover:text-orange transition-colors"
-            >About<span class="brand-period">.</span></a>
-            <a
-              href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP"
-              target="_blank"
-              rel="noopener"
-              class="mobile-nav-link font-display text-4xl text-ink hover:text-orange transition-colors"
-            >Bounce<span class="brand-period">.</span></a>
-          </div>
-
-          <div class="mt-16">
-            <a
-              href="mailto:molliecox@gmail.com"
-              class="mobile-nav-link inline-flex items-center gap-2 px-6 py-3 bg-ink text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange transition-colors"
-              style="border-radius: 999px;"
-            >
-              Contact →
-            </a>
-          </div>
+        <div style="margin-top: 4rem;">
+          <a
+            href="mailto:molliecox@gmail.com"
+            class="mobile-nav-link font-mono"
+            style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background-color: #02101D; color: #F4EFE5; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; border-radius: 999px; text-decoration: none;"
+          >
+            Contact →
+          </a>
         </div>
       </div>
-    </header>
+    </div>
 
     <script>
       const toggle = document.getElementById('mobile-menu-toggle');
@@ -159,18 +142,17 @@ const isAbout = path === '/about';
       let isOpen = false;
 
       function setMenu(open) {
+        if (!menu) return;
         isOpen = open;
         if (open) {
-          menu?.classList.remove('opacity-0', 'pointer-events-none');
-          menu?.classList.add('opacity-100');
+          menu.style.display = 'block';
           document.body.style.overflow = 'hidden';
           // Hamburger morphs to X
           lines[0]?.classList.add('translate-y-2', 'rotate-45');
           lines[1]?.classList.add('opacity-0');
           lines[2]?.classList.add('-translate-y-2', '-rotate-45');
         } else {
-          menu?.classList.add('opacity-0', 'pointer-events-none');
-          menu?.classList.remove('opacity-100');
+          menu.style.display = 'none';
           document.body.style.overflow = '';
           // X back to hamburger
           lines[0]?.classList.remove('translate-y-2', 'rotate-45');
