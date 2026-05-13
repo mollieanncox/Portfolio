@@ -10,6 +10,13 @@ const {
   title,
   description = 'Mollie Cox. Design and Product Experience leader and AI-native founder. Twenty years building, scaling, and leading design organizations across enterprise SaaS, fintech, and consumer products.',
 } = Astro.props;
+
+// Strip trailing slash for consistent comparison across Astro build modes
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isWork = path === '/' || path.startsWith('/work');
+const isAI = path === '/ai';
+const isTeaching = path === '/teaching';
+const isAbout = path === '/about';
 ---
 
 <!DOCTYPE html>
@@ -51,22 +58,10 @@ const {
 
         <!-- Desktop nav -->
         <div class="hidden md:flex items-center gap-7 text-sm">
-          <a
-            href="/#work"
-            class:list={["nav-link", { "nav-link-current": Astro.url.pathname === "/" || Astro.url.pathname.startsWith("/work/") }]}
-          >Work</a>
-          <a
-            href="/ai"
-            class:list={["nav-link", { "nav-link-current": Astro.url.pathname === "/ai" }]}
-          >AI</a>
-          <a
-            href="/teaching"
-            class:list={["nav-link", { "nav-link-current": Astro.url.pathname === "/teaching" }]}
-          >Teaching</a>
-          <a
-            href="/about"
-            class:list={["nav-link", { "nav-link-current": Astro.url.pathname === "/about" }]}
-          >About</a>
+          <a href="/#work" class={`nav-link ${isWork ? 'nav-link-current' : ''}`}>Work</a>
+          <a href="/ai" class={`nav-link ${isAI ? 'nav-link-current' : ''}`}>AI</a>
+          <a href="/teaching" class={`nav-link ${isTeaching ? 'nav-link-current' : ''}`}>Teaching</a>
+          <a href="/about" class={`nav-link ${isAbout ? 'nav-link-current' : ''}`}>About</a>
           <a href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP" target="_blank" rel="noopener" class="nav-link">Bounce</a>
 
           <!-- Contact CTA button -->
