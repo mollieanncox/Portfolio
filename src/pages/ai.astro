@@ -30,14 +30,20 @@ import Base from '../layouts/Base.astro';
         treating AI like a co-founder instead of a calculator.
       </p>
 
-      <div class="mt-10 flex flex-wrap gap-4">
-        <a
-          href="/work/course-code"
-          class="inline-flex items-center gap-2 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
-          style="border-radius: 999px;"
-        >
-          See Course Code case study →
-        </a>
+      <!-- 3-stat visual moment: gives the hero data weight -->
+      <div class="mt-20 grid grid-cols-3 gap-6 md:gap-12 pt-10 border-t border-cream/15 max-w-3xl">
+        <div>
+          <p class="font-display text-cream leading-none" style="font-size: clamp(2.5rem, 5vw, 4rem);">3</p>
+          <p class="stat-hero-label-light">Foundational documents</p>
+        </div>
+        <div>
+          <p class="font-display text-cream leading-none" style="font-size: clamp(2.5rem, 5vw, 4rem);">3</p>
+          <p class="stat-hero-label-light">Layers of AI in production</p>
+        </div>
+        <div>
+          <p class="font-display text-cream leading-none" style="font-size: clamp(2.5rem, 5vw, 4rem);">~80%</p>
+          <p class="stat-hero-label-light">Reduction in AI operating cost</p>
+        </div>
       </div>
     </div>
   </section>

@@ -83,6 +83,14 @@
   }
   .nav-link:hover::after { @apply w-full; }
 
+  /* Current page indicator: persistent underline + darker text */
+  .nav-link-current {
+    @apply text-ink;
+  }
+  .nav-link-current::after {
+    @apply w-full;
+  }
+
   /* ============================================================
      STATS
      Hero numbers in BRAND ORANGE. No periods on numbers.
@@ -165,6 +173,18 @@
     margin-bottom: 1.5rem;
   }
   .linocut-icon svg {
+    @apply w-full h-full;
+  }
+
+  /* Feature icon: 72px. For section-anchor moments (Maven mortarboard,
+     UNL book). Distinct from 52px linocut, smaller than display imagery. */
+  .feature-icon {
+    @apply inline-block;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 1.5rem;
+  }
+  .feature-icon svg {
     @apply w-full h-full;
   }
 
