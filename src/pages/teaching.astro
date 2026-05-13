@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 
 const directReportTestimonials = [
   {
-    quote: "Mollie has a rare combination of charisma, exceptional intelligence, and leadership in one human being, and the field of design is lucky to have someone in it with such a skillset. She is a highly regarded design leader known for her energy, clarity, and authenticity. Her leadership inspires confidence and fosters a sense of purpose.",
+    quote: "Mollie has a rare combination of charisma, exceptional intelligence, and leadership in one human being, and the field of design is lucky to have someone in it with such a skillset. Her leadership inspires confidence and fosters a sense of purpose.",
     name: "Zeljka Hassler",
     role: "Sr. Product Design Manager",
   },
@@ -41,132 +41,325 @@ const menteeTestimonials = [
     role: "Visitor Lecturer, Regent's University",
   },
 ];
+
+const courseOutcomes = [
+  'Master relationship building & strategic communication',
+  'Build your professional assessment framework',
+  'Transform design skills into organizational impact',
+  'Create your career acceleration roadmap',
+  'Navigate complex organizational dynamics',
+  'Develop leadership through influence',
+];
 ---
 
 <Base title="Teaching & Mentoring · Mollie Cox">
-  <!-- Header -->
-  <section class="max-w-7xl mx-auto px-6 md:px-10 pt-12 md:pt-20 pb-16">
-    <p class="eyebrow mb-8">Teaching & Mentoring</p>
 
-    <h1 class="font-display text-display-lg text-ink leading-[1.0] tracking-tight max-w-[22ch]">
-      Growing the designers who'll lead the field next<span class="brand-period">.</span>
-    </h1>
+  <!-- ============================== -->
+  <!-- HERO -->
+  <!-- ============================== -->
+  <section class="case-hero-dark">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 relative z-10">
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] text-cream/60 hover:text-orange transition-colors mb-16"
+      >
+        ← Home
+      </a>
 
-    <p class="mt-10 text-xl text-ink-soft leading-relaxed max-w-reading">
-      Teaching is part of the work, not a side project. I've been an adjunct professor at the
-      University of Nebraska since 2013, I run a paid cohort course on design career strategy,
-      and I mentor designers around the world through ADPList. The thread across all of it
-      is the same: technical skill alone isn't what makes a designer a leader.
-    </p>
+      <p class="eyebrow-light mb-6">Teaching & Mentoring</p>
+
+      <h1 class="font-display text-display-lg text-cream leading-[0.95] tracking-tight max-w-[22ch]">
+        Growing the designers who'll lead the field next<span class="brand-period">.</span>
+      </h1>
+
+      <p class="mt-10 text-xl text-cream/80 leading-relaxed max-w-[48ch]">
+        Teaching is part of the work, not a side project. Adjunct professor at the
+        University of Nebraska since 2013. A paid cohort course on design career
+        strategy. Designers mentored around the world through ADPList. The thread
+        across all of it: technical skill alone isn't what makes a designer a leader.
+      </p>
+
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a
+          href="https://maven.com/mollie-cox/design-career-catalyst"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
+          style="border-radius: 999px;"
+        >
+          Join the Maven waitlist →
+        </a>
+      </div>
+    </div>
   </section>
 
-  <!-- Stats row -->
-  <section class="border-y border-ink/10 bg-cream-warm/40">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 py-12">
-      <p class="eyebrow mb-8">Mentoring impact</p>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+  <!-- ============================== -->
+  <!-- Stats with grid backdrop -->
+  <!-- ============================== -->
+  <section class="grid-backdrop border-b border-ink/10 overflow-hidden">
+    <div class="grid-backdrop-band-top"></div>
+    <div class="grid-backdrop-band-bottom"></div>
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28 relative z-10">
+      <p class="eyebrow mb-12">Mentoring impact</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">
         <div>
-          <p class="stat">3,900</p>
-          <p class="stat-label">Minutes mentored</p>
+          <p class="stat-hero">3,900</p>
+          <p class="stat-hero-label">Minutes mentored</p>
         </div>
         <div>
-          <p class="stat">116</p>
-          <p class="stat-label">1:1 bookings</p>
+          <p class="stat-hero">116</p>
+          <p class="stat-hero-label">1:1 bookings</p>
         </div>
         <div>
-          <p class="stat">11</p>
-          <p class="stat-label">Countries reached</p>
+          <p class="stat-hero">11</p>
+          <p class="stat-hero-label">Countries reached</p>
         </div>
         <div>
-          <p class="stat">12+</p>
-          <p class="stat-label">Years teaching at UNL</p>
+          <p class="stat-hero">12+</p>
+          <p class="stat-hero-label">Years teaching at UNL</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Maven course -->
+  <!-- ============================== -->
+  <!-- Maven course block -->
+  <!-- ============================== -->
   <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
     <div class="grid md:grid-cols-12 gap-8 md:gap-16">
+
       <div class="md:col-span-4">
         <p class="eyebrow mb-3">Cohort course</p>
-        <p class="font-display text-3xl text-orange mb-2">Maven<span class="text-ink">.</span></p>
-        <p class="font-mono text-xs text-ink-muted uppercase tracking-wider mb-8">3-week cohort · $899</p>
+        <p class="font-display text-4xl text-orange mb-2 leading-none">Maven</p>
+        <p class="font-mono text-xs text-ink-muted uppercase tracking-wider mb-10">3-week cohort · $899</p>
+
+        <!-- Linocut icon for the course -->
+        <div class="linocut-icon mb-8" style="width: 80px; height: 80px;">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Mortarboard / graduation cap -->
+            <path d="M40 14 L 8 28 L 40 40 L 72 28 Z" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M20 34 L 20 50 C 20 56, 28 60, 40 60 C 52 60, 60 56, 60 50 L 60 34" fill="none" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
+            <line x1="72" y1="28" x2="72" y2="48" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="72" cy="52" r="4" fill="#E13D0F" stroke="#02101D" stroke-width="2.5"/>
+          </svg>
+        </div>
 
         <a
           href="https://maven.com/mollie-cox/design-career-catalyst"
           target="_blank"
           rel="noopener"
           class="inline-flex items-center gap-2 px-6 py-3 bg-ink text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange transition-colors"
+          style="border-radius: 999px;"
         >
           Join the waitlist →
         </a>
       </div>
+
       <div class="md:col-span-8">
-        <h2 class="font-display text-display-md text-ink leading-tight mb-6 max-w-[22ch]">
-          The Design Career Catalyst: Amplify Your Impact<span class="brand-period">.</span>
+        <h2 class="font-display text-display-md text-ink leading-tight mb-8 max-w-[22ch]">
+          The Design Career Catalyst.
         </h2>
 
         <p class="text-lg text-ink-soft leading-relaxed mb-6">
-          A 3-week cohort course built for senior designers and design leads who've mastered
-          the craft but want to amplify their organizational impact. The curriculum covers
-          strategic relationships, stakeholder influence, personal evaluation frameworks, and
-          turning design decisions into business outcomes.
+          A 3-week cohort course built for senior designers and design leads who've
+          mastered the craft but want to amplify their organizational impact. The
+          curriculum covers strategic relationships, stakeholder influence, personal
+          evaluation frameworks, and turning design decisions into business outcomes.
         </p>
 
         <p class="text-lg text-ink-soft leading-relaxed mb-10">
-          The soft skills and career frameworks I teach aren't in books, on YouTube, or in
-          most design education. They're what I learned the hard way leading design teams
-          for two decades, distilled for designers ready to lead.
+          The soft skills and career frameworks I teach aren't in books, on YouTube,
+          or in most design education. They're what I learned the hard way leading
+          design teams for two decades, distilled for designers ready to lead.
         </p>
 
-        <div class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-10">
-          {[
-            'Master relationship building & strategic communication',
-            'Build your professional assessment framework',
-            'Transform design skills into organizational impact',
-            'Create your career acceleration roadmap',
-            'Navigate complex organizational dynamics',
-            'Develop leadership through influence',
-          ].map((item) => (
-            <div class="flex gap-3 items-start">
-              <span class="font-mono text-orange mt-1">→</span>
-              <p class="text-ink-soft">{item}</p>
-            </div>
-          ))}
+        <p class="eyebrow mb-6">What you'll learn</p>
+        <div class="grid sm:grid-cols-2 gap-x-8 gap-y-4">
+          {
+            courseOutcomes.map((item) => (
+              <div class="flex gap-3 items-start py-2 border-b border-ink/10">
+                <span class="font-mono text-orange mt-1 shrink-0">◆</span>
+                <p class="text-ink-soft">{item}</p>
+              </div>
+            ))
+          }
         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- THREE-PILLAR: How I teach -->
+  <!-- ============================== -->
+  <section class="bg-cream-warm/40 border-y border-ink/10 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-10">
+      <p class="eyebrow mb-3">Philosophy</p>
+      <h2 class="font-display text-display-md text-ink leading-tight max-w-[26ch] mb-16">
+        Three threads in everything I teach.
+      </h2>
+
+      <div class="pillar-grid">
+
+        <!-- Pillar 1: Craft to leadership -->
+        <div class="pillar">
+          <div class="pillar-icon">
+            <!-- Stepladder going up -->
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <line x1="20" y1="14" x2="20" y2="68" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
+              <line x1="60" y1="14" x2="60" y2="68" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
+              <rect x="20" y="22" width="40" height="6" fill="#E13D0F" stroke="#02101D" stroke-width="2.5"/>
+              <rect x="20" y="36" width="40" height="6" fill="#E13D0F" stroke="#02101D" stroke-width="2.5"/>
+              <rect x="20" y="50" width="40" height="6" fill="#E13D0F" stroke="#02101D" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <div class="pillar-meta">
+            <p class="eyebrow mb-3">Craft to leadership</p>
+            <h3 class="font-display text-3xl text-ink leading-tight">
+              The next rung is different.
+            </h3>
+          </div>
+          <div class="pillar-body">
+            <p class="text-ink-soft leading-relaxed">
+              The skills that got you to senior won't take you to lead, and the skills
+              that make you a lead won't make you a director. Each transition is a new
+              practice. I help designers see the next set of skills, not just the next
+              title.
+            </p>
+          </div>
+          <div class="pillar-tagline"></div>
+        </div>
+
+        <!-- Pillar 2: Voice -->
+        <div class="pillar">
+          <div class="pillar-icon">
+            <!-- Megaphone / voice -->
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 32 L 14 48 L 40 48 L 60 60 L 60 20 L 40 32 Z" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M64 28 Q 72 32, 72 40 Q 72 48, 64 52" fill="none" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
+              <line x1="40" y1="32" x2="40" y2="48" stroke="#02101D" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <div class="pillar-meta">
+            <p class="eyebrow-voice mb-3">Voice</p>
+            <h3 class="font-display text-3xl text-ink leading-tight">
+              How you say it matters.
+            </h3>
+          </div>
+          <div class="pillar-body">
+            <p class="text-ink-soft leading-relaxed">
+              Most senior designers know what to say but struggle with how to say it
+              in rooms with VPs and CEOs. Voice is a craft. Confidence, brevity,
+              specificity, the willingness to push back. These are teachable, and most
+              design education skips them entirely.
+            </p>
+          </div>
+          <div class="pillar-tagline">
+            <p class="font-display text-2xl italic text-orange">"Direct, with kindness."</p>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Evidence -->
+        <div class="pillar">
+          <div class="pillar-icon">
+            <!-- Magnifying glass over data -->
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="40" width="8" height="22" fill="#02101D"/>
+              <rect x="28" y="32" width="8" height="30" fill="#02101D"/>
+              <rect x="42" y="46" width="8" height="16" fill="#02101D"/>
+              <rect x="56" y="22" width="8" height="40" fill="#E13D0F" stroke="#02101D" stroke-width="2.5"/>
+              <line x1="14" y1="62" x2="68" y2="62" stroke="#02101D" stroke-width="3"/>
+              <path d="M40 14 L 50 22" stroke="#E13D0F" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="38" cy="14" r="3" fill="#E13D0F"/>
+            </svg>
+          </div>
+          <div class="pillar-meta">
+            <p class="eyebrow mb-3">Evidence</p>
+            <h3 class="font-display text-3xl text-ink leading-tight">
+              Opinion becomes business case.
+            </h3>
+          </div>
+          <div class="pillar-body">
+            <p class="text-ink-soft leading-relaxed">
+              The fastest way to lose an executive room is to bring opinions instead of
+              evidence. I teach designers how to frame their work as business cases,
+              with tested methodology and real numbers, so the room hears the
+              recommendation instead of arguing the taste.
+            </p>
+          </div>
+          <div class="pillar-tagline"></div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Direct report testimonials -->
-  <section class="bg-cream-warm/40 border-y border-ink/10">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+  <!-- ============================== -->
+  <!-- Leadership / direct report testimonials -->
+  <!-- ============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <div class="grid md:grid-cols-12 gap-8 mb-16">
+      <div class="md:col-span-4">
+        <p class="eyebrow mb-3">Voices</p>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch]">
+          From people I've led.
+        </h2>
+        <p class="mt-6 text-lg text-ink-soft max-w-reading">
+          Direct reports and design leaders who know my leadership from the inside.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+      {
+        directReportTestimonials.map((t) => (
+          <figure class="p-8 md:p-10 bg-cream border border-ink/10" style="border-radius: 18px;">
+            <p class="font-display text-5xl text-orange leading-none mb-4">"</p>
+            <blockquote class="text-lg text-ink-soft leading-relaxed mb-8">
+              {t.quote}
+            </blockquote>
+            <figcaption class="pt-6 border-t border-ink/10">
+              <p class="font-display text-lg text-ink">{t.name}</p>
+              <p class="font-mono text-xs text-orange mt-1 uppercase tracking-wider">{t.role}</p>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- ADPList mentees -->
+  <!-- ============================== -->
+  <section class="bg-cream-warm/40 border-y border-ink/10 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-10">
       <div class="grid md:grid-cols-12 gap-8 mb-16">
         <div class="md:col-span-4">
-          <p class="eyebrow mb-3">Voices</p>
+          <p class="eyebrow mb-3">ADPList mentoring</p>
         </div>
         <div class="md:col-span-8">
-          <h2 class="font-display text-display-md text-ink leading-tight max-w-[22ch]">
-            What former directs and design leaders say<span class="brand-period">.</span>
+          <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch]">
+            From designers around the world.
           </h2>
           <p class="mt-6 text-lg text-ink-soft max-w-reading">
-            People who reported to me, partnered with me on design teams, or know my leadership
-            from the inside.
+            116 designers across 11 countries through ADPList. A selection of what
+            they've said:
           </p>
         </div>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
         {
-          directReportTestimonials.map((t) => (
-            <figure class="bg-cream p-8 md:p-10 border border-ink/10">
-              <blockquote class="text-lg text-ink-soft leading-relaxed mb-6">
+          menteeTestimonials.map((t) => (
+            <figure class="border-l-2 border-orange pl-6">
+              <blockquote class="text-base text-ink-soft leading-relaxed mb-6 italic">
                 "{t.quote}"
               </blockquote>
               <figcaption>
-                <p class="font-display text-lg text-ink">{t.name}</p>
-                <p class="font-mono text-xs text-ink-muted mt-1 uppercase tracking-wider">{t.role}</p>
+                <p class="font-display text-base text-ink">{t.name}</p>
+                <p class="font-mono text-xs text-orange mt-1 uppercase tracking-wider">{t.role}</p>
               </figcaption>
             </figure>
           ))
@@ -175,68 +368,94 @@ const menteeTestimonials = [
     </div>
   </section>
 
-  <!-- ADPList mentee testimonials -->
+  <!-- ============================== -->
+  <!-- UNL teaching -->
+  <!-- ============================== -->
   <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
-    <div class="grid md:grid-cols-12 gap-8 mb-16">
-      <div class="md:col-span-4">
-        <p class="eyebrow mb-3">ADPList mentoring</p>
-      </div>
-      <div class="md:col-span-8">
-        <h2 class="font-display text-display-md text-ink leading-tight max-w-[22ch]">
-          From designers around the world<span class="brand-period">.</span>
-        </h2>
-        <p class="mt-6 text-lg text-ink-soft max-w-reading">
-          I've mentored 116 designers across 11 countries through ADPList. A selection of
-          what they've said:
-        </p>
-      </div>
-    </div>
+    <div class="grid md:grid-cols-12 gap-8 md:gap-16">
 
-    <div class="grid md:grid-cols-3 gap-6 md:gap-8">
-      {
-        menteeTestimonials.map((t) => (
-          <figure class="border-l-2 border-orange pl-6">
-            <blockquote class="text-base text-ink-soft leading-relaxed mb-6 italic">
-              "{t.quote}"
-            </blockquote>
-            <figcaption>
-              <p class="font-display text-base text-ink">{t.name}</p>
-              <p class="font-mono text-xs text-ink-muted mt-1 uppercase tracking-wider">{t.role}</p>
-            </figcaption>
-          </figure>
-        ))
-      }
-    </div>
-  </section>
-
-  <!-- UNL Teaching -->
-  <section class="max-w-7xl mx-auto px-6 md:px-10 pb-24 md:pb-32">
-    <div class="grid md:grid-cols-12 gap-8">
       <div class="md:col-span-4">
         <p class="eyebrow mb-3">University teaching</p>
-        <p class="font-display text-3xl text-ink mb-2">UNL<span class="text-orange">.</span></p>
+
+        <div class="linocut-icon mb-6" style="width: 80px; height: 80px;">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Open book -->
+            <path d="M10 22 L 38 18 L 38 64 L 10 60 Z" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M70 22 L 42 18 L 42 64 L 70 60 Z" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+            <line x1="16" y1="30" x2="34" y2="28" stroke="#02101D" stroke-width="2"/>
+            <line x1="16" y1="38" x2="34" y2="36" stroke="#02101D" stroke-width="2"/>
+            <line x1="16" y1="46" x2="30" y2="44" stroke="#02101D" stroke-width="2"/>
+            <line x1="46" y1="28" x2="64" y2="30" stroke="#02101D" stroke-width="2"/>
+            <line x1="46" y1="36" x2="64" y2="38" stroke="#02101D" stroke-width="2"/>
+            <line x1="46" y1="44" x2="60" y2="46" stroke="#02101D" stroke-width="2"/>
+            <line x1="40" y1="18" x2="40" y2="64" stroke="#02101D" stroke-width="2.5"/>
+          </svg>
+        </div>
+
+        <p class="font-display text-3xl text-ink mb-2 leading-none">UNL.</p>
         <p class="font-mono text-xs text-ink-muted uppercase tracking-wider">Adjunct · 2013 to present</p>
       </div>
+
       <div class="md:col-span-8 max-w-reading">
-        <h2 class="font-display text-display-md text-ink leading-tight mb-6">
-          Twelve years teaching the next generation<span class="brand-period">.</span>
+        <h2 class="font-display text-display-md text-ink leading-tight mb-8">
+          Twelve years teaching the next generation.
         </h2>
+
         <p class="text-lg text-ink-soft leading-relaxed mb-6">
-          I've been an adjunct professor at the University of Nebraska, Lincoln since 2013,
-          teaching undergraduate students design fundamentals, design systems, and what it
+          Adjunct professor at the University of Nebraska, Lincoln since 2013,
+          teaching undergraduates design fundamentals, design systems, and what it
           actually takes to build a career in product design.
         </p>
-        <p class="text-lg text-ink-soft leading-relaxed mb-6">
-          Courses I've taught include UX/UI Design (ADPR 358), Atomic Design (ADPR 398),
-          Design Systems (ADPR 398), Art Direction (ADPR 433), Layout & Design (ADPR 333),
-          Portfolio Development (ADPR 483), and Photo & Video (JOUR 160).
+
+        <p class="text-lg text-ink-soft leading-relaxed mb-10">
+          Courses taught include UX/UI Design (ADPR 358), Atomic Design (ADPR 398),
+          Design Systems (ADPR 398), Art Direction (ADPR 433), Layout & Design
+          (ADPR 333), Portfolio Development (ADPR 483), and Photo & Video (JOUR 160).
         </p>
+
         <p class="text-lg text-ink-soft leading-relaxed">
-          Teaching keeps me connected to how designers learn, what they're up against in
-          the field, and how to translate hard-won professional lessons into something
-          actionable.
+          Teaching keeps me connected to how designers learn, what they're up
+          against in the field, and how to translate hard-won professional lessons
+          into something actionable.
         </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- Contact close -->
+  <!-- ============================== -->
+  <section class="grid-backdrop overflow-hidden border-b border-ink/10">
+    <div class="grid-backdrop-band-top"></div>
+    <div class="grid-backdrop-band-bottom"></div>
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-28 md:py-36 relative z-10">
+      <p class="eyebrow-voice mb-8">Work with me</p>
+
+      <h2 class="font-display text-ink leading-[0.95] tracking-tight mb-12" style="font-size: clamp(2.5rem, 6vw, 5.5rem);">
+        Available for talks, workshops, and 1:1 mentoring.<br/>
+        <span class="text-orange">Let's get into it.</span>
+      </h2>
+
+      <div class="flex flex-wrap gap-4">
+        <a
+          href="https://maven.com/mollie-cox/design-career-catalyst"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
+          style="border-radius: 999px;"
+        >
+          Join the Maven waitlist →
+        </a>
+        <a
+          href="mailto:molliecox@gmail.com"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-ink/30 text-ink font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
+          style="border-radius: 999px;"
+        >
+          Email for talks & workshops →
+        </a>
       </div>
     </div>
   </section>
+
 </Base>
