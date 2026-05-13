@@ -123,6 +123,17 @@
     @apply font-display text-3xl leading-none text-cream;
   }
 
+  /* Orange dot bullet for designed lists. Inline-block so it sits cleanly with text baseline. */
+  .dot-bullet {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #E13D0F;
+    margin-top: 0.55em;
+    flex-shrink: 0;
+  }
+
   /* ============================================================
      BELIEF CARDS
      ============================================================ */
