@@ -45,10 +45,12 @@ const {
   <body>
     <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-cream/80 border-b border-ink/5">
       <nav class="max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
-        <a href="/" class="font-display text-xl text-ink hover:text-orange transition-colors">
+        <a href="/" class="font-display text-xl text-ink hover:text-orange transition-colors relative z-50">
           Mollie Cox<span class="brand-period">.</span>
         </a>
-        <div class="flex items-center gap-5 md:gap-7 text-sm">
+
+        <!-- Desktop nav -->
+        <div class="hidden md:flex items-center gap-7 text-sm">
           <a
             href="/#work"
             class:list={["nav-link", { "nav-link-current": Astro.url.pathname === "/" || Astro.url.pathname.startsWith("/work/") }]}
@@ -66,10 +68,110 @@ const {
             class:list={["nav-link", { "nav-link-current": Astro.url.pathname === "/about" }]}
           >About</a>
           <a href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP" target="_blank" rel="noopener" class="nav-link">Bounce</a>
-          <a href="mailto:molliecox@gmail.com" class="nav-link">Contact</a>
+
+          <!-- Contact CTA button -->
+          <a
+            href="mailto:molliecox@gmail.com"
+            class="inline-flex items-center gap-2 px-5 py-2 bg-ink text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange transition-colors"
+            style="border-radius: 999px;"
+          >
+            Contact →
+          </a>
         </div>
+
+        <!-- Mobile hamburger button -->
+        <button
+          id="mobile-menu-toggle"
+          class="md:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5"
+          aria-label="Toggle menu"
+        >
+          <span class="hamburger-line block w-6 h-0.5 bg-ink transition-all duration-300"></span>
+          <span class="hamburger-line block w-6 h-0.5 bg-ink transition-all duration-300"></span>
+          <span class="hamburger-line block w-6 h-0.5 bg-ink transition-all duration-300"></span>
+        </button>
       </nav>
+
+      <!-- Mobile menu overlay -->
+      <div
+        id="mobile-menu"
+        class="md:hidden fixed inset-0 bg-cream z-40 opacity-0 pointer-events-none transition-opacity duration-300 flex flex-col"
+      >
+        <div class="flex-1 flex flex-col justify-center px-8">
+          <div class="flex flex-col gap-8">
+            <a
+              href="/#work"
+              class="mobile-nav-link font-display text-4xl text-ink hover:text-orange transition-colors"
+            >Work<span class="brand-period">.</span></a>
+            <a
+              href="/ai"
+              class="mobile-nav-link font-display text-4xl text-ink hover:text-orange transition-colors"
+            >AI<span class="brand-period">.</span></a>
+            <a
+              href="/teaching"
+              class="mobile-nav-link font-display text-4xl text-ink hover:text-orange transition-colors"
+            >Teaching<span class="brand-period">.</span></a>
+            <a
+              href="/about"
+              class="mobile-nav-link font-display text-4xl text-ink hover:text-orange transition-colors"
+            >About<span class="brand-period">.</span></a>
+            <a
+              href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP"
+              target="_blank"
+              rel="noopener"
+              class="mobile-nav-link font-display text-4xl text-ink hover:text-orange transition-colors"
+            >Bounce<span class="brand-period">.</span></a>
+          </div>
+
+          <div class="mt-16">
+            <a
+              href="mailto:molliecox@gmail.com"
+              class="inline-flex items-center gap-2 px-6 py-3 bg-ink text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange transition-colors"
+              style="border-radius: 999px;"
+            >
+              Contact →
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
+
+    <script>
+      const toggle = document.getElementById('mobile-menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      const lines = document.querySelectorAll('.hamburger-line');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+      let isOpen = false;
+
+      function setMenu(open) {
+        isOpen = open;
+        if (open) {
+          menu?.classList.remove('opacity-0', 'pointer-events-none');
+          menu?.classList.add('opacity-100');
+          document.body.style.overflow = 'hidden';
+          // Hamburger morphs to X
+          lines[0]?.classList.add('translate-y-2', 'rotate-45');
+          lines[1]?.classList.add('opacity-0');
+          lines[2]?.classList.add('-translate-y-2', '-rotate-45');
+        } else {
+          menu?.classList.add('opacity-0', 'pointer-events-none');
+          menu?.classList.remove('opacity-100');
+          document.body.style.overflow = '';
+          // X back to hamburger
+          lines[0]?.classList.remove('translate-y-2', 'rotate-45');
+          lines[1]?.classList.remove('opacity-0');
+          lines[2]?.classList.remove('-translate-y-2', '-rotate-45');
+        }
+      }
+
+      toggle?.addEventListener('click', () => setMenu(!isOpen));
+      mobileLinks.forEach(link => link.addEventListener('click', () => setMenu(false)));
+
+      // Close on resize to desktop (avoids stuck-open state on rotation)
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768 && isOpen) setMenu(false);
+      });
+    </script>
 
     <main class="pt-24">
       <slot />
