@@ -381,7 +381,7 @@ import Base from '../layouts/Base.astro';
         The part most AI evangelists skip.
       </h2>
 
-      <div class="max-w-reading mb-12">
+      <div class="max-w-reading mb-16">
         <p class="text-xl text-ink-soft leading-relaxed">
           Running AI at production scale without cost controls is how you burn $13
           in one morning because a heartbeat cron started reading a bloated JSON
@@ -389,26 +389,39 @@ import Base from '../layouts/Base.astro';
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-x-12 gap-y-6">
+      <p class="eyebrow mb-6">Six rules</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-16">
         {[
-          { rule: 'No new cron jobs without explicit approval', why: 'Crons compound. Each one adds a fixed recurring cost forever.' },
-          { rule: 'Model split is non-negotiable', why: 'Sonnet for execution. Opus for strategy only. Haiku for fallbacks.' },
-          { rule: 'Session hygiene', why: 'New topic, new session. Long sessions compound token burn exponentially.' },
-          { rule: 'Subagents for big work', why: 'Coding over 50 lines or deep research gets its own isolated context.' },
-          { rule: 'Root file size limits', why: 'Heartbeat files under 1KB. Root files auto-load on every session.' },
-          { rule: 'Archive aggressively', why: 'Done tasks move out of active context. Ship log lives in reference.' },
+          { num: '01', rule: 'No new cron jobs without explicit approval', why: 'Crons compound. Each one adds a fixed recurring cost forever.' },
+          { num: '02', rule: 'Model split is non-negotiable', why: 'Sonnet for execution. Opus for strategy only. Haiku for fallbacks.' },
+          { num: '03', rule: 'Session hygiene', why: 'New topic, new session. Long sessions compound token burn exponentially.' },
+          { num: '04', rule: 'Subagents for big work', why: 'Coding over 50 lines or deep research gets its own isolated context.' },
+          { num: '05', rule: 'Root file size limits', why: 'Heartbeat files under 1KB. Root files auto-load on every session.' },
+          { num: '06', rule: 'Archive aggressively', why: 'Done tasks move out of active context. Ship log lives in reference.' },
         ].map((row) => (
-          <div class="py-5 border-b border-ink/10">
-            <p class="font-display text-xl text-ink mb-2">{row.rule}</p>
-            <p class="text-ink-soft leading-relaxed">{row.why}</p>
+          <div class="p-6 md:p-7 bg-cream border border-ink/10 h-full flex flex-col" style="border-radius: 12px;">
+            <p class="font-mono text-xs text-orange uppercase tracking-wider mb-3">{row.num}</p>
+            <p class="font-display text-xl text-ink mb-3 leading-tight">{row.rule}</p>
+            <p class="text-sm text-ink-soft leading-relaxed">{row.why}</p>
           </div>
         ))}
       </div>
 
-      <p class="mt-12 text-xl text-ink-soft leading-relaxed max-w-reading">
-        The result: AI operating costs went from unpredictable and escalating to
-        controlled and predictable. The model split alone cut costs by roughly 80%.
-      </p>
+      <!-- The result, pulled out as a visual moment -->
+      <div class="grid md:grid-cols-12 gap-8 items-center pt-12 border-t border-ink/10">
+        <div class="md:col-span-4">
+          <p class="font-display text-ink leading-none" style="font-size: clamp(4rem, 8vw, 7rem);">~80%</p>
+          <p class="stat-hero-label">Cost reduction from model split alone</p>
+        </div>
+        <div class="md:col-span-8 max-w-reading">
+          <p class="text-xl text-ink-soft leading-relaxed">
+            AI operating costs went from unpredictable and escalating to controlled
+            and predictable. The model split alone cut costs by roughly 80%. Cost
+            discipline is the difference between AI as a hobby project and AI as
+            production infrastructure.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
