@@ -8,186 +8,396 @@ const leadershipTestimonials = [
     role: "Sr. Product Design Manager",
   },
   {
-    quote: "One of the standout qualities of Mollie is her commitment to mentorship. She invests time in developing her team's skills, encouraging them to push boundaries and explore new ideas. Her feedback is always constructive and insightful.",
+    quote: "Mollie's extensive experience across organizations and products makes her an exceptional design leader. Her authenticity, passion, and fearless approach to growth will leave you feeling empowered.",
+    name: "Mandi Saeteun",
+    role: "Product Design Manager",
+  },
+  {
+    quote: "One of the standout qualities of Mollie is her commitment to mentorship. She invests time in developing her team's skills, encouraging them to push boundaries and explore new ideas.",
     name: "Dani Weidner",
     role: "Senior Product Designer",
+  },
+  {
+    quote: "Mollie's mentorship was transformative for my career. She consistently set clear goals, provided actionable feedback, and created opportunities for me to stretch and develop new skills.",
+    name: "Jeff Nissen",
+    role: "Senior Product Designer",
+  },
+];
+
+const workHistory = [
+  {
+    company: 'Branch',
+    role: 'Sr. Director, Product Experience',
+    period: '2024 to present',
+    note: 'Mobile measurement & engagement platform. Leading product design, UX research, content, technical docs, design systems.',
+  },
+  {
+    company: 'Course Code',
+    role: 'Founder',
+    period: '2026 to present',
+    note: 'AI-native consumer product. Solo founder with AI co-founder. 4.6K users, $39/yr Pro tier, live revenue.',
+  },
+  {
+    company: 'Veer',
+    role: 'Co-Founder, CEO',
+    period: '2024 to 2026',
+    note: 'AI-powered healthcare workforce platform. NMotion Spring 2025 accelerator, $100K from gener8tor + Invest Nebraska.',
+  },
+  {
+    company: 'Fleetio',
+    role: 'Director of Product Design',
+    period: '2021 to 2023',
+    note: 'Scaled design org from 6 to 15. Hiring rubrics, leveling frameworks, 150% headcount growth.',
+  },
+  {
+    company: 'GRIN',
+    role: 'Director of Product Design',
+    period: '2020 to 2021',
+    note: 'Influencer marketing SaaS. Built design org from the ground up.',
+  },
+  {
+    company: 'Hudl',
+    role: 'Design Lead',
+    period: '2018 to 2020',
+    note: 'Sports analytics platform with hardware integration. Cross-functional product design.',
+  },
+  {
+    company: 'DMSi',
+    role: 'Design Director',
+    period: '2016 to 2018',
+    note: 'Enterprise ERP platform modernization. Multi-product surface design.',
+  },
+  {
+    company: 'ORCA.TRADE',
+    role: 'CMO',
+    period: '2015 to 2016',
+    note: 'Fintech options trading platform. Brand, growth, and product marketing.',
   },
 ];
 ---
 
 <Base title="About · Mollie Cox">
-  <section class="max-w-7xl mx-auto px-6 md:px-10 pt-12 md:pt-20 pb-16">
-    <p class="eyebrow mb-8">About</p>
 
-    <h1
-      class="font-display text-display-lg text-ink leading-[1.0] tracking-tight max-w-[20ch]"
-    >
-      I lead by building the operating system, not just the output<span class="brand-period">.</span>
-    </h1>
-  </section>
+  <!-- ============================== -->
+  <!-- HERO -->
+  <!-- ============================== -->
+  <section class="case-hero-dark">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 relative z-10">
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] text-cream/60 hover:text-orange transition-colors mb-16"
+      >
+        ← Home
+      </a>
 
-  <section class="max-w-7xl mx-auto px-6 md:px-10 pb-32">
-    <div class="grid md:grid-cols-12 gap-8 md:gap-16">
-      <!-- Left column: portrait + quick facts -->
-      <div class="md:col-span-4">
-        <img
-          src="/portrait.png"
-          alt="Mollie Cox"
-          class="w-full mb-8"
-          loading="lazy"
-        />
+      <div class="grid md:grid-cols-12 gap-8 md:gap-16 items-center">
+        <div class="md:col-span-7">
+          <p class="eyebrow-light mb-6">About</p>
 
-        <div class="space-y-6">
-          <div>
-            <p class="eyebrow mb-2">Based in</p>
-            <p class="text-ink">Lincoln, Nebraska</p>
-            <p class="text-sm text-ink-muted">Open to relocation</p>
-          </div>
-          <div>
-            <p class="eyebrow mb-2">Currently</p>
-            <p class="text-ink">Sr. Director of Product Experience</p>
-            <p class="text-sm text-ink-muted">Branch · branch.io</p>
-          </div>
-          <div>
-            <p class="eyebrow mb-2">Also</p>
-            <p class="text-ink">Co-Founder & CEO</p>
-            <p class="text-sm text-ink-muted">Veer · NMotion Spring 2025</p>
-          </div>
-          <div>
-            <p class="eyebrow mb-2">Host</p>
-            <p class="text-ink">
-              <a href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP" target="_blank" rel="noopener" class="hover:text-orange transition-colors">
-                Bounce Podcast →
-              </a>
-            </p>
-            <p class="text-sm text-ink-muted">Design and leadership conversations</p>
-          </div>
-          <div>
-            <p class="eyebrow mb-2">Teaching</p>
-            <p class="text-ink">
-              <a href="/teaching" class="hover:text-orange transition-colors">
-                Maven course + UNL adjunct →
-              </a>
-            </p>
-            <p class="text-sm text-ink-muted">Adjunct at UNL since 2013</p>
+          <h1 class="font-display text-display-lg text-cream leading-[0.95] tracking-tight max-w-[22ch]">
+            I lead by building the operating system, not just the output<span class="brand-period">.</span>
+          </h1>
+
+          <p class="mt-10 text-xl text-cream/80 leading-relaxed max-w-[44ch]">
+            Twenty years building, scaling, and leading design organizations across
+            enterprise SaaS, fintech, and consumer products. Plus direct experience as
+            a venture-backed CEO. I think about design as a business function, not a
+            craft silo.
+          </p>
+        </div>
+
+        <!-- Portrait -->
+        <div class="md:col-span-5 flex justify-center md:justify-end">
+          <div class="relative max-w-xs md:max-w-sm w-full">
+            <img
+              src="/portrait.png"
+              alt="Mollie Cox"
+              class="w-full"
+              style="border-radius: 18px;"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
 
-      <!-- Right column: long-form bio -->
-      <div class="md:col-span-8">
-        <div class="prose-mc">
-          <p class="text-xl text-ink-soft leading-relaxed mb-10">
-            Twenty years building, scaling, and leading design organizations across
-            enterprise SaaS, fintech, and consumer products, plus direct experience as a
-            venture-backed CEO. I think about design as a business function, not a craft
-            silo.
-          </p>
-
-          <h2>How I lead</h2>
-          <p>
-            I architect operating models that move design upstream into product strategy
-            instead of downstream into UI execution. At Branch I redesigned the
-            company-wide product development lifecycle into a four-phase model with named
-            DACI ownership, paired problem and technical solution briefs, mandatory
-            success metrics before Build, and a 90-day Invest, Iterate, or Deprecate
-            decision loop that closed the longstanding gap between launch and measurement.
-          </p>
-
-          <p>
-            I build design systems that scale across complex platforms. Auxin at Branch
-            spans a multi-product enterprise SaaS surface, with reusable components, a
-            governance model, and Figma-to-code alignment practices that change the
-            relationship between design and engineering.
-          </p>
-
-          <p>
-            And I translate design decisions into executive-ready business cases grounded
-            in real data. I don't bring opinions to leadership. I bring tested
-            methodologies and the numbers behind them.
-          </p>
-
-          <h2>Where I've been</h2>
-          <p>
-            <strong>Branch.</strong> Sr. Director of Product Experience leading product
-            design, UX research, content, technical documentation, design systems, and
-            customer insight programs across a mobile measurement and engagement platform
-            serving global enterprise customers.
-          </p>
-
-          <p>
-            <strong>Veer.</strong> Co-Founder and CEO of an AI-powered healthcare
-            workforce platform. Selected for the NMotion (powered by gener8tor) Spring
-            2025 accelerator with $100K investment from gener8tor and Invest Nebraska. Led
-            the company through accelerator participation, market validation, and ultimate
-            wind-down decision.
-          </p>
-
-          <p>
-            <strong>Fleetio.</strong> Director of Product Design. Built and scaled the
-            product and content design organization from 6 to 15 designers, establishing
-            hiring rubrics, leveling frameworks, and onboarding processes that supported
-            150% headcount growth without quality degradation.
-          </p>
-
-          <p>
-            <strong>GRIN, Hudl, DMSi, Resort Lifestyle Communities, ORCA.TRADE, Thought
-              District, HobbyTown.</strong> Design and creative leadership roles across
-            influencer marketing SaaS, sports analytics with hardware integration,
-            enterprise ERP, senior living, fintech options trading (CMO), digital agency
-            ($1.2M+ client budgets), and national retail franchise (helped grow annual
-            sales to $300M+).
-          </p>
-
-          <h2>Speaking, teaching, and writing</h2>
-          <p>
-            I host <strong>Bounce</strong>, a podcast on design and leadership, available
-            on <a href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP" target="_blank" rel="noopener" class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors">Spotify</a>
-            and <a href="https://www.youtube.com/@BouncePodcast" target="_blank" rel="noopener" class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors">YouTube</a>.
-            I run <strong>Design Career Catalyst</strong>, a paid cohort course on
-            <a href="https://maven.com/mollie-cox/design-career-catalyst" target="_blank" rel="noopener" class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors">Maven</a>
-            built for senior designers ready to lead. I've taught UX/UI, design systems,
-            and atomic design as adjunct faculty at the University of Nebraska, Lincoln since
-            2013. And I have a community of 17,000+ followers on LinkedIn where I write
-            about design as a business function and what it takes to ship great work.
-          </p>
-
-          <h2>Outside of work</h2>
-          <p>
-            I play golf (13 handicap), and I live in Lincoln with deep roots in the
-            Midwest tech and creative community. I'm a graduate of UNL (BA, Theatre
-            Performance), CalArts (MFA, Acting), and Kaplan University (MBA, Summa Cum
-            Laude).
-          </p>
+      <!-- Meta row -->
+      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-cream/15 relative z-10">
+        <div>
+          <p class="eyebrow-light mb-2">Based in</p>
+          <p class="text-cream">Lincoln, Nebraska</p>
+          <p class="text-sm text-cream/60 mt-1">Open to relocation</p>
+        </div>
+        <div>
+          <p class="eyebrow-light mb-2">Currently</p>
+          <p class="text-cream">Sr. Director · Branch</p>
+          <p class="text-sm text-cream/60 mt-1">Founder · Course Code</p>
+        </div>
+        <div>
+          <p class="eyebrow-light mb-2">Speaking</p>
+          <p class="text-cream">Bounce Podcast host</p>
+          <p class="text-sm text-cream/60 mt-1">Available for talks</p>
+        </div>
+        <div>
+          <p class="eyebrow-light mb-2">Teaching</p>
+          <p class="text-cream">Maven · UNL Adjunct</p>
+          <p class="text-sm text-cream/60 mt-1">Since 2013</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Leadership testimonials block -->
-  <section class="bg-cream-warm/40 border-y border-ink/10">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
-      <div class="grid md:grid-cols-12 gap-8 mb-16">
-        <div class="md:col-span-4">
-          <p class="eyebrow mb-3">Voices</p>
+  <!-- ============================== -->
+  <!-- Stats with grid backdrop -->
+  <!-- ============================== -->
+  <section class="grid-backdrop border-b border-ink/10 overflow-hidden">
+    <div class="grid-backdrop-band-top"></div>
+    <div class="grid-backdrop-band-bottom"></div>
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28 relative z-10">
+      <p class="eyebrow mb-12">By the numbers</p>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-x-6 gap-y-12">
+        <div>
+          <p class="stat-hero">20</p>
+          <p class="stat-hero-label">Years leading design</p>
         </div>
-        <div class="md:col-span-8">
-          <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch]">
-            From people I've led<span class="brand-period">.</span>
-          </h2>
+        <div>
+          <p class="stat-hero">6 → 15</p>
+          <p class="stat-hero-label">Designers scaled</p>
+        </div>
+        <div>
+          <p class="stat-hero">116</p>
+          <p class="stat-hero-label">Designers mentored</p>
+        </div>
+        <div>
+          <p class="stat-hero">11</p>
+          <p class="stat-hero-label">Countries reached</p>
+        </div>
+        <div>
+          <p class="stat-hero">17K+</p>
+          <p class="stat-hero-label">LinkedIn community</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- THREE-PILLAR: How I lead -->
+  <!-- ============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <p class="eyebrow mb-3">How I lead</p>
+    <h2 class="font-display text-display-md text-ink leading-tight max-w-[26ch] mb-16">
+      Three threads run through everything I do.
+    </h2>
+
+    <div class="pillar-grid">
+
+      <!-- Operating model -->
+      <div class="pillar">
+        <div class="pillar-icon">
+          <!-- Architecture / blueprint -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <rect x="12" y="14" width="56" height="52" fill="#E13D0F" stroke="#02101D" stroke-width="3"/>
+            <line x1="12" y1="26" x2="68" y2="26" stroke="#02101D" stroke-width="2.5"/>
+            <line x1="40" y1="26" x2="40" y2="66" stroke="#02101D" stroke-width="2.5"/>
+            <line x1="12" y1="46" x2="40" y2="46" stroke="#02101D" stroke-width="2"/>
+            <line x1="40" y1="46" x2="68" y2="46" stroke="#02101D" stroke-width="2"/>
+            <circle cx="26" cy="36" r="2" fill="#F4EFE5"/>
+            <circle cx="26" cy="56" r="2" fill="#F4EFE5"/>
+            <circle cx="54" cy="36" r="2" fill="#F4EFE5"/>
+            <circle cx="54" cy="56" r="2" fill="#F4EFE5"/>
+          </svg>
+        </div>
+        <div class="pillar-meta">
+          <p class="eyebrow mb-3">Operating model</p>
+          <h3 class="font-display text-3xl text-ink leading-tight">
+            Architecture, not just output.
+          </h3>
+        </div>
+        <div class="pillar-body">
+          <p class="text-ink-soft leading-relaxed">
+            I architect operating models that move design upstream into product strategy
+            instead of downstream into UI execution. At Branch I redesigned the company-wide
+            product development lifecycle. Four phases, named DACI ownership, mandatory
+            success metrics before Build, and a decision loop that closed the gap between
+            launch and measurement.
+          </p>
+        </div>
+        <div class="pillar-tagline"></div>
+      </div>
+
+      <!-- Systems at scale -->
+      <div class="pillar">
+        <div class="pillar-icon">
+          <!-- Stacked / scaled system -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="14" width="20" height="20" fill="#E13D0F" stroke="#02101D" stroke-width="2.5"/>
+            <rect x="46" y="14" width="20" height="20" fill="#E13D0F" stroke="#02101D" stroke-width="2.5"/>
+            <rect x="30" y="46" width="20" height="20" fill="#02101D"/>
+            <line x1="34" y1="34" x2="40" y2="46" stroke="#02101D" stroke-width="2.5"/>
+            <line x1="46" y1="34" x2="40" y2="46" stroke="#02101D" stroke-width="2.5"/>
+            <circle cx="40" cy="56" r="3" fill="#F4EFE5"/>
+          </svg>
+        </div>
+        <div class="pillar-meta">
+          <p class="eyebrow-voice mb-3">Systems at scale</p>
+          <h3 class="font-display text-3xl text-ink leading-tight">
+            Build for the platform.
+          </h3>
+        </div>
+        <div class="pillar-body">
+          <p class="text-ink-soft leading-relaxed">
+            I build design systems that scale across complex platforms. Auxin at Branch
+            spans a multi-product enterprise SaaS surface, with reusable components, a
+            governance model, and Figma-to-code alignment practices that change the
+            relationship between design and engineering. At Fleetio I built the hiring
+            and leveling infrastructure that grew the design org from 6 to 15.
+          </p>
+        </div>
+        <div class="pillar-tagline">
+          <p class="font-display text-2xl italic text-orange">"My eye is the product."</p>
         </div>
       </div>
 
+      <!-- Business case -->
+      <div class="pillar">
+        <div class="pillar-icon">
+          <!-- Chart with rising line -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="14" y1="14" x2="14" y2="66" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
+            <line x1="14" y1="66" x2="66" y2="66" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
+            <path d="M22 58 L 34 44 L 44 50 L 60 24" fill="none" stroke="#E13D0F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="22" cy="58" r="3" fill="#02101D"/>
+            <circle cx="34" cy="44" r="3" fill="#02101D"/>
+            <circle cx="44" cy="50" r="3" fill="#02101D"/>
+            <circle cx="60" cy="24" r="3" fill="#02101D"/>
+          </svg>
+        </div>
+        <div class="pillar-meta">
+          <p class="eyebrow mb-3">Business case</p>
+          <h3 class="font-display text-3xl text-ink leading-tight">
+            Tested methodologies, real data.
+          </h3>
+        </div>
+        <div class="pillar-body">
+          <p class="text-ink-soft leading-relaxed">
+            I translate design decisions into executive-ready business cases grounded in
+            real data. I don't bring opinions to leadership. I bring tested methodologies
+            and the numbers behind them. The Linear migration pilot at Branch is a
+            recent example. The Course Code AI operating model is another.
+          </p>
+        </div>
+        <div class="pillar-tagline"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- Where I've been -->
+  <!-- ============================== -->
+  <section class="bg-cream-warm/40 border-y border-ink/10 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-10">
+      <p class="eyebrow mb-3">Where I've been</p>
+      <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch] mb-16">
+        Twenty years across the work.
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+        {
+          workHistory.map((job) => (
+            <div class="p-6 md:p-7 bg-cream border border-ink/10" style="border-radius: 12px;">
+              <div class="flex items-baseline justify-between mb-3 gap-4">
+                <p class="font-display text-xl text-ink leading-tight">{job.company}</p>
+                <p class="font-mono text-xs text-ink-muted uppercase tracking-wider shrink-0">{job.period}</p>
+              </div>
+              <p class="text-sm text-orange font-mono uppercase tracking-wider mb-3">{job.role}</p>
+              <p class="text-sm text-ink-soft leading-relaxed">{job.note}</p>
+            </div>
+          ))
+        }
+      </div>
+
+      <p class="mt-10 text-sm text-ink-muted leading-relaxed max-w-reading">
+        Plus earlier creative leadership roles at Thought District (digital agency, $1.2M+ client budgets) and HobbyTown (national retail franchise, helped grow annual sales to $300M+).
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- Education + speaking/teaching -->
+  <!-- ============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <div class="grid md:grid-cols-2 gap-12 md:gap-16">
+
+      <div>
+        <p class="eyebrow mb-3">Education</p>
+        <h2 class="font-display text-display-md text-ink leading-tight mb-10">
+          Trained across disciplines.
+        </h2>
+        <div class="space-y-6">
+          <div class="border-b border-ink/10 pb-6">
+            <p class="font-display text-xl text-ink mb-1">Kaplan University</p>
+            <p class="text-sm text-orange font-mono uppercase tracking-wider mb-2">MBA · Summa Cum Laude</p>
+          </div>
+          <div class="border-b border-ink/10 pb-6">
+            <p class="font-display text-xl text-ink mb-1">CalArts</p>
+            <p class="text-sm text-orange font-mono uppercase tracking-wider mb-2">MFA · Acting</p>
+          </div>
+          <div>
+            <p class="font-display text-xl text-ink mb-1">University of Nebraska, Lincoln</p>
+            <p class="text-sm text-orange font-mono uppercase tracking-wider mb-2">BA · Theatre Performance</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p class="eyebrow mb-3">Speaking, teaching, writing</p>
+        <h2 class="font-display text-display-md text-ink leading-tight mb-10">
+          A platform for the field.
+        </h2>
+        <div class="space-y-6">
+          <div class="border-b border-ink/10 pb-6">
+            <p class="font-display text-xl text-ink mb-1">Bounce Podcast</p>
+            <p class="text-sm text-orange font-mono uppercase tracking-wider mb-2">Host</p>
+            <p class="text-sm text-ink-soft">A podcast on design and leadership. Real conversations with practitioners about the work, the careers, the choices.</p>
+          </div>
+          <div class="border-b border-ink/10 pb-6">
+            <p class="font-display text-xl text-ink mb-1">Design Career Catalyst on Maven</p>
+            <p class="text-sm text-orange font-mono uppercase tracking-wider mb-2">Course Instructor</p>
+            <p class="text-sm text-ink-soft">3-week cohort course for senior designers ready to lead. $899.</p>
+          </div>
+          <div>
+            <p class="font-display text-xl text-ink mb-1">UNL Adjunct Faculty</p>
+            <p class="text-sm text-orange font-mono uppercase tracking-wider mb-2">Since 2013</p>
+            <p class="text-sm text-ink-soft">Teaching UX/UI design, design systems, and atomic design at the University of Nebraska, Lincoln.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- Leadership testimonials -->
+  <!-- ============================== -->
+  <section class="bg-cream-warm/40 border-y border-ink/10 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-10">
+      <p class="eyebrow mb-3">Voices</p>
+      <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch] mb-16">
+        From people I've led.
+      </h2>
+
       <div class="grid md:grid-cols-2 gap-6 md:gap-8">
         {
-          leadershipTestimonials.map((t) => (
-            <figure class="bg-cream p-8 md:p-10 border border-ink/10">
-              <blockquote class="text-lg text-ink-soft leading-relaxed mb-6">
-                "{t.quote}"
+          leadershipTestimonials.map((t, i) => (
+            <figure class="p-8 md:p-10 bg-cream border border-ink/10" style="border-radius: 18px;">
+              <!-- Quote mark glyph -->
+              <p class="font-display text-5xl text-orange leading-none mb-4">"</p>
+              <blockquote class="text-lg text-ink-soft leading-relaxed mb-8">
+                {t.quote}
               </blockquote>
-              <figcaption>
+              <figcaption class="pt-6 border-t border-ink/10">
                 <p class="font-display text-lg text-ink">{t.name}</p>
-                <p class="font-mono text-xs text-ink-muted mt-1 uppercase tracking-wider">{t.role}</p>
+                <p class="font-mono text-xs text-orange mt-1 uppercase tracking-wider">{t.role}</p>
               </figcaption>
             </figure>
           ))
@@ -196,32 +406,72 @@ const leadershipTestimonials = [
 
       <p class="mt-10 text-sm text-ink-muted">
         <a href="/teaching" class="hover:text-orange border-b border-ink-muted/30 hover:border-orange transition-colors">
-          Read more testimonials from designers I've led, taught, and mentored →
+          Read more testimonials from designers I've taught and mentored →
         </a>
       </p>
     </div>
   </section>
 
+  <!-- ============================== -->
+  <!-- Outside of work -->
+  <!-- ============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <div class="grid md:grid-cols-12 gap-8">
+      <div class="md:col-span-4">
+        <p class="eyebrow mb-3">Outside of work</p>
+      </div>
+      <div class="md:col-span-8 max-w-reading">
+        <h2 class="font-display text-display-md text-ink leading-tight mb-8">
+          Where I actually live.
+        </h2>
+        <p class="text-lg text-ink-soft leading-relaxed mb-6">
+          I play golf with a 13 handicap and a real obsession with the women's
+          game (which is partly how Course Code happened). I live in Lincoln with
+          deep roots in the Midwest tech and creative community.
+        </p>
+        <p class="text-lg text-ink-soft leading-relaxed">
+          Trained originally as a theater performer (BA from UNL, MFA from
+          CalArts) before pivoting to design. The performance training shows up
+          in how I lead. Direct, present, and willing to take up space when the
+          work calls for it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
   <!-- Contact -->
-  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24">
-    <div class="prose-mc max-w-reading">
-      <p>
+  <!-- ============================== -->
+  <section class="grid-backdrop overflow-hidden border-b border-ink/10">
+    <div class="grid-backdrop-band-top"></div>
+    <div class="grid-backdrop-band-bottom"></div>
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-28 md:py-36 relative z-10">
+      <p class="eyebrow-voice mb-8">Get in touch</p>
+
+      <h2 class="font-display text-ink leading-[0.95] tracking-tight mb-12" style="font-size: clamp(2.5rem, 6vw, 5.5rem);">
+        Open to VP, Head of Design, and AI-native operator roles.<br/>
+        <span class="text-orange">Let's talk.</span>
+      </h2>
+
+      <div class="flex flex-wrap gap-4">
         <a
           href="mailto:molliecox@gmail.com"
-          class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
+          style="border-radius: 999px;"
         >
-          molliecox@gmail.com
+          molliecox@gmail.com →
         </a>
-        ·
         <a
           href="https://linkedin.com/in/molliecox"
           target="_blank"
           rel="noopener"
-          class="text-ink hover:text-orange border-b border-ink/30 hover:border-orange transition-colors"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-ink/30 text-ink font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
+          style="border-radius: 999px;"
         >
-          LinkedIn
+          LinkedIn →
         </a>
-      </p>
+      </div>
     </div>
   </section>
+
 </Base>
