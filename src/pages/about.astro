@@ -304,7 +304,7 @@ const workHistory = [
       <div class="grid md:grid-cols-2 gap-4 md:gap-6">
         {
           workHistory.map((job) => (
-            <div class="p-6 md:p-7 bg-cream border border-ink/10" style="border-radius: 12px;">
+            <div class="p-6 md:p-7 bg-cream border border-ink/10 h-full flex flex-col" style="border-radius: 12px;">
               <div class="flex items-baseline justify-between mb-3 gap-4">
                 <p class="font-display text-xl text-ink leading-tight">{job.company}</p>
                 <p class="font-mono text-xs text-ink-muted uppercase tracking-wider shrink-0">{job.period}</p>

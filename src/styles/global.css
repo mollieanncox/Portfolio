@@ -93,6 +93,8 @@
   }
   .stat-label {
     @apply font-mono text-xs uppercase tracking-[0.15em] text-ink-muted mt-3;
+    display: block;
+    min-height: 2.5em; /* Reserves space for 2 lines so single-line and two-line labels align */
   }
 
   /* Hero stat: ink (navy), supersized, no period. Orange reserved for signature. */
@@ -103,9 +105,13 @@
   }
   .stat-hero-label {
     @apply font-mono text-xs uppercase tracking-[0.2em] text-ink-muted mt-4;
+    display: block;
+    min-height: 2.5em;
   }
   .stat-hero-label-light {
     @apply font-mono text-xs uppercase tracking-[0.2em] text-cream/60 mt-4;
+    display: block;
+    min-height: 2.5em;
   }
 
   /* Inline stat number in tables: ink (navy) on light surfaces */
@@ -122,7 +128,7 @@
      ============================================================ */
 
   .belief-card {
-    @apply bg-cream border-2 rounded-sm transition-all duration-300;
+    @apply bg-cream border-2 rounded-sm transition-all duration-300 h-full flex flex-col;
     border-color: rgba(225, 61, 15, 0.5);
   }
   .belief-card:hover {

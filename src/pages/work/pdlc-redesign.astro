@@ -279,7 +279,7 @@ import Base from '../../layouts/Base.astro';
           desc: 'Post-launch reviews against Plan metrics. Triad reconvenes. Invest, Iterate, or Deprecate decision documented.',
         },
       ].map((phase) => (
-        <div class="relative p-6 md:p-8 bg-cream border border-ink/10" style="border-radius: 16px;">
+        <div class="relative p-6 md:p-8 bg-cream border border-ink/10 h-full flex flex-col" style="border-radius: 16px;">
           <div class="absolute left-0 top-0 bottom-0" style={`width: 6px; background: ${phase.color}; border-radius: 16px 0 0 16px;`}></div>
           <div class="pl-3">
             <p class="font-mono text-xs uppercase tracking-wider mb-3" style={`color: ${phase.color};`}>{phase.num}</p>
