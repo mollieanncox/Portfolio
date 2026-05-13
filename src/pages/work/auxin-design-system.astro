@@ -1,55 +1,403 @@
 ---
-import CaseStudy from '../../layouts/CaseStudy.astro';
+import Base from '../../layouts/Base.astro';
 ---
 
-<CaseStudy
-  title="Auxin: a design system for a multi-product platform"
-  eyebrow="Branch · 2024–2026"
-  summary="Building Branch's modern design system across a complex multi-product enterprise SaaS platform and reusable components, governance model, and Figma-to-code alignment that changed the relationship between design and engineering."
-  role="Sr. Director of Product Experience"
-  duration="2024–present"
-  team="Product Design, Engineering"
-  outcome="Cross-platform consistency"
+<Base
+  title="Design System at Scale · Mollie Cox"
+  description="Building a design system for a multi-product enterprise SaaS platform. Component library, governance, intake, and design-engineering ownership."
 >
-  <h2>What was broken before Auxin</h2>
+  <!-- ============================== -->
+  <!-- HERO -->
+  <!-- ============================== -->
+  <section class="case-hero-dark">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 relative z-10">
+      <a
+        href="/#work"
+        class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] text-cream/60 hover:text-orange transition-colors mb-16"
+      >
+        ← All work
+      </a>
 
-  <p>
-    [TODO: Describe the systemic UX inconsistencies across Branch's dashboard before
-    Auxin. Navigation, forms, empty states, tooltips, error states, date pickers, tables,
-    cards, reporting workflows. Why was this expensive and engineering rework, design
-    rework, customer trust erosion?]
-  </p>
+      <p class="eyebrow-light mb-6">Branch · 2024 to 2026</p>
 
-  <h2>The principles I set</h2>
+      <h1 class="font-display text-display-lg text-cream leading-[0.95] tracking-tight max-w-[22ch]">
+        A design system for a multi-product platform<span class="brand-period">.</span>
+      </h1>
 
-  <p>
-    [TODO: What did you decide about scope, governance, and adoption upfront? Tokens
-    vs. components vs. patterns. How much was opinionated vs. how much was flexible.
-    Who owns what.]
-  </p>
+      <p class="mt-10 text-xl text-cream/80 leading-relaxed max-w-[48ch]">
+        Building the design system that scales a complex enterprise SaaS surface
+        through a multi-year product transformation. Component library, governance,
+        intake process, dark mode readiness, and design-engineering ownership model.
+      </p>
 
-  <h2>The governance model</h2>
+      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-cream/15 relative z-10">
+        <div>
+          <p class="eyebrow-light mb-2">Role</p>
+          <p class="text-cream">Sr. Director, Product Experience</p>
+        </div>
+        <div>
+          <p class="eyebrow-light mb-2">Duration</p>
+          <p class="text-cream">Multi-year program</p>
+        </div>
+        <div>
+          <p class="eyebrow-light mb-2">Surface</p>
+          <p class="text-cream">Multi-product platform</p>
+        </div>
+        <div>
+          <p class="eyebrow-light mb-2">Target</p>
+          <p class="text-cream">90% system adoption</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <p>
-    [TODO: This is where most design systems fail. How does a new component get proposed,
-    reviewed, accepted, deprecated? Who has decision authority? How is change communicated
-    to consumers of the system?]
-  </p>
+  <!-- =============================== -->
+  <!-- The problem -->
+  <!-- =============================== -->
+  <section class="grid-backdrop border-b border-ink/10 overflow-hidden">
+    <div class="grid-backdrop-band-top"></div>
+    <div class="grid-backdrop-band-bottom"></div>
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32 relative z-10">
+      <p class="eyebrow mb-3">The problem</p>
+      <h2 class="font-display text-display-md text-ink leading-tight max-w-[28ch] mb-12">
+        A growing platform, an aging system.
+      </h2>
 
-  <h2>Figma to code alignment</h2>
+      <div class="grid md:grid-cols-2 gap-12 max-w-5xl">
+        <p class="text-xl text-ink-soft leading-relaxed">
+          Branch's product surface had grown across multiple products and customer
+          segments. The existing design system was struggling to keep up: components
+          had drifted, custom one-offs had multiplied, design tokens were
+          inconsistent, dark mode was unsupported, and Figma-to-code alignment was
+          unreliable.
+        </p>
+        <p class="text-xl text-ink-soft leading-relaxed">
+          The cost was real. Designers and engineers spent significant time
+          recreating what should have been shared infrastructure. New product
+          modernization work risked compounding the inconsistency. Customer-facing
+          UI quality varied across products. Without a stronger system, every new
+          product surface added entropy.
+        </p>
+      </div>
+    </div>
+  </section>
 
-  <p>
-    [TODO: How did you close the gap between Figma source-of-truth and what engineers
-    actually shipped? Component naming conventions, props parity, design review process.
-    This is the bullet that makes hiring managers' eyes light up because most companies
-    fail at it.]
-  </p>
+  <!-- =============================== -->
+  <!-- THREE-PILLAR APPROACH -->
+  <!-- =============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <p class="eyebrow mb-3">The approach</p>
+    <h2 class="font-display text-display-md text-ink leading-tight max-w-[26ch] mb-16">
+      Foundation, governance, adoption.
+    </h2>
 
-  <h2>What changed</h2>
+    <div class="pillar-grid">
 
-  <p>
-    [TODO: Outcomes. Even directional language is fine here. Did engineering rework go
-    down? Did design velocity go up? Did the system get adopted across products or did
-    it stay siloed?]
-  </p>
-</CaseStudy>
+      <!-- Foundation -->
+      <div class="pillar">
+        <div class="pillar-icon">
+          <!-- Foundation / stacked layers -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="52" width="60" height="14" fill="#02101D"/>
+            <rect x="14" y="38" width="52" height="14" fill="#E13D0F" stroke="#02101D" stroke-width="2.5"/>
+            <rect x="18" y="24" width="44" height="14" fill="#E13D0F" stroke="#02101D" stroke-width="2.5"/>
+            <rect x="22" y="14" width="36" height="10" fill="#02101D"/>
+            <line x1="18" y1="32" x2="62" y2="32" stroke="#F4EFE5" stroke-width="1.5" opacity="0.5"/>
+            <line x1="14" y1="46" x2="66" y2="46" stroke="#F4EFE5" stroke-width="1.5" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="pillar-meta">
+          <p class="eyebrow mb-3">Foundation</p>
+          <h3 class="font-display text-3xl text-ink leading-tight">
+            Rebuild the building blocks.
+          </h3>
+        </div>
+        <div class="pillar-body">
+          <p class="text-ink-soft leading-relaxed">
+            Typography revisions, badge component corrections, design token
+            normalization, dark mode feasibility, and a production audit that mapped
+            every inconsistency back to a system gap. The work of making the
+            primitives right so everything built on top could trust them.
+          </p>
+        </div>
+        <div class="pillar-tagline"></div>
+      </div>
+
+      <!-- Governance -->
+      <div class="pillar">
+        <div class="pillar-icon">
+          <!-- Governance / scales -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <rect x="36" y="12" width="8" height="50" fill="#02101D"/>
+            <line x1="14" y1="22" x2="66" y2="22" stroke="#02101D" stroke-width="3"/>
+            <path d="M14 22 L 8 38 L 26 38 L 20 22 Z" fill="#E13D0F" stroke="#02101D" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M66 22 L 60 38 L 78 38 L 72 22 Z" fill="#E13D0F" stroke="#02101D" stroke-width="2.5" stroke-linejoin="round"/>
+            <rect x="28" y="62" width="24" height="6" fill="#02101D"/>
+          </svg>
+        </div>
+        <div class="pillar-meta">
+          <p class="eyebrow-voice mb-3">Governance</p>
+          <h3 class="font-display text-3xl text-ink leading-tight">
+            Rules, intake, ownership.
+          </h3>
+        </div>
+        <div class="pillar-body">
+          <p class="text-ink-soft leading-relaxed">
+            A formal governance model with a moratorium on custom components, a
+            structured intake process for new requests, and a defined ownership
+            model between design and engineering. Without governance, a design
+            system entropies back into a component zoo.
+          </p>
+        </div>
+        <div class="pillar-tagline">
+          <p class="font-display text-2xl italic text-orange">"No new custom components."</p>
+        </div>
+      </div>
+
+      <!-- Adoption -->
+      <div class="pillar">
+        <div class="pillar-icon">
+          <!-- Adoption / network expansion -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="8" fill="#E13D0F" stroke="#02101D" stroke-width="2.5"/>
+            <circle cx="16" cy="16" r="5" fill="#02101D"/>
+            <circle cx="64" cy="16" r="5" fill="#02101D"/>
+            <circle cx="16" cy="64" r="5" fill="#02101D"/>
+            <circle cx="64" cy="64" r="5" fill="#02101D"/>
+            <circle cx="16" cy="40" r="4" fill="#E13D0F" stroke="#02101D" stroke-width="2"/>
+            <circle cx="64" cy="40" r="4" fill="#E13D0F" stroke="#02101D" stroke-width="2"/>
+            <line x1="22" y1="20" x2="36" y2="36" stroke="#02101D" stroke-width="2"/>
+            <line x1="58" y1="20" x2="44" y2="36" stroke="#02101D" stroke-width="2"/>
+            <line x1="22" y1="60" x2="36" y2="44" stroke="#02101D" stroke-width="2"/>
+            <line x1="58" y1="60" x2="44" y2="44" stroke="#02101D" stroke-width="2"/>
+            <line x1="20" y1="40" x2="32" y2="40" stroke="#02101D" stroke-width="2"/>
+            <line x1="48" y1="40" x2="60" y2="40" stroke="#02101D" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="pillar-meta">
+          <p class="eyebrow mb-3">Adoption</p>
+          <h3 class="font-display text-3xl text-ink leading-tight">
+            Make the system the path of least resistance.
+          </h3>
+        </div>
+        <div class="pillar-body">
+          <p class="text-ink-soft leading-relaxed">
+            Public documentation, Storybook integration, Supernova for component
+            specs, training sessions, and integrating the system into the broader
+            product modernization program. Adoption isn't enforced. It's earned by
+            making the system easier than the alternative.
+          </p>
+        </div>
+        <div class="pillar-tagline"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================== -->
+  <!-- Operational artifacts grid -->
+  <!-- =============================== -->
+  <section class="bg-cream-warm/40 border-y border-ink/10 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-10">
+      <p class="eyebrow mb-3">The operational artifacts</p>
+      <h2 class="font-display text-display-md text-ink leading-tight max-w-[28ch] mb-16">
+        What we built, what we shipped, what we measured.
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        {[
+          {
+            num: '01',
+            name: 'Component library',
+            desc: 'Reusable components across primitives, composites, and patterns. Versioned, documented, and synchronized between Figma and code.',
+          },
+          {
+            num: '02',
+            name: 'Storybook integration',
+            desc: 'Live component playground for engineers. Documentation, props, states, and accessibility specs in one place.',
+          },
+          {
+            num: '03',
+            name: 'Supernova specs',
+            desc: 'Single source of truth for component specifications, design tokens, and usage guidelines accessible to design and engineering.',
+          },
+          {
+            num: '04',
+            name: 'Public documentation',
+            desc: 'Public-facing system documentation for designers, engineers, and product partners. Adoption requires accessibility.',
+          },
+          {
+            num: '05',
+            name: 'Governance model',
+            desc: 'Formal governance with named owners, decision rights, and a moratorium on new custom components. Rules of the road.',
+          },
+          {
+            num: '06',
+            name: 'Intake process',
+            desc: 'Structured intake for new component requests. Triage, prioritization, and a defined path from request to release.',
+          },
+          {
+            num: '07',
+            name: 'Production audit',
+            desc: 'Full audit of live product surfaces to map system drift, inconsistency, and the cost of custom one-offs.',
+          },
+          {
+            num: '08',
+            name: 'Dark mode readiness',
+            desc: 'Feasibility assessment, token architecture, and roadmap for dark mode support across the platform.',
+          },
+          {
+            num: '09',
+            name: 'Training sessions',
+            desc: 'Structured onboarding and training for designers and engineers adopting the system. Reduces support burden.',
+          },
+        ].map((item) => (
+          <div class="p-6 md:p-7 bg-cream border border-ink/10" style="border-radius: 12px;">
+            <p class="font-mono text-xs text-orange uppercase tracking-wider mb-3">{item.num}</p>
+            <p class="font-display text-xl text-ink mb-3 leading-tight">{item.name}</p>
+            <p class="text-sm text-ink-soft leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== -->
+  <!-- The ownership model (dark) -->
+  <!-- =============================== -->
+  <section class="bg-ink text-cream py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-10">
+      <p class="eyebrow-light mb-3">The ownership model</p>
+      <h2 class="font-display text-display-md text-cream leading-tight max-w-[28ch] mb-16">
+        Design and engineering as co-owners<span class="text-orange">.</span>
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-12 md:gap-16">
+        <div class="max-w-reading">
+          <p class="font-display text-2xl text-orange mb-6">What design owns</p>
+          <ul class="space-y-3 text-cream/80">
+            <li class="flex gap-3"><span class="text-orange shrink-0">◆</span><span>Component specifications, props, and states</span></li>
+            <li class="flex gap-3"><span class="text-orange shrink-0">◆</span><span>Design tokens and visual language</span></li>
+            <li class="flex gap-3"><span class="text-orange shrink-0">◆</span><span>Accessibility standards and contrast requirements</span></li>
+            <li class="flex gap-3"><span class="text-orange shrink-0">◆</span><span>Usage guidelines and pattern documentation</span></li>
+            <li class="flex gap-3"><span class="text-orange shrink-0">◆</span><span>Figma library structure and governance</span></li>
+            <li class="flex gap-3"><span class="text-orange shrink-0">◆</span><span>Intake triage and prioritization</span></li>
+          </ul>
+        </div>
+        <div class="max-w-reading">
+          <p class="font-display text-2xl text-orange mb-6">What engineering owns</p>
+          <ul class="space-y-3 text-cream/80">
+            <li class="flex gap-3"><span class="text-orange shrink-0">◆</span><span>Component implementation in code</span></li>
+            <li class="flex gap-3"><span class="text-orange shrink-0">◆</span><span>Storybook maintenance and updates</span></li>
+            <li class="flex gap-3"><span class="text-orange shrink-0">◆</span><span>Token implementation and theming infrastructure</span></li>
+            <li class="flex gap-3"><span class="text-orange shrink-0">◆</span><span>Release process and versioning</span></li>
+            <li class="flex gap-3"><span class="text-orange shrink-0">◆</span><span>Accessibility implementation and testing</span></li>
+            <li class="flex gap-3"><span class="text-orange shrink-0">◆</span><span>Performance and bundle size discipline</span></li>
+          </ul>
+        </div>
+        <div class="md:col-span-2 max-w-reading mt-4">
+          <p class="text-lg text-cream/80 leading-relaxed">
+            Co-ownership isn't a slogan. It's a decision rights model. When design
+            and engineering both have skin in the system, the system gets cared for.
+            When neither owns it, the system rots.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== -->
+  <!-- Lessons (3-up) -->
+  <!-- =============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <p class="eyebrow mb-3">What I learned</p>
+    <h2 class="font-display text-display-md text-ink leading-tight max-w-[28ch] mb-16">
+      Three lessons for anyone scaling a system.
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+      <div class="lesson-card">
+        <div class="linocut-icon">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="14" width="40" height="50" fill="#E13D0F" stroke="#02101D" stroke-width="3"/>
+            <line x1="26" y1="24" x2="54" y2="24" stroke="#F4EFE5" stroke-width="2"/>
+            <line x1="26" y1="32" x2="54" y2="32" stroke="#F4EFE5" stroke-width="2"/>
+            <line x1="26" y1="40" x2="48" y2="40" stroke="#F4EFE5" stroke-width="2"/>
+            <path d="M30 50 L 36 56 L 50 42" fill="none" stroke="#F4EFE5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl text-ink mb-4 leading-tight">Audit first, build second.</h3>
+        <p class="text-ink-soft leading-relaxed">
+          The production audit was the unlock. You can't fix a system you haven't
+          measured. Every "we need a new component" request can usually be solved
+          with an existing component plus better documentation.
+        </p>
+      </div>
+
+      <div class="lesson-card">
+        <div class="linocut-icon">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="14" width="52" height="52" fill="#E13D0F" stroke="#02101D" stroke-width="3"/>
+            <line x1="14" y1="40" x2="66" y2="40" stroke="#02101D" stroke-width="2.5"/>
+            <line x1="40" y1="14" x2="40" y2="66" stroke="#02101D" stroke-width="2.5"/>
+            <circle cx="27" cy="27" r="5" fill="#F4EFE5"/>
+            <circle cx="53" cy="27" r="5" fill="#F4EFE5"/>
+            <circle cx="27" cy="53" r="5" fill="#F4EFE5"/>
+            <circle cx="53" cy="53" r="5" fill="#F4EFE5"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl text-ink mb-4 leading-tight">Governance is the work.</h3>
+        <p class="text-ink-soft leading-relaxed">
+          A design system without governance is a component zoo. The intake
+          process, the moratorium on custom components, and the ownership model
+          are not bureaucratic overhead. They are what makes a system durable.
+        </p>
+      </div>
+
+      <div class="lesson-card">
+        <div class="linocut-icon">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 66 C 20 50, 10 38, 10 26 C 10 18, 18 12, 26 14 C 32 15, 38 20, 40 26 C 42 20, 48 15, 54 14 C 62 12, 70 18, 70 26 C 70 38, 60 50, 40 66 Z" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+            <line x1="26" y1="28" x2="34" y2="36" stroke="#F4EFE5" stroke-width="1.5" opacity="0.6"/>
+            <line x1="32" y1="26" x2="42" y2="36" stroke="#F4EFE5" stroke-width="1.5" opacity="0.6"/>
+            <line x1="40" y1="28" x2="48" y2="38" stroke="#F4EFE5" stroke-width="1.5" opacity="0.6"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl text-ink mb-4 leading-tight">Adoption is earned.</h3>
+        <p class="text-ink-soft leading-relaxed">
+          Mandates don't drive adoption. Quality does. Documentation does. Training
+          does. The fastest path to 90% adoption is making the system genuinely
+          better than the alternative, and visible enough that nobody has to ask
+          for it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== -->
+  <!-- Meta-point -->
+  <!-- =============================== -->
+  <section class="grid-backdrop overflow-hidden border-b border-ink/10">
+    <div class="grid-backdrop-band-top"></div>
+    <div class="grid-backdrop-band-bottom"></div>
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-28 md:py-36 relative z-10">
+      <p class="eyebrow-voice mb-8">The meta-point</p>
+
+      <h2 class="font-display text-ink leading-[0.95] tracking-tight mb-12" style="font-size: clamp(2.5rem, 6vw, 5.5rem);">
+        A design system isn't a component library.<br/>
+        <span class="text-orange">It's an operating contract between design and engineering.</span>
+      </h2>
+
+      <div class="max-w-3xl">
+        <p class="text-xl text-ink-soft leading-relaxed">
+          The components are the visible artifact. The real product is the
+          relationship: shared decision rights, agreed governance, a public source
+          of truth, and a commitment from both functions to maintain it. That's
+          what makes a system scale across multiple products. That's what makes it
+          last beyond the team that built it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</Base>
