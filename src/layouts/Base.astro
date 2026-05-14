@@ -44,10 +44,22 @@ const isAbout = path === '/about';
 
     <title>{title}</title>
 
+    <!-- Open Graph / Facebook / LinkedIn / Slack / iMessage -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/portrait.png" />
+    <meta property="og:url" content={`https://molliecox.com${Astro.url.pathname}`} />
+    <meta property="og:image" content="https://molliecox.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mollie Cox. Great design is a moral imperative." />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://molliecox.com/og-image.png" />
+    <meta name="twitter:image:alt" content="Mollie Cox. Great design is a moral imperative." />
   </head>
   <body>
     <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-cream/80 border-b border-ink/5">
