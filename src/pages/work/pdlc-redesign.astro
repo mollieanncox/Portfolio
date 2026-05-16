@@ -10,7 +10,7 @@ import Base from '../../layouts/Base.astro';
   <!-- HERO -->
   <!-- ============================== -->
   <section class="case-hero-dark">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28 relative z-10">
       <a
         href="/#work"
         class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] text-cream/60 hover:text-orange transition-colors mb-16"
@@ -18,17 +18,128 @@ import Base from '../../layouts/Base.astro';
         ← All work
       </a>
 
-      <p class="eyebrow-light mb-6">Branch · 2025 to 2026</p>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
 
-      <h1 class="font-display text-display-lg text-cream leading-[0.95] tracking-tight max-w-[22ch]">
-        Redesigning a product development lifecycle<span class="brand-period">.</span>
-      </h1>
+        <!-- Text column -->
+        <div class="md:col-span-7">
+          <p class="eyebrow-light mb-6">Branch · 2025 to 2026</p>
 
-      <p class="mt-10 text-xl text-cream/80 leading-relaxed max-w-[44ch]">
-        A four-phase operating model with named DACI ownership, paired briefs,
-        mandatory success metrics before Build, and post-launch decision loops.
-        Adopted across product, design, engineering, and PMM.
-      </p>
+          <h1 class="font-display text-display-lg text-cream leading-[0.95] tracking-tight">
+            Redesigning a product development lifecycle<span class="brand-period">.</span>
+          </h1>
+
+          <p class="mt-10 text-xl text-cream/80 leading-relaxed max-w-[48ch]">
+            A four-phase operating model with named DACI ownership, paired briefs,
+            mandatory success metrics before Build, and post-launch decision loops.
+            Adopted across product, design, engineering, and PMM.
+          </p>
+        </div>
+
+        <!-- Artifact column: four phases with two standing threads -->
+        <div class="md:col-span-5 hidden md:flex justify-end items-start">
+          <div class="case-hero-artifact">
+            <svg viewBox="0 0 480 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four product development phases with two standing threads — design at the top, customer proximity at the bottom — running across all phases">
+
+              <!-- Subtle grid backdrop -->
+              <g opacity="0.06">
+                <line stroke="#F4EFE5" stroke-width="0.5" x1="80" y1="6" x2="80" y2="420"/>
+                <line stroke="#F4EFE5" stroke-width="0.5" x1="160" y1="6" x2="160" y2="420"/>
+                <line stroke="#F4EFE5" stroke-width="0.5" x1="240" y1="6" x2="240" y2="420"/>
+                <line stroke="#F4EFE5" stroke-width="0.5" x1="320" y1="6" x2="320" y2="420"/>
+                <line stroke="#F4EFE5" stroke-width="0.5" x1="400" y1="6" x2="400" y2="420"/>
+              </g>
+
+              <!-- TOP THREAD: Design (orange, dashed, runs across all phases) -->
+              <text x="240" y="10" text-anchor="middle" fill="#E13D0F" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" letter-spacing="2">DESIGN · STANDING THREAD</text>
+              <line x1="60" y1="22" x2="420" y2="22" stroke="#E13D0F" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round"/>
+              <circle cx="240" cy="22" r="4" fill="#E13D0F"/>
+
+              <!-- Phase 01 — Discover -->
+              <g transform="translate(0, 42)">
+                <rect x="60" y="0" width="360" height="68" rx="4" fill="none" stroke="#F4EFE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="62" y="2" width="4" height="64" fill="#E13D0F"/>
+                <g transform="translate(100, 34)">
+                  <circle cx="0" cy="0" r="14" fill="none" stroke="#F4EFE5" stroke-width="2"/>
+                  <circle cx="0" cy="0" r="9" fill="none" stroke="#F4EFE5" stroke-width="1.5"/>
+                  <circle cx="0" cy="0" r="4" fill="#E13D0F"/>
+                </g>
+                <text x="140" y="28" fill="#E13D0F" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="500" letter-spacing="2">01</text>
+                <text x="140" y="46" fill="#F4EFE5" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" letter-spacing="2" opacity="0.95">DISCOVER</text>
+                <text x="140" y="60" fill="#F4EFE5" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" letter-spacing="1" opacity="0.55">Signed problem brief</text>
+              </g>
+
+              <!-- Connector arrow Discover -> Plan -->
+              <g transform="translate(240, 120)">
+                <line x1="0" y1="0" x2="0" y2="12" stroke="#F4EFE5" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                <polyline points="-4,8 0,12 4,8" fill="none" stroke="#F4EFE5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+              </g>
+
+              <!-- Phase 02 — Plan -->
+              <g transform="translate(0, 140)">
+                <rect x="60" y="0" width="360" height="68" rx="4" fill="none" stroke="#F4EFE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="62" y="2" width="4" height="64" fill="#9B40C4"/>
+                <g transform="translate(100, 34)">
+                  <rect x="-12" y="-10" width="10" height="14" fill="none" stroke="#F4EFE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="2" y="-10" width="10" height="14" fill="none" stroke="#F4EFE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="-9" y1="-5" x2="-5" y2="-5" stroke="#F4EFE5" stroke-width="1"/>
+                  <line x1="-9" y1="-1" x2="-5" y2="-1" stroke="#F4EFE5" stroke-width="1"/>
+                  <line x1="5" y1="-5" x2="9" y2="-5" stroke="#F4EFE5" stroke-width="1"/>
+                  <line x1="5" y1="-1" x2="9" y2="-1" stroke="#F4EFE5" stroke-width="1"/>
+                </g>
+                <text x="140" y="28" fill="#9B40C4" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="500" letter-spacing="2">02</text>
+                <text x="140" y="46" fill="#F4EFE5" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" letter-spacing="2" opacity="0.95">PLAN</text>
+                <text x="140" y="60" fill="#F4EFE5" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" letter-spacing="1" opacity="0.55">Paired briefs + metrics</text>
+              </g>
+
+              <!-- Connector arrow Plan -> Build -->
+              <g transform="translate(240, 218)">
+                <line x1="0" y1="0" x2="0" y2="12" stroke="#F4EFE5" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                <polyline points="-4,8 0,12 4,8" fill="none" stroke="#F4EFE5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+              </g>
+
+              <!-- Phase 03 — Build -->
+              <g transform="translate(0, 238)">
+                <rect x="60" y="0" width="360" height="68" rx="4" fill="none" stroke="#F4EFE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="62" y="2" width="4" height="64" fill="#F4EFE5"/>
+                <g transform="translate(100, 34)">
+                  <rect x="-12" y="-12" width="24" height="24" fill="none" stroke="#F4EFE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="-6" y="-6" width="12" height="12" fill="none" stroke="#F4EFE5" stroke-width="1"/>
+                </g>
+                <text x="140" y="28" fill="#F4EFE5" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="500" letter-spacing="2">03</text>
+                <text x="140" y="46" fill="#F4EFE5" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" letter-spacing="2" opacity="0.95">BUILD</text>
+                <text x="140" y="60" fill="#F4EFE5" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" letter-spacing="1" opacity="0.55">SDLC inside · Design QA</text>
+              </g>
+
+              <!-- Connector arrow Build -> Measure -->
+              <g transform="translate(240, 316)">
+                <line x1="0" y1="0" x2="0" y2="12" stroke="#F4EFE5" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                <polyline points="-4,8 0,12 4,8" fill="none" stroke="#F4EFE5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+              </g>
+
+              <!-- Phase 04 — Measure -->
+              <g transform="translate(0, 336)">
+                <rect x="60" y="0" width="360" height="68" rx="4" fill="none" stroke="#F4EFE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="62" y="2" width="4" height="64" fill="#E13D0F"/>
+                <g transform="translate(100, 34)">
+                  <line x1="-10" y1="10" x2="-10" y2="0" stroke="#F4EFE5" stroke-width="3" stroke-linecap="round"/>
+                  <line x1="-3" y1="10" x2="-3" y2="-6" stroke="#F4EFE5" stroke-width="3" stroke-linecap="round"/>
+                  <line x1="4" y1="10" x2="4" y2="-2" stroke="#F4EFE5" stroke-width="3" stroke-linecap="round"/>
+                  <line x1="11" y1="10" x2="11" y2="-10" stroke="#F4EFE5" stroke-width="3" stroke-linecap="round"/>
+                </g>
+                <text x="140" y="28" fill="#E13D0F" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" font-weight="500" letter-spacing="2">04</text>
+                <text x="140" y="46" fill="#F4EFE5" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" letter-spacing="2" opacity="0.95">MEASURE</text>
+                <text x="140" y="60" fill="#F4EFE5" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" letter-spacing="1" opacity="0.55">Invest · Iterate · Deprecate</text>
+              </g>
+
+              <!-- BOTTOM THREAD: Customer proximity (purple, dashed) -->
+              <line x1="60" y1="420" x2="420" y2="420" stroke="#9B40C4" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round"/>
+              <circle cx="240" cy="420" r="4" fill="#9B40C4"/>
+              <text x="240" y="438" text-anchor="middle" fill="#9B40C4" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" letter-spacing="2">CUSTOMER PROXIMITY · STANDING THREAD</text>
+            </svg>
+          </div>
+        </div>
+
+      </div>
 
       <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-cream/15 relative z-10">
         <div>
@@ -387,7 +498,7 @@ import Base from '../../layouts/Base.astro';
     <div class="max-w-reading">
       <p class="text-lg text-ink-soft leading-relaxed">
         Design and customer proximity run through all four phases as standing
-        threads, not one-time gates. Design is never "started" at ticket assignment.
+        threads, not one-time gates. Design is never "started" at ticket assignment
         Customer contact is a calendar commitment with defined minimums per phase.
         The PDLC governs initiative-level work; SDLC runs inside Build.
       </p>
