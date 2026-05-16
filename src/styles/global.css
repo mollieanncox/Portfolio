@@ -407,4 +407,24 @@
     border-top: 1px solid rgba(2, 16, 29, 0.1);
     min-height: 60px;
   }
+
+  /* ============================================================
+     CASE STUDY HERO ARTIFACT
+     Right-anchored SVG diagram in case study hero. Used by PX Org,
+     and reused by PDLC, Linear, Auxin, Inner Circle.
+     ============================================================ */
+
+  .case-hero-artifact {
+    @apply w-full;
+    max-width: 420px;
+  }
+  .case-hero-artifact svg {
+    @apply w-full h-auto block;
+  }
+
+  @media (min-width: 768px) {
+    .case-hero-artifact {
+      max-width: 440px;
+    }
+  }
 }
