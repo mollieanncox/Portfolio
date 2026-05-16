@@ -319,46 +319,46 @@ const beliefs = [
       </div>
     </div>
 
-    <!-- Episode embeds: 3 columns on desktop, stacked on mobile -->
-    <div class="grid md:grid-cols-3 gap-6 md:gap-8 mb-12">
-      <!-- Featured: Latest episode (auto-updates) -->
+    <!-- Episode embeds: 3 columns of real episode players -->
+    <div class="grid md:grid-cols-3 gap-6 md:gap-8 mb-10">
+      <!-- Episode 1 -->
       <div class="space-y-3">
-        <p class="font-mono text-xs uppercase tracking-[0.15em] text-orange">Latest episode</p>
+        <p class="font-mono text-xs uppercase tracking-[0.15em] text-orange">Featured</p>
         <iframe
           style="border-radius:12px"
-          src="https://open.spotify.com/embed/show/6uE0yn2odzLyV3qyo7jVAP?utm_source=generator&theme=0"
+          src="https://open.spotify.com/embed/episode/38SgLFucJ0AXv2PCGiBWVR?utm_source=generator&theme=0"
           width="100%"
           height="232"
           frameBorder="0"
           allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
-          title="Bounce Podcast · Latest Episode"
+          title="Bounce Podcast"
         ></iframe>
       </div>
 
-      <!-- Featured episode 2 - swap Spotify ID when you have it -->
+      <!-- Episode 2 -->
       <div class="space-y-3">
         <p class="font-mono text-xs uppercase tracking-[0.15em] text-ink-muted">Featured</p>
         <iframe
           style="border-radius:12px"
-          src="https://open.spotify.com/embed/episode/1UMan28MIfIJX1y2XL3vdH?utm_source=generator&theme=0"
+          src="https://open.spotify.com/embed/episode/7KegJOqD6572O2pQsBlMfC?utm_source=generator&theme=0"
           width="100%"
           height="232"
           frameBorder="0"
           allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
-          title="Bounce Podcast · Childcare Waitlists"
+          title="Bounce Podcast"
         ></iframe>
       </div>
 
-      <!-- Featured episode 3 - REPLACE WITH SPOTIFY ID -->
+      <!-- Episode 3 -->
       <div class="space-y-3">
         <p class="font-mono text-xs uppercase tracking-[0.15em] text-ink-muted">Featured</p>
         <iframe
           style="border-radius:12px"
-          src="https://open.spotify.com/embed/show/6uE0yn2odzLyV3qyo7jVAP?utm_source=generator&theme=0"
+          src="https://open.spotify.com/embed/episode/6VMhAiNHQ6uC1dY5oCaBc0?utm_source=generator&theme=0"
           width="100%"
           height="232"
           frameBorder="0"
@@ -370,23 +370,22 @@ const beliefs = [
       </div>
     </div>
 
-    <!-- Platform links -->
-    <div class="flex flex-wrap gap-4 justify-center pt-8 border-t border-ink/10">
+    <!-- Listen on row: integrated, no divider above -->
+    <div class="flex flex-wrap items-baseline gap-x-6 gap-y-2">
+      <p class="font-mono text-xs uppercase tracking-[0.15em] text-ink-muted">Listen on</p>
       <a
         href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP"
         target="_blank"
         rel="noopener"
-        class="inline-flex items-center gap-2 px-6 py-3 bg-ink text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange transition-colors"
-        style="border-radius: 999px;"
+        class="font-mono text-xs uppercase tracking-[0.15em] text-ink hover:text-orange transition-colors border-b border-ink/30 hover:border-orange pb-0.5"
       >
-        Listen on Spotify →
+        Spotify →
       </a>
       <a
         href="https://podcasts.apple.com/us/podcast/bounce/id1745556826"
         target="_blank"
         rel="noopener"
-        class="inline-flex items-center gap-2 px-6 py-3 border border-ink/30 text-ink font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
-        style="border-radius: 999px;"
+        class="font-mono text-xs uppercase tracking-[0.15em] text-ink hover:text-orange transition-colors border-b border-ink/30 hover:border-orange pb-0.5"
       >
         Apple Podcasts →
       </a>
@@ -394,12 +393,11 @@ const beliefs = [
         href="https://www.youtube.com/@BouncePodcast"
         target="_blank"
         rel="noopener"
-        class="inline-flex items-center gap-2 px-6 py-3 border border-ink/30 text-ink font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
-        style="border-radius: 999px;"
-        >
+        class="font-mono text-xs uppercase tracking-[0.15em] text-ink hover:text-orange transition-colors border-b border-ink/30 hover:border-orange pb-0.5"
+      >
         YouTube →
-        </a>
-      </div>
+      </a>
+    </div>
   </section>
 
   <!-- ===================== -->
