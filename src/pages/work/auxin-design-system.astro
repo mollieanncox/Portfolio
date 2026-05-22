@@ -10,7 +10,7 @@ import Base from '../../layouts/Base.astro';
   <!-- HERO -->
   <!-- ============================== -->
   <section class="case-hero-dark">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 relative z-10">
       <a
         href="/#work"
         class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] text-cream/60 hover:text-orange transition-colors mb-16"
@@ -18,104 +18,17 @@ import Base from '../../layouts/Base.astro';
         ← All work
       </a>
 
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
+      <p class="eyebrow-light mb-6">Branch · 2024 to 2026</p>
 
-        <!-- Text column -->
-        <div class="md:col-span-7">
-          <p class="eyebrow-light mb-6">Branch · 2024 to 2026</p>
+      <h1 class="font-display text-display-lg text-cream leading-[0.95] tracking-tight max-w-[22ch]">
+        A design system for a multi-product platform<span class="brand-period">.</span>
+      </h1>
 
-          <h1 class="font-display text-display-lg text-cream leading-[0.95] tracking-tight">
-            A design system for a multi-product platform<span class="brand-period">.</span>
-          </h1>
-
-          <p class="mt-10 text-xl text-cream/80 leading-relaxed max-w-[48ch]">
-            Building the design system that scales a complex enterprise SaaS surface
-            through a multi-year product transformation. Component library, governance,
-            intake process, dark mode readiness, and design-engineering ownership model.
-          </p>
-        </div>
-
-        <!-- Artifact column: abstract component mosaic -->
-        <div class="md:col-span-5 flex justify-center md:justify-end items-start mt-8 md:mt-0">
-          <div class="case-hero-artifact w-full max-w-sm md:max-w-none">
-            <svg viewBox="0 0 480 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An abstract mosaic of geometric tiles in varying sizes and treatments, evoking a design system's vocabulary of primitives, tokens, and patterns">
-
-              <!-- Subtle grid backdrop -->
-              <g opacity="0.06">
-                <line stroke="#F4EFE5" stroke-width="0.5" x1="80" y1="20" x2="80" y2="420"/>
-                <line stroke="#F4EFE5" stroke-width="0.5" x1="160" y1="20" x2="160" y2="420"/>
-                <line stroke="#F4EFE5" stroke-width="0.5" x1="240" y1="20" x2="240" y2="420"/>
-                <line stroke="#F4EFE5" stroke-width="0.5" x1="320" y1="20" x2="320" y2="420"/>
-                <line stroke="#F4EFE5" stroke-width="0.5" x1="400" y1="20" x2="400" y2="420"/>
-              </g>
-
-              <!-- Top row: large filled tile + two stacked small tiles -->
-              <rect x="60" y="40" width="200" height="100" rx="4" fill="#E13D0F"/>
-              <rect x="280" y="40" width="60" height="46" rx="4" fill="none" stroke="#F4EFE5" stroke-width="1.5"/>
-              <rect x="360" y="40" width="60" height="46" rx="4" fill="#F4EFE5" opacity="0.9"/>
-              <rect x="280" y="94" width="140" height="46" rx="23" fill="none" stroke="#F4EFE5" stroke-width="1.5" opacity="0.5"/>
-
-              <!-- Middle row: opacity-scaled squares grid -->
-              <g>
-                <rect x="60" y="160" width="22" height="22" rx="2" fill="#F4EFE5" opacity="0.85"/>
-                <rect x="88" y="160" width="22" height="22" rx="2" fill="#F4EFE5" opacity="0.55"/>
-                <rect x="116" y="160" width="22" height="22" rx="2" fill="#F4EFE5" opacity="0.3"/>
-                <rect x="144" y="160" width="22" height="22" rx="2" fill="none" stroke="#F4EFE5" stroke-width="1.5" opacity="0.5"/>
-                <rect x="172" y="160" width="22" height="22" rx="2" fill="none" stroke="#F4EFE5" stroke-width="1.5" opacity="0.25"/>
-
-                <rect x="60" y="190" width="22" height="22" rx="11" fill="#E13D0F"/>
-                <rect x="88" y="190" width="22" height="22" rx="11" fill="#E13D0F" opacity="0.6"/>
-                <rect x="116" y="190" width="22" height="22" rx="11" fill="#E13D0F" opacity="0.3"/>
-                <rect x="144" y="190" width="22" height="22" rx="11" fill="none" stroke="#E13D0F" stroke-width="1.5"/>
-                <rect x="172" y="190" width="22" height="22" rx="11" fill="none" stroke="#E13D0F" stroke-width="1.5" opacity="0.4"/>
-              </g>
-
-              <!-- Card-ish outlined tile with sub-elements -->
-              <rect x="220" y="160" width="100" height="52" rx="4" fill="none" stroke="#F4EFE5" stroke-width="1.5"/>
-              <rect x="234" y="174" width="48" height="6" rx="3" fill="#F4EFE5" opacity="0.85"/>
-              <rect x="234" y="186" width="72" height="3" rx="1.5" fill="#F4EFE5" opacity="0.4"/>
-              <rect x="234" y="194" width="60" height="3" rx="1.5" fill="#F4EFE5" opacity="0.4"/>
-
-              <!-- Purple accent block -->
-              <rect x="340" y="160" width="80" height="52" rx="4" fill="#9B40C4" opacity="0.85"/>
-
-              <!-- Spacing/rhythm row: descending cream bars -->
-              <g transform="translate(0, 232)">
-                <rect x="60" y="0" width="6" height="48" fill="#F4EFE5" opacity="0.85"/>
-                <rect x="74" y="12" width="6" height="36" fill="#F4EFE5" opacity="0.65"/>
-                <rect x="88" y="20" width="6" height="28" fill="#F4EFE5" opacity="0.5"/>
-                <rect x="102" y="28" width="6" height="20" fill="#F4EFE5" opacity="0.35"/>
-                <rect x="116" y="36" width="6" height="12" fill="#F4EFE5" opacity="0.25"/>
-              </g>
-
-              <!-- Ascending orange bars (mirrored) -->
-              <g transform="translate(0, 232)">
-                <rect x="148" y="36" width="6" height="12" fill="#E13D0F" opacity="0.4"/>
-                <rect x="162" y="28" width="6" height="20" fill="#E13D0F" opacity="0.55"/>
-                <rect x="176" y="20" width="6" height="28" fill="#E13D0F" opacity="0.7"/>
-                <rect x="190" y="12" width="6" height="36" fill="#E13D0F" opacity="0.85"/>
-                <rect x="204" y="0" width="6" height="48" fill="#E13D0F"/>
-              </g>
-
-              <!-- Long outlined horizontal tile -->
-              <rect x="220" y="232" width="200" height="48" rx="4" fill="none" stroke="#F4EFE5" stroke-width="1.5" opacity="0.5"/>
-
-              <!-- Bottom row: radius scale + medium filled tile + stacked outlined tiles -->
-              <g>
-                <rect x="60" y="300" width="32" height="32" rx="0" fill="#F4EFE5" opacity="0.7"/>
-                <rect x="100" y="300" width="32" height="32" rx="4" fill="#F4EFE5" opacity="0.7"/>
-                <rect x="140" y="300" width="32" height="32" rx="8" fill="#F4EFE5" opacity="0.7"/>
-                <rect x="180" y="300" width="32" height="32" rx="16" fill="#F4EFE5" opacity="0.7"/>
-              </g>
-
-              <rect x="230" y="300" width="90" height="64" rx="4" fill="#E13D0F" opacity="0.7"/>
-              <rect x="340" y="300" width="80" height="32" rx="4" fill="none" stroke="#F4EFE5" stroke-width="1.5"/>
-              <rect x="340" y="344" width="80" height="20" rx="4" fill="none" stroke="#F4EFE5" stroke-width="1.5" opacity="0.5"/>
-            </svg>
-          </div>
-        </div>
-
-      </div>
+      <p class="mt-10 text-xl text-cream/80 leading-relaxed max-w-[48ch]">
+        Building the design system that scales a complex enterprise SaaS surface
+        through a multi-year product transformation. Component library, governance,
+        intake process, dark mode readiness, and design-engineering ownership model.
+      </p>
 
       <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-cream/15 relative z-10">
         <div>
@@ -269,10 +182,10 @@ import Base from '../../layouts/Base.astro';
         </div>
         <div class="pillar-body">
           <p class="text-ink-soft leading-relaxed">
-            Public documentation, Storybook integration, Supernova for component
-            specs, training sessions, and integrating the system into the broader
-            product modernization program. Adoption isn't enforced. It's earned by
-            making the system easier than the alternative.
+            Public documentation, Storybook integration, a canonical spec repository
+            for component documentation, training sessions, and integrating the system
+            into the broader product modernization program. Adoption isn't enforced.
+            It's earned by making the system easier than the alternative.
           </p>
         </div>
         <div class="pillar-tagline"></div>
@@ -305,7 +218,7 @@ import Base from '../../layouts/Base.astro';
           },
           {
             num: '03',
-            name: 'Supernova specs',
+            name: 'Canonical spec repository',
             desc: 'Single source of truth for component specifications, design tokens, and usage guidelines accessible to design and engineering.',
           },
           {
@@ -346,6 +259,183 @@ import Base from '../../layouts/Base.astro';
           </div>
         ))}
       </div>
+    </div>
+  </section>
+
+  <!-- =============================== -->
+  <!-- THE GOVERNANCE FLOW (intake → triage → tracked → done) -->
+  <!-- =============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <p class="eyebrow mb-3">The governance flow</p>
+    <h2 class="font-display text-display-md text-ink leading-tight max-w-[28ch] mb-12">
+      How a request becomes a tracked, finished system change.
+    </h2>
+
+    <p class="text-lg text-ink-soft leading-relaxed max-w-reading mb-16">
+      Before governance, every team was creating their own custom components and
+      nothing was getting logged. The system was reverting to the problem the system
+      was supposed to solve. The fix was a real intake with three defined paths, a
+      triage gate, and auto-generated tracking work per request type. The rule that
+      made it work was simple: no new custom components.
+    </p>
+
+    <!-- Governance flow diagram -->
+    <div class="mb-16 p-8 md:p-12 bg-cream border border-ink/10" style="border-radius: 16px;">
+      <svg viewBox="0 0 1200 540" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" style="max-width: 100%;">
+
+        <!-- Subtle grid backdrop -->
+        <g opacity="0.04">
+          <line stroke="#02101D" stroke-width="0.5" x1="120" y1="20" x2="120" y2="520"/>
+          <line stroke="#02101D" stroke-width="0.5" x1="320" y1="20" x2="320" y2="520"/>
+          <line stroke="#02101D" stroke-width="0.5" x1="520" y1="20" x2="520" y2="520"/>
+          <line stroke="#02101D" stroke-width="0.5" x1="720" y1="20" x2="720" y2="520"/>
+          <line stroke="#02101D" stroke-width="0.5" x1="920" y1="20" x2="920" y2="520"/>
+          <line stroke="#02101D" stroke-width="0.5" x1="1080" y1="20" x2="1080" y2="520"/>
+        </g>
+
+        <!-- ===== STAGE 1: INTAKE (single entry) ===== -->
+        <g>
+          <rect x="60" y="220" width="180" height="100" rx="12" fill="#FFFFFF" stroke="#02101D" stroke-width="2.5"/>
+          <rect x="60" y="220" width="6" height="100" fill="#02101D" rx="3"/>
+          <text x="84" y="248" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#5C6770" letter-spacing="1.5">STAGE 01</text>
+          <text x="84" y="280" font-family="ui-serif, Georgia, serif" font-size="22" font-weight="500" fill="#02101D">Intake</text>
+          <text x="84" y="302" font-family="ui-serif, Georgia, serif" font-size="13" fill="#5C6770" font-style="italic">One form. One channel.</text>
+        </g>
+
+        <!-- Arrow from intake to triage -->
+        <g stroke="#02101D" stroke-width="2" fill="none">
+          <line x1="240" y1="270" x2="290" y2="270"/>
+          <polyline points="283,264 290,270 283,276"/>
+        </g>
+
+        <!-- ===== STAGE 2: TRIAGE (gate) ===== -->
+        <g>
+          <rect x="290" y="220" width="180" height="100" rx="12" fill="#FFFFFF" stroke="#E13D0F" stroke-width="2.5"/>
+          <rect x="290" y="220" width="6" height="100" fill="#E13D0F" rx="3"/>
+          <text x="314" y="248" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#E13D0F" letter-spacing="1.5">STAGE 02</text>
+          <text x="314" y="280" font-family="ui-serif, Georgia, serif" font-size="22" font-weight="500" fill="#02101D">Triage</text>
+          <text x="314" y="302" font-family="ui-serif, Georgia, serif" font-size="13" fill="#5C6770" font-style="italic">Validity. Fit. Requirements.</text>
+        </g>
+
+        <!-- Three diverging paths from triage -->
+        <g stroke="#02101D" stroke-width="2" fill="none">
+          <!-- Top path -->
+          <path d="M 470 250 Q 510 250 510 130 L 540 130"/>
+          <polyline points="533,124 540,130 533,136"/>
+          <!-- Middle path -->
+          <line x1="470" y1="270" x2="540" y2="270"/>
+          <polyline points="533,264 540,270 533,276"/>
+          <!-- Bottom path -->
+          <path d="M 470 290 Q 510 290 510 410 L 540 410"/>
+          <polyline points="533,404 540,410 533,416"/>
+        </g>
+
+        <!-- ===== STAGE 3: THREE PATHS ===== -->
+        <!-- Path A: New component -->
+        <g>
+          <rect x="540" y="80" width="200" height="100" rx="12" fill="#FFFFFF" stroke="#02101D" stroke-width="2"/>
+          <rect x="540" y="80" width="6" height="100" fill="#E13D0F" rx="3"/>
+          <text x="564" y="108" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#E13D0F" letter-spacing="1.5">PATH A</text>
+          <text x="564" y="138" font-family="ui-serif, Georgia, serif" font-size="18" font-weight="500" fill="#02101D">New component</text>
+          <text x="564" y="158" font-family="ui-serif, Georgia, serif" font-size="12" fill="#5C6770" font-style="italic">Net-new functionality</text>
+        </g>
+
+        <!-- Path B: Component change -->
+        <g>
+          <rect x="540" y="220" width="200" height="100" rx="12" fill="#FFFFFF" stroke="#02101D" stroke-width="2"/>
+          <rect x="540" y="220" width="6" height="100" fill="#9B40C4" rx="3"/>
+          <text x="564" y="248" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#9B40C4" letter-spacing="1.5">PATH B</text>
+          <text x="564" y="278" font-family="ui-serif, Georgia, serif" font-size="18" font-weight="500" fill="#02101D">Component change</text>
+          <text x="564" y="298" font-family="ui-serif, Georgia, serif" font-size="12" fill="#5C6770" font-style="italic">Modify existing</text>
+        </g>
+
+        <!-- Path C: Bug fix -->
+        <g>
+          <rect x="540" y="360" width="200" height="100" rx="12" fill="#FFFFFF" stroke="#02101D" stroke-width="2"/>
+          <rect x="540" y="360" width="6" height="100" fill="#062E5C" rx="3"/>
+          <text x="564" y="388" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#062E5C" letter-spacing="1.5">PATH C</text>
+          <text x="564" y="418" font-family="ui-serif, Georgia, serif" font-size="18" font-weight="500" fill="#02101D">Bug fix</text>
+          <text x="564" y="438" font-family="ui-serif, Georgia, serif" font-size="12" fill="#5C6770" font-style="italic">Behavior correction</text>
+        </g>
+
+        <!-- Arrows from paths to auto-generated sub-issues -->
+        <g stroke="#02101D" stroke-width="2" fill="none">
+          <line x1="740" y1="130" x2="800" y2="130"/>
+          <polyline points="793,124 800,130 793,136"/>
+          <line x1="740" y1="270" x2="800" y2="270"/>
+          <polyline points="793,264 800,270 793,276"/>
+          <line x1="740" y1="410" x2="800" y2="410"/>
+          <polyline points="793,404 800,410 793,416"/>
+        </g>
+
+        <!-- ===== STAGE 4: AUTO-GENERATED SUB-ISSUES ===== -->
+        <!-- Path A sub-issues: 3 tickets -->
+        <g>
+          <rect x="800" y="60" width="200" height="20" rx="4" fill="#E13D0F" opacity="0.15" stroke="#E13D0F" stroke-width="1"/>
+          <text x="814" y="74" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#02101D" letter-spacing="0.5">Design · Figma library</text>
+          <rect x="800" y="86" width="200" height="20" rx="4" fill="#E13D0F" opacity="0.15" stroke="#E13D0F" stroke-width="1"/>
+          <text x="814" y="100" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#02101D" letter-spacing="0.5">Engineering · Build component</text>
+          <rect x="800" y="112" width="200" height="20" rx="4" fill="#E13D0F" opacity="0.15" stroke="#E13D0F" stroke-width="1"/>
+          <text x="814" y="126" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#02101D" letter-spacing="0.5">Design · Documentation</text>
+          <text x="800" y="155" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" fill="#5C6770" letter-spacing="1" opacity="0.7">3 SUB-ISSUES AUTO-CREATED</text>
+        </g>
+
+        <!-- Path B sub-issues: 3 tickets -->
+        <g>
+          <rect x="800" y="200" width="200" height="20" rx="4" fill="#9B40C4" opacity="0.12" stroke="#9B40C4" stroke-width="1"/>
+          <text x="814" y="214" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#02101D" letter-spacing="0.5">Design · Edit in Figma</text>
+          <rect x="800" y="226" width="200" height="20" rx="4" fill="#9B40C4" opacity="0.12" stroke="#9B40C4" stroke-width="1"/>
+          <text x="814" y="240" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#02101D" letter-spacing="0.5">Engineering · Apply changes</text>
+          <rect x="800" y="252" width="200" height="20" rx="4" fill="#9B40C4" opacity="0.12" stroke="#9B40C4" stroke-width="1"/>
+          <text x="814" y="266" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#02101D" letter-spacing="0.5">Design · Update docs</text>
+          <text x="800" y="295" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" fill="#5C6770" letter-spacing="1" opacity="0.7">3 SUB-ISSUES AUTO-CREATED</text>
+        </g>
+
+        <!-- Path C sub-issues: 2 tickets -->
+        <g>
+          <rect x="800" y="350" width="200" height="20" rx="4" fill="#062E5C" opacity="0.12" stroke="#062E5C" stroke-width="1"/>
+          <text x="814" y="364" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#02101D" letter-spacing="0.5">Engineering · Fix component</text>
+          <rect x="800" y="376" width="200" height="20" rx="4" fill="#062E5C" opacity="0.12" stroke="#062E5C" stroke-width="1"/>
+          <text x="814" y="390" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#02101D" letter-spacing="0.5">Design · Update if applicable</text>
+          <text x="800" y="419" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" fill="#5C6770" letter-spacing="1" opacity="0.7">2 SUB-ISSUES AUTO-CREATED</text>
+        </g>
+
+        <!-- Arrows to "done" -->
+        <g stroke="#02101D" stroke-width="2" fill="none">
+          <path d="M 1000 92 Q 1090 92 1090 270 L 1090 270"/>
+          <line x1="1000" y1="232" x2="1080" y2="232"/>
+          <line x1="1000" y1="382" x2="1080" y2="382"/>
+          <path d="M 1000 382 Q 1090 382 1090 270 L 1090 270"/>
+          <line x1="1000" y1="232" x2="1080" y2="270" stroke-opacity="0"/>
+        </g>
+
+        <!-- ===== STAGE 5: DONE ===== -->
+        <g>
+          <circle cx="1110" cy="270" r="40" fill="#E13D0F"/>
+          <path d="M 1090 270 L 1104 284 L 1132 256" fill="none" stroke="#F4EFE5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="1110" y="340" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#02101D" letter-spacing="1.5">DONE</text>
+          <text x="1110" y="358" text-anchor="middle" font-family="ui-serif, Georgia, serif" font-size="11" fill="#5C6770" font-style="italic">All sub-issues complete</text>
+        </g>
+      </svg>
+
+      <!-- Caption -->
+      <p class="mt-6 font-mono text-xs uppercase tracking-[0.15em] text-ink-muted text-center">
+        One intake form · One triage gate · Three defined paths · Auto-generated work · One source of truth
+      </p>
+    </div>
+
+    <!-- The rule -->
+    <div class="max-w-reading">
+      <p class="eyebrow-voice mb-4">The rule that made it work</p>
+      <p class="font-display text-3xl text-ink leading-tight mb-6">
+        No new custom components<span class="text-orange">.</span>
+      </p>
+      <p class="text-lg text-ink-soft leading-relaxed">
+        The design system stays stable and untouchable during feature development.
+        New patterns go through the intake. Without that rule, every team optimizes
+        for their own feature timeline and the system silently drifts back into a
+        component zoo. With it, the system gets cared for.
+      </p>
     </div>
   </section>
 
