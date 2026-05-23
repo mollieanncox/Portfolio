@@ -350,12 +350,184 @@ import Base from '../../layouts/Base.astro';
         </div>
       </div>
     </div>
+
+    <!-- Workshop in action: three screenshots showing the arc -->
+    <div class="mt-16 md:mt-20">
+      <p class="eyebrow mb-3">The workshop in action</p>
+      <h3 class="font-display text-2xl md:text-3xl text-ink leading-tight max-w-[42ch] mb-10">
+        Setup. Current state. Future state. Three boards, one arc.
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-5">
+
+        <!-- Board 1: Setup -->
+        <figure>
+          <button
+            type="button"
+            data-modal-trigger
+            data-modal-src="/pdlc/workshop-step-1.png"
+            data-modal-caption="Step 01 · Setup. Role purpose, work that fills the week, and pain points. Each discipline maps its current reality first."
+            class="group block relative w-full bg-cream-warm/60 border border-ink/10 overflow-hidden aspect-[12/5] flex items-center justify-center transition-all hover:border-orange/40 hover:shadow-lg cursor-zoom-in"
+            style="border-radius: 12px;"
+            aria-label="View Step 01 Setup workshop board at full size"
+          >
+            <img
+              src="/pdlc/workshop-step-1.png"
+              alt="Workshop intro board showing the five-phase PDLC framework, instructions for the participatory workshop, and Step 1 individual input: role purpose, work that fills your week, and pain points organized by role using color-coded stickies"
+              class="w-full h-full object-contain block transition-transform group-hover:scale-[1.02] pointer-events-none"
+              loading="lazy"
+            />
+            <span class="absolute top-3 right-3 bg-ink/80 text-cream font-mono text-[10px] uppercase tracking-[0.12em] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm pointer-events-none">View full ↗</span>
+          </button>
+          <figcaption class="mt-4">
+            <p class="font-mono text-xs uppercase tracking-[0.15em] text-orange mb-1">Step 01 · Setup</p>
+            <p class="text-sm text-ink-soft leading-snug">Role purpose, work that fills the week, and pain points. Each discipline maps its current reality first.</p>
+          </figcaption>
+        </figure>
+
+        <!-- Board 2: Map to PDLC -->
+        <figure>
+          <button
+            type="button"
+            data-modal-trigger
+            data-modal-src="/pdlc/workshop-step-2.png"
+            data-modal-caption="Step 02 · Current state. Map every sticky to the lifecycle phase where it happens. The concentration of work shows where the process actually breaks."
+            class="group block relative w-full bg-cream-warm/60 border border-ink/10 overflow-hidden aspect-[12/5] flex items-center justify-center transition-all hover:border-orange/40 hover:shadow-lg cursor-zoom-in"
+            style="border-radius: 12px;"
+            aria-label="View Step 02 Current state workshop board at full size"
+          >
+            <img
+              src="/pdlc/workshop-step-2.png"
+              alt="Workshop board showing stickies clustered into the five PDLC phases of Discover, Define, Experiment, Deliver, and Monitor. Visible concentration of work and friction in the Define and Deliver phases"
+              class="w-full h-full object-contain block transition-transform group-hover:scale-[1.02] pointer-events-none"
+              loading="lazy"
+            />
+            <span class="absolute top-3 right-3 bg-ink/80 text-cream font-mono text-[10px] uppercase tracking-[0.12em] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm pointer-events-none">View full ↗</span>
+          </button>
+          <figcaption class="mt-4">
+            <p class="font-mono text-xs uppercase tracking-[0.15em] text-orange mb-1">Step 02 · Current state</p>
+            <p class="text-sm text-ink-soft leading-snug">Map every sticky to the lifecycle phase where it happens. The concentration of work shows where the process actually breaks.</p>
+          </figcaption>
+        </figure>
+
+        <!-- Board 3: Phase Outcomes -->
+        <figure>
+          <button
+            type="button"
+            data-modal-trigger
+            data-modal-src="/pdlc/workshop-step-3.png"
+            data-modal-caption="Step 03 · Future state. For each phase: outcomes that must be true and artifacts that support them. Teal for outcomes. Orange for artifacts."
+            class="group block relative w-full bg-cream-warm/60 border border-ink/10 overflow-hidden aspect-[12/5] flex items-center justify-center transition-all hover:border-orange/40 hover:shadow-lg cursor-zoom-in"
+            style="border-radius: 12px;"
+            aria-label="View Step 03 Future state workshop board at full size"
+          >
+            <img
+              src="/pdlc/workshop-step-3.png"
+              alt="Workshop board showing each PDLC phase populated with teal outcome stickies and orange artifact stickies, defining what must be true to move forward and what deliverables support that work"
+              class="w-full h-full object-contain block transition-transform group-hover:scale-[1.02] pointer-events-none"
+              loading="lazy"
+            />
+            <span class="absolute top-3 right-3 bg-ink/80 text-cream font-mono text-[10px] uppercase tracking-[0.12em] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm pointer-events-none">View full ↗</span>
+          </button>
+          <figcaption class="mt-4">
+            <p class="font-mono text-xs uppercase tracking-[0.15em] text-orange mb-1">Step 03 · Future state</p>
+            <p class="text-sm text-ink-soft leading-snug">For each phase: outcomes that must be true and artifacts that support them. Teal for outcomes. Orange for artifacts.</p>
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <p class="mt-6 font-mono text-xs uppercase tracking-[0.15em] text-ink-muted max-w-reading">
+        Click any board to view full size. Three boards. Same room. Built by the people who had to do the work afterward.
+      </p>
+
+      <!-- Image Modal -->
+      <div
+        id="image-modal"
+        class="fixed inset-0 z-50 hidden items-center justify-center p-4 md:p-10 bg-ink/95"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-caption"
+      >
+        <button
+          type="button"
+          id="modal-close"
+          class="absolute top-4 right-4 md:top-6 md:right-6 text-cream/80 hover:text-orange transition-colors p-2 z-10"
+          aria-label="Close modal"
+        >
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="8" y1="8" x2="24" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="24" y1="8" x2="8" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="relative max-w-7xl w-full max-h-full flex flex-col items-center justify-center gap-4">
+          <img
+            id="modal-image"
+            src=""
+            alt=""
+            class="max-w-full max-h-[80vh] object-contain"
+            style="border-radius: 8px;"
+          />
+          <p
+            id="modal-caption"
+            class="font-mono text-xs md:text-sm uppercase tracking-[0.15em] text-cream/80 text-center max-w-3xl"
+          ></p>
+        </div>
+      </div>
+
+      <script is:inline>
+        (function() {
+          const modal = document.getElementById('image-modal');
+          const modalImage = document.getElementById('modal-image');
+          const modalCaption = document.getElementById('modal-caption');
+          const modalClose = document.getElementById('modal-close');
+          const triggers = document.querySelectorAll('[data-modal-trigger]');
+
+          function openModal(src, caption) {
+            modalImage.src = src;
+            modalImage.alt = caption;
+            modalCaption.textContent = caption;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+          }
+
+          function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+            modalImage.src = '';
+          }
+
+          triggers.forEach(function(trigger) {
+            trigger.addEventListener('click', function() {
+              openModal(trigger.dataset.modalSrc, trigger.dataset.modalCaption);
+            });
+          });
+
+          modalClose.addEventListener('click', closeModal);
+
+          // Click outside image to close
+          modal.addEventListener('click', function(e) {
+            if (e.target === modal) closeModal();
+          });
+
+          // Escape key to close
+          document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+              closeModal();
+            }
+          });
+        })();
+      </script>
+    </div>
+
   </section>
 
   <!-- =============================== -->
   <!-- THE SHIFT (before/after operating model) -->
   <!-- =============================== -->
-  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+  <section class="max-w-7xl mx-auto px-6 md:px-10 pt-12 md:pt-16 pb-24 md:pb-32">
     <p class="eyebrow mb-3">The shift</p>
     <h2 class="font-display text-display-md text-ink leading-tight max-w-[28ch] mb-12">
       From sequential handoffs to a shared operating model.
