@@ -366,148 +366,83 @@ import Base from '../../layouts/Base.astro';
       made it work was simple: no new custom components.
     </p>
 
-    <!-- Governance flow diagram -->
+    <!-- Governance flow diagram (simplified) -->
     <div class="mb-16 p-8 md:p-12 bg-cream border border-ink/10" style="border-radius: 16px;">
-      <svg viewBox="0 0 1200 540" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" style="max-width: 100%;">
+      <svg viewBox="0 0 1000 380" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" role="img" aria-label="Governance flow diagram. A single intake form feeds into a triage gate. The triage gate routes into three defined paths: Path A for new components, Path B for component changes, and Path C for bug fixes. All three paths converge into a Done state. Sub-issues are auto-generated per path and tracked in one source of truth.">
 
-        <!-- Subtle grid backdrop -->
-        <g opacity="0.04">
-          <line stroke="#02101D" stroke-width="0.5" x1="120" y1="20" x2="120" y2="520"/>
-          <line stroke="#02101D" stroke-width="0.5" x1="320" y1="20" x2="320" y2="520"/>
-          <line stroke="#02101D" stroke-width="0.5" x1="520" y1="20" x2="520" y2="520"/>
-          <line stroke="#02101D" stroke-width="0.5" x1="720" y1="20" x2="720" y2="520"/>
-          <line stroke="#02101D" stroke-width="0.5" x1="920" y1="20" x2="920" y2="520"/>
-          <line stroke="#02101D" stroke-width="0.5" x1="1080" y1="20" x2="1080" y2="520"/>
-        </g>
-
-        <!-- ===== STAGE 1: INTAKE (single entry) ===== -->
+        <!-- Stage 01: Intake -->
         <g>
-          <rect x="60" y="220" width="180" height="100" rx="12" fill="#FFFFFF" stroke="#02101D" stroke-width="2.5"/>
-          <rect x="60" y="220" width="6" height="100" fill="#02101D" rx="3"/>
-          <text x="84" y="248" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#5C6770" letter-spacing="1.5">STAGE 01</text>
-          <text x="84" y="280" font-family="ui-serif, Georgia, serif" font-size="22" font-weight="500" fill="#02101D">Intake</text>
-          <text x="84" y="302" font-family="ui-serif, Georgia, serif" font-size="13" fill="#5C6770" font-style="italic">One form. One channel.</text>
+          <rect x="40" y="160" width="160" height="60" rx="8" fill="#FFFFFF" stroke="#02101D" stroke-width="1.5"/>
+          <text x="56" y="184" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" letter-spacing="2" fill="#E13D0F">01 · INTAKE</text>
+          <text x="56" y="206" font-family="'new-spirit', Georgia, serif" font-size="18" fill="#02101D" font-weight="500">One form</text>
         </g>
 
-        <!-- Arrow from intake to triage -->
-        <g stroke="#02101D" stroke-width="2" fill="none">
-          <line x1="240" y1="270" x2="290" y2="270"/>
-          <polyline points="283,264 290,270 283,276"/>
+        <!-- Arrow intake to triage -->
+        <g stroke="#02101D" stroke-width="1.5" fill="none">
+          <line x1="200" y1="190" x2="240" y2="190"/>
+          <polyline points="235,184 240,190 235,196"/>
         </g>
 
-        <!-- ===== STAGE 2: TRIAGE (gate) ===== -->
+        <!-- Stage 02: Triage (the gate, dominant element) -->
         <g>
-          <rect x="290" y="220" width="180" height="100" rx="12" fill="#FFFFFF" stroke="#E13D0F" stroke-width="2.5"/>
-          <rect x="290" y="220" width="6" height="100" fill="#E13D0F" rx="3"/>
-          <text x="314" y="248" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#E13D0F" letter-spacing="1.5">STAGE 02</text>
-          <text x="314" y="280" font-family="ui-serif, Georgia, serif" font-size="22" font-weight="500" fill="#02101D">Triage</text>
-          <text x="314" y="302" font-family="ui-serif, Georgia, serif" font-size="13" fill="#5C6770" font-style="italic">Validity. Fit. Requirements.</text>
+          <rect x="240" y="140" width="180" height="100" rx="8" fill="#E13D0F"/>
+          <text x="256" y="166" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" letter-spacing="2" fill="#F4EFE5">02 · TRIAGE</text>
+          <text x="256" y="194" font-family="'new-spirit', Georgia, serif" font-size="22" fill="#F4EFE5" font-weight="500">The gate</text>
+          <text x="256" y="220" font-family="'new-spirit', Georgia, serif" font-size="11" fill="#F4EFE5" opacity="0.85" font-style="italic">3 paths out</text>
         </g>
 
-        <!-- Three diverging paths from triage -->
-        <g stroke="#02101D" stroke-width="2" fill="none">
-          <!-- Top path -->
-          <path d="M 470 250 Q 510 250 510 130 L 540 130"/>
-          <polyline points="533,124 540,130 533,136"/>
-          <!-- Middle path -->
-          <line x1="470" y1="270" x2="540" y2="270"/>
-          <polyline points="533,264 540,270 533,276"/>
-          <!-- Bottom path -->
-          <path d="M 470 290 Q 510 290 510 410 L 540 410"/>
-          <polyline points="533,404 540,410 533,416"/>
+        <!-- 3 diverging arrows from triage to paths -->
+        <g stroke="#02101D" stroke-width="1.5" fill="none">
+          <path d="M 420 170 Q 460 170 460 90 L 500 90"/>
+          <polyline points="495,84 500,90 495,96"/>
+          <line x1="420" y1="190" x2="500" y2="190"/>
+          <polyline points="495,184 500,190 495,196"/>
+          <path d="M 420 210 Q 460 210 460 290 L 500 290"/>
+          <polyline points="495,284 500,290 495,296"/>
         </g>
 
-        <!-- ===== STAGE 3: THREE PATHS ===== -->
         <!-- Path A: New component -->
         <g>
-          <rect x="540" y="80" width="200" height="100" rx="12" fill="#FFFFFF" stroke="#02101D" stroke-width="2"/>
-          <rect x="540" y="80" width="6" height="100" fill="#E13D0F" rx="3"/>
-          <text x="564" y="108" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#E13D0F" letter-spacing="1.5">PATH A</text>
-          <text x="564" y="138" font-family="ui-serif, Georgia, serif" font-size="18" font-weight="500" fill="#02101D">New component</text>
-          <text x="564" y="158" font-family="ui-serif, Georgia, serif" font-size="12" fill="#5C6770" font-style="italic">Net-new functionality</text>
+          <rect x="500" y="60" width="180" height="60" rx="8" fill="#FFFFFF" stroke="#E13D0F" stroke-width="1.5"/>
+          <text x="516" y="84" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" letter-spacing="2" fill="#E13D0F">PATH A</text>
+          <text x="516" y="106" font-family="'new-spirit', Georgia, serif" font-size="15" fill="#02101D">New component</text>
         </g>
 
         <!-- Path B: Component change -->
         <g>
-          <rect x="540" y="220" width="200" height="100" rx="12" fill="#FFFFFF" stroke="#02101D" stroke-width="2"/>
-          <rect x="540" y="220" width="6" height="100" fill="#9B40C4" rx="3"/>
-          <text x="564" y="248" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#9B40C4" letter-spacing="1.5">PATH B</text>
-          <text x="564" y="278" font-family="ui-serif, Georgia, serif" font-size="18" font-weight="500" fill="#02101D">Component change</text>
-          <text x="564" y="298" font-family="ui-serif, Georgia, serif" font-size="12" fill="#5C6770" font-style="italic">Modify existing</text>
+          <rect x="500" y="160" width="180" height="60" rx="8" fill="#FFFFFF" stroke="#9B40C4" stroke-width="1.5"/>
+          <text x="516" y="184" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" letter-spacing="2" fill="#9B40C4">PATH B</text>
+          <text x="516" y="206" font-family="'new-spirit', Georgia, serif" font-size="15" fill="#02101D">Component change</text>
         </g>
 
         <!-- Path C: Bug fix -->
         <g>
-          <rect x="540" y="360" width="200" height="100" rx="12" fill="#FFFFFF" stroke="#02101D" stroke-width="2"/>
-          <rect x="540" y="360" width="6" height="100" fill="#062E5C" rx="3"/>
-          <text x="564" y="388" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#062E5C" letter-spacing="1.5">PATH C</text>
-          <text x="564" y="418" font-family="ui-serif, Georgia, serif" font-size="18" font-weight="500" fill="#02101D">Bug fix</text>
-          <text x="564" y="438" font-family="ui-serif, Georgia, serif" font-size="12" fill="#5C6770" font-style="italic">Behavior correction</text>
+          <rect x="500" y="260" width="180" height="60" rx="8" fill="#FFFFFF" stroke="#062E5C" stroke-width="1.5"/>
+          <text x="516" y="284" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" letter-spacing="2" fill="#062E5C">PATH C</text>
+          <text x="516" y="306" font-family="'new-spirit', Georgia, serif" font-size="15" fill="#02101D">Bug fix</text>
         </g>
 
-        <!-- Arrows from paths to auto-generated sub-issues -->
-        <g stroke="#02101D" stroke-width="2" fill="none">
-          <line x1="740" y1="130" x2="800" y2="130"/>
-          <polyline points="793,124 800,130 793,136"/>
-          <line x1="740" y1="270" x2="800" y2="270"/>
-          <polyline points="793,264 800,270 793,276"/>
-          <line x1="740" y1="410" x2="800" y2="410"/>
-          <polyline points="793,404 800,410 793,416"/>
+        <!-- 3 converging arrows to done -->
+        <g stroke="#02101D" stroke-width="1.5" fill="none" opacity="0.55">
+          <path d="M 680 90 Q 760 90 760 190 L 810 190"/>
+          <line x1="680" y1="190" x2="810" y2="190"/>
+          <path d="M 680 290 Q 760 290 760 190 L 810 190"/>
+          <polyline points="805,184 810,190 805,196" opacity="1"/>
         </g>
 
-        <!-- ===== STAGE 4: AUTO-GENERATED SUB-ISSUES ===== -->
-        <!-- Path A sub-issues: 3 tickets -->
+        <!-- Done circle (the destination) -->
         <g>
-          <rect x="800" y="60" width="200" height="20" rx="4" fill="#E13D0F" opacity="0.15" stroke="#E13D0F" stroke-width="1"/>
-          <text x="814" y="74" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#02101D" letter-spacing="0.5">Design · Figma library</text>
-          <rect x="800" y="86" width="200" height="20" rx="4" fill="#E13D0F" opacity="0.15" stroke="#E13D0F" stroke-width="1"/>
-          <text x="814" y="100" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#02101D" letter-spacing="0.5">Engineering · Build component</text>
-          <rect x="800" y="112" width="200" height="20" rx="4" fill="#E13D0F" opacity="0.15" stroke="#E13D0F" stroke-width="1"/>
-          <text x="814" y="126" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#02101D" letter-spacing="0.5">Design · Documentation</text>
-          <text x="800" y="155" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" fill="#5C6770" letter-spacing="1" opacity="0.7">3 SUB-ISSUES AUTO-CREATED</text>
+          <circle cx="870" cy="190" r="40" fill="#E13D0F"/>
+          <path d="M 853 190 L 865 202 L 890 175" fill="none" stroke="#F4EFE5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="870" y="254" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" letter-spacing="2" fill="#02101D">DONE</text>
+          <text x="870" y="272" text-anchor="middle" font-family="'new-spirit', Georgia, serif" font-size="10" fill="#5C6770" font-style="italic">All sub-issues complete</text>
         </g>
 
-        <!-- Path B sub-issues: 3 tickets -->
-        <g>
-          <rect x="800" y="200" width="200" height="20" rx="4" fill="#9B40C4" opacity="0.12" stroke="#9B40C4" stroke-width="1"/>
-          <text x="814" y="214" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#02101D" letter-spacing="0.5">Design · Edit in Figma</text>
-          <rect x="800" y="226" width="200" height="20" rx="4" fill="#9B40C4" opacity="0.12" stroke="#9B40C4" stroke-width="1"/>
-          <text x="814" y="240" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#02101D" letter-spacing="0.5">Engineering · Apply changes</text>
-          <rect x="800" y="252" width="200" height="20" rx="4" fill="#9B40C4" opacity="0.12" stroke="#9B40C4" stroke-width="1"/>
-          <text x="814" y="266" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#02101D" letter-spacing="0.5">Design · Update docs</text>
-          <text x="800" y="295" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" fill="#5C6770" letter-spacing="1" opacity="0.7">3 SUB-ISSUES AUTO-CREATED</text>
-        </g>
-
-        <!-- Path C sub-issues: 2 tickets -->
-        <g>
-          <rect x="800" y="350" width="200" height="20" rx="4" fill="#062E5C" opacity="0.12" stroke="#062E5C" stroke-width="1"/>
-          <text x="814" y="364" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#02101D" letter-spacing="0.5">Engineering · Fix component</text>
-          <rect x="800" y="376" width="200" height="20" rx="4" fill="#062E5C" opacity="0.12" stroke="#062E5C" stroke-width="1"/>
-          <text x="814" y="390" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#02101D" letter-spacing="0.5">Design · Update if applicable</text>
-          <text x="800" y="419" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" fill="#5C6770" letter-spacing="1" opacity="0.7">2 SUB-ISSUES AUTO-CREATED</text>
-        </g>
-
-        <!-- Arrows to "done" -->
-        <g stroke="#02101D" stroke-width="2" fill="none">
-          <path d="M 1000 92 Q 1090 92 1090 270 L 1090 270"/>
-          <line x1="1000" y1="232" x2="1080" y2="232"/>
-          <line x1="1000" y1="382" x2="1080" y2="382"/>
-          <path d="M 1000 382 Q 1090 382 1090 270 L 1090 270"/>
-          <line x1="1000" y1="232" x2="1080" y2="270" stroke-opacity="0"/>
-        </g>
-
-        <!-- ===== STAGE 5: DONE ===== -->
-        <g>
-          <circle cx="1110" cy="270" r="40" fill="#E13D0F"/>
-          <path d="M 1090 270 L 1104 284 L 1132 256" fill="none" stroke="#F4EFE5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="1110" y="340" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#02101D" letter-spacing="1.5">DONE</text>
-          <text x="1110" y="358" text-anchor="middle" font-family="ui-serif, Georgia, serif" font-size="11" fill="#5C6770" font-style="italic">All sub-issues complete</text>
-        </g>
       </svg>
 
-      <!-- Caption -->
-      <p class="mt-6 font-mono text-xs uppercase tracking-[0.15em] text-ink-muted text-center">
-        One intake form · One triage gate · Three defined paths · Auto-generated work · One source of truth
+      <!-- Caption with the operational detail (moves out of diagram) -->
+      <p class="mt-8 font-mono text-xs uppercase tracking-[0.15em] text-ink-muted text-center">
+        One form · One gate · Three paths · Sub-issues auto-generated per path · One source of truth
       </p>
     </div>
 
