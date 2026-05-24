@@ -295,6 +295,126 @@ import Base from '../../layouts/Base.astro';
           trust each time it runs.
         </p>
       </div>
+
+      <!-- The loop in practice: one journey through all six steps, visualized -->
+      <div class="mt-20 md:mt-24">
+        <p class="eyebrow mb-3">The loop in practice</p>
+        <h3 class="font-display text-2xl md:text-3xl text-ink leading-tight max-w-[42ch] mb-10">
+          One conversation through six stations.
+        </h3>
+
+        <p class="text-lg text-ink-soft leading-relaxed max-w-reading mb-16">
+          Process diagrams describe what is supposed to happen. The test of the model is
+          whether a single customer comment can travel from the conversation it started in
+          to a roadmap decision and back to the customer who raised it. Here is one journey,
+          anonymized.
+        </p>
+
+        <!-- The closed loop SVG -->
+        <div class="max-w-3xl mx-auto">
+          <svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" role="img" aria-label="A closed feedback loop showing one customer journey. A quote enters at the top and travels clockwise through six numbered stations around a circular loop: Conversation, Theme, Synthesis, Ownership, Decision, Return. The customer sits at the center of the loop as the destination of all activity.">
+
+            <!-- The customer's voice, positioned above the loop -->
+            <foreignObject x="180" y="30" width="540" height="60">
+              <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'new-spirit', Georgia, serif; font-style: italic; font-size: 20px; color: #02101D; margin: 0; line-height: 1.4; text-align: center; opacity: 0.88;">"We can't get data out of the platform fast enough&nbsp;to&nbsp;act&nbsp;on&nbsp;it."</p>
+            </foreignObject>
+
+            <!-- Subtle entry line from quote down to station 01 -->
+            <line x1="450" y1="100" x2="450" y2="140" stroke="#E13D0F" stroke-width="1.5" opacity="0.4"/>
+
+            <!-- The loop arc -->
+            <circle cx="450" cy="330" r="170" fill="none" stroke="#E13D0F" stroke-width="1.5" opacity="0.5"/>
+
+            <!-- Center: customer (focal point) -->
+            <g>
+              <circle cx="450" cy="330" r="60" fill="#02101D"/>
+              <text x="450" y="328" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" fill="#E13D0F" letter-spacing="2.5">CUSTOMER</text>
+              <text x="450" y="348" text-anchor="middle" font-family="'new-spirit', Georgia, serif" font-style="italic" font-size="11" fill="#F4EFE5" opacity="0.65">at the center</text>
+            </g>
+
+            <!-- Station 01: Conversation (top, emphasized) -->
+            <g>
+              <circle cx="450" cy="160" r="30" fill="#FFFFFF" stroke="#E13D0F" stroke-width="2.5"/>
+              <text x="450" y="166" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13" fill="#E13D0F" letter-spacing="1.5" font-weight="500">01</text>
+            </g>
+
+            <!-- Station 02: Theme (2 o'clock) -->
+            <g>
+              <circle cx="597" cy="245" r="26" fill="#FFFFFF" stroke="#9B40C4" stroke-width="2"/>
+              <text x="597" y="251" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" fill="#9B40C4" letter-spacing="1.5" font-weight="500">02</text>
+            </g>
+
+            <!-- Station 03: Synthesis (4 o'clock) -->
+            <g>
+              <circle cx="597" cy="415" r="26" fill="#FFFFFF" stroke="#062E5C" stroke-width="2"/>
+              <text x="597" y="421" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" fill="#062E5C" letter-spacing="1.5" font-weight="500">03</text>
+            </g>
+
+            <!-- Station 04: Ownership (bottom) -->
+            <g>
+              <circle cx="450" cy="500" r="26" fill="#FFFFFF" stroke="#7A6A4F" stroke-width="2"/>
+              <text x="450" y="506" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" fill="#7A6A4F" letter-spacing="1.5" font-weight="500">04</text>
+            </g>
+
+            <!-- Station 05: Decision (8 o'clock, emphasized) -->
+            <g>
+              <circle cx="303" cy="415" r="30" fill="#FFFFFF" stroke="#E13D0F" stroke-width="2.5"/>
+              <text x="303" y="421" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13" fill="#E13D0F" letter-spacing="1.5" font-weight="500">05</text>
+            </g>
+
+            <!-- Station 06: Return (10 o'clock) -->
+            <g>
+              <circle cx="303" cy="245" r="26" fill="#FFFFFF" stroke="#9B40C4" stroke-width="2"/>
+              <text x="303" y="251" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" fill="#9B40C4" letter-spacing="1.5" font-weight="500">06</text>
+            </g>
+
+          </svg>
+
+          <!-- Caption strip below the image: the key to reading the visual -->
+          <div class="mt-10 grid grid-cols-2 md:grid-cols-6 gap-6 md:gap-4 pt-8 border-t border-ink/8">
+            <div class="text-left md:text-center">
+              <p class="font-mono text-[10px] uppercase tracking-[0.15em] font-semibold mb-1.5" style="color: #E13D0F;">01</p>
+              <p class="font-display text-sm text-ink mb-1 leading-tight">Conversation</p>
+              <p class="font-display text-xs text-ink-soft italic leading-snug">London cohort</p>
+            </div>
+            <div class="text-left md:text-center">
+              <p class="font-mono text-[10px] uppercase tracking-[0.15em] font-semibold mb-1.5" style="color: #9B40C4;">02</p>
+              <p class="font-display text-sm text-ink mb-1 leading-tight">Theme</p>
+              <p class="font-display text-xs text-ink-soft italic leading-snug">Export velocity</p>
+            </div>
+            <div class="text-left md:text-center">
+              <p class="font-mono text-[10px] uppercase tracking-[0.15em] font-semibold mb-1.5" style="color: #062E5C;">03</p>
+              <p class="font-display text-sm text-ink mb-1 leading-tight">Synthesis</p>
+              <p class="font-display text-xs text-ink-soft italic leading-snug">6 customers</p>
+            </div>
+            <div class="text-left md:text-center">
+              <p class="font-mono text-[10px] uppercase tracking-[0.15em] font-semibold mb-1.5" style="color: #7A6A4F;">04</p>
+              <p class="font-display text-sm text-ink mb-1 leading-tight">Ownership</p>
+              <p class="font-display text-xs text-ink-soft italic leading-snug">Data platform PM</p>
+            </div>
+            <div class="text-left md:text-center">
+              <p class="font-mono text-[10px] uppercase tracking-[0.15em] font-semibold mb-1.5" style="color: #E13D0F;">05</p>
+              <p class="font-display text-sm text-ink mb-1 leading-tight">Decision</p>
+              <p class="font-display text-xs text-ink-soft italic leading-snug">P1 next quarter</p>
+            </div>
+            <div class="text-left md:text-center">
+              <p class="font-mono text-[10px] uppercase tracking-[0.15em] font-semibold mb-1.5" style="color: #9B40C4;">06</p>
+              <p class="font-display text-sm text-ink mb-1 leading-tight">Return</p>
+              <p class="font-display text-xs text-ink-soft italic leading-snug">Customer hears back</p>
+            </div>
+          </div>
+
+          <!-- Closing serif line -->
+          <p class="font-display text-xl md:text-2xl text-ink text-center leading-snug mt-14 max-w-2xl mx-auto">
+            One conversation. Six stations. One roadmap commitment in a single&nbsp;planning&nbsp;cycle.
+          </p>
+        </div>
+
+        <p class="mt-16 font-mono text-xs uppercase tracking-[0.15em] text-ink-muted text-center max-w-reading mx-auto">
+          Anonymized example. The mechanism, not the exact customer or product detail.
+        </p>
+      </div>
+
     </div>
   </section>
 
