@@ -1,15 +1,14 @@
 ---
 import Base from '../layouts/Base.astro';
-
 const caseStudies = [
   {
     slug: 'course-code',
     eyebrow: 'Course Code · 2026 to present',
     title: 'Course Code: an AI-native consumer product, solo',
     summary:
-      'Built a live, revenue-generating consumer app from zero to paying subscribers in ten weeks. Solo, with an AI co-founder.',
-    metric: '4.6K',
-    metricLabel: 'Active users (28 days)',
+      'Built a live consumer app from zero to 5.2K active users in ten weeks. Solo, with an AI co-founder. A deliberate experiment in what AI collapses and what taste protects.',
+    metric: '5.2K',
+    metricLabel: 'Active users (30 days)',
   },
   {
     slug: 'linear-migration',
@@ -21,6 +20,33 @@ const caseStudies = [
     metricLabel: 'Throughput per engineer',
   },
   {
+    slug: 'branch-repositioning',
+    eyebrow: 'Branch · 2025 to 2026',
+    title: 'Repositioning a company through web and product narrative',
+    summary:
+      'Led the product and experience strategy behind a public B2B SaaS rebrand. A new market story, a product-led website, a sharper voice. One enterprise customer re-signed for three years on the strength of the new positioning.',
+    metric: '$1M',
+    metricLabel: 'ARR retained at launch',
+  },
+  {
+    slug: 'auxin-design-system',
+    eyebrow: 'Branch · 2024 to 2026',
+    title: 'A design system for a multi-product platform',
+    summary:
+      'Scalable component library, governance model, intake process, and Figma-to-code alignment across a complex enterprise SaaS surface. 94% adoption. 2× pod velocity. Zero custom components shipped.',
+    metric: '94%',
+    metricLabel: 'Component adoption',
+  },
+  {
+    slug: 'inner-circle',
+    eyebrow: 'Branch · 2025 to 2026',
+    title: 'Building a customer signal engine',
+    summary:
+      'A structured customer program that turned ad hoc feedback into a repeatable VOC loop. EMEA pilot reached 7 enterprise accounts across 4 verticals and influenced 8 roadmap items.',
+    metric: '8',
+    metricLabel: 'Roadmap items influenced',
+  },
+  {
     slug: 'px-org-strategy',
     eyebrow: 'Branch · 2025 to 2026',
     title: 'From design function to product experience organization',
@@ -28,15 +54,6 @@ const caseStudies = [
       'Evolved a design-centered team into a multi-disciplinary product organization spanning design, content, documentation, research, education, community, and AI. Six pillars, one North Star.',
     metric: '6',
     metricLabel: 'Pillars, one North Star',
-  },
-  {
-    slug: 'branch-repositioning',
-    eyebrow: 'Branch · 2025 to 2026',
-    title: 'Repositioning a company through web and product narrative',
-    summary:
-      'Led the product and experience strategy behind a public B2B SaaS rebrand. A new market story, a product-led website, a sharper voice. Launched at sales kickoff, live in market.',
-    metric: '150+',
-    metricLabel: 'Pages, three-tier triage',
   },
   {
     slug: 'pdlc-redesign',
@@ -47,26 +64,7 @@ const caseStudies = [
     metric: '4',
     metricLabel: 'Phases, full lifecycle',
   },
-  {
-    slug: 'auxin-design-system',
-    eyebrow: 'Branch · 2024 to 2026',
-    title: 'A design system for a multi-product platform',
-    summary:
-      'Scalable component library, governance model, intake process, and Figma-to-code alignment across a complex enterprise SaaS surface.',
-    metric: '9',
-    metricLabel: 'Operational artifacts',
-  },
-  {
-    slug: 'inner-circle',
-    eyebrow: 'Branch · 2025 to 2026',
-    title: 'Building a customer signal engine',
-    summary:
-      'A structured customer program that turned ad hoc feedback into a repeatable VOC loop. EMEA pilot, North America rollout, formalized as part of PX strategy.',
-    metric: '4',
-    metricLabel: 'Regions, 2026 target',
-  },
 ];
-
 const beliefs = [
   {
     title: 'Personal preference is a hypothesis',
@@ -86,7 +84,6 @@ const beliefs = [
   },
 ];
 ---
-
 <Base title="Mollie Cox · Product & Design Leader · AI-Native Founder">
   <!-- ===================== -->
   <!-- HERO with grid backdrop -->
@@ -103,17 +100,13 @@ const beliefs = [
           Currently building Course Code
         </span>
       </div>
-
       <p class="eyebrow mb-8">Product & Design Leader · AI-Native Founder</p>
-
       <h1 class="font-display text-display-xl text-ink leading-[0.95] tracking-tight max-w-[18ch]">
         Great design is a moral imperative<span class="brand-period">.</span>
       </h1>
-
       <p class="mt-8 font-display text-2xl md:text-3xl text-ink-soft max-w-[40ch] leading-snug">
         Product and design leader building executive-grade product experience organizations. AI-native founder shipping live consumer products with an AI co-founder.
       </p>
-
       <div class="mt-12 max-w-reading">
         <p class="text-xl md:text-2xl text-ink-soft leading-relaxed">
           Twenty years building, scaling, and leading product and design organizations. I architect
@@ -123,7 +116,6 @@ const beliefs = [
           ten weeks.
         </p>
       </div>
-
       <div class="mt-16 flex flex-wrap gap-x-12 gap-y-8">
         <div>
           <p class="stat">20</p>
@@ -134,8 +126,8 @@ const beliefs = [
           <p class="stat-label">Throughput gain (Linear)</p>
         </div>
         <div>
-          <p class="stat">4.6K</p>
-          <p class="stat-label">Users (Course Code, 28 days)</p>
+          <p class="stat">5.2K</p>
+          <p class="stat-label">Users (Course Code, 30 days)</p>
         </div>
         <div>
           <p class="stat">17K+</p>
@@ -144,7 +136,6 @@ const beliefs = [
       </div>
     </div>
   </section>
-
   <!-- ===================== -->
   <!-- Currently building -->
   <!-- ===================== -->
@@ -157,11 +148,10 @@ const beliefs = [
         </div>
         <div class="md:col-span-6 max-w-reading">
           <p class="font-display text-2xl text-cream leading-tight mb-4">
-            A live, revenue-generating consumer app built solo with an AI co-founder<span class="text-orange">.</span>
+            A live consumer app built solo with an AI co-founder<span class="text-orange">.</span>
           </p>
           <p class="text-cream/80 leading-relaxed">
-            4,659 golf courses. 4.6K active users in 28 days. Live Pro tier at $39 a year.
-            Phase 1 shipped on time. Ten weeks from concept to revenue.
+            18K+ golf courses indexed. 5.2K active users in 30 days. 100% organic growth. A deliberate experiment in what AI collapses and what taste protects.
           </p>
         </div>
         <div class="md:col-span-3 flex flex-col gap-3">
@@ -185,7 +175,6 @@ const beliefs = [
       </div>
     </div>
   </section>
-
   <!-- ===================== -->
   <!-- Recognition row -->
   <!-- ===================== -->
@@ -216,7 +205,6 @@ const beliefs = [
       </div>
     </div>
   </section>
-
   <!-- ===================== -->
   <!-- Work grid -->
   <!-- ===================== -->
@@ -225,7 +213,6 @@ const beliefs = [
       <p class="eyebrow">Selected work</p>
       <p class="text-sm text-ink-muted">2024 to present</p>
     </div>
-
     <div class="space-y-2">
       {
         caseStudies.map((cs, i) => (
@@ -263,7 +250,6 @@ const beliefs = [
       }
     </div>
   </section>
-
   <!-- ===================== -->
   <!-- AI Operating Model block -->
   <!-- ===================== -->
@@ -295,7 +281,6 @@ const beliefs = [
       </div>
     </div>
   </section>
-
   <!-- ===================== -->
   <!-- Bounce block - rich episode embeds, co-hosted -->
   <!-- ===================== -->
@@ -319,7 +304,6 @@ const beliefs = [
         </p>
       </div>
     </div>
-
     <!-- Episode embeds: 3 columns of real episode players -->
     <div class="grid md:grid-cols-3 gap-6 md:gap-8 mb-10">
       <!-- Episode 1 -->
@@ -334,7 +318,6 @@ const beliefs = [
         loading="lazy"
         title="Bounce Podcast"
       ></iframe>
-
       <!-- Episode 2 -->
       <iframe
         style="border-radius:12px"
@@ -347,7 +330,6 @@ const beliefs = [
         loading="lazy"
         title="Bounce Podcast"
       ></iframe>
-
       <!-- Episode 3 -->
       <iframe
         style="border-radius:12px"
@@ -361,7 +343,6 @@ const beliefs = [
         title="Bounce Podcast"
       ></iframe>
     </div>
-
     <!-- Listen on row: integrated, no divider above -->
     <div class="flex flex-wrap items-baseline gap-x-6 gap-y-2">
       <p class="font-mono text-xs uppercase tracking-[0.15em] text-ink-muted">Listen on</p>
@@ -391,7 +372,6 @@ const beliefs = [
       </a>
     </div>
   </section>
-
   <!-- ===================== -->
   <!-- Things I Believe (now with linocut icons per principle) -->
   <!-- ===================== -->
@@ -406,7 +386,6 @@ const beliefs = [
         </h2>
       </div>
     </div>
-
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
       <!-- 01 Personal preference is a hypothesis -->
       <div class="belief-card p-7 md:p-8">
@@ -429,7 +408,6 @@ const beliefs = [
         </div>
         <p class="text-ink-soft leading-relaxed">{beliefs[0].body}</p>
       </div>
-
       <!-- 02 Test early, test often -->
       <div class="belief-card p-7 md:p-8">
         <div class="linocut-icon">
@@ -446,7 +424,6 @@ const beliefs = [
         </div>
         <p class="text-ink-soft leading-relaxed">{beliefs[1].body}</p>
       </div>
-
       <!-- 03 Roadmap is a capital allocation document -->
       <div class="belief-card p-7 md:p-8">
         <div class="linocut-icon">
@@ -471,7 +448,6 @@ const beliefs = [
         </div>
         <p class="text-ink-soft leading-relaxed">{beliefs[2].body}</p>
       </div>
-
       <!-- 04 Live in the now, build for the future -->
       <div class="belief-card p-7 md:p-8">
         <div class="linocut-icon">
@@ -495,7 +471,6 @@ const beliefs = [
       </div>
     </div>
   </section>
-
   <!-- ===================== -->
   <!-- About preview -->
   <!-- ===================== -->
