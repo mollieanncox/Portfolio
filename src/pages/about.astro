@@ -1,6 +1,5 @@
 ---
 import Base from '../layouts/Base.astro';
-
 const leadershipTestimonials = [
   {
     quote: "Mollie has a rare combination of charisma, exceptional intelligence, and leadership in one human being, and the field of design is lucky to have someone in it with such a skillset. Her leadership inspires confidence and fosters a sense of purpose.",
@@ -23,7 +22,6 @@ const leadershipTestimonials = [
     role: "Senior Product Designer",
   },
 ];
-
 const workHistory = [
   {
     company: 'Branch',
@@ -35,7 +33,7 @@ const workHistory = [
     company: 'Course Code',
     role: 'Founder',
     period: '2026 to present',
-    note: 'AI-native consumer product. Solo founder with AI co-founder. 4.6K users, $39/yr Pro tier, live revenue.',
+    note: 'AI-native consumer product. 18K+ courses indexed. 5.2K active users in 30 days. 100% organic growth. A deliberate experiment in what AI collapses and what taste protects.',
   },
   {
     company: 'Veer',
@@ -75,9 +73,7 @@ const workHistory = [
   },
 ];
 ---
-
 <Base title="About · Mollie Cox">
-
   <!-- ============================== -->
   <!-- HERO -->
   <!-- ============================== -->
@@ -89,23 +85,19 @@ const workHistory = [
       >
         ← Home
       </a>
-
       <div class="grid md:grid-cols-12 gap-8 md:gap-16 items-center">
         <div class="md:col-span-7">
           <p class="eyebrow-light mb-6">About</p>
-
           <h1 class="font-display text-display-lg text-cream leading-[0.95] tracking-tight max-w-[22ch]">
             I lead by building the operating system, not just the output<span class="brand-period">.</span>
           </h1>
-
           <p class="mt-10 text-xl text-cream/80 leading-relaxed max-w-[44ch]">
             Twenty years building, scaling, and leading design organizations across
-            enterprise SaaS, fintech, and consumer products. Plus direct experience as
-            a venture-backed CEO. I think about design as a business function, not a
-            craft silo.
+            enterprise SaaS, fintech, and consumer. I architect operating models,
+            build systems that scale, and run experiments on what the design
+            discipline is becoming next.
           </p>
         </div>
-
         <!-- Portrait -->
         <div class="md:col-span-5 flex justify-center md:justify-end">
           <div class="relative max-w-xs md:max-w-sm w-full">
@@ -119,7 +111,6 @@ const workHistory = [
           </div>
         </div>
       </div>
-
       <!-- Meta row -->
       <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-cream/15 relative z-10">
         <div>
@@ -145,7 +136,6 @@ const workHistory = [
       </div>
     </div>
   </section>
-
   <!-- ============================== -->
   <!-- Stats with grid backdrop -->
   <!-- ============================== -->
@@ -174,21 +164,18 @@ const workHistory = [
       </div>
     </div>
   </section>
-
   <!-- ============================== -->
-  <!-- THREE-PILLAR: How I lead -->
+  <!-- FOUR THREADS: How I lead (was 3, now 4) -->
   <!-- ============================== -->
   <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
     <p class="eyebrow mb-3">How I lead</p>
     <h2 class="font-display text-display-md text-ink leading-tight max-w-[26ch] mb-16">
-      Three threads run through everything I do.
+      Four threads run through everything I do.
     </h2>
-
-    <div class="pillar-grid">
-
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8">
       <!-- Operating model -->
-      <div class="pillar">
-        <div class="pillar-icon">
+      <div class="lesson-card">
+        <div class="linocut-icon">
           <!-- Architecture / blueprint -->
           <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
             <rect x="12" y="14" width="56" height="52" fill="#E13D0F" stroke="#02101D" stroke-width="3"/>
@@ -202,27 +189,19 @@ const workHistory = [
             <circle cx="54" cy="56" r="2" fill="#F4EFE5"/>
           </svg>
         </div>
-        <div class="pillar-meta">
-          <p class="eyebrow mb-3">Operating model</p>
-          <h3 class="font-display text-3xl text-ink leading-tight">
-            Architecture, not just output.
-          </h3>
-        </div>
-        <div class="pillar-body">
-          <p class="text-ink-soft leading-relaxed">
-            I architect operating models that move design upstream into product strategy
-            instead of downstream into UI execution. At Branch I redesigned the company-wide
-            product development lifecycle. Four phases, named DACI ownership, mandatory
-            success metrics before Build, and a decision loop that closed the gap between
-            launch and measurement.
-          </p>
-        </div>
-        <div class="pillar-tagline"></div>
+        <p class="font-mono text-xs text-orange uppercase tracking-wider mb-2">Thread 01</p>
+        <h3 class="font-display text-2xl text-ink mb-4 leading-tight">Operating model. Architecture, not just output.</h3>
+        <p class="text-ink-soft leading-relaxed">
+          I architect operating models that move design upstream into product strategy
+          instead of downstream into UI execution. At Branch I redesigned the company-wide
+          product development lifecycle. Four phases, named DACI ownership, mandatory
+          success metrics before Build, and a decision loop that closed the gap between
+          launch and measurement.
+        </p>
       </div>
-
       <!-- Systems at scale -->
-      <div class="pillar">
-        <div class="pillar-icon">
+      <div class="lesson-card">
+        <div class="linocut-icon">
           <!-- Stacked / scaled system -->
           <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
             <rect x="14" y="14" width="20" height="20" fill="#E13D0F" stroke="#02101D" stroke-width="2.5"/>
@@ -233,29 +212,19 @@ const workHistory = [
             <circle cx="40" cy="56" r="3" fill="#F4EFE5"/>
           </svg>
         </div>
-        <div class="pillar-meta">
-          <p class="eyebrow-voice mb-3">Systems at scale</p>
-          <h3 class="font-display text-3xl text-ink leading-tight">
-            Build for the platform.
-          </h3>
-        </div>
-        <div class="pillar-body">
-          <p class="text-ink-soft leading-relaxed">
-            I build design systems that scale across complex platforms. Auxin at Branch
-            spans a multi-product enterprise SaaS surface, with reusable components, a
-            governance model, and Figma-to-code alignment practices that change the
-            relationship between design and engineering. At Fleetio I built the hiring
-            and leveling infrastructure that grew the design org from 6 to 15.
-          </p>
-        </div>
-        <div class="pillar-tagline">
-          <p class="font-display text-2xl italic text-orange">"My eye is the product."</p>
-        </div>
+        <p class="font-mono text-xs uppercase tracking-wider mb-2" style="color: #9B40C4;">Thread 02</p>
+        <h3 class="font-display text-2xl text-ink mb-4 leading-tight">Systems at scale. Build for the platform.</h3>
+        <p class="text-ink-soft leading-relaxed">
+          I build design systems that scale across complex platforms. Auxin at Branch
+          spans a multi-product enterprise SaaS surface, with reusable components, a
+          governance model, and Figma-to-code alignment practices that change the
+          relationship between design and engineering. At Fleetio I built the hiring
+          and leveling infrastructure that grew the design org from 6 to 15.
+        </p>
       </div>
-
       <!-- Business case -->
-      <div class="pillar">
-        <div class="pillar-icon">
+      <div class="lesson-card">
+        <div class="linocut-icon">
           <!-- Chart with rising line -->
           <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
             <line x1="14" y1="14" x2="14" y2="66" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
@@ -267,26 +236,48 @@ const workHistory = [
             <circle cx="60" cy="24" r="3" fill="#02101D"/>
           </svg>
         </div>
-        <div class="pillar-meta">
-          <p class="eyebrow mb-3">Business case</p>
-          <h3 class="font-display text-3xl text-ink leading-tight">
-            Tested methodologies, real data.
-          </h3>
-        </div>
-        <div class="pillar-body">
-          <p class="text-ink-soft leading-relaxed">
-            I translate design decisions into executive-ready business cases grounded in
-            real data. I don't bring opinions to leadership. I bring tested methodologies
-            and the numbers behind them. The Linear migration pilot at Branch is a
-            recent example. The Course Code AI operating model is another.
-          </p>
-        </div>
-        <div class="pillar-tagline"></div>
+        <p class="font-mono text-xs text-orange uppercase tracking-wider mb-2">Thread 03</p>
+        <h3 class="font-display text-2xl text-ink mb-4 leading-tight">Business case. Tested methodologies, real data.</h3>
+        <p class="text-ink-soft leading-relaxed">
+          I translate design decisions into executive-ready business cases grounded in
+          real data. I don't bring opinions to leadership. I bring tested methodologies
+          and the numbers behind them. The Branch repositioning and Auxin migration
+          together saved $1M ARR after a customer re-signed for three years on the
+          new positioning and modernized product surface. The Linear pilot at Branch
+          delivered 2.7× throughput per engineer on real data. The Course Code AI
+          operating model is another.
+        </p>
       </div>
-
+      <!-- Discipline research (NEW fourth thread) -->
+      <div class="lesson-card">
+        <div class="linocut-icon">
+          <!-- Magnifier on a question / specimen jar: methodology research -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Specimen jar / beaker -->
+            <rect x="22" y="22" width="36" height="44" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
+            <rect x="18" y="14" width="44" height="10" fill="#02101D"/>
+            <!-- Liquid line -->
+            <line x1="22" y1="48" x2="58" y2="48" stroke="#02101D" stroke-width="2"/>
+            <!-- Question marks (the experiment) -->
+            <text x="40" y="44" text-anchor="middle" fill="#F4EFE5" font-family="Georgia, serif" font-size="20" font-weight="700">?</text>
+            <!-- Bubbles -->
+            <circle cx="32" cy="58" r="2" fill="#F4EFE5"/>
+            <circle cx="44" cy="60" r="1.5" fill="#F4EFE5"/>
+            <circle cx="50" cy="56" r="1.5" fill="#F4EFE5"/>
+          </svg>
+        </div>
+        <p class="font-mono text-xs uppercase tracking-wider mb-2" style="color: #9B40C4;">Thread 04</p>
+        <h3 class="font-display text-2xl text-ink mb-4 leading-tight">Discipline research. Stress-test the assumptions.</h3>
+        <p class="text-ink-soft leading-relaxed">
+          I run real experiments on the design function and write up what I learn.
+          Course Code was the most recent. I shipped a live consumer product without
+          opening Figma to test which artifacts in the design process are load-bearing
+          and which exist only because we were anxious. The findings became the
+          operating model.
+        </p>
+      </div>
     </div>
   </section>
-
   <!-- ============================== -->
   <!-- Where I've been -->
   <!-- ============================== -->
@@ -296,7 +287,6 @@ const workHistory = [
       <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch] mb-16">
         Twenty years across the work.
       </h2>
-
       <div class="grid md:grid-cols-2 gap-4 md:gap-6">
         {
           workHistory.map((job) => (
@@ -311,19 +301,16 @@ const workHistory = [
           ))
         }
       </div>
-
       <p class="mt-10 text-sm text-ink-muted leading-relaxed max-w-reading">
         Plus earlier creative leadership roles at Thought District (digital agency, $1.2M+ client budgets) and HobbyTown (national retail franchise, helped grow annual sales to $300M+).
       </p>
     </div>
   </section>
-
   <!-- ============================== -->
   <!-- Education + speaking/teaching -->
   <!-- ============================== -->
   <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
     <div class="grid md:grid-cols-2 gap-12 md:gap-16">
-
       <div>
         <p class="eyebrow mb-3">Education</p>
         <h2 class="font-display text-display-md text-ink leading-tight mb-10">
@@ -344,7 +331,6 @@ const workHistory = [
           </div>
         </div>
       </div>
-
       <div>
         <p class="eyebrow mb-3">Speaking, teaching, writing</p>
         <h2 class="font-display text-display-md text-ink leading-tight mb-10">
@@ -368,10 +354,8 @@ const workHistory = [
           </div>
         </div>
       </div>
-
     </div>
   </section>
-
   <!-- ============================== -->
   <!-- Leadership testimonials -->
   <!-- ============================== -->
@@ -381,7 +365,6 @@ const workHistory = [
       <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch] mb-16">
         From people I've led.
       </h2>
-
       <div class="grid md:grid-cols-2 gap-6 md:gap-8">
         {
           leadershipTestimonials.map((t, i) => (
@@ -399,7 +382,6 @@ const workHistory = [
           ))
         }
       </div>
-
       <p class="mt-10 text-sm text-ink-muted">
         <a href="/teaching" class="hover:text-orange border-b border-ink-muted/30 hover:border-orange transition-colors">
           Read more testimonials from designers I've taught and mentored →
@@ -407,7 +389,6 @@ const workHistory = [
       </p>
     </div>
   </section>
-
   <!-- ============================== -->
   <!-- Outside of work -->
   <!-- ============================== -->
@@ -452,7 +433,6 @@ const workHistory = [
       </div>
     </div>
   </section>
-
   <!-- ============================== -->
   <!-- Contact -->
   <!-- ============================== -->
@@ -461,12 +441,10 @@ const workHistory = [
     <div class="grid-backdrop-band-bottom"></div>
     <div class="max-w-7xl mx-auto px-6 md:px-10 py-28 md:py-36 relative z-10">
       <p class="eyebrow-voice mb-8">Get in touch</p>
-
-      <h2 class="font-display text-ink leading-[0.95] tracking-tight mb-12" style="font-size: clamp(2.5rem, 6vw, 5.5rem);">
-        Always happy to talk shop with thoughtful builders.<br/>
+      <h2 class="font-display text-ink leading-[0.95] tracking-tight mb-12" style="font-size: clamp(2rem, 6vw, 5.5rem);">
+        Always happy to talk shop with thoughtful builders and leaders.<br/>
         <span class="text-orange">Reach out.</span>
       </h2>
-
       <div class="flex flex-wrap gap-4">
         <a
           href="mailto:molliecox@gmail.com"
@@ -487,5 +465,4 @@ const workHistory = [
       </div>
     </div>
   </section>
-
 </Base>

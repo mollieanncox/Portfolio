@@ -1,7 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-
 <Base
   title="How I Lead with AI · Mollie Cox"
   description="An operating model, not a tool list. How Mollie Cox builds with AI as a co-founder, not a calculator."
@@ -17,18 +16,24 @@ import Base from '../layouts/Base.astro';
       >
         ← Home
       </a>
-
       <p class="eyebrow-light mb-6">AI Operating Model</p>
-
       <h1 class="font-display text-display-lg text-cream leading-[0.95] tracking-tight max-w-[22ch]">
         How I actually lead with AI<span class="brand-period">.</span>
       </h1>
-
       <p class="mt-10 text-xl text-cream/80 leading-relaxed max-w-[48ch]">
         Everyone in 2026 says they use AI. Very few have redesigned how they work
         around what AI can actually do. Not a page about tools. A page about
         treating AI like a co-founder instead of a calculator.
       </p>
+
+      <!-- The hypothesis: the thesis carried over from Course Code -->
+      <div class="mt-10 py-6 border-y border-orange/30 max-w-[48ch]">
+        <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-orange font-semibold mb-3">The hypothesis</p>
+        <p class="font-display text-cream leading-[1.1] tracking-tight" style="font-size: clamp(1.5rem, 2.4vw, 2rem);">
+          AI can execute<span class="text-orange">.</span><br/>
+          Taste cannot be delegated<span class="text-orange">.</span>
+        </p>
+      </div>
 
       <!-- 3-stat visual moment: gives the hero data weight -->
       <div class="mt-20 grid grid-cols-3 gap-6 md:gap-12 pt-10 border-t border-cream/15 max-w-3xl">
@@ -47,7 +52,6 @@ import Base from '../layouts/Base.astro';
       </div>
     </div>
   </section>
-
   <!-- =============================== -->
   <!-- The distinction (pull quote moment) -->
   <!-- =============================== -->
@@ -56,7 +60,7 @@ import Base from '../layouts/Base.astro';
     <div class="grid-backdrop-band-bottom"></div>
     <div class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32 relative z-10">
       <p class="eyebrow-voice mb-8">The distinction</p>
-      <h2 class="font-display text-ink leading-[1.0] tracking-tight max-w-[24ch]" style="font-size: clamp(2.5rem, 5.5vw, 5rem);">
+      <h2 class="font-display text-ink leading-[1.0] tracking-tight max-w-[24ch]" style="font-size: clamp(2rem, 5.5vw, 5rem);">
         AI as a faster keyboard is useful. <span class="text-orange italic">AI with real authority is something else.</span>
       </h2>
       <div class="mt-16 grid md:grid-cols-2 gap-12 max-w-5xl">
@@ -73,7 +77,6 @@ import Base from '../layouts/Base.astro';
       </div>
     </div>
   </section>
-
   <!-- =============================== -->
   <!-- THREE DOCUMENTS (3-pillar with linocut icons) -->
   <!-- =============================== -->
@@ -82,21 +85,16 @@ import Base from '../layouts/Base.astro';
     <h2 class="font-display text-display-md text-ink leading-tight max-w-[26ch] mb-16">
       Three documents run everything.
     </h2>
-
     <div class="pillar-grid">
-
       <!-- SOUL.md -->
       <div class="pillar">
         <div class="pillar-icon">
           <!-- Heart with internal hatching = "soul" -->
           <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-            <!-- Heart fill -->
             <path d="M40 66 C 20 50, 10 38, 10 26 C 10 18, 18 12, 26 14 C 32 15, 38 20, 40 26 C 42 20, 48 15, 54 14 C 62 12, 70 18, 70 26 C 70 38, 60 50, 40 66 Z" fill="#E13D0F"/>
-            <!-- Hatching texture inside -->
             <line x1="22" y1="30" x2="32" y2="40" stroke="#F4EFE5" stroke-width="1.2" opacity="0.6"/>
             <line x1="28" y1="26" x2="40" y2="38" stroke="#F4EFE5" stroke-width="1.2" opacity="0.6"/>
             <line x1="36" y1="28" x2="48" y2="40" stroke="#F4EFE5" stroke-width="1.2" opacity="0.6"/>
-            <!-- Outer outline -->
             <path d="M40 66 C 20 50, 10 38, 10 26 C 10 18, 18 12, 26 14 C 32 15, 38 20, 40 26 C 42 20, 48 15, 54 14 C 62 12, 70 18, 70 26 C 70 38, 60 50, 40 66 Z" fill="none" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
           </svg>
         </div>
@@ -116,24 +114,17 @@ import Base from '../layouts/Base.astro';
         </div>
         <div class="pillar-tagline"></div>
       </div>
-
       <!-- AGENTS.md -->
       <div class="pillar">
         <div class="pillar-icon">
-          <!-- Scroll / agreement: rolled top edge, ruled lines inside -->
           <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-            <!-- Top scroll roll -->
             <ellipse cx="40" cy="14" rx="22" ry="6" fill="#E13D0F"/>
-            <!-- Body of scroll -->
             <rect x="18" y="14" width="44" height="48" fill="#E13D0F"/>
-            <!-- Bottom roll -->
             <ellipse cx="40" cy="62" rx="22" ry="6" fill="#02101D"/>
-            <!-- Ruled lines (cream) -->
             <line x1="24" y1="26" x2="56" y2="26" stroke="#F4EFE5" stroke-width="2"/>
             <line x1="24" y1="34" x2="56" y2="34" stroke="#F4EFE5" stroke-width="2"/>
             <line x1="24" y1="42" x2="50" y2="42" stroke="#F4EFE5" stroke-width="2"/>
             <line x1="24" y1="50" x2="56" y2="50" stroke="#F4EFE5" stroke-width="2"/>
-            <!-- Outer outline -->
             <ellipse cx="40" cy="14" rx="22" ry="6" fill="none" stroke="#02101D" stroke-width="2.5"/>
             <line x1="18" y1="14" x2="18" y2="62" stroke="#02101D" stroke-width="2.5"/>
             <line x1="62" y1="14" x2="62" y2="62" stroke="#02101D" stroke-width="2.5"/>
@@ -155,21 +146,15 @@ import Base from '../layouts/Base.astro';
         </div>
         <div class="pillar-tagline"></div>
       </div>
-
       <!-- MEMORY.md -->
       <div class="pillar">
         <div class="pillar-icon">
-          <!-- Brain / book hybrid: filled brain shape with hatching -->
           <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-            <!-- Brain main fill -->
             <path d="M40 14 C 28 14, 20 22, 20 32 C 18 36, 18 42, 22 46 C 22 54, 28 60, 36 60 L 44 60 C 52 60, 58 54, 58 46 C 62 42, 62 36, 60 32 C 60 22, 52 14, 40 14 Z" fill="#E13D0F"/>
-            <!-- Hatching folds (navy lines) -->
             <path d="M30 24 Q 36 28, 32 34 Q 28 38, 34 44" fill="none" stroke="#02101D" stroke-width="2" stroke-linecap="round"/>
             <path d="M48 24 Q 42 28, 46 34 Q 50 38, 44 44" fill="none" stroke="#02101D" stroke-width="2" stroke-linecap="round"/>
             <path d="M40 18 L 40 56" stroke="#02101D" stroke-width="2.5"/>
-            <!-- Outline -->
             <path d="M40 14 C 28 14, 20 22, 20 32 C 18 36, 18 42, 22 46 C 22 54, 28 60, 36 60 L 44 60 C 52 60, 58 54, 58 46 C 62 42, 62 36, 60 32 C 60 22, 52 14, 40 14 Z" fill="none" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
-            <!-- Pedestal/stem (book-like) -->
             <rect x="32" y="60" width="16" height="6" fill="#02101D"/>
           </svg>
         </div>
@@ -189,10 +174,8 @@ import Base from '../layouts/Base.astro';
         </div>
         <div class="pillar-tagline"></div>
       </div>
-
     </div>
   </section>
-
   <!-- =============================== -->
   <!-- Authority structure: two columns -->
   <!-- =============================== -->
@@ -202,17 +185,16 @@ import Base from '../layouts/Base.astro';
       <h2 class="font-display text-display-md text-ink leading-tight max-w-[28ch] mb-16">
         What stays with me, what gets delegated.
       </h2>
-
       <div class="grid md:grid-cols-2 gap-6 md:gap-8">
         <div class="compare-cream">
           <p class="eyebrow mb-8">What I own. Non-delegable.</p>
           <div class="space-y-4">
             {[
-              { what: 'Brand direction and voice', why: "Taste can't be systematized" },
+              { what: 'Taste', why: 'Cannot be delegated. The hypothesis this page tests.' },
+              { what: 'Judgment', why: 'The hundred small calls about what this product is, who it is for, and what it refuses to be' },
+              { what: 'Brand direction and voice', why: "The product is the voice. Generic is the enemy of taste" },
               { what: 'Pricing and positioning', why: 'Requires market intuition and judgment' },
               { what: "Who we're building for", why: 'Empathy and values, not data alone' },
-              { what: 'Aesthetic judgment', why: 'My eye is the product' },
-              { what: 'Editorial standards', why: 'The product is the voice' },
               { what: 'Strategic pivots', why: 'Consequence too high, context too human' },
               { what: 'Anything public-facing I haven\'t reviewed', why: 'My reputation' },
             ].map((row) => (
@@ -223,7 +205,6 @@ import Base from '../layouts/Base.astro';
             ))}
           </div>
         </div>
-
         <div class="compare-dark">
           <p class="eyebrow-light mb-8">What she owns. Full execution authority.</p>
           <div class="space-y-4">
@@ -246,7 +227,6 @@ import Base from '../layouts/Base.astro';
       </div>
     </div>
   </section>
-
   <!-- =============================== -->
   <!-- Three layers of AI -->
   <!-- =============================== -->
@@ -255,19 +235,16 @@ import Base from '../layouts/Base.astro';
     <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch] mb-16">
       Three layers of AI in Course Code.
     </h2>
-
     <div class="space-y-6">
       <!-- Layer 1 -->
       <div class="lesson-card">
         <div class="grid md:grid-cols-12 gap-8 items-start">
           <div class="md:col-span-3">
             <div class="linocut-icon mb-4">
-              <!-- AI brain / chip mark -->
               <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
                 <rect x="20" y="20" width="40" height="40" fill="#E13D0F"/>
                 <rect x="28" y="28" width="24" height="24" fill="#02101D"/>
                 <circle cx="40" cy="40" r="4" fill="#F4EFE5"/>
-                <!-- Pins -->
                 <line x1="20" y1="28" x2="14" y2="28" stroke="#02101D" stroke-width="2.5"/>
                 <line x1="20" y1="40" x2="14" y2="40" stroke="#02101D" stroke-width="2.5"/>
                 <line x1="20" y1="52" x2="14" y2="52" stroke="#02101D" stroke-width="2.5"/>
@@ -301,16 +278,13 @@ import Base from '../layouts/Base.astro';
           </div>
         </div>
       </div>
-
       <!-- Layer 2 -->
       <div class="lesson-card">
         <div class="grid md:grid-cols-12 gap-8 items-start">
           <div class="md:col-span-3">
             <div class="linocut-icon mb-4">
-              <!-- Lightning bolt: intelligence flowing through product -->
               <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
                 <path d="M44 10 L 20 44 L 36 44 L 30 70 L 60 32 L 44 32 Z" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
-                <!-- Inner hatching -->
                 <line x1="30" y1="36" x2="38" y2="28" stroke="#F4EFE5" stroke-width="1.5" opacity="0.6"/>
                 <line x1="32" y1="50" x2="46" y2="40" stroke="#F4EFE5" stroke-width="1.5" opacity="0.6"/>
               </svg>
@@ -327,21 +301,18 @@ import Base from '../layouts/Base.astro';
             <p class="text-lg text-ink-soft leading-relaxed">
               The data extraction pipeline uses Claude to normalize and structure dress
               code data at a quality level no regex pipeline could match. The moat isn't
-              4,659 courses. The moat is verified data plus a women's POV editorial layer
+              18K+ courses. The moat is verified data plus a women's POV editorial layer
               plus a brand voice. Claude is what makes that scalable without losing quality.
             </p>
           </div>
         </div>
       </div>
-
       <!-- Layer 3 -->
       <div class="lesson-card">
         <div class="grid md:grid-cols-12 gap-8 items-start">
           <div class="md:col-span-3">
             <div class="linocut-icon mb-4">
-              <!-- Gear with internal teeth -->
               <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                <!-- Gear teeth as a star-like shape -->
                 <path d="M40 8 L 46 14 L 54 12 L 56 20 L 64 22 L 62 30 L 70 36 L 64 42 L 68 50 L 60 54 L 60 62 L 52 62 L 46 68 L 40 64 L 34 68 L 28 62 L 20 62 L 20 54 L 12 50 L 16 42 L 10 36 L 18 30 L 16 22 L 24 20 L 26 12 L 34 14 Z" fill="#E13D0F"/>
                 <circle cx="40" cy="40" r="14" fill="#02101D"/>
                 <circle cx="40" cy="40" r="6" fill="#F4EFE5"/>
@@ -370,7 +341,6 @@ import Base from '../layouts/Base.astro';
       </div>
     </div>
   </section>
-
   <!-- =============================== -->
   <!-- Cost discipline (the part most skip) -->
   <!-- =============================== -->
@@ -380,7 +350,6 @@ import Base from '../layouts/Base.astro';
       <h2 class="font-display text-display-md text-ink leading-tight max-w-[24ch] mb-12">
         The part most AI evangelists skip.
       </h2>
-
       <div class="max-w-reading mb-16">
         <p class="text-xl text-ink-soft leading-relaxed">
           Running AI at production scale without cost controls is how you burn $13
@@ -388,7 +357,6 @@ import Base from '../layouts/Base.astro';
           file. I learned this the expensive way.
         </p>
       </div>
-
       <p class="eyebrow mb-6">Six rules</p>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-16">
         {[
@@ -406,7 +374,6 @@ import Base from '../layouts/Base.astro';
           </div>
         ))}
       </div>
-
       <!-- The result, pulled out as a visual moment -->
       <div class="grid md:grid-cols-12 gap-8 items-center pt-12 border-t border-ink/10">
         <div class="md:col-span-4">
@@ -424,17 +391,15 @@ import Base from '../layouts/Base.astro';
       </div>
     </div>
   </section>
-
   <!-- =============================== -->
-  <!-- What changed (dark before/after) -->
+  <!-- What actually changed (dark, with load-bearing/anxious framing) -->
   <!-- =============================== -->
   <section class="bg-ink text-cream py-24 md:py-32">
     <div class="max-w-7xl mx-auto px-6 md:px-10">
       <p class="eyebrow-light mb-3">What actually changed</p>
-      <h2 class="font-display text-display-md text-cream leading-tight max-w-[28ch] mb-20">
-        The bottleneck shifted from execution to clarity<span class="text-orange">.</span>
+      <h2 class="font-display text-display-md text-cream leading-tight max-w-[32ch] mb-20">
+        The artifact stack collapsed. The work that's left got harder<span class="text-orange">.</span>
       </h2>
-
       <div class="grid md:grid-cols-2 gap-16 md:gap-20 mb-20">
         <div>
           <p class="eyebrow-light mb-6">Before</p>
@@ -445,27 +410,96 @@ import Base from '../layouts/Base.astro';
         <div>
           <p class="eyebrow-light mb-6">After</p>
           <p class="font-display text-cream leading-[1.05] italic" style="font-size: clamp(1.75rem, 3.5vw, 3rem);">
-            Blocked on <span class="text-orange">"exactly what do I want this to do."</span>
+            Blocked on <span class="text-orange">"exactly what do I want this to do, and is this output good enough to ship."</span>
           </p>
         </div>
       </div>
-
       <div class="max-w-reading">
         <p class="text-lg text-cream/80 leading-relaxed mb-6">
-          Spec quality became the highest-leverage skill I have. When AI handles
-          execution, every decision that stays with me became more consequential.
-          I'm not reviewing PRs. I'm making brand calls, pricing decisions,
-          positioning choices.
+          Spec quality and taste became the highest-leverage skills I have.
+          When AI handles execution, every decision that stays with me became
+          more consequential. I'm not reviewing PRs. I'm making brand calls,
+          pricing decisions, positioning choices, and rejecting the ninety-nine
+          outputs that aren't good enough so the right one ships.
         </p>
         <p class="text-lg text-cream/80 leading-relaxed">
-          This is the counterintuitive truth about delegating execution to AI: it
-          doesn't make your job less important. It makes it more important, because
-          your judgment is now the actual bottleneck.
+          The counterintuitive truth: delegating execution to AI does not make
+          designers less important. It makes us more important. The work that
+          is left is the hardest work designers do.
         </p>
       </div>
     </div>
   </section>
-
+  <!-- =============================== -->
+  <!-- The no-Figma experiment (bridge to Course Code) -->
+  <!-- =============================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
+    <p class="eyebrow mb-3">The experiment</p>
+    <h2 class="font-display text-display-md text-ink leading-tight max-w-[30ch] mb-12">
+      I shipped a real consumer product without opening Figma<span class="text-orange">.</span>
+    </h2>
+    <div class="grid md:grid-cols-12 gap-8 md:gap-12">
+      <div class="md:col-span-7 max-w-reading">
+        <p class="text-xl text-ink-soft leading-relaxed mb-6">
+          Not as a stunt. As a deliberate stress test on the design discipline.
+          No wireframes. No mocks. No prototypes. No spec docs translating intent
+          for engineers. Brief, prompt, judge, ship.
+        </p>
+        <p class="text-xl text-ink-soft leading-relaxed mb-6">
+          The AI operating model on this page is the infrastructure that made it
+          possible. The experiment proved which artifacts in the design process
+          are load-bearing and which exist only because the assembly line was
+          anxious about handoffs. AI dissolved most of the handoffs. The defenses
+          came down. Taste and judgment stepped forward.
+        </p>
+        <p class="text-xl text-ink leading-relaxed font-display mb-8">
+          The case study is the proof. The operating model on this page is the how.
+        </p>
+        <a
+          href="/work/course-code"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
+          style="border-radius: 999px;"
+        >
+          Read the Course Code case study →
+        </a>
+      </div>
+      <div class="md:col-span-5">
+        <div class="border-2 border-orange p-6 md:p-8 h-full flex flex-col" style="border-radius: 14px; background: rgba(225,61,15,0.04);">
+          <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-orange font-semibold mb-6">What the experiment proved</p>
+          <ul class="space-y-5">
+            <li class="flex items-baseline gap-3">
+              <span class="font-mono text-[10px] text-orange font-semibold">01</span>
+              <div>
+                <p class="font-display text-lg text-ink leading-tight">The brief is the design.</p>
+                <p class="text-xs text-ink-soft leading-snug mt-1">Once the spec was right, the output was 90% right on the first try.</p>
+              </div>
+            </li>
+            <li class="flex items-baseline gap-3">
+              <span class="font-mono text-[10px] text-orange font-semibold">02</span>
+              <div>
+                <p class="font-display text-lg text-ink leading-tight">Taste does more work than ever.</p>
+                <p class="text-xs text-ink-soft leading-snug mt-1">100 options at the speed of one. Knowing which one ships is the job.</p>
+              </div>
+            </li>
+            <li class="flex items-baseline gap-3">
+              <span class="font-mono text-[10px] text-orange font-semibold">03</span>
+              <div>
+                <p class="font-display text-lg text-ink leading-tight">Authority beats access.</p>
+                <p class="text-xs text-ink-soft leading-snug mt-1">The differentiator is what you tell it to do, and what you refuse to ship.</p>
+              </div>
+            </li>
+            <li class="flex items-baseline gap-3">
+              <span class="font-mono text-[10px] text-orange font-semibold">04</span>
+              <div>
+                <p class="font-display text-lg text-ink leading-tight">The artifact stack collapsed.</p>
+                <p class="text-xs text-ink-soft leading-snug mt-1">Wireframe, mock, prototype, spec. All compressed into one prompt-and-judge loop.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- =============================== -->
   <!-- Meta-point -->
   <!-- =============================== -->
@@ -474,20 +508,26 @@ import Base from '../layouts/Base.astro';
     <div class="grid-backdrop-band-bottom"></div>
     <div class="max-w-7xl mx-auto px-6 md:px-10 py-28 md:py-36 relative z-10">
       <p class="eyebrow-voice mb-8">The meta-point</p>
-
-      <h2 class="font-display text-ink leading-[0.95] tracking-tight mb-12" style="font-size: clamp(2.5rem, 6vw, 5.5rem);">
-        Stop asking how to use AI faster.<br/>
-        <span class="text-orange">Start asking how to redesign the work itself.</span>
+      <h2 class="font-display text-ink leading-[0.95] tracking-tight mb-12" style="font-size: clamp(2rem, 6vw, 5.5rem);">
+        The artifact stack collapsed.<br/>
+        <span class="text-orange">Taste and judgment did not.</span>
       </h2>
-
       <div class="max-w-3xl">
-        <p class="text-xl text-ink-soft leading-relaxed mb-12">
-          The question every product leader should be asking in 2026 isn't "how do
-          I use AI to work faster." It's "how do I redesign the operating model of
-          this business around what AI can actually do?" That's what I built with
-          Course Code. That's what I bring to every product org I work in.
+        <p class="text-xl text-ink-soft leading-relaxed mb-6">
+          Most of the artifact stack we trained a generation of designers to build,
+          the wireframes, mocks, prototypes, spec docs, handoff files, existed because
+          each station didn't trust the next. AI dissolved most of those handoffs.
+          The defenses became unnecessary.
         </p>
-
+        <p class="text-xl text-ink-soft leading-relaxed mb-12">
+          What didn't collapse is taste and judgment. The hundred small calls about
+          which screen ships, what the product refuses to be, which ninety-nine
+          outputs die so the right one survives. Those calls cost me hundreds of
+          hours on Course Code. AI could not make any of them for me. That is the
+          case for designers in 2026. We are not less important. We are more important.
+          The senior move is deleting the anxious artifacts and protecting the
+          irreducible ones.
+        </p>
         <div class="flex flex-wrap gap-4">
           <a
             href="/work/course-code"
