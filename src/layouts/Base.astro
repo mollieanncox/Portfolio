@@ -1,16 +1,13 @@
 ---
 import '../styles/global.css';
-
 interface Props {
   title: string;
   description?: string;
 }
-
 const {
   title,
   description = 'Mollie Cox. Product and design leader. Twenty years building product experience at enterprise SaaS, fintech, and consumer. Sr. Director of Product Experience at Branch. Founder of Course Code, a live AI-native consumer product built solo with an AI co-founder.',
 } = Astro.props;
-
 // Strip trailing slash for consistent comparison across Astro build modes
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isWork = path === '/' || path.startsWith('/work');
@@ -18,7 +15,6 @@ const isAI = path === '/ai';
 const isTeaching = path === '/teaching';
 const isAbout = path === '/about';
 ---
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,24 +22,19 @@ const isAbout = path === '/about';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
     <!-- Adobe Fonts (New Spirit) -->
     <link rel="stylesheet" href="https://use.typekit.net/nbd2daq.css" />
-
     <!-- Fontshare (Satoshi) -->
     <link
       rel="stylesheet"
       href="https://api.fontshare.com/v2/css?f[]=satoshi@301,401,501,701&display=swap"
     />
-
     <!-- Google Fonts (JetBrains Mono) -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
     />
-
     <title>{title}</title>
-
     <!-- Open Graph / Facebook / LinkedIn / Slack / iMessage -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -53,13 +44,20 @@ const isAbout = path === '/about';
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Mollie Cox. Great design is a moral imperative." />
-
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="https://molliecox.com/og-image.png" />
     <meta name="twitter:image:alt" content="Mollie Cox. Great design is a moral imperative." />
+    <!-- Google Analytics (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-WPMTLV85TL"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WPMTLV85TL');
+    </script>
   </head>
   <body>
     <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-cream/80 border-b border-ink/5">
@@ -67,7 +65,6 @@ const isAbout = path === '/about';
         <a href="/" class="font-display text-xl text-ink hover:text-orange transition-colors">
           Mollie Cox<span class="brand-period">.</span>
         </a>
-
         <!-- Desktop nav -->
         <div class="hidden md:flex items-center gap-7 text-sm">
           <a href="/#work" class={`nav-link ${isWork ? 'nav-link-current' : ''}`}>Work</a>
@@ -75,7 +72,6 @@ const isAbout = path === '/about';
           <a href="/teaching" class={`nav-link ${isTeaching ? 'nav-link-current' : ''}`}>Teaching</a>
           <a href="/about" class={`nav-link ${isAbout ? 'nav-link-current' : ''}`}>About</a>
           <a href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP" target="_blank" rel="noopener" class="nav-link">Bounce</a>
-
           <!-- Contact CTA button -->
           <a
             href="mailto:molliecox@gmail.com"
@@ -85,7 +81,6 @@ const isAbout = path === '/about';
             Contact →
           </a>
         </div>
-
         <!-- Mobile hamburger button -->
         <button
           id="mobile-menu-toggle"
@@ -98,7 +93,6 @@ const isAbout = path === '/about';
         </button>
       </nav>
     </header>
-
     <!-- Mobile menu overlay - OUTSIDE the header to avoid backdrop-blur stacking context trap -->
     <div
       id="mobile-menu"
@@ -121,7 +115,6 @@ const isAbout = path === '/about';
           </svg>
         </button>
       </div>
-
       <!-- Nav links centered in remaining vertical space -->
       <div style="display: flex; flex-direction: column; justify-content: center; padding: 0 2rem 3rem; height: calc(100vh - 5rem);">
         <div style="display: flex; flex-direction: column; gap: 2rem;">
@@ -131,7 +124,6 @@ const isAbout = path === '/about';
           <a href="/about" class="mobile-nav-link font-display text-ink" style="font-size: 2.25rem; text-decoration: none;">About<span class="brand-period">.</span></a>
           <a href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP" target="_blank" rel="noopener" class="mobile-nav-link font-display text-ink" style="font-size: 2.25rem; text-decoration: none;">Bounce<span class="brand-period">.</span></a>
         </div>
-
         <div style="margin-top: 4rem;">
           <a
             href="mailto:molliecox@gmail.com"
@@ -143,16 +135,13 @@ const isAbout = path === '/about';
         </div>
       </div>
     </div>
-
     <script>
       const toggle = document.getElementById('mobile-menu-toggle');
       const closeBtn = document.getElementById('mobile-menu-close');
       const menu = document.getElementById('mobile-menu');
       const lines = document.querySelectorAll('.hamburger-line');
       const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-
       let isOpen = false;
-
       function setMenu(open) {
         if (!menu) return;
         isOpen = open;
@@ -172,21 +161,17 @@ const isAbout = path === '/about';
           lines[2]?.classList.remove('-translate-y-2', '-rotate-45');
         }
       }
-
       toggle?.addEventListener('click', () => setMenu(!isOpen));
       closeBtn?.addEventListener('click', () => setMenu(false));
       mobileLinks.forEach(link => link.addEventListener('click', () => setMenu(false)));
-
       // Close on resize to desktop (avoids stuck-open state on rotation)
       window.addEventListener('resize', () => {
         if (window.innerWidth >= 768 && isOpen) setMenu(false);
       });
     </script>
-
     <main class="pt-24">
       <slot />
     </main>
-
     <footer class="py-16 border-t border-ink/10">
       <div class="max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-3 gap-8">
         <div>

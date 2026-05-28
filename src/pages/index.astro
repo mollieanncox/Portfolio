@@ -1,48 +1,53 @@
 ---
 import Base from '../layouts/Base.astro';
-const caseStudies = [
+
+// Top 4: outcomes-led case studies, shown as cinematic horizontal scroll cards
+const showcaseStudies = [
   {
     slug: 'course-code',
     eyebrow: 'Course Code · 2026 to present',
-    title: 'Course Code: an AI-native consumer product, solo',
-    summary:
-      'Built a live consumer app from zero to 5.2K active users in ten weeks. Solo, with an AI co-founder. A deliberate experiment in what AI collapses and what taste protects.',
+    title: 'An AI-native consumer product',
+    hook: 'Built solo with an AI co-founder. A deliberate experiment in what AI collapses and what taste protects.',
     metric: '5.2K',
     metricLabel: 'Active users (30 days)',
+    artwork: 'course-code',
   },
   {
     slug: 'linear-migration',
     eyebrow: 'Branch · 2026',
     title: 'Migrating an engineering org from Jira to Linear',
-    summary:
-      'A six-week pilot, 2.7× throughput, and a measurable enterprise-scale rollout decision. Built on real engineer data.',
+    hook: 'Six-week pilot with real engineers. The data made the case for an enterprise rollout decision.',
     metric: '2.7×',
     metricLabel: 'Throughput per engineer',
+    artwork: 'linear',
   },
   {
     slug: 'branch-repositioning',
     eyebrow: 'Branch · 2025 to 2026',
     title: 'Repositioning a company through web and product narrative',
-    summary:
-      'Led the product and experience strategy behind a public B2B SaaS rebrand. A new market story, a product-led website, a sharper voice. One enterprise customer re-signed for three years on the strength of the new positioning.',
+    hook: 'Public B2B SaaS rebrand. An enterprise customer re-signed for three years on the strength of the new positioning and modernized product surface.',
     metric: '$1M',
     metricLabel: 'ARR retained at launch',
+    artwork: 'branch-repositioning',
   },
   {
     slug: 'auxin-design-system',
     eyebrow: 'Branch · 2024 to 2026',
     title: 'A design system for a multi-product platform',
-    summary:
-      'Scalable component library, governance model, intake process, and Figma-to-code alignment across a complex enterprise SaaS surface. 94% adoption. 2× pod velocity. Zero custom components shipped.',
+    hook: 'Component library, governance, intake, and Figma-to-code alignment across a complex enterprise SaaS surface.',
     metric: '94%',
     metricLabel: 'Component adoption',
+    artwork: 'auxin',
   },
+];
+
+// Bottom 3: in-flight operating model work, shown as a simple list
+const operatingWork = [
   {
     slug: 'inner-circle',
     eyebrow: 'Branch · 2025 to 2026',
     title: 'Building a customer signal engine',
-    summary:
-      'A structured customer program that turned ad hoc feedback into a repeatable VOC loop. EMEA pilot reached 7 enterprise accounts across 4 verticals and influenced 8 roadmap items.',
+    summary: 'A structured customer program that turned ad hoc feedback into a repeatable VOC loop. EMEA pilot reached 7 enterprise accounts across 4 verticals and influenced 8 roadmap items.',
     metric: '8',
     metricLabel: 'Roadmap items influenced',
   },
@@ -50,8 +55,7 @@ const caseStudies = [
     slug: 'px-org-strategy',
     eyebrow: 'Branch · 2025 to 2026',
     title: 'From design function to product experience organization',
-    summary:
-      'Evolved a design-centered team into a multi-disciplinary product organization spanning design, content, documentation, research, education, community, and AI. Six pillars, one North Star.',
+    summary: 'Evolved a design-centered team into a multi-disciplinary product organization spanning design, content, documentation, research, education, community, and AI.',
     metric: '6',
     metricLabel: 'Pillars, one North Star',
   },
@@ -59,12 +63,12 @@ const caseStudies = [
     slug: 'pdlc-redesign',
     eyebrow: 'Branch · 2025 to 2026',
     title: 'Redesigning the product development lifecycle',
-    summary:
-      'A four-phase operating model with named DACI ownership that pulled design upstream into discovery and closed the loop on measurement.',
+    summary: 'A four-phase operating model with named DACI ownership that pulled design upstream into discovery and closed the loop on measurement.',
     metric: '4',
     metricLabel: 'Phases, full lifecycle',
   },
 ];
+
 const beliefs = [
   {
     title: 'Personal preference is a hypothesis',
@@ -136,45 +140,86 @@ const beliefs = [
       </div>
     </div>
   </section>
+
   <!-- ===================== -->
-  <!-- Currently building -->
+  <!-- COURSE CODE FOUNDER MOMENT · moved up + upgraded (Move 1 Option B + Move 4 Option A) -->
   <!-- ===================== -->
   <section class="bg-ink text-cream relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28 relative z-10">
-      <div class="grid md:grid-cols-12 gap-8 items-start">
-        <div class="md:col-span-3">
-          <p class="font-mono text-xs uppercase tracking-[0.18em] text-cream/60 mb-3">Currently building</p>
-          <p class="font-display text-3xl text-orange">Course Code</p>
-        </div>
-        <div class="md:col-span-6 max-w-reading">
-          <p class="font-display text-2xl text-cream leading-tight mb-4">
-            A live consumer app built solo with an AI co-founder<span class="text-orange">.</span>
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-36 relative z-10">
+      <div class="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
+        <!-- Left: the founder framing -->
+        <div class="md:col-span-7">
+          <div class="inline-flex items-center gap-3 mb-8 px-3 py-1.5 border border-orange/40 rounded-full bg-orange/10">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-orange"></span>
+            </span>
+            <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-orange font-semibold">Currently building · Live in market</span>
+          </div>
+          <p class="font-display text-orange leading-none mb-8" style="font-size: clamp(3.5rem, 8vw, 6rem);">
+            Course Code<span class="brand-period">.</span>
           </p>
-          <p class="text-cream/80 leading-relaxed">
-            18K+ golf courses indexed. 5.2K active users in 30 days. 100% organic growth. A deliberate experiment in what AI collapses and what taste protects.
+          <h2 class="font-display text-cream leading-[1.05] tracking-tight max-w-[24ch] mb-10" style="font-size: clamp(1.75rem, 3.5vw, 2.75rem);">
+            A live consumer product, built solo with an AI co-founder<span class="text-orange">.</span>
+          </h2>
+          <p class="text-xl text-cream/80 leading-relaxed max-w-[48ch] mb-10">
+            18K+ golf courses indexed. 5.2K active users in 30 days. 100% organic growth.
+            A deliberate experiment in what AI collapses and what taste protects.
           </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="/work/course-code"
+              class="inline-flex items-center gap-2 px-6 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
+              style="border-radius: 999px;"
+            >
+              Read case study →
+            </a>
+            <a
+              href="https://coursecode.golf"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 px-6 py-3 border border-cream/30 text-cream font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
+              style="border-radius: 999px;"
+            >
+              See it live →
+            </a>
+            <a
+              href="/ai"
+              class="inline-flex items-center gap-2 px-6 py-3 border border-cream/30 text-cream font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
+              style="border-radius: 999px;"
+            >
+              Read the AI operating model →
+            </a>
+          </div>
         </div>
-        <div class="md:col-span-3 flex flex-col gap-3">
-          <a
-            href="/work/course-code"
-            class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-orange text-cream font-mono text-xs uppercase tracking-[0.15em] hover:bg-orange-deep transition-colors"
-            style="border-radius: 999px;"
-          >
-            Read case study →
-          </a>
-          <a
-            href="https://coursecode.golf"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-cream/30 text-cream font-mono text-xs uppercase tracking-[0.15em] hover:border-orange hover:text-orange transition-colors"
-            style="border-radius: 999px;"
-          >
-            See it live →
-          </a>
+        <!-- Right: the fox + stat strip -->
+        <div class="md:col-span-5 flex flex-col items-center md:items-end gap-10">
+          <!-- The orange fox, matching the case study hero -->
+          <div class="w-full max-w-xs md:max-w-sm">
+            <svg viewBox="0 0 277 301" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" aria-label="Course Code fox mark">
+              <path d="M157.433 0.0194147C160.064 0.28246 161.676 2.94593 163.024 5.90516C174.636 31.2571 178.058 58.7139 177.992 87.0253C214.307 112.772 199.242 143.253 239.011 154.663L268.419 163.081C274.142 164.725 277.234 169.887 276.148 175.74C272.267 196.554 258.681 212.173 239.504 220.887C220.326 229.6 189.406 232.1 183.452 250.02C181.84 254.887 181.018 259.819 180.788 264.817L180.67 267.096C180.578 273.283 181.289 279.521 182.33 285.721C179.573 283.247 175.416 281.701 170.458 280.891C170.317 279.63 170.194 278.361 170.097 277.082C169.866 274.155 169.769 271.163 169.867 268.105L169.995 265.711C170.379 258.307 171.814 250.388 174.867 241.602C168.255 238.873 147.532 257.714 150.689 246.042C150.854 245.45 151.61 244.957 152.63 244.036C174.636 224.011 204.8 224.503 229.603 213.883C209.866 214.869 192.005 217.072 173.814 211.581C171.479 210.858 171.446 207.998 172.301 207.142C177.794 201.651 202.761 214.903 240.228 202.572C247.07 200.303 252.925 196.719 257.136 191.458C252.202 188.729 249.274 185.473 246.248 180.969L233.32 186.657C205.36 198.988 150.623 172.616 96.9395 203.525C79.1437 213.784 66.4796 229.141 59.21 248.541C71.2821 243.806 79.9003 236.539 93.2881 234.829L80.0322 253.802C79.177 255.051 76.8417 256.728 78.3877 258.011C80.9219 260.147 109.275 245.187 120.064 247.685C113.222 257.517 107.4 268.961 102.663 281.028C100.208 287.265 98.0441 293.674 96.1797 300.12C94.2075 297.729 89.4431 292.472 79.5605 282.119C70.127 272.236 57.3445 262.334 46.5098 254.907C41.0905 251.193 36.1506 248.092 32.3516 245.918C30.453 244.831 28.8327 243.973 27.5771 243.385C26.95 243.091 26.4061 242.861 25.96 242.703C25.5303 242.551 25.1376 242.447 24.8359 242.447C22.9579 242.447 21.5809 243.475 20.1895 244.663C18.7753 245.87 17.299 247.285 15.1299 248.37H15.1289C14.7446 248.562 13.3407 249.316 11.1123 250.156C10.9008 250.236 9.71064 250.723 7.72363 251.541C8.84172 248.237 9.90812 244.805 10.9395 241.224C11.9443 237.736 12.9182 234.108 13.8818 230.324C7.69769 231.048 5.65784 235.125 0 233.086C8.58539 216.217 15.4935 199.546 18.0264 180.508C19.2435 171.268 24.2434 160.844 23.0264 151.638C21.0198 136.545 16.9406 122.702 16.6445 107.083C16.1182 81.0735 19.21 55.7217 25.7559 30.6659C26.4466 28.0354 28.355 25.9306 29.8682 25.3388C32.3681 24.3523 35.6573 25.2074 38.1572 26.9501C59.1109 41.8784 76.8741 59.108 92.7949 79.3632C98.9462 78.8371 106.611 77.8838 111.282 74.6942C115.46 61.3439 144.538 -1.26276 157.433 0.0194147ZM53.6182 206.945C44.8354 210.891 39.3743 218.289 35.5586 226.575C44.1111 223.418 50.7563 216.744 53.6182 206.945ZM49.9004 194.186C52.0052 182.219 34.9018 205.727 35.3945 210.496C41.8088 206.452 45.8873 200.697 49.9004 194.186ZM41.4473 175.641C37.2697 182.053 33.9798 187.972 32.1377 195.699C39.1113 190.767 42.6315 183.895 41.4473 175.641ZM100.756 183.5C89.8679 180.508 83.9469 188.104 76.3154 192.773C73.4207 192.905 75.4928 194.515 78.1572 193.989C86.2492 190.833 94.1113 187.544 100.756 183.5ZM102.86 172.058C93.3542 167.29 84.6705 171.498 77.5654 177.614C87.1702 177.154 94.4726 173.998 102.86 172.058ZM143.223 141.477C133.848 141.642 129.604 147.692 122.631 150.257C120.295 151.112 117.828 153.085 119.045 155.288C119.252 155.654 140.888 165.283 144.275 162.85L144.242 162.817C139.966 154.038 140.032 148.35 143.223 141.477ZM156.841 144.634C157.499 152.229 156.775 156.965 154.341 162.653C161.347 162.357 166.248 160.91 172.005 157.622C166.577 151.309 162.729 148.152 156.841 144.634ZM39.21 44.1141C29.3746 70.1894 38.2559 119.643 49.1768 143.943C62.6964 139.142 33.7827 93.6996 51.4141 75.1542L52.4336 95.7714C56.1073 93.5746 55.4637 88.9593 59.4062 89.0634C59.472 95.4096 56.1833 98.7313 58.749 104.025C61.249 101.921 60.6905 97.777 65.5918 97.0536C63.8155 104.978 62.4666 111.949 63.6836 120.728C71.2162 112.738 78.5846 106.294 88.8145 100.605C74.5712 78.6074 58.3216 60.2592 39.21 44.1141ZM195.787 126.351C193.452 133.125 197.334 140.031 203.584 142.168C202.367 135.986 200.557 130.889 195.787 126.351ZM140.295 104.387C146.578 107.773 150.656 113.331 158.847 115.008C155.327 107.116 147.861 105.274 140.295 104.387ZM154.966 100.572C159.143 105.307 162.926 109.582 169.209 113.002C167.926 106.787 162.531 101.427 154.966 100.572ZM156.873 21.3602C148.748 38.8533 145.097 56.5109 143.519 75.5165C152.3 77.6865 159.175 80.8749 168.187 80.9413C166.411 60.2707 164.731 40.52 156.873 21.3602Z" fill="#E13D0F"/>
+            </svg>
+          </div>
+          <!-- Compact stat strip -->
+          <div class="grid grid-cols-3 gap-6 md:gap-8 w-full max-w-sm pt-8 border-t border-cream/15">
+            <div>
+              <p class="font-display text-cream leading-none" style="font-size: clamp(1.5rem, 2.5vw, 2rem);">18K+</p>
+              <p class="font-mono text-[10px] uppercase tracking-[0.15em] text-cream/60 mt-2 leading-tight">Courses indexed</p>
+            </div>
+            <div>
+              <p class="font-display text-orange leading-none" style="font-size: clamp(1.5rem, 2.5vw, 2rem);">5.2K</p>
+              <p class="font-mono text-[10px] uppercase tracking-[0.15em] text-cream/60 mt-2 leading-tight">Users · 30 days</p>
+            </div>
+            <div>
+              <p class="font-display text-cream leading-none" style="font-size: clamp(1.5rem, 2.5vw, 2rem);">+96%</p>
+              <p class="font-mono text-[10px] uppercase tracking-[0.15em] text-cream/60 mt-2 leading-tight">MoM growth</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
   <!-- ===================== -->
   <!-- Recognition row -->
   <!-- ===================== -->
@@ -205,44 +250,276 @@ const beliefs = [
       </div>
     </div>
   </section>
+
   <!-- ===================== -->
-  <!-- Work grid -->
+  <!-- SELECTED WORK · HORIZONTAL SCROLL SHOWCASE (top 4 outcomes-led case studies) -->
   <!-- ===================== -->
-  <section id="work" class="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
-    <div class="flex items-baseline justify-between mb-16">
-      <p class="eyebrow">Selected work</p>
-      <p class="text-sm text-ink-muted">2024 to present</p>
+  <section id="work" class="bg-cream-warm/40 border-y border-ink/10 py-20 md:py-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 mb-12 md:mb-16">
+      <div class="flex flex-wrap items-baseline justify-between gap-y-4">
+        <div>
+          <p class="eyebrow mb-3">Selected work</p>
+          <h2 class="font-display text-display-md text-ink leading-tight max-w-[26ch]">
+            Four case studies. Four measurable outcomes<span class="brand-period">.</span>
+          </h2>
+        </div>
+        <p class="font-mono text-xs uppercase tracking-[0.15em] text-ink-muted">
+          Drag · scroll · or use the arrows
+        </p>
+      </div>
+    </div>
+    <!-- Horizontal scroll container -->
+    <div class="relative">
+      <!-- Left arrow -->
+      <button
+        type="button"
+        id="showcase-prev"
+        class="hidden md:flex absolute left-4 lg:left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center bg-ink text-cream hover:bg-orange transition-colors shadow-xl"
+        style="border-radius: 999px;"
+        aria-label="Previous case study"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M13 4L7 10L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <!-- Right arrow -->
+      <button
+        type="button"
+        id="showcase-next"
+        class="hidden md:flex absolute right-4 lg:right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center bg-ink text-cream hover:bg-orange transition-colors shadow-xl"
+        style="border-radius: 999px;"
+        aria-label="Next case study"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <!-- Scroll track -->
+      <div
+        id="showcase-track"
+        class="flex gap-6 md:gap-8 overflow-x-auto scroll-smooth px-6 md:px-16 lg:px-20 pb-6"
+        style="scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none;"
+      >
+        {
+          showcaseStudies.map((cs, i) => (
+            <a
+              href={`/work/${cs.slug}`}
+              class="group showcase-card flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-[600px] lg:w-[640px] bg-ink text-cream overflow-hidden transition-transform hover:-translate-y-1"
+              style="scroll-snap-align: start; border-radius: 18px;"
+            >
+              <!-- Artwork area: ~60% of card height -->
+              <div class="relative bg-ink/95 px-8 md:px-12 pt-10 md:pt-12 pb-6 flex items-center justify-center" style="min-height: 320px;">
+                {cs.artwork === 'course-code' && (
+                  <svg viewBox="0 0 277 301" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[200px] md:max-w-[240px] h-auto" aria-label="Course Code fox mark">
+                    <path d="M157.433 0.0194147C160.064 0.28246 161.676 2.94593 163.024 5.90516C174.636 31.2571 178.058 58.7139 177.992 87.0253C214.307 112.772 199.242 143.253 239.011 154.663L268.419 163.081C274.142 164.725 277.234 169.887 276.148 175.74C272.267 196.554 258.681 212.173 239.504 220.887C220.326 229.6 189.406 232.1 183.452 250.02C181.84 254.887 181.018 259.819 180.788 264.817L180.67 267.096C180.578 273.283 181.289 279.521 182.33 285.721C179.573 283.247 175.416 281.701 170.458 280.891C170.317 279.63 170.194 278.361 170.097 277.082C169.866 274.155 169.769 271.163 169.867 268.105L169.995 265.711C170.379 258.307 171.814 250.388 174.867 241.602C168.255 238.873 147.532 257.714 150.689 246.042C150.854 245.45 151.61 244.957 152.63 244.036C174.636 224.011 204.8 224.503 229.603 213.883C209.866 214.869 192.005 217.072 173.814 211.581C171.479 210.858 171.446 207.998 172.301 207.142C177.794 201.651 202.761 214.903 240.228 202.572C247.07 200.303 252.925 196.719 257.136 191.458C252.202 188.729 249.274 185.473 246.248 180.969L233.32 186.657C205.36 198.988 150.623 172.616 96.9395 203.525C79.1437 213.784 66.4796 229.141 59.21 248.541C71.2821 243.806 79.9003 236.539 93.2881 234.829L80.0322 253.802C79.177 255.051 76.8417 256.728 78.3877 258.011C80.9219 260.147 109.275 245.187 120.064 247.685C113.222 257.517 107.4 268.961 102.663 281.028C100.208 287.265 98.0441 293.674 96.1797 300.12C94.2075 297.729 89.4431 292.472 79.5605 282.119C70.127 272.236 57.3445 262.334 46.5098 254.907C41.0905 251.193 36.1506 248.092 32.3516 245.918C30.453 244.831 28.8327 243.973 27.5771 243.385C26.95 243.091 26.4061 242.861 25.96 242.703C25.5303 242.551 25.1376 242.447 24.8359 242.447C22.9579 242.447 21.5809 243.475 20.1895 244.663C18.7753 245.87 17.299 247.285 15.1299 248.37H15.1289C14.7446 248.562 13.3407 249.316 11.1123 250.156C10.9008 250.236 9.71064 250.723 7.72363 251.541C8.84172 248.237 9.90812 244.805 10.9395 241.224C11.9443 237.736 12.9182 234.108 13.8818 230.324C7.69769 231.048 5.65784 235.125 0 233.086C8.58539 216.217 15.4935 199.546 18.0264 180.508C19.2435 171.268 24.2434 160.844 23.0264 151.638C21.0198 136.545 16.9406 122.702 16.6445 107.083C16.1182 81.0735 19.21 55.7217 25.7559 30.6659C26.4466 28.0354 28.355 25.9306 29.8682 25.3388C32.3681 24.3523 35.6573 25.2074 38.1572 26.9501C59.1109 41.8784 76.8741 59.108 92.7949 79.3632C98.9462 78.8371 106.611 77.8838 111.282 74.6942C115.46 61.3439 144.538 -1.26276 157.433 0.0194147ZM53.6182 206.945C44.8354 210.891 39.3743 218.289 35.5586 226.575C44.1111 223.418 50.7563 216.744 53.6182 206.945ZM49.9004 194.186C52.0052 182.219 34.9018 205.727 35.3945 210.496C41.8088 206.452 45.8873 200.697 49.9004 194.186ZM41.4473 175.641C37.2697 182.053 33.9798 187.972 32.1377 195.699C39.1113 190.767 42.6315 183.895 41.4473 175.641ZM100.756 183.5C89.8679 180.508 83.9469 188.104 76.3154 192.773C73.4207 192.905 75.4928 194.515 78.1572 193.989C86.2492 190.833 94.1113 187.544 100.756 183.5ZM102.86 172.058C93.3542 167.29 84.6705 171.498 77.5654 177.614C87.1702 177.154 94.4726 173.998 102.86 172.058ZM143.223 141.477C133.848 141.642 129.604 147.692 122.631 150.257C120.295 151.112 117.828 153.085 119.045 155.288C119.252 155.654 140.888 165.283 144.275 162.85L144.242 162.817C139.966 154.038 140.032 148.35 143.223 141.477ZM156.841 144.634C157.499 152.229 156.775 156.965 154.341 162.653C161.347 162.357 166.248 160.91 172.005 157.622C166.577 151.309 162.729 148.152 156.841 144.634ZM39.21 44.1141C29.3746 70.1894 38.2559 119.643 49.1768 143.943C62.6964 139.142 33.7827 93.6996 51.4141 75.1542L52.4336 95.7714C56.1073 93.5746 55.4637 88.9593 59.4062 89.0634C59.472 95.4096 56.1833 98.7313 58.749 104.025C61.249 101.921 60.6905 97.777 65.5918 97.0536C63.8155 104.978 62.4666 111.949 63.6836 120.728C71.2162 112.738 78.5846 106.294 88.8145 100.605C74.5712 78.6074 58.3216 60.2592 39.21 44.1141ZM195.787 126.351C193.452 133.125 197.334 140.031 203.584 142.168C202.367 135.986 200.557 130.889 195.787 126.351ZM140.295 104.387C146.578 107.773 150.656 113.331 158.847 115.008C155.327 107.116 147.861 105.274 140.295 104.387ZM154.966 100.572C159.143 105.307 162.926 109.582 169.209 113.002C167.926 106.787 162.531 101.427 154.966 100.572ZM156.873 21.3602C148.748 38.8533 145.097 56.5109 143.519 75.5165C152.3 77.6865 159.175 80.8749 168.187 80.9413C166.411 60.2707 164.731 40.52 156.873 21.3602Z" fill="#E13D0F"/>
+                  </svg>
+                )}
+                {cs.artwork === 'linear' && (
+                  <svg viewBox="0 0 480 440" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[420px] h-auto" aria-label="Linear migration trajectory">
+                    <g opacity="0.06">
+                      <line stroke="#F4EFE5" stroke-width="0.5" x1="80" y1="20" x2="80" y2="420"/>
+                      <line stroke="#F4EFE5" stroke-width="0.5" x1="160" y1="20" x2="160" y2="420"/>
+                      <line stroke="#F4EFE5" stroke-width="0.5" x1="240" y1="20" x2="240" y2="420"/>
+                      <line stroke="#F4EFE5" stroke-width="0.5" x1="320" y1="20" x2="320" y2="420"/>
+                      <line stroke="#F4EFE5" stroke-width="0.5" x1="400" y1="20" x2="400" y2="420"/>
+                    </g>
+                    <circle cx="60" cy="300" r="12" fill="#02101D" stroke="#F4EFE5" stroke-width="3"/>
+                    <circle cx="60" cy="300" r="4" fill="#E13D0F"/>
+                    <path d="M 60 300 C 180 300, 280 312, 440 320" fill="none" stroke="#F4EFE5" stroke-width="2.5" stroke-linecap="round" opacity="0.35" stroke-dasharray="7 7"/>
+                    <circle cx="440" cy="320" r="6" fill="none" stroke="#F4EFE5" stroke-width="2" opacity="0.5"/>
+                    <text x="430" y="352" fill="#F4EFE5" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" letter-spacing="2.5" opacity="0.5" text-anchor="end">JIRA · KEEP</text>
+                    <path d="M 60 300 C 200 300, 280 200, 440 60" fill="none" stroke="#E13D0F" stroke-width="3.5" stroke-linecap="round"/>
+                    <circle cx="440" cy="60" r="11" fill="#02101D" stroke="#E13D0F" stroke-width="3.5"/>
+                    <circle cx="440" cy="60" r="4" fill="#E13D0F"/>
+                    <text x="430" y="34" fill="#E13D0F" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13" letter-spacing="2.5" font-weight="500" text-anchor="end">LINEAR · 2.7×</text>
+                  </svg>
+                )}
+                {cs.artwork === 'branch-repositioning' && (
+                  <svg viewBox="0 0 480 540" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[300px] h-auto" aria-label="Branch repositioning system">
+                    <g opacity="0.06">
+                      <line stroke="#F4EFE5" stroke-width="0.5" x1="80" y1="40" x2="80" y2="500"/>
+                      <line stroke="#F4EFE5" stroke-width="0.5" x1="160" y1="40" x2="160" y2="500"/>
+                      <line stroke="#F4EFE5" stroke-width="0.5" x1="240" y1="40" x2="240" y2="500"/>
+                      <line stroke="#F4EFE5" stroke-width="0.5" x1="320" y1="40" x2="320" y2="500"/>
+                      <line stroke="#F4EFE5" stroke-width="0.5" x1="400" y1="40" x2="400" y2="500"/>
+                    </g>
+                    <line x1="240" y1="50" x2="240" y2="340" stroke="#E13D0F" stroke-width="2.5" stroke-linecap="round"/>
+                    <circle cx="240" cy="40" r="8" fill="#02101D" stroke="#E13D0F" stroke-width="2"/>
+                    <circle cx="240" cy="40" r="3" fill="#E13D0F"/>
+                    <g transform="translate(0, 80)">
+                      <rect x="40" y="0" width="160" height="42" rx="4" fill="none" stroke="#F4EFE5" stroke-width="1.5" stroke-linecap="round"/>
+                      <text x="56" y="18" fill="#E13D0F" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" font-weight="500" letter-spacing="2">01</text>
+                      <text x="56" y="33" fill="#F4EFE5" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" letter-spacing="2" opacity="0.92">STRATEGY</text>
+                      <line x1="200" y1="21" x2="232" y2="21" stroke="#E13D0F" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+                      <circle cx="240" cy="21" r="3.5" fill="#E13D0F"/>
+                    </g>
+                    <g transform="translate(0, 140)">
+                      <rect x="280" y="0" width="160" height="42" rx="4" fill="none" stroke="#F4EFE5" stroke-width="1.5" stroke-linecap="round"/>
+                      <text x="296" y="18" fill="#E13D0F" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" font-weight="500" letter-spacing="2">02</text>
+                      <text x="296" y="33" fill="#F4EFE5" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" letter-spacing="2" opacity="0.92">NARRATIVE</text>
+                      <line x1="280" y1="21" x2="248" y2="21" stroke="#E13D0F" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+                      <circle cx="240" cy="21" r="3.5" fill="#E13D0F"/>
+                    </g>
+                    <g transform="translate(0, 200)">
+                      <rect x="40" y="0" width="160" height="42" rx="4" fill="none" stroke="#F4EFE5" stroke-width="1.5" stroke-linecap="round"/>
+                      <text x="56" y="18" fill="#9B40C4" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" font-weight="500" letter-spacing="2">03</text>
+                      <text x="56" y="33" fill="#F4EFE5" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" letter-spacing="2" opacity="0.92">VOICE</text>
+                      <line x1="200" y1="21" x2="232" y2="21" stroke="#9B40C4" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+                      <circle cx="240" cy="21" r="3.5" fill="#9B40C4"/>
+                    </g>
+                    <g transform="translate(0, 260)">
+                      <rect x="280" y="0" width="160" height="42" rx="4" fill="none" stroke="#F4EFE5" stroke-width="1.5" stroke-linecap="round"/>
+                      <text x="296" y="18" fill="#E13D0F" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" font-weight="500" letter-spacing="2">04</text>
+                      <text x="296" y="33" fill="#F4EFE5" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" letter-spacing="2" opacity="0.92">ARCHITECTURE</text>
+                      <line x1="280" y1="21" x2="248" y2="21" stroke="#E13D0F" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+                      <circle cx="240" cy="21" r="3.5" fill="#E13D0F"/>
+                    </g>
+                    <line x1="240" y1="340" x2="240" y2="380" stroke="#E13D0F" stroke-width="2.5" stroke-linecap="round"/>
+                    <polyline points="234,374 240,380 246,374" fill="none" stroke="#E13D0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <g transform="translate(0, 390)">
+                      <rect x="60" y="0" width="360" height="120" rx="6" fill="none" stroke="#F4EFE5" stroke-width="2" stroke-linejoin="round"/>
+                      <rect x="76" y="14" width="328" height="14" rx="2" fill="#F4EFE5" opacity="0.12"/>
+                      <rect x="84" y="18" width="32" height="6" rx="1" fill="#E13D0F"/>
+                      <rect x="124" y="18" width="20" height="6" rx="1" fill="#F4EFE5" opacity="0.55"/>
+                      <rect x="152" y="18" width="20" height="6" rx="1" fill="#F4EFE5" opacity="0.55"/>
+                      <rect x="180" y="18" width="20" height="6" rx="1" fill="#F4EFE5" opacity="0.55"/>
+                      <rect x="208" y="18" width="20" height="6" rx="1" fill="#F4EFE5" opacity="0.55"/>
+                      <rect x="76" y="38" width="180" height="7" rx="2" fill="#F4EFE5" opacity="0.85"/>
+                      <rect x="76" y="50" width="220" height="7" rx="2" fill="#F4EFE5" opacity="0.85"/>
+                      <rect x="76" y="62" width="140" height="5" rx="1" fill="#F4EFE5" opacity="0.4"/>
+                      <rect x="76" y="71" width="180" height="5" rx="1" fill="#F4EFE5" opacity="0.4"/>
+                      <rect x="76" y="86" width="64" height="14" rx="7" fill="#E13D0F"/>
+                      <rect x="306" y="38" width="92" height="62" rx="4" fill="#E13D0F" opacity="0.18" stroke="#E13D0F" stroke-width="1"/>
+                      <circle cx="352" cy="69" r="14" fill="#E13D0F" opacity="0.5"/>
+                      <rect x="76" y="108" width="100" height="6" rx="1" fill="#F4EFE5" opacity="0.3"/>
+                      <rect x="190" y="108" width="100" height="6" rx="1" fill="#F4EFE5" opacity="0.3"/>
+                      <rect x="304" y="108" width="100" height="6" rx="1" fill="#F4EFE5" opacity="0.3"/>
+                    </g>
+                  </svg>
+                )}
+                {cs.artwork === 'auxin' && (
+                  <svg viewBox="0 0 480 440" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[420px] h-auto" aria-label="Auxin design system mosaic">
+                    <g opacity="0.06">
+                      <line stroke="#F4EFE5" stroke-width="0.5" x1="80" y1="20" x2="80" y2="420"/>
+                      <line stroke="#F4EFE5" stroke-width="0.5" x1="160" y1="20" x2="160" y2="420"/>
+                      <line stroke="#F4EFE5" stroke-width="0.5" x1="240" y1="20" x2="240" y2="420"/>
+                      <line stroke="#F4EFE5" stroke-width="0.5" x1="320" y1="20" x2="320" y2="420"/>
+                      <line stroke="#F4EFE5" stroke-width="0.5" x1="400" y1="20" x2="400" y2="420"/>
+                    </g>
+                    <rect x="60" y="40" width="200" height="100" rx="4" fill="#E13D0F"/>
+                    <rect x="280" y="40" width="60" height="46" rx="4" fill="none" stroke="#F4EFE5" stroke-width="1.5"/>
+                    <rect x="360" y="40" width="60" height="46" rx="4" fill="#F4EFE5" opacity="0.9"/>
+                    <rect x="280" y="94" width="140" height="46" rx="23" fill="none" stroke="#F4EFE5" stroke-width="1.5" opacity="0.5"/>
+                    <g>
+                      <rect x="60" y="160" width="22" height="22" rx="2" fill="#F4EFE5" opacity="0.85"/>
+                      <rect x="88" y="160" width="22" height="22" rx="2" fill="#F4EFE5" opacity="0.55"/>
+                      <rect x="116" y="160" width="22" height="22" rx="2" fill="#F4EFE5" opacity="0.3"/>
+                      <rect x="144" y="160" width="22" height="22" rx="2" fill="none" stroke="#F4EFE5" stroke-width="1.5" opacity="0.5"/>
+                      <rect x="172" y="160" width="22" height="22" rx="2" fill="none" stroke="#F4EFE5" stroke-width="1.5" opacity="0.25"/>
+                      <rect x="60" y="190" width="22" height="22" rx="11" fill="#E13D0F"/>
+                      <rect x="88" y="190" width="22" height="22" rx="11" fill="#E13D0F" opacity="0.6"/>
+                      <rect x="116" y="190" width="22" height="22" rx="11" fill="#E13D0F" opacity="0.3"/>
+                      <rect x="144" y="190" width="22" height="22" rx="11" fill="none" stroke="#E13D0F" stroke-width="1.5"/>
+                      <rect x="172" y="190" width="22" height="22" rx="11" fill="none" stroke="#E13D0F" stroke-width="1.5" opacity="0.4"/>
+                    </g>
+                    <rect x="220" y="160" width="100" height="52" rx="4" fill="none" stroke="#F4EFE5" stroke-width="1.5"/>
+                    <rect x="234" y="174" width="48" height="6" rx="3" fill="#F4EFE5" opacity="0.85"/>
+                    <rect x="234" y="186" width="72" height="3" rx="1.5" fill="#F4EFE5" opacity="0.4"/>
+                    <rect x="234" y="194" width="60" height="3" rx="1.5" fill="#F4EFE5" opacity="0.4"/>
+                    <rect x="340" y="160" width="80" height="52" rx="4" fill="#9B40C4" opacity="0.85"/>
+                    <g transform="translate(0, 232)">
+                      <rect x="60" y="0" width="6" height="48" fill="#F4EFE5" opacity="0.85"/>
+                      <rect x="74" y="12" width="6" height="36" fill="#F4EFE5" opacity="0.65"/>
+                      <rect x="88" y="20" width="6" height="28" fill="#F4EFE5" opacity="0.5"/>
+                      <rect x="102" y="28" width="6" height="20" fill="#F4EFE5" opacity="0.35"/>
+                      <rect x="116" y="36" width="6" height="12" fill="#F4EFE5" opacity="0.25"/>
+                    </g>
+                    <g transform="translate(0, 232)">
+                      <rect x="148" y="36" width="6" height="12" fill="#E13D0F" opacity="0.4"/>
+                      <rect x="162" y="28" width="6" height="20" fill="#E13D0F" opacity="0.55"/>
+                      <rect x="176" y="20" width="6" height="28" fill="#E13D0F" opacity="0.7"/>
+                      <rect x="190" y="12" width="6" height="36" fill="#E13D0F" opacity="0.85"/>
+                      <rect x="204" y="0" width="6" height="48" fill="#E13D0F"/>
+                    </g>
+                    <rect x="220" y="232" width="200" height="48" rx="4" fill="none" stroke="#F4EFE5" stroke-width="1.5" opacity="0.5"/>
+                    <g>
+                      <rect x="60" y="300" width="32" height="32" rx="0" fill="#F4EFE5" opacity="0.7"/>
+                      <rect x="100" y="300" width="32" height="32" rx="4" fill="#F4EFE5" opacity="0.7"/>
+                      <rect x="140" y="300" width="32" height="32" rx="8" fill="#F4EFE5" opacity="0.7"/>
+                      <rect x="180" y="300" width="32" height="32" rx="16" fill="#F4EFE5" opacity="0.7"/>
+                    </g>
+                    <rect x="230" y="300" width="90" height="64" rx="4" fill="#E13D0F" opacity="0.7"/>
+                    <rect x="340" y="300" width="80" height="32" rx="4" fill="none" stroke="#F4EFE5" stroke-width="1.5"/>
+                    <rect x="340" y="344" width="80" height="20" rx="4" fill="none" stroke="#F4EFE5" stroke-width="1.5" opacity="0.5"/>
+                  </svg>
+                )}
+              </div>
+              <!-- Content area -->
+              <div class="px-8 md:px-12 pb-10 md:pb-12 pt-2">
+                <div class="flex items-baseline justify-between gap-4 mb-4">
+                  <p class="font-mono text-[10px] uppercase tracking-[0.15em] text-cream/50">{String(i + 1).padStart(2, '0')} / 04</p>
+                  <p class="font-mono text-[10px] uppercase tracking-[0.15em] text-orange">{cs.eyebrow}</p>
+                </div>
+                <h3 class="font-display text-2xl md:text-3xl text-cream group-hover:text-orange transition-colors leading-tight mb-4">
+                  {cs.title}
+                </h3>
+                <p class="text-cream/70 leading-relaxed mb-6 text-sm md:text-base">{cs.hook}</p>
+                <div class="flex items-end justify-between gap-4 pt-6 border-t border-cream/15">
+                  <div>
+                    <p class="font-display text-orange leading-none" style="font-size: clamp(2rem, 4vw, 3rem);">{cs.metric}</p>
+                    <p class="font-mono text-[10px] uppercase tracking-[0.15em] text-cream/60 mt-2">{cs.metricLabel}</p>
+                  </div>
+                  <span class="font-mono text-xs uppercase tracking-[0.15em] text-cream group-hover:text-orange group-hover:translate-x-1 transition-all">
+                    Read →
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== -->
+  <!-- OPERATING MODEL WORK · Simple list for in-flight strategic work (bottom 3) -->
+  <!-- ===================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28">
+    <div class="flex items-baseline justify-between mb-12">
+      <div>
+        <p class="eyebrow mb-3">Operating model work</p>
+        <h2 class="font-display text-display-md text-ink leading-tight max-w-[26ch]">
+          The infrastructure underneath<span class="brand-period">.</span>
+        </h2>
+      </div>
+      <p class="text-sm text-ink-muted hidden md:block">In flight · 2025 to 2026</p>
     </div>
     <div class="space-y-2">
       {
-        caseStudies.map((cs, i) => (
+        operatingWork.map((cs, i) => (
           <a
             href={`/work/${cs.slug}`}
-            class="group block py-10 md:py-12 border-t border-ink/10 hover:border-orange transition-colors duration-300"
+            class="group block py-8 md:py-10 border-t border-ink/10 hover:border-orange transition-colors duration-300"
           >
             <div class="grid md:grid-cols-12 gap-6 items-start">
               <div class="md:col-span-1">
                 <p class="font-mono text-xs text-ink-muted">
-                  {String(i + 1).padStart(2, '0')}
+                  {String(i + 5).padStart(2, '0')}
                 </p>
               </div>
               <div class="md:col-span-7">
                 <p class="eyebrow mb-3">{cs.eyebrow}</p>
-                <h2 class="font-display text-display-md text-ink group-hover:text-orange transition-colors leading-tight">
+                <h3 class="font-display text-2xl md:text-3xl text-ink group-hover:text-orange transition-colors leading-tight">
                   {cs.title}
-                </h2>
-                <p class="mt-4 text-lg text-ink-soft max-w-reading">{cs.summary}</p>
+                </h3>
+                <p class="mt-4 text-base text-ink-soft max-w-reading">{cs.summary}</p>
               </div>
               <div class="md:col-span-3 md:text-right">
-                <p class="font-display text-3xl md:text-4xl text-ink">{cs.metric}</p>
+                <p class="font-display text-3xl text-ink">{cs.metric}</p>
                 <p class="stat-label md:text-right">{cs.metricLabel}</p>
               </div>
               <div class="md:col-span-1 md:text-right pt-2">
-                <span
-                  class="inline-block text-ink-muted group-hover:text-orange group-hover:translate-x-1 transition-all"
-                >
-                  →
-                </span>
+                <span class="inline-block text-ink-muted group-hover:text-orange group-hover:translate-x-1 transition-all">→</span>
               </div>
             </div>
           </a>
@@ -250,6 +527,7 @@ const beliefs = [
       }
     </div>
   </section>
+
   <!-- ===================== -->
   <!-- AI Operating Model block -->
   <!-- ===================== -->
@@ -281,11 +559,11 @@ const beliefs = [
       </div>
     </div>
   </section>
+
   <!-- ===================== -->
   <!-- Bounce block - rich episode embeds, co-hosted -->
   <!-- ===================== -->
   <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32 border-b border-ink/10">
-    <!-- Section header -->
     <div class="grid md:grid-cols-12 gap-8 mb-12 md:mb-16">
       <div class="md:col-span-5">
         <p class="eyebrow mb-6">Podcast</p>
@@ -304,76 +582,21 @@ const beliefs = [
         </p>
       </div>
     </div>
-    <!-- Episode embeds: 3 columns of real episode players -->
     <div class="grid md:grid-cols-3 gap-6 md:gap-8 mb-10">
-      <!-- Episode 1 -->
-      <iframe
-        style="border-radius:12px"
-        src="https://open.spotify.com/embed/episode/38SgLFucJ0AXv2PCGiBWVR?utm_source=generator&theme=0"
-        width="100%"
-        height="232"
-        frameBorder="0"
-        allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-        title="Bounce Podcast"
-      ></iframe>
-      <!-- Episode 2 -->
-      <iframe
-        style="border-radius:12px"
-        src="https://open.spotify.com/embed/episode/7KegJOqD6572O2pQsBlMfC?utm_source=generator&theme=0"
-        width="100%"
-        height="232"
-        frameBorder="0"
-        allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-        title="Bounce Podcast"
-      ></iframe>
-      <!-- Episode 3 -->
-      <iframe
-        style="border-radius:12px"
-        src="https://open.spotify.com/embed/episode/6VMhAiNHQ6uC1dY5oCaBc0?utm_source=generator&theme=0"
-        width="100%"
-        height="232"
-        frameBorder="0"
-        allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-        title="Bounce Podcast"
-      ></iframe>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/38SgLFucJ0AXv2PCGiBWVR?utm_source=generator&theme=0" width="100%" height="232" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Bounce Podcast"></iframe>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/7KegJOqD6572O2pQsBlMfC?utm_source=generator&theme=0" width="100%" height="232" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Bounce Podcast"></iframe>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/6VMhAiNHQ6uC1dY5oCaBc0?utm_source=generator&theme=0" width="100%" height="232" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Bounce Podcast"></iframe>
     </div>
-    <!-- Listen on row: integrated, no divider above -->
     <div class="flex flex-wrap items-baseline gap-x-6 gap-y-2">
       <p class="font-mono text-xs uppercase tracking-[0.15em] text-ink-muted">Listen on</p>
-      <a
-        href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP"
-        target="_blank"
-        rel="noopener"
-        class="font-mono text-xs uppercase tracking-[0.15em] text-ink hover:text-orange transition-colors border-b border-ink/30 hover:border-orange pb-0.5"
-      >
-        Spotify →
-      </a>
-      <a
-        href="https://podcasts.apple.com/us/podcast/bounce/id1745556826"
-        target="_blank"
-        rel="noopener"
-        class="font-mono text-xs uppercase tracking-[0.15em] text-ink hover:text-orange transition-colors border-b border-ink/30 hover:border-orange pb-0.5"
-      >
-        Apple Podcasts →
-      </a>
-      <a
-        href="https://www.youtube.com/@BouncePodcast"
-        target="_blank"
-        rel="noopener"
-        class="font-mono text-xs uppercase tracking-[0.15em] text-ink hover:text-orange transition-colors border-b border-ink/30 hover:border-orange pb-0.5"
-      >
-        YouTube →
-      </a>
+      <a href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP" target="_blank" rel="noopener" class="font-mono text-xs uppercase tracking-[0.15em] text-ink hover:text-orange transition-colors border-b border-ink/30 hover:border-orange pb-0.5">Spotify →</a>
+      <a href="https://podcasts.apple.com/us/podcast/bounce/id1745556826" target="_blank" rel="noopener" class="font-mono text-xs uppercase tracking-[0.15em] text-ink hover:text-orange transition-colors border-b border-ink/30 hover:border-orange pb-0.5">Apple Podcasts →</a>
+      <a href="https://www.youtube.com/@BouncePodcast" target="_blank" rel="noopener" class="font-mono text-xs uppercase tracking-[0.15em] text-ink hover:text-orange transition-colors border-b border-ink/30 hover:border-orange pb-0.5">YouTube →</a>
     </div>
   </section>
+
   <!-- ===================== -->
-  <!-- Things I Believe (now with linocut icons per principle) -->
+  <!-- Things I Believe -->
   <!-- ===================== -->
   <section class="max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
     <div class="grid md:grid-cols-12 gap-8 mb-16">
@@ -387,16 +610,12 @@ const beliefs = [
       </div>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-      <!-- 01 Personal preference is a hypothesis -->
       <div class="belief-card p-7 md:p-8">
         <div class="linocut-icon">
           <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-            <!-- Flask -->
             <path d="M32 10 L 32 32 L 18 62 C 16 66, 19 70, 24 70 L 56 70 C 61 70, 64 66, 62 62 L 48 32 L 48 10" fill="#E13D0F" stroke="#02101D" stroke-width="3" stroke-linejoin="round"/>
             <line x1="28" y1="10" x2="52" y2="10" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
-            <!-- Liquid level -->
             <path d="M24 50 L 56 50" stroke="#02101D" stroke-width="2"/>
-            <!-- Bubbles -->
             <circle cx="34" cy="58" r="2" fill="#F4EFE5"/>
             <circle cx="44" cy="62" r="1.5" fill="#F4EFE5"/>
             <circle cx="38" cy="64" r="1" fill="#F4EFE5"/>
@@ -408,11 +627,9 @@ const beliefs = [
         </div>
         <p class="text-ink-soft leading-relaxed">{beliefs[0].body}</p>
       </div>
-      <!-- 02 Test early, test often -->
       <div class="belief-card p-7 md:p-8">
         <div class="linocut-icon">
           <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-            <!-- Circular arrow loop -->
             <path d="M40 18 a22 22 0 1 1 -22 22" fill="none" stroke="#E13D0F" stroke-width="6" stroke-linecap="round"/>
             <path d="M40 18 L 30 12 L 30 24 Z" fill="#E13D0F"/>
             <circle cx="40" cy="40" r="6" fill="#02101D"/>
@@ -424,21 +641,17 @@ const beliefs = [
         </div>
         <p class="text-ink-soft leading-relaxed">{beliefs[1].body}</p>
       </div>
-      <!-- 03 Roadmap is a capital allocation document -->
       <div class="belief-card p-7 md:p-8">
         <div class="linocut-icon">
           <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-            <!-- Bar chart bars of unequal heights = allocation -->
             <rect x="14" y="44" width="12" height="28" fill="#E13D0F" stroke="#02101D" stroke-width="2.5" stroke-linejoin="round"/>
             <rect x="30" y="28" width="12" height="44" fill="#E13D0F" stroke="#02101D" stroke-width="2.5" stroke-linejoin="round"/>
             <rect x="46" y="36" width="12" height="36" fill="#E13D0F" stroke="#02101D" stroke-width="2.5" stroke-linejoin="round"/>
             <rect x="62" y="52" width="10" height="20" fill="#E13D0F" stroke="#02101D" stroke-width="2.5" stroke-linejoin="round"/>
-            <!-- Hatching on the tallest bar to give it weight -->
             <line x1="32" y1="36" x2="40" y2="36" stroke="#02101D" stroke-width="1" opacity="0.5"/>
             <line x1="32" y1="44" x2="40" y2="44" stroke="#02101D" stroke-width="1" opacity="0.5"/>
             <line x1="32" y1="52" x2="40" y2="52" stroke="#02101D" stroke-width="1" opacity="0.5"/>
             <line x1="32" y1="60" x2="40" y2="60" stroke="#02101D" stroke-width="1" opacity="0.5"/>
-            <!-- Baseline -->
             <line x1="8" y1="72" x2="74" y2="72" stroke="#02101D" stroke-width="2.5" stroke-linecap="round"/>
           </svg>
         </div>
@@ -448,11 +661,9 @@ const beliefs = [
         </div>
         <p class="text-ink-soft leading-relaxed">{beliefs[2].body}</p>
       </div>
-      <!-- 04 Live in the now, build for the future -->
       <div class="belief-card p-7 md:p-8">
         <div class="linocut-icon">
           <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-            <!-- Bridge -->
             <path d="M10 50 Q 40 26, 70 50" fill="none" stroke="#E13D0F" stroke-width="6" stroke-linecap="round"/>
             <line x1="10" y1="50" x2="10" y2="70" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
             <line x1="70" y1="50" x2="70" y2="70" stroke="#02101D" stroke-width="3" stroke-linecap="round"/>
@@ -471,6 +682,7 @@ const beliefs = [
       </div>
     </div>
   </section>
+
   <!-- ===================== -->
   <!-- About preview -->
   <!-- ===================== -->
@@ -508,4 +720,113 @@ const beliefs = [
       </div>
     </div>
   </section>
+
+  <!-- ===================== -->
+  <!-- Horizontal scroll script + scrollbar hide -->
+  <!-- ===================== -->
+  <style is:global>
+    #showcase-track::-webkit-scrollbar { display: none; }
+    .showcase-card {
+      transition: transform 0.3s ease;
+    }
+    /* Cursor changes when dragging */
+    #showcase-track {
+      cursor: grab;
+    }
+    #showcase-track.dragging {
+      cursor: grabbing;
+      scroll-behavior: auto;
+    }
+    #showcase-track.dragging a {
+      pointer-events: none;
+    }
+  </style>
+  <script is:inline>
+    (function() {
+      const track = document.getElementById('showcase-track');
+      const prevBtn = document.getElementById('showcase-prev');
+      const nextBtn = document.getElementById('showcase-next');
+      if (!track) return;
+
+      // Arrow button scrolling: scroll by one card width
+      function getCardWidth() {
+        const firstCard = track.querySelector('.showcase-card');
+        if (!firstCard) return 600;
+        const gap = parseInt(window.getComputedStyle(track).columnGap || '32', 10);
+        return firstCard.offsetWidth + gap;
+      }
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function() {
+          track.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+        });
+      }
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function() {
+          track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+        });
+      }
+
+      // Drag-to-scroll (mouse)
+      let isDown = false;
+      let startX = 0;
+      let scrollLeft = 0;
+      let hasDragged = false;
+
+      track.addEventListener('mousedown', function(e) {
+        // Only initiate drag with primary button
+        if (e.button !== 0) return;
+        isDown = true;
+        hasDragged = false;
+        startX = e.pageX - track.offsetLeft;
+        scrollLeft = track.scrollLeft;
+      });
+      track.addEventListener('mouseleave', function() {
+        if (isDown) {
+          isDown = false;
+          track.classList.remove('dragging');
+        }
+      });
+      track.addEventListener('mouseup', function() {
+        isDown = false;
+        // Defer removing dragging class so the click handler on the link can be intercepted
+        setTimeout(function() {
+          track.classList.remove('dragging');
+        }, 0);
+      });
+      track.addEventListener('mousemove', function(e) {
+        if (!isDown) return;
+        const x = e.pageX - track.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        if (Math.abs(walk) > 5 && !hasDragged) {
+          hasDragged = true;
+          track.classList.add('dragging');
+        }
+        if (hasDragged) {
+          e.preventDefault();
+          track.scrollLeft = scrollLeft - walk;
+        }
+      });
+
+      // Prevent click after drag
+      track.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          if (track.classList.contains('dragging')) {
+            e.preventDefault();
+          }
+        });
+      });
+
+      // Keyboard arrow navigation when section is focused
+      document.addEventListener('keydown', function(e) {
+        const rect = track.getBoundingClientRect();
+        const inView = rect.top < window.innerHeight && rect.bottom > 0;
+        if (!inView) return;
+        if (e.key === 'ArrowLeft') {
+          track.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+        } else if (e.key === 'ArrowRight') {
+          track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+        }
+      });
+    })();
+  </script>
 </Base>
