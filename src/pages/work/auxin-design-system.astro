@@ -8,7 +8,10 @@ import Base from '../../layouts/Base.astro';
   <!-- ============================== -->
   <!-- HERO -->
   <!-- ============================== -->
-  <section class="case-hero-dark">
+  <section class="case-hero-dark relative overflow-hidden">
+    <!-- Atmospheric overlays: per-case wash + grain texture -->
+    <div class="case-wash-purple absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+    <div class="case-grain absolute inset-0 pointer-events-none opacity-[0.06]" aria-hidden="true"></div>
     <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28 relative z-10">
       <a
         href="/#work"

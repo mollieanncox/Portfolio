@@ -58,6 +58,30 @@ const isAbout = path === '/about';
       gtag('js', new Date());
       gtag('config', 'G-WPMTLV85TL');
     </script>
+    <!-- Global case study hero atmospheric styles -->
+    <style is:global>
+      /* Per-case radial gradient washes for case study heroes.
+         Layer over case-hero-dark background. Sit beneath content (z-index handled by parent's z-10). */
+      .case-wash-amber {
+        background: radial-gradient(ellipse at 100% 0%, rgba(225, 61, 15, 0.32) 0%, rgba(225, 61, 15, 0.08) 35%, transparent 70%);
+      }
+      .case-wash-cyan {
+        background: radial-gradient(ellipse at 0% 100%, rgba(120, 200, 220, 0.22) 0%, rgba(120, 200, 220, 0.06) 40%, transparent 75%);
+      }
+      .case-wash-gold {
+        background: radial-gradient(ellipse at 100% 100%, rgba(212, 165, 75, 0.36) 0%, rgba(212, 165, 75, 0.10) 40%, transparent 75%);
+      }
+      .case-wash-purple {
+        background: radial-gradient(ellipse at 0% 0%, rgba(155, 64, 196, 0.30) 0%, rgba(155, 64, 196, 0.10) 40%, transparent 75%);
+      }
+      /* Grain texture: inline SVG noise filter applied as background image.
+         Use mix-blend-mode so it reads as paper texture, not pixel noise. */
+      .case-grain {
+        background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.85 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+        background-size: 200px 200px;
+        mix-blend-mode: overlay;
+      }
+    </style>
   </head>
   <body>
     <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-cream/80 border-b border-ink/5">
