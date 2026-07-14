@@ -224,5 +224,24 @@ const isAbout = path === '/about';
         </div>
       </div>
     </footer>
+    <script is:inline>
+    (function () {
+      var els = Array.prototype.slice.call(document.querySelectorAll('[data-plx]'));
+      if (!els.length) return;
+      var raf = null;
+      function plx() {
+        var vhc = window.innerHeight / 2;
+        els.forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          var off = ((r.top + r.height / 2) - vhc) * parseFloat(el.dataset.plx);
+          el.style.transform = 'rotate(' + (el.dataset.rot || 0) + 'deg) translateY(' + off.toFixed(1) + 'px)';
+        });
+        raf = null;
+      }
+      window.addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(plx); }, { passive: true });
+      window.addEventListener('resize', function () { if (!raf) raf = requestAnimationFrame(plx); });
+      plx();
+    })();
+  </script>
   </body>
 </html>
