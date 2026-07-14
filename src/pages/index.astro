@@ -95,23 +95,14 @@ const beliefs = [
   <section class="hero-grid relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 md:px-10 pt-24 md:pt-20 pb-24 md:pb-32 relative z-10">
       <!-- Currently building indicator (discreet, no job-seeking language) -->
-      <div class="inline-flex items-center gap-3 mb-8 px-4 py-2 border border-ink/15 rounded-full bg-cream/70 backdrop-blur-sm">
-        <span class="relative flex h-2 w-2">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-orange"></span>
-        </span>
-        <span class="font-mono text-xs uppercase tracking-[0.15em] text-ink-soft">
-          Currently building Course Code
-        </span>
-      </div>
-      <p class="eyebrow mb-8">Product & Design Leader · AI-Native Founder</p>
-      <h1 class="font-display text-display-xl text-ink leading-[0.95] tracking-tight max-w-[18ch]">
-        Great design is a moral imperative<span class="brand-period">.</span>
+            <p class="eyebrow mb-8 rise-1">Product & Design Leader · AI-Native Founder</p>
+      <h1 class="font-display text-display-xl text-ink leading-[0.95] tracking-tight max-w-[18ch] rise-2">
+        Great design is a <em class="italic text-voice">moral</em> imperative<span class="brand-period">.</span>
       </h1>
-      <p class="mt-8 font-display text-2xl md:text-3xl text-ink-soft max-w-[40ch] leading-snug">
+      <p class="mt-8 font-display text-2xl md:text-3xl text-ink-soft max-w-[40ch] leading-snug rise-3">
         Product and design leader building executive-grade product experience organizations. AI-native founder shipping live consumer products with an AI co-founder.
       </p>
-      <div class="mt-12 max-w-reading">
+      <div class="mt-12 max-w-reading rise-4">
         <p class="text-xl md:text-2xl text-ink-soft leading-relaxed">
           Twenty years building, scaling, and leading product and design organizations. I architect
           operating models that move design upstream into product strategy. I build
@@ -120,7 +111,7 @@ const beliefs = [
           ten weeks.
         </p>
       </div>
-      <div class="mt-16 flex flex-wrap gap-x-12 gap-y-8">
+      <div class="mt-16 flex flex-wrap gap-x-12 gap-y-8 rise-5">
         <div>
           <p class="stat">20</p>
           <p class="stat-label">Years in product & design leadership</p>
@@ -149,14 +140,7 @@ const beliefs = [
       <div class="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
         <!-- Left: the founder framing -->
         <div class="md:col-span-7">
-          <div class="inline-flex items-center gap-3 mb-8 px-3 py-1.5 border border-orange/40 rounded-full bg-orange/10">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-orange"></span>
-            </span>
-            <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-orange font-semibold">Currently building · Live in market</span>
-          </div>
-          <p class="font-display text-orange leading-none mb-8" style="font-size: clamp(3.5rem, 8vw, 6rem);">
+                    <p class="font-display text-orange leading-none mb-8" style="font-size: clamp(3.5rem, 8vw, 6rem);">
             Course Code<span class="brand-period">.</span>
           </p>
           <h2 class="font-display text-cream leading-[1.05] tracking-tight max-w-[24ch] mb-10" style="font-size: clamp(1.75rem, 3.5vw, 2.75rem);">
@@ -194,11 +178,23 @@ const beliefs = [
         </div>
         <!-- Right: the fox + stat strip -->
         <div class="md:col-span-5 flex flex-col items-center md:items-end gap-10">
-          <!-- The orange fox, matching the case study hero -->
-          <div class="w-full max-w-xs md:max-w-sm">
-            <svg viewBox="0 0 277 301" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" aria-label="Course Code fox mark">
-              <path d="M157.433 0.0194147C160.064 0.28246 161.676 2.94593 163.024 5.90516C174.636 31.2571 178.058 58.7139 177.992 87.0253C214.307 112.772 199.242 143.253 239.011 154.663L268.419 163.081C274.142 164.725 277.234 169.887 276.148 175.74C272.267 196.554 258.681 212.173 239.504 220.887C220.326 229.6 189.406 232.1 183.452 250.02C181.84 254.887 181.018 259.819 180.788 264.817L180.67 267.096C180.578 273.283 181.289 279.521 182.33 285.721C179.573 283.247 175.416 281.701 170.458 280.891C170.317 279.63 170.194 278.361 170.097 277.082C169.866 274.155 169.769 271.163 169.867 268.105L169.995 265.711C170.379 258.307 171.814 250.388 174.867 241.602C168.255 238.873 147.532 257.714 150.689 246.042C150.854 245.45 151.61 244.957 152.63 244.036C174.636 224.011 204.8 224.503 229.603 213.883C209.866 214.869 192.005 217.072 173.814 211.581C171.479 210.858 171.446 207.998 172.301 207.142C177.794 201.651 202.761 214.903 240.228 202.572C247.07 200.303 252.925 196.719 257.136 191.458C252.202 188.729 249.274 185.473 246.248 180.969L233.32 186.657C205.36 198.988 150.623 172.616 96.9395 203.525C79.1437 213.784 66.4796 229.141 59.21 248.541C71.2821 243.806 79.9003 236.539 93.2881 234.829L80.0322 253.802C79.177 255.051 76.8417 256.728 78.3877 258.011C80.9219 260.147 109.275 245.187 120.064 247.685C113.222 257.517 107.4 268.961 102.663 281.028C100.208 287.265 98.0441 293.674 96.1797 300.12C94.2075 297.729 89.4431 292.472 79.5605 282.119C70.127 272.236 57.3445 262.334 46.5098 254.907C41.0905 251.193 36.1506 248.092 32.3516 245.918C30.453 244.831 28.8327 243.973 27.5771 243.385C26.95 243.091 26.4061 242.861 25.96 242.703C25.5303 242.551 25.1376 242.447 24.8359 242.447C22.9579 242.447 21.5809 243.475 20.1895 244.663C18.7753 245.87 17.299 247.285 15.1299 248.37H15.1289C14.7446 248.562 13.3407 249.316 11.1123 250.156C10.9008 250.236 9.71064 250.723 7.72363 251.541C8.84172 248.237 9.90812 244.805 10.9395 241.224C11.9443 237.736 12.9182 234.108 13.8818 230.324C7.69769 231.048 5.65784 235.125 0 233.086C8.58539 216.217 15.4935 199.546 18.0264 180.508C19.2435 171.268 24.2434 160.844 23.0264 151.638C21.0198 136.545 16.9406 122.702 16.6445 107.083C16.1182 81.0735 19.21 55.7217 25.7559 30.6659C26.4466 28.0354 28.355 25.9306 29.8682 25.3388C32.3681 24.3523 35.6573 25.2074 38.1572 26.9501C59.1109 41.8784 76.8741 59.108 92.7949 79.3632C98.9462 78.8371 106.611 77.8838 111.282 74.6942C115.46 61.3439 144.538 -1.26276 157.433 0.0194147ZM53.6182 206.945C44.8354 210.891 39.3743 218.289 35.5586 226.575C44.1111 223.418 50.7563 216.744 53.6182 206.945ZM49.9004 194.186C52.0052 182.219 34.9018 205.727 35.3945 210.496C41.8088 206.452 45.8873 200.697 49.9004 194.186ZM41.4473 175.641C37.2697 182.053 33.9798 187.972 32.1377 195.699C39.1113 190.767 42.6315 183.895 41.4473 175.641ZM100.756 183.5C89.8679 180.508 83.9469 188.104 76.3154 192.773C73.4207 192.905 75.4928 194.515 78.1572 193.989C86.2492 190.833 94.1113 187.544 100.756 183.5ZM102.86 172.058C93.3542 167.29 84.6705 171.498 77.5654 177.614C87.1702 177.154 94.4726 173.998 102.86 172.058ZM143.223 141.477C133.848 141.642 129.604 147.692 122.631 150.257C120.295 151.112 117.828 153.085 119.045 155.288C119.252 155.654 140.888 165.283 144.275 162.85L144.242 162.817C139.966 154.038 140.032 148.35 143.223 141.477ZM156.841 144.634C157.499 152.229 156.775 156.965 154.341 162.653C161.347 162.357 166.248 160.91 172.005 157.622C166.577 151.309 162.729 148.152 156.841 144.634ZM39.21 44.1141C29.3746 70.1894 38.2559 119.643 49.1768 143.943C62.6964 139.142 33.7827 93.6996 51.4141 75.1542L52.4336 95.7714C56.1073 93.5746 55.4637 88.9593 59.4062 89.0634C59.472 95.4096 56.1833 98.7313 58.749 104.025C61.249 101.921 60.6905 97.777 65.5918 97.0536C63.8155 104.978 62.4666 111.949 63.6836 120.728C71.2162 112.738 78.5846 106.294 88.8145 100.605C74.5712 78.6074 58.3216 60.2592 39.21 44.1141ZM195.787 126.351C193.452 133.125 197.334 140.031 203.584 142.168C202.367 135.986 200.557 130.889 195.787 126.351ZM140.295 104.387C146.578 107.773 150.656 113.331 158.847 115.008C155.327 107.116 147.861 105.274 140.295 104.387ZM154.966 100.572C159.143 105.307 162.926 109.582 169.209 113.002C167.926 106.787 162.531 101.427 154.966 100.572ZM156.873 21.3602C148.748 38.8533 145.097 56.5109 143.519 75.5165C152.3 77.6865 159.175 80.8749 168.187 80.9413C166.411 60.2707 164.731 40.52 156.873 21.3602Z" fill="#E13D0F"/>
-            </svg>
+          <!-- Layered product composition with scroll parallax -->
+          <div class="w-full relative" style="padding: 24px 0 48px;">
+            <div data-plx="-0.04" data-rot="-1" class="relative overflow-hidden" style="border-radius: 8px; border: 1px solid rgba(244,239,229,0.18); box-shadow: 0 32px 64px -16px rgba(0,0,0,0.45); transform: rotate(-1deg); will-change: transform;">
+              <div class="flex items-center" style="gap: 6px; background: #0A1820; padding: 11px 14px; border-bottom: 1px solid rgba(244,239,229,0.1);">
+                <span style="width:9px;height:9px;border-radius:50%;background:rgba(244,239,229,0.25);"></span>
+                <span style="width:9px;height:9px;border-radius:50%;background:rgba(244,239,229,0.25);"></span>
+                <span style="width:9px;height:9px;border-radius:50%;background:rgba(244,239,229,0.25);"></span>
+                <span class="flex-1 text-center font-mono" style="font-size: 9.5px; letter-spacing: 0.08em; color: rgba(244,239,229,0.45);">coursecode.golf</span>
+              </div>
+              <img src="/coursecode/02-course-detail.png" alt="Course Code, Sedona Golf Resort course detail" class="block w-full h-auto" />
+            </div>
+            <div data-plx="0.07" data-rot="1.5" class="absolute overflow-hidden" style="right: -28px; bottom: -8px; width: 44%; border-radius: 6px; border: 1px solid rgba(244,239,229,0.2); box-shadow: 0 20px 48px -8px rgba(0,0,0,0.5); transform: rotate(1.5deg); will-change: transform;">
+              <img src="/coursecode/03-community.png" alt="Course Code community" class="block w-full h-auto" />
+            </div>
+            <div data-plx="0.11" data-rot="-2" class="absolute overflow-hidden" style="left: -36px; bottom: 56px; width: 38%; border-radius: 6px; border: 1px solid rgba(244,239,229,0.2); box-shadow: 0 20px 48px -8px rgba(0,0,0,0.5); transform: rotate(-2deg); will-change: transform;">
+              <img src="/coursecode/04-pricing.png" alt="Course Code pricing" class="block w-full h-auto" />
+            </div>
           </div>
           <!-- Compact stat strip -->
           <div class="grid grid-cols-3 gap-6 md:gap-8 w-full max-w-sm pt-8 border-t border-cream/15">
@@ -374,7 +370,7 @@ const beliefs = [
                 </div>
 
                 <!-- ARTWORK: positioned top-right, constrained to top zone, intentionally cropped past edge -->
-                <div class="absolute pointer-events-none" style="top: 7%; right: -10%; width: 62%; max-width: 290px; max-height: 45%; overflow: hidden;">
+                <div class="absolute pointer-events-none" data-plx="0.045" style="top: 7%; right: -10%; width: 62%; max-width: 290px; max-height: 45%; overflow: hidden; will-change: transform;">
                   {cs.artwork === 'course-code' && (
                     <svg viewBox="0 0 277 301" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" aria-label="Course Code fox mark">
                       <path d="M157.433 0.0194147C160.064 0.28246 161.676 2.94593 163.024 5.90516C174.636 31.2571 178.058 58.7139 177.992 87.0253C214.307 112.772 199.242 143.253 239.011 154.663L268.419 163.081C274.142 164.725 277.234 169.887 276.148 175.74C272.267 196.554 258.681 212.173 239.504 220.887C220.326 229.6 189.406 232.1 183.452 250.02C181.84 254.887 181.018 259.819 180.788 264.817L180.67 267.096C180.578 273.283 181.289 279.521 182.33 285.721C179.573 283.247 175.416 281.701 170.458 280.891C170.317 279.63 170.194 278.361 170.097 277.082C169.866 274.155 169.769 271.163 169.867 268.105L169.995 265.711C170.379 258.307 171.814 250.388 174.867 241.602C168.255 238.873 147.532 257.714 150.689 246.042C150.854 245.45 151.61 244.957 152.63 244.036C174.636 224.011 204.8 224.503 229.603 213.883C209.866 214.869 192.005 217.072 173.814 211.581C171.479 210.858 171.446 207.998 172.301 207.142C177.794 201.651 202.761 214.903 240.228 202.572C247.07 200.303 252.925 196.719 257.136 191.458C252.202 188.729 249.274 185.473 246.248 180.969L233.32 186.657C205.36 198.988 150.623 172.616 96.9395 203.525C79.1437 213.784 66.4796 229.141 59.21 248.541C71.2821 243.806 79.9003 236.539 93.2881 234.829L80.0322 253.802C79.177 255.051 76.8417 256.728 78.3877 258.011C80.9219 260.147 109.275 245.187 120.064 247.685C113.222 257.517 107.4 268.961 102.663 281.028C100.208 287.265 98.0441 293.674 96.1797 300.12C94.2075 297.729 89.4431 292.472 79.5605 282.119C70.127 272.236 57.3445 262.334 46.5098 254.907C41.0905 251.193 36.1506 248.092 32.3516 245.918C30.453 244.831 28.8327 243.973 27.5771 243.385C26.95 243.091 26.4061 242.861 25.96 242.703C25.5303 242.551 25.1376 242.447 24.8359 242.447C22.9579 242.447 21.5809 243.475 20.1895 244.663C18.7753 245.87 17.299 247.285 15.1299 248.37H15.1289C14.7446 248.562 13.3407 249.316 11.1123 250.156C10.9008 250.236 9.71064 250.723 7.72363 251.541C8.84172 248.237 9.90812 244.805 10.9395 241.224C11.9443 237.736 12.9182 234.108 13.8818 230.324C7.69769 231.048 5.65784 235.125 0 233.086C8.58539 216.217 15.4935 199.546 18.0264 180.508C19.2435 171.268 24.2434 160.844 23.0264 151.638C21.0198 136.545 16.9406 122.702 16.6445 107.083C16.1182 81.0735 19.21 55.7217 25.7559 30.6659C26.4466 28.0354 28.355 25.9306 29.8682 25.3388C32.3681 24.3523 35.6573 25.2074 38.1572 26.9501C59.1109 41.8784 76.8741 59.108 92.7949 79.3632C98.9462 78.8371 106.611 77.8838 111.282 74.6942C115.46 61.3439 144.538 -1.26276 157.433 0.0194147ZM53.6182 206.945C44.8354 210.891 39.3743 218.289 35.5586 226.575C44.1111 223.418 50.7563 216.744 53.6182 206.945ZM49.9004 194.186C52.0052 182.219 34.9018 205.727 35.3945 210.496C41.8088 206.452 45.8873 200.697 49.9004 194.186ZM41.4473 175.641C37.2697 182.053 33.9798 187.972 32.1377 195.699C39.1113 190.767 42.6315 183.895 41.4473 175.641ZM100.756 183.5C89.8679 180.508 83.9469 188.104 76.3154 192.773C73.4207 192.905 75.4928 194.515 78.1572 193.989C86.2492 190.833 94.1113 187.544 100.756 183.5ZM102.86 172.058C93.3542 167.29 84.6705 171.498 77.5654 177.614C87.1702 177.154 94.4726 173.998 102.86 172.058ZM143.223 141.477C133.848 141.642 129.604 147.692 122.631 150.257C120.295 151.112 117.828 153.085 119.045 155.288C119.252 155.654 140.888 165.283 144.275 162.85L144.242 162.817C139.966 154.038 140.032 148.35 143.223 141.477ZM156.841 144.634C157.499 152.229 156.775 156.965 154.341 162.653C161.347 162.357 166.248 160.91 172.005 157.622C166.577 151.309 162.729 148.152 156.841 144.634ZM39.21 44.1141C29.3746 70.1894 38.2559 119.643 49.1768 143.943C62.6964 139.142 33.7827 93.6996 51.4141 75.1542L52.4336 95.7714C56.1073 93.5746 55.4637 88.9593 59.4062 89.0634C59.472 95.4096 56.1833 98.7313 58.749 104.025C61.249 101.921 60.6905 97.777 65.5918 97.0536C63.8155 104.978 62.4666 111.949 63.6836 120.728C71.2162 112.738 78.5846 106.294 88.8145 100.605C74.5712 78.6074 58.3216 60.2592 39.21 44.1141ZM195.787 126.351C193.452 133.125 197.334 140.031 203.584 142.168C202.367 135.986 200.557 130.889 195.787 126.351ZM140.295 104.387C146.578 107.773 150.656 113.331 158.847 115.008C155.327 107.116 147.861 105.274 140.295 104.387ZM154.966 100.572C159.143 105.307 162.926 109.582 169.209 113.002C167.926 106.787 162.531 101.427 154.966 100.572ZM156.873 21.3602C148.748 38.8533 145.097 56.5109 143.519 75.5165C152.3 77.6865 159.175 80.8749 168.187 80.9413C166.411 60.2707 164.731 40.52 156.873 21.3602Z" fill="#E13D0F"/>
@@ -750,6 +746,16 @@ const beliefs = [
   <!-- Horizontal scroll script + scrollbar hide -->
   <!-- ===================== -->
   <style is:global>
+    /* === HERO STAGGERED ENTRANCE === */
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(34px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .rise-1 { animation: rise 0.7s ease backwards; }
+    .rise-2 { animation: rise 0.7s ease 0.12s backwards; }
+    .rise-3 { animation: rise 0.7s ease 0.22s backwards; }
+    .rise-4 { animation: rise 0.7s ease 0.3s backwards; }
+    .rise-5 { animation: rise 0.7s ease 0.38s backwards; }
     /* === SHOWCASE SECTION BACKGROUND === */
     .showcase-section {
       background-color: #F4EFE5;
@@ -919,6 +925,25 @@ const beliefs = [
       updateState();
       // Re-check on resize (card width may change)
       window.addEventListener('resize', updateState);
+    })();
+  </script>
+  <script is:inline>
+    (function () {
+      var els = Array.prototype.slice.call(document.querySelectorAll('[data-plx]'));
+      if (!els.length) return;
+      var raf = null;
+      function plx() {
+        var vhc = window.innerHeight / 2;
+        els.forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          var off = ((r.top + r.height / 2) - vhc) * parseFloat(el.dataset.plx);
+          el.style.transform = 'rotate(' + (el.dataset.rot || 0) + 'deg) translateY(' + off.toFixed(1) + 'px)';
+        });
+        raf = null;
+      }
+      window.addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(plx); }, { passive: true });
+      window.addEventListener('resize', function () { if (!raf) raf = requestAnimationFrame(plx); });
+      plx();
     })();
   </script>
 </Base>

@@ -428,3 +428,13 @@
     }
   }
 }
+
+/* ============================================================
+   DISPLAY WEIGHT
+   New Spirit reads too heavy at bold. Medium (500) everywhere.
+   Unlayered so it wins over utilities.
+   ============================================================ */
+h1, h2, h3, h4,
+.font-display {
+  font-weight: 500;
+}

@@ -196,52 +196,31 @@ const isAbout = path === '/about';
     <main class="pt-24">
       <slot />
     </main>
-    <footer class="py-16 border-t border-ink/10">
-      <div class="max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-3 gap-8">
+    <footer class="bg-ink text-cream" style="background-image: linear-gradient(to right, rgba(244,239,229,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(244,239,229,0.04) 1px, transparent 1px); background-size: 48px 48px;">
+      <div class="max-w-7xl mx-auto px-6 md:px-10 pt-16 md:pt-20 grid md:grid-cols-3 gap-10 md:gap-16 items-start">
         <div>
-          <p class="font-display text-2xl text-ink mb-2">
-            Mollie Cox<span class="text-orange">.</span>
-          </p>
-          <p class="text-sm text-ink-muted">
-            Product and design leader. AI-native founder<span class="text-orange">.</span>
+          <p class="font-display text-cream mb-4" style="font-size: 34px;">Mollie Cox<span class="text-orange">.</span></p>
+          <p class="text-cream/60" style="font-size: 15.5px; line-height: 1.6;">
+            Product and design leader. AI-native founder.
             <br />Lincoln, Nebraska.
           </p>
         </div>
         <div>
-          <p class="eyebrow mb-3">Get in touch</p>
-          <a
-            href="mailto:molliecox@gmail.com"
-            class="block text-ink-soft hover:text-orange transition-colors"
-          >
-            molliecox@gmail.com
-          </a>
-          <a
-            href="https://linkedin.com/in/molliecox"
-            target="_blank"
-            rel="noopener"
-            class="block text-ink-soft hover:text-orange transition-colors mt-1"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://coursecode.golf"
-            target="_blank"
-            rel="noopener"
-            class="block text-ink-soft hover:text-orange transition-colors mt-1"
-          >
-            Course Code
-          </a>
-          <a
-            href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP"
-            target="_blank"
-            rel="noopener"
-            class="block text-ink-soft hover:text-orange transition-colors mt-1"
-          >
-            Bounce on Spotify
-          </a>
+          <p class="font-mono text-[10px] uppercase tracking-[0.16em] text-cream/45 mb-4">Get in touch</p>
+          <a href="mailto:molliecox@gmail.com" class="block text-cream hover:text-orange transition-colors">molliecox@gmail.com</a>
+          <a href="https://linkedin.com/in/molliecox" target="_blank" rel="noopener" class="block text-cream hover:text-orange transition-colors mt-3">LinkedIn</a>
         </div>
-        <div class="md:text-right">
-          <p class="font-mono text-xs text-ink-muted">© 2026 Mollie Cox</p>
+        <div>
+          <p class="font-mono text-[10px] uppercase tracking-[0.16em] text-cream/45 mb-4">Elsewhere</p>
+          <a href="https://coursecode.golf" target="_blank" rel="noopener" class="block text-cream hover:text-orange transition-colors">Course Code</a>
+          <a href="https://open.spotify.com/show/6uE0yn2odzLyV3qyo7jVAP" target="_blank" rel="noopener" class="block text-cream hover:text-orange transition-colors mt-3">Bounce on Spotify</a>
+          <a href="https://www.youtube.com/@BouncePodcast" target="_blank" rel="noopener" class="block text-cream hover:text-orange transition-colors mt-3">Bounce on YouTube</a>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-6 md:px-10 mt-12">
+        <div class="flex justify-between py-5 font-mono text-[10px] uppercase tracking-[0.14em] text-cream/40" style="border-top: 1px solid rgba(244,239,229,0.12);">
+          <span>Lincoln, Nebraska</span>
+          <span>© 2026 Mollie Cox</span>
         </div>
       </div>
     </footer>
